@@ -6,14 +6,14 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 pt-8 relative overflow-hidden" style={{
+    <div className="min-h-screen font-grotesk flex flex-col items-center justify-between px-4 py-8 relative overflow-hidden" style={{
       backgroundImage: `url('/lovable-uploads/fa3199e7-634e-40a9-84ce-a8160d03c596.png')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       filter: 'brightness(1.55)'
     }}>
-      <div className="text-center space-y-9 max-w-3xl relative z-10">
+      <div className="text-center space-y-9 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
         {/* Main Header Logo */}
         <div className="mb-12 animate-fade-in animate-scale-in" style={{animationDelay: '0.2s'}}>
           <img 
@@ -59,7 +59,7 @@ const Home = () => {
       </div>
       
       {/* Address Footer */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-black text-sm z-10">
+      <div className="text-center text-black text-sm z-10 mt-8">
         <div>16 EMERY ROAD</div>
         <div>BRISLINGTON</div>
         <div>BRISTOL</div>
