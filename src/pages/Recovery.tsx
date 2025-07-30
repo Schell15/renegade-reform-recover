@@ -38,9 +38,14 @@ const Recovery = () => {
         <img 
           src="/lovable-uploads/6d24f46b-0611-475f-b70f-81f24ce0e64d.png" 
           alt="Renegade Recovery Logo" 
-          className="mx-auto max-w-md w-full h-auto"
+          className="mx-auto max-w-md w-full h-auto animate-fade-in"
         />
       </section>
+
+      {/* Separator Line */}
+      <div className="max-w-4xl mx-auto px-4">
+        <hr className="border-t border-border/30" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 py-12 space-y-16">
         {/* Hero Section */}
