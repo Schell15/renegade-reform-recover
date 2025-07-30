@@ -13,22 +13,22 @@ const Home = () => {
       backgroundRepeat: 'no-repeat',
       filter: 'brightness(1.55)'
     }}>
-      <div className="text-center space-y-9 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
+      <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
         {/* Main Header Logo */}
-        <div className="mb-12 animate-fade-in animate-scale-in" style={{animationDelay: '0.2s'}}>
+        <div className="mb-10 animate-fade-in animate-scale-in" style={{animationDelay: '0.2s'}}>
           <img 
-            src="/lovable-uploads/cd778455-8416-4101-ab3b-2c4df8ab7221.png" 
+            src="/lovable-uploads/b0cf15a9-9652-4ee5-829e-cd02ca17d65d.png" 
             alt="Renegade Studios - reform. repower. recover" 
-            className="mx-auto w-full max-w-xl h-auto object-contain"
+            className="mx-auto w-full max-w-lg h-auto object-contain"
           />
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex flex-col sm:flex-row gap-12 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-10 justify-center items-center">
           <div className="border-2 border-black transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button
               onClick={() => navigate('/reformer')}
-              className="w-[250px] h-24 p-0 border-0 bg-transparent"
+              className="w-[200px] h-20 p-0 border-0 bg-transparent"
               aria-label="Navigate to Renegade Reformer"
             >
               <img 
@@ -40,12 +40,12 @@ const Home = () => {
           </div>
           
           {/* Vertical Separator */}
-          <div className="hidden sm:block w-0.5 h-24 bg-black"></div>
+          <div className="hidden sm:block w-0.5 h-20 bg-black"></div>
           
           <div className="border-2 border-black transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button
               onClick={() => navigate('/recover')}
-              className="w-[250px] h-24 p-0 border-0 bg-transparent"
+              className="w-[200px] h-20 p-0 border-0 bg-transparent"
               aria-label="Navigate to Renegade Recovery"
             >
               <img 
@@ -59,7 +59,7 @@ const Home = () => {
       </div>
       
       {/* Address Footer */}
-      <div className="text-center text-black text-sm z-10 mt-8">
+      <div className="text-center text-black text-xs z-10 mt-6">
         <div>16 EMERY ROAD</div>
         <div>BRISLINGTON</div>
         <div>BRISTOL</div>
