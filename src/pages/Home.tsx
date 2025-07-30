@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
+// Updated to use direct image paths
 const Home = () => {
   const navigate = useNavigate();
 
