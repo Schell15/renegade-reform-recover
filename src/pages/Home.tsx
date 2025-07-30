@@ -24,7 +24,7 @@ const Home = () => {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-12 justify-center items-center">
           <div className="border-2 border-black transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button
               onClick={() => navigate('/reformer')}
@@ -56,6 +56,14 @@ const Home = () => {
             </button>
           </div>
         </div>
+      </div>
+      
+      {/* Address Footer */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-black text-sm z-10">
+        <div>16 & 16a Emery Road</div>
+        <div>Brislington</div>
+        <div>Bristol</div>
+        <div>BS4 4PL</div>
       </div>
     </div>
   );
