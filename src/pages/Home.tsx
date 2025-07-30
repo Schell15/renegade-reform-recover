@@ -6,7 +6,12 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-cream font-grotesk flex flex-col items-center justify-center px-4 relative overflow-hidden">
+    <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 relative overflow-hidden" style={{
+      backgroundImage: `url('/lovable-uploads/fa3199e7-634e-40a9-84ce-a8160d03c596.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
       <div className="text-center space-y-12 max-w-4xl relative z-10">
         {/* Main Header Logo */}
         <div className="mb-16">
