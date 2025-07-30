@@ -18,6 +18,15 @@ const Recovery = () => {
 
   return (
     <div className="min-h-screen bg-background dark font-grotesk text-foreground">
+      {/* Top Logo */}
+      <div className="py-8 px-4 text-center">
+        <img 
+          src="/lovable-uploads/416fc5fc-c739-493a-87e9-45765530eb70.png" 
+          alt="Renegade Recovery Logo" 
+          className="mx-auto max-w-md h-auto object-contain"
+        />
+      </div>
+
       {/* Header */}
       <header className="py-6 px-4 border-b border-border">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
