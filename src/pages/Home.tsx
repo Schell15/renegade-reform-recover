@@ -17,7 +17,7 @@ const Home = () => {
         {/* Main Header Logo */}
         <div className="mb-10 animate-fade-in animate-scale-in" style={{animationDelay: '0.2s'}}>
           <img 
-            src="/lovable-uploads/518319cb-3e42-4db0-a34c-1ea955c9764f.png" 
+            src="/lovable-uploads/31d3750f-fcef-492a-94c1-d830e04cff92.png" 
             alt="Renegade Studios - reform. repower. recover" 
             className="mx-auto w-full max-w-lg h-auto object-contain"
           />
