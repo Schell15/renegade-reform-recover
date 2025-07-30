@@ -22,14 +22,14 @@ const Home = () => {
           <button
             onClick={() => navigate('/reformer')}
             className="w-80 h-24 bg-cover bg-center bg-no-repeat transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-md"
-            style={{ backgroundImage: `url(/lovable-uploads/59b68da1-d01e-4bae-bd9c-1aacb69353a8.png)` }}
+            style={{ backgroundImage: `url(/lovable-uploads/25069f3d-a5c5-4782-8bbe-a384fdda2e92.png)` }}
             aria-label="Navigate to Renegade Reformer"
           />
           
           <button
             onClick={() => navigate('/recover')}
             className="w-80 h-24 bg-cover bg-center bg-no-repeat transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-md"
-            style={{ backgroundImage: `url(/lovable-uploads/e78a67eb-6331-43bf-a793-23df83f993ca.png)` }}
+            style={{ backgroundImage: `url(/lovable-uploads/4dd2cda4-483b-4ad3-8c89-da432f15972c.png)` }}
             aria-label="Navigate to Renegade Recovery"
           />
         </div>
