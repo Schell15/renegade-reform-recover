@@ -21,14 +21,14 @@ const Home = () => {
         <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
           <button
             onClick={() => navigate('/reformer')}
-            className="w-[416px] h-32 bg-contain bg-center bg-no-repeat transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg"
+            className="w-[416px] h-32 bg-cover bg-center bg-no-repeat transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg"
             style={{ backgroundImage: `url(/lovable-uploads/25069f3d-a5c5-4782-8bbe-a384fdda2e92.png)` }}
             aria-label="Navigate to Renegade Reformer"
           />
           
           <button
             onClick={() => navigate('/recover')}
-            className="w-[416px] h-32 bg-contain bg-center bg-no-repeat transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg"
+            className="w-[416px] h-32 bg-cover bg-center bg-no-repeat transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg"
             style={{ backgroundImage: `url(/lovable-uploads/4dd2cda4-483b-4ad3-8c89-da432f15972c.png)` }}
             aria-label="Navigate to Renegade Recovery"
           />
