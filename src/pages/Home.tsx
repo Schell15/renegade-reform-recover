@@ -6,7 +6,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 pt-16 relative overflow-hidden" style={{
+    <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 pt-8 relative overflow-hidden" style={{
       backgroundImage: `url('/lovable-uploads/fa3199e7-634e-40a9-84ce-a8160d03c596.png')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
