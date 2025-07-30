@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import renegadeLogo from "@/assets/renegade-logo.png";
+import renegadeMainLogo from "@/assets/renegade-main-logo.png";
+import renegadeRecoveryButton from "@/assets/renegade-recovery-button.png";
+import renegadeReformerButton from "@/assets/renegade-reformer-button.png";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -11,36 +13,27 @@ const Home = () => {
         {/* Logo */}
         <div className="mb-8">
           <img 
-            src={renegadeLogo} 
+            src={renegadeMainLogo} 
             alt="Renegade Studios" 
-            className="mx-auto h-32 w-auto object-contain"
+            className="mx-auto h-40 w-auto object-contain"
           />
         </div>
 
-        {/* Tagline */}
-        <h1 className="text-2xl md:text-3xl font-serif italic text-primary tracking-wide">
-          reform. repower. recover
-        </h1>
-
         {/* Navigation Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-12">
-          <Button
-            variant="outline"
-            size="lg"
+          <button
             onClick={() => navigate('/reformer')}
-            className="w-64 h-14 text-lg font-medium tracking-wider uppercase border-2 border-primary bg-transparent hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-          >
-            RENEGADE. reformer
-          </Button>
+            className="w-64 h-20 bg-cover bg-center bg-no-repeat transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            style={{ backgroundImage: `url(${renegadeReformerButton})` }}
+            aria-label="Navigate to Renegade Reformer"
+          />
           
-          <Button
-            variant="outline"
-            size="lg"
+          <button
             onClick={() => navigate('/recover')}
-            className="w-64 h-14 text-lg font-medium tracking-wider uppercase border-2 border-primary bg-transparent hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-          >
-            RENEGADE. recovery
-          </Button>
+            className="w-64 h-20 bg-cover bg-center bg-no-repeat transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            style={{ backgroundImage: `url(${renegadeRecoveryButton})` }}
+            aria-label="Navigate to Renegade Recovery"
+          />
         </div>
       </div>
     </div>
