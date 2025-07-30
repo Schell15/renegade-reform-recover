@@ -11,7 +11,7 @@ const Home = () => {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
-      filter: 'brightness(1.3)'
+      filter: 'brightness(1.55)'
     }}>
       <div className="text-center space-y-9 max-w-3xl relative z-10">
         {/* Main Header Logo */}
