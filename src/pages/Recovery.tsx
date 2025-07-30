@@ -18,21 +18,9 @@ const Recovery = () => {
 
   return (
     <div className="min-h-screen bg-background dark font-grotesk text-foreground">
-      {/* Back to Home Button */}
-      <div className="absolute top-6 left-6 z-10">
-        <Button
-          variant="ghost"
-          onClick={() => navigate('/')}
-          className="flex items-center gap-2 text-foreground hover:bg-accent"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Back to Home
-        </Button>
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 py-12 space-y-16">
         {/* Logo Section */}
-        <div className="text-center py-8 pt-16">
+        <div className="text-center py-8">
           <img 
             src="/lovable-uploads/3a0cff08-d1c4-4ec5-a34b-ed9314db53a1.png" 
             alt="Renegade Recovery Logo" 
