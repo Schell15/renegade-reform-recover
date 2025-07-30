@@ -12,22 +12,22 @@ const Home = () => {
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
     }}>
-      <div className="text-center space-y-12 max-w-4xl relative z-10">
+      <div className="text-center space-y-9 max-w-3xl relative z-10">
         {/* Main Header Logo */}
-        <div className="mb-16 animate-fade-in animate-scale-in" style={{animationDelay: '0.2s'}}>
+        <div className="mb-12 animate-fade-in animate-scale-in" style={{animationDelay: '0.2s'}}>
           <img 
             src="/lovable-uploads/cd778455-8416-4101-ab3b-2c4df8ab7221.png" 
             alt="Renegade Studios - reform. repower. recover" 
-            className="mx-auto w-full max-w-2xl h-auto object-contain"
+            className="mx-auto w-full max-w-xl h-auto object-contain"
           />
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <div className="border-2 border-black transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button
               onClick={() => navigate('/reformer')}
-              className="w-[333px] h-32 p-0 border-0 bg-transparent"
+              className="w-[250px] h-24 p-0 border-0 bg-transparent"
               aria-label="Navigate to Renegade Reformer"
             >
               <img 
@@ -39,12 +39,12 @@ const Home = () => {
           </div>
           
           {/* Vertical Separator */}
-          <div className="hidden sm:block w-0.5 h-32 bg-black"></div>
+          <div className="hidden sm:block w-0.5 h-24 bg-black"></div>
           
           <div className="border-2 border-black transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button
               onClick={() => navigate('/recover')}
-              className="w-[333px] h-32 p-0 border-0 bg-transparent"
+              className="w-[250px] h-24 p-0 border-0 bg-transparent"
               aria-label="Navigate to Renegade Recovery"
             >
               <img 
