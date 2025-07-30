@@ -4,28 +4,39 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-
 const Recovery = () => {
   const navigate = useNavigate();
-
-  const sessionSchedule = [
-    { time: "9:00 AM", service: "Deep Tissue Massage", duration: "60 min", practitioner: "David" },
-    { time: "10:30 AM", service: "Sports Recovery", duration: "90 min", practitioner: "Emma" },
-    { time: "1:00 PM", service: "Therapeutic Massage", duration: "60 min", practitioner: "Lisa" },
-    { time: "2:30 PM", service: "Injury Rehabilitation", duration: "45 min", practitioner: "David" },
-    { time: "4:00 PM", service: "Relaxation Therapy", duration: "75 min", practitioner: "Emma" },
-  ];
-
-  return (
-    <div className="min-h-screen bg-background dark font-grotesk text-foreground">
+  const sessionSchedule = [{
+    time: "9:00 AM",
+    service: "Deep Tissue Massage",
+    duration: "60 min",
+    practitioner: "David"
+  }, {
+    time: "10:30 AM",
+    service: "Sports Recovery",
+    duration: "90 min",
+    practitioner: "Emma"
+  }, {
+    time: "1:00 PM",
+    service: "Therapeutic Massage",
+    duration: "60 min",
+    practitioner: "Lisa"
+  }, {
+    time: "2:30 PM",
+    service: "Injury Rehabilitation",
+    duration: "45 min",
+    practitioner: "David"
+  }, {
+    time: "4:00 PM",
+    service: "Relaxation Therapy",
+    duration: "75 min",
+    practitioner: "Emma"
+  }];
+  return <div className="min-h-screen bg-background dark font-grotesk text-foreground">
       {/* Header */}
       <header className="py-6 px-4 border-b border-border">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Button
-            variant="ghost"
-            onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-foreground hover:bg-accent"
-          >
+          <Button variant="ghost" onClick={() => navigate('/')} className="flex items-center gap-2 text-foreground hover:bg-accent">
             <ArrowLeft className="h-4 w-4" />
             Back to Home
           </Button>
@@ -35,11 +46,7 @@ const Recovery = () => {
 
       {/* Logo Section */}
       <section className="text-center py-8">
-        <img 
-          src="/lovable-uploads/6d24f46b-0611-475f-b70f-81f24ce0e64d.png" 
-          alt="Renegade Recovery Logo" 
-          className="mx-auto max-w-md w-full h-auto animate-fade-in"
-        />
+        <img src="/lovable-uploads/6d24f46b-0611-475f-b70f-81f24ce0e64d.png" alt="Renegade Recovery Logo" className="mx-auto max-w-md w-full h-auto animate-fade-in" />
       </section>
 
       {/* Separator Line */}
@@ -51,10 +58,17 @@ const Recovery = () => {
         {/* Hero Section */}
         <section className="text-center space-y-6">
           <h2 className="text-4xl md:text-5xl font-light text-foreground">Restore & Renew</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Premium recovery services designed to optimize your performance and well-being. 
-            Experience therapeutic treatments in our serene, minimalist environment.
-          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">Located next door to our Reformer Pilates studio, Renegade Recover is a purpose-built wellness suite offering contrast therapy for body, mind and muscle. Open to all members of the public aged 18 and over, it is an adults-only space designed for deep recovery and quiet reset.
+
+
+
+
+At the heart of the experience is a curated thermal circuit, featuring two distinct sauna options: a traditional coal-fired sauna for dry, penetrating heat, and an infrared carbon-panel sauna for gentle, muscle-targeted therapy. These are paired with cold plunge tanks, overhead bucket pulls and therapeutic showers to promote circulation, reduce inflammation and reset the nervous system.
+
+
+
+
+Whether used as a follow-on from a Pilates session next door or as a stand-alone visit, Renegade Recover offers a restorative contrast of hot and cold designed to help you decompress, restore balance and build long-term resilience.</p>
         </section>
 
         {/* Session Schedule */}
@@ -71,14 +85,12 @@ const Recovery = () => {
                 </tr>
               </thead>
               <tbody>
-                {sessionSchedule.map((session, index) => (
-                  <tr key={index} className="border-t border-border">
+                {sessionSchedule.map((session, index) => <tr key={index} className="border-t border-border">
                     <td className="px-6 py-4 text-foreground">{session.time}</td>
                     <td className="px-6 py-4 text-foreground font-medium">{session.service}</td>
                     <td className="px-6 py-4 text-muted-foreground">{session.duration}</td>
                     <td className="px-6 py-4 text-foreground">{session.practitioner}</td>
-                  </tr>
-                ))}
+                  </tr>)}
               </tbody>
             </table>
           </div>
@@ -110,46 +122,22 @@ const Recovery = () => {
           <h3 className="text-3xl font-light text-foreground mb-8 text-center">Recovery Space</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="rounded-lg aspect-video overflow-hidden">
-              <img 
-                src="/lovable-uploads/86840907-ee69-4e5d-8a4c-4b3936ace326.png" 
-                alt="Red light therapy recovery room" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/lovable-uploads/86840907-ee69-4e5d-8a4c-4b3936ace326.png" alt="Red light therapy recovery room" className="w-full h-full object-cover" />
             </div>
             <div className="rounded-lg aspect-video overflow-hidden">
-              <img 
-                src="/lovable-uploads/c7d99545-1023-4978-98cd-ec78ab0d58bc.png" 
-                alt="Recovery massage table area" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/lovable-uploads/c7d99545-1023-4978-98cd-ec78ab0d58bc.png" alt="Recovery massage table area" className="w-full h-full object-cover" />
             </div>
             <div className="rounded-lg aspect-video overflow-hidden">
-              <img 
-                src="/lovable-uploads/d5bd1570-1542-4706-8224-f1296e1f6dcb.png" 
-                alt="Recovery room with wooden lockers" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/lovable-uploads/d5bd1570-1542-4706-8224-f1296e1f6dcb.png" alt="Recovery room with wooden lockers" className="w-full h-full object-cover" />
             </div>
             <div className="rounded-lg aspect-video overflow-hidden">
-              <img 
-                src="/lovable-uploads/a3723427-0cb6-40ea-9408-28234f2f8fd1.png" 
-                alt="Sauna interior with wooden benches" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/lovable-uploads/a3723427-0cb6-40ea-9408-28234f2f8fd1.png" alt="Sauna interior with wooden benches" className="w-full h-full object-cover" />
             </div>
             <div className="rounded-lg aspect-video overflow-hidden">
-              <img 
-                src="/lovable-uploads/8fe03607-e67c-476a-b171-106162aea276.png" 
-                alt="Steamy sauna with ambient lighting" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/lovable-uploads/8fe03607-e67c-476a-b171-106162aea276.png" alt="Steamy sauna with ambient lighting" className="w-full h-full object-cover" />
             </div>
             <div className="rounded-lg aspect-video overflow-hidden">
-              <img 
-                src="/lovable-uploads/b3cf33c3-11ae-445a-af1e-3fcc74831dcd.png" 
-                alt="Red light therapy session" 
-                className="w-full h-full object-cover"
-              />
+              <img src="/lovable-uploads/b3cf33c3-11ae-445a-af1e-3fcc74831dcd.png" alt="Red light therapy session" className="w-full h-full object-cover" />
             </div>
           </div>
         </section>
@@ -217,12 +205,7 @@ const Recovery = () => {
                 <label htmlFor="recovery-message" className="block text-sm font-medium text-foreground mb-2">
                   Message
                 </label>
-                <Textarea 
-                  id="recovery-message" 
-                  placeholder="Tell us about your recovery goals and any specific concerns..."
-                  rows={5}
-                  className="bg-background border-border"
-                />
+                <Textarea id="recovery-message" placeholder="Tell us about your recovery goals and any specific concerns..." rows={5} className="bg-background border-border" />
               </div>
               <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" size="lg">
                 Send Message
@@ -231,8 +214,6 @@ const Recovery = () => {
           </Card>
         </section>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Recovery;
