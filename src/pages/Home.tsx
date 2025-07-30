@@ -11,7 +11,7 @@ const Home = () => {
         {/* Main Header Logo */}
         <div className="mb-16">
           <img 
-            src="/lovable-uploads/fe9d56ea-77de-4fdc-930d-23f546ccc6fa.png" 
+            src="/lovable-uploads/fecb6f63-fe92-4447-bbca-dcd4b28e0a20.png" 
             alt="Renegade Studios - reform. repower. recover" 
             className="mx-auto w-full max-w-2xl h-auto object-contain"
           />
