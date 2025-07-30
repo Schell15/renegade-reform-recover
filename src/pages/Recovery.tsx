@@ -29,7 +29,7 @@ const Recovery = () => {
             <ArrowLeft className="h-4 w-4" />
             Back to Home
           </Button>
-          <h1 className="text-2xl font-medium text-foreground">renegade.recovery</h1>
+          <h1 className="text-2xl font-medium text-foreground">renegade.recover</h1>
         </div>
       </header>
 
