@@ -18,24 +18,21 @@ const Recovery = () => {
 
   return (
     <div className="min-h-screen bg-background dark font-grotesk text-foreground">
-      {/* Header */}
-      <header className="py-6 px-4 border-b border-border">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Button
-            variant="ghost"
-            onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-foreground hover:bg-accent"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to Home
-          </Button>
-          <h1 className="text-2xl font-medium text-foreground">RENEGADE. recovery</h1>
-        </div>
-      </header>
+      {/* Back to Home Button */}
+      <div className="absolute top-6 left-6 z-10">
+        <Button
+          variant="ghost"
+          onClick={() => navigate('/')}
+          className="flex items-center gap-2 text-foreground hover:bg-accent"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Back to Home
+        </Button>
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 py-12 space-y-16">
         {/* Logo Section */}
-        <div className="text-center py-8">
+        <div className="text-center py-8 pt-16">
           <img 
             src="/lovable-uploads/3a0cff08-d1c4-4ec5-a34b-ed9314db53a1.png" 
             alt="Renegade Recovery Logo" 
