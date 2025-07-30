@@ -36,7 +36,7 @@ const Recovery = () => {
       {/* Logo Section */}
       <section className="text-center py-8">
         <img 
-          src="/lovable-uploads/3499394c-f86f-4ad6-ac75-753d3f8544c9.png" 
+          src="/lovable-uploads/08e24abe-2188-4c9f-bd64-3d752ee72d38.png" 
           alt="Renegade Recovery Logo" 
           className="mx-auto max-w-md w-full h-auto"
         />
