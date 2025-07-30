@@ -109,11 +109,48 @@ const Recovery = () => {
         <section>
           <h3 className="text-3xl font-light text-foreground mb-8 text-center">Recovery Space</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="bg-muted rounded-lg aspect-video flex items-center justify-center">
-                <span className="text-muted-foreground">Recovery Space {item}</span>
-              </div>
-            ))}
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img 
+                src="/lovable-uploads/86840907-ee69-4e5d-8a4c-4b3936ace326.png" 
+                alt="Red light therapy recovery room" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img 
+                src="/lovable-uploads/c7d99545-1023-4978-98cd-ec78ab0d58bc.png" 
+                alt="Recovery massage table area" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img 
+                src="/lovable-uploads/d5bd1570-1542-4706-8224-f1296e1f6dcb.png" 
+                alt="Recovery room with wooden lockers" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img 
+                src="/lovable-uploads/a3723427-0cb6-40ea-9408-28234f2f8fd1.png" 
+                alt="Sauna interior with wooden benches" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img 
+                src="/lovable-uploads/8fe03607-e67c-476a-b171-106162aea276.png" 
+                alt="Steamy sauna with ambient lighting" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img 
+                src="/lovable-uploads/b3cf33c3-11ae-445a-af1e-3fcc74831dcd.png" 
+                alt="Red light therapy session" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </section>
 
