@@ -10,7 +10,8 @@ const Home = () => {
       backgroundImage: `url('/lovable-uploads/fa3199e7-634e-40a9-84ce-a8160d03c596.png')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
+      backgroundRepeat: 'no-repeat',
+      filter: 'brightness(1.3)'
     }}>
       <div className="text-center space-y-9 max-w-3xl relative z-10">
         {/* Main Header Logo */}
