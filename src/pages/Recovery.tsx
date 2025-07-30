@@ -58,11 +58,17 @@ const Recovery = () => {
         {/* Hero Section */}
         <section className="text-center space-y-6">
           <h2 className="text-4xl md:text-5xl font-light text-foreground">Restore & Renew</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">Located next door to our Reformer Pilates studio, Renegade Recover is a purpose-built wellness suite offering contrast therapy for body, mind and muscle. Open to all members of the public aged 18 and over, it is an adults-only space designed for deep recovery and quiet reset.
-
-At the heart of the experience is a curated thermal circuit, featuring two distinct sauna options: a traditional coal-fired sauna for dry, penetrating heat, and an infrared carbon-panel sauna for gentle, muscle-targeted therapy.
-
- These are paired with cold plunge tanks, overhead bucket pulls and therapeutic showers to promote circulation, reduce inflammation and reset the nervous system. Whether used as a follow-on from a Pilates session next door or as a stand-alone visit, Renegade Recover offers a restorative contrast of hot and cold designed to help you decompress, restore balance and build long-term resilience.</p>
+          <div className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed space-y-6">
+            <p>
+              Located next door to our Reformer Pilates studio, Renegade Recover is a purpose-built wellness suite offering contrast therapy for body, mind and muscle. Open to all members of the public aged 18 and over, it is an adults-only space designed for deep recovery and quiet reset.
+            </p>
+            <p>
+              At the heart of the experience is a curated thermal circuit, featuring two distinct sauna options: a traditional coal-fired sauna for dry, penetrating heat, and an infrared carbon-panel sauna for gentle, muscle-targeted therapy.
+            </p>
+            <p>
+              These are paired with cold plunge tanks, overhead bucket pulls and therapeutic showers to promote circulation, reduce inflammation and reset the nervous system. Whether used as a follow-on from a Pilates session next door or as a stand-alone visit, Renegade Recover offers a restorative contrast of hot and cold designed to help you decompress, restore balance and build long-term resilience.
+            </p>
+          </div>
         </section>
 
         {/* Session Schedule */}
