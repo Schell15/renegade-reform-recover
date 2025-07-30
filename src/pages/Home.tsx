@@ -6,7 +6,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 relative overflow-hidden" style={{
+    <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 pt-16 relative overflow-hidden" style={{
       backgroundImage: `url('/lovable-uploads/fa3199e7-634e-40a9-84ce-a8160d03c596.png')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -60,9 +60,9 @@ const Home = () => {
       
       {/* Address Footer */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-black text-sm z-10">
-        <div>16 & 16a Emery Road</div>
-        <div>Brislington</div>
-        <div>Bristol</div>
+        <div>16 EMERY ROAD</div>
+        <div>BRISLINGTON</div>
+        <div>BRISTOL</div>
         <div>BS4 4PL</div>
       </div>
     </div>
