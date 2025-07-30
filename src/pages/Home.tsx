@@ -26,7 +26,7 @@ const Home = () => {
               aria-label="Navigate to Renegade Reformer"
             >
               <img 
-                src="/lovable-uploads/03f0b6f2-743f-409f-90aa-9a0555fcb526.png"
+                src="/lovable-uploads/46819078-6da9-4f35-a421-d42eaf3c72d1.png"
                 alt="Renegade Reformer Button"
                 className="w-full h-full object-contain"
               />
@@ -40,7 +40,7 @@ const Home = () => {
               aria-label="Navigate to Renegade Recovery"
             >
               <img 
-                src="/lovable-uploads/8d289788-c2c3-4401-bd4a-c7315fb85433.png"
+                src="/lovable-uploads/ef9fd42a-3bf0-4897-a169-ab84fa48363e.png"
                 alt="Renegade Recovery Button"
                 className="w-full h-full object-contain"
               />
