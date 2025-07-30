@@ -14,7 +14,7 @@ const Home = () => {
     }}>
       <div className="text-center space-y-12 max-w-4xl relative z-10">
         {/* Main Header Logo */}
-        <div className="mb-16">
+        <div className="mb-16 animate-fade-in animate-scale-in" style={{animationDelay: '0.2s'}}>
           <img 
             src="/lovable-uploads/cd778455-8416-4101-ab3b-2c4df8ab7221.png" 
             alt="Renegade Studios - reform. repower. recover" 
