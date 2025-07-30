@@ -1,0 +1,187 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+
+const Recovery = () => {
+  const navigate = useNavigate();
+
+  const sessionSchedule = [
+    { time: "9:00 AM", service: "Deep Tissue Massage", duration: "60 min", practitioner: "David" },
+    { time: "10:30 AM", service: "Sports Recovery", duration: "90 min", practitioner: "Emma" },
+    { time: "1:00 PM", service: "Therapeutic Massage", duration: "60 min", practitioner: "Lisa" },
+    { time: "2:30 PM", service: "Injury Rehabilitation", duration: "45 min", practitioner: "David" },
+    { time: "4:00 PM", service: "Relaxation Therapy", duration: "75 min", practitioner: "Emma" },
+  ];
+
+  return (
+    <div className="min-h-screen bg-background dark font-grotesk text-foreground">
+      {/* Header */}
+      <header className="py-6 px-4 border-b border-border">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <Button
+            variant="ghost"
+            onClick={() => navigate('/')}
+            className="flex items-center gap-2 text-foreground hover:bg-accent"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to Home
+          </Button>
+          <h1 className="text-2xl font-medium text-foreground">RENEGADE. recovery</h1>
+        </div>
+      </header>
+
+      <div className="max-w-7xl mx-auto px-4 py-12 space-y-16">
+        {/* Hero Section */}
+        <section className="text-center space-y-6">
+          <h2 className="text-4xl md:text-5xl font-light text-foreground">Restore & Renew</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Premium recovery services designed to optimize your performance and well-being. 
+            Experience therapeutic treatments in our serene, minimalist environment.
+          </p>
+        </section>
+
+        {/* Session Schedule */}
+        <section>
+          <h3 className="text-3xl font-light text-foreground mb-8 text-center">Session Schedule</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse bg-card rounded-lg overflow-hidden">
+              <thead>
+                <tr className="bg-muted">
+                  <th className="px-6 py-4 text-left font-medium text-foreground">Time</th>
+                  <th className="px-6 py-4 text-left font-medium text-foreground">Service</th>
+                  <th className="px-6 py-4 text-left font-medium text-foreground">Duration</th>
+                  <th className="px-6 py-4 text-left font-medium text-foreground">Practitioner</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sessionSchedule.map((session, index) => (
+                  <tr key={index} className="border-t border-border">
+                    <td className="px-6 py-4 text-foreground">{session.time}</td>
+                    <td className="px-6 py-4 text-foreground font-medium">{session.service}</td>
+                    <td className="px-6 py-4 text-muted-foreground">{session.duration}</td>
+                    <td className="px-6 py-4 text-foreground">{session.practitioner}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Practitioner Bio */}
+        <section className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <h3 className="text-3xl font-light text-foreground">Expert Practitioners</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Our team of licensed therapists and recovery specialists brings decades of combined 
+                experience in sports medicine, therapeutic massage, and holistic wellness.
+              </p>
+              <p>
+                Each practitioner is trained in multiple modalities, ensuring personalized treatment 
+                plans that address your specific recovery needs, whether you're an elite athlete 
+                or seeking relief from everyday stress.
+              </p>
+            </div>
+          </div>
+          <div className="bg-muted rounded-lg aspect-square flex items-center justify-center">
+            <span className="text-muted-foreground">Practitioner Photo Placeholder</span>
+          </div>
+        </section>
+
+        {/* Gallery */}
+        <section>
+          <h3 className="text-3xl font-light text-foreground mb-8 text-center">Recovery Space</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map((item) => (
+              <div key={item} className="bg-muted rounded-lg aspect-video flex items-center justify-center">
+                <span className="text-muted-foreground">Recovery Space {item}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Recovery Philosophy */}
+        <section className="text-center space-y-8">
+          <h3 className="text-3xl font-light text-foreground">Our Recovery Philosophy</h3>
+          <div className="max-w-4xl mx-auto space-y-6 text-muted-foreground leading-relaxed">
+            <p className="text-lg">
+              Recovery is not just about healing—it's about optimization. Our approach integrates 
+              cutting-edge recovery techniques with time-tested therapeutic practices to help you 
+              perform at your peak.
+            </p>
+            <p>
+              We believe in treating the whole person, not just symptoms. Every session is tailored 
+              to your unique needs, goals, and recovery timeline. Our serene environment promotes 
+              deep relaxation and accelerated healing.
+            </p>
+          </div>
+        </section>
+
+        {/* Location */}
+        <section>
+          <h3 className="text-3xl font-light text-foreground mb-8 text-center">Find Us</h3>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-4">
+              <h4 className="text-xl font-medium text-foreground">Location</h4>
+              <p className="text-muted-foreground">
+                Emery Road, Brislington<br />
+                Bristol, UK
+              </p>
+              <p className="text-muted-foreground">
+                Private entrance with dedicated parking. Appointment-only facility for your privacy and comfort.
+              </p>
+            </div>
+            <div className="bg-muted rounded-lg h-64 flex items-center justify-center">
+              <span className="text-muted-foreground">Google Maps - Emery Road, Brislington</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form */}
+        <section>
+          <h3 className="text-3xl font-light text-foreground mb-8 text-center">Book Your Session</h3>
+          <Card className="max-w-2xl mx-auto bg-card border-border">
+            <CardHeader>
+              <CardTitle className="text-center text-foreground">Contact Us</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="recovery-name" className="block text-sm font-medium text-foreground mb-2">
+                    Name
+                  </label>
+                  <Input id="recovery-name" placeholder="Your name" className="bg-background border-border" />
+                </div>
+                <div>
+                  <label htmlFor="recovery-email" className="block text-sm font-medium text-foreground mb-2">
+                    Email
+                  </label>
+                  <Input id="recovery-email" type="email" placeholder="your.email@example.com" className="bg-background border-border" />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="recovery-message" className="block text-sm font-medium text-foreground mb-2">
+                  Message
+                </label>
+                <Textarea 
+                  id="recovery-message" 
+                  placeholder="Tell us about your recovery goals and any specific concerns..."
+                  rows={5}
+                  className="bg-background border-border"
+                />
+              </div>
+              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" size="lg">
+                Send Message
+              </Button>
+            </CardContent>
+          </Card>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default Recovery;

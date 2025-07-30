@@ -18,7 +18,12 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'grotesk': ['Space Grotesk', 'sans-serif'],
+				'serif': ['Playfair Display', 'serif'],
+			},
 			colors: {
+				cream: 'hsl(var(--cream-bg))',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
