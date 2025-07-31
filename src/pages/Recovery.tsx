@@ -99,7 +99,7 @@ const Recovery = () => {
         {/* Practitioner Bio */}
         <section className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-3xl font-light text-foreground">Reclaim Your Energy. Renegade the Price.</h3>
+            <h3 className="text-3xl font-light text-foreground px-[13px]">Reclaim Your Energy. Renegade the Price.</h3>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <h4 className="text-xl font-medium text-foreground mb-4">Pricing</h4>
               
@@ -110,12 +110,7 @@ const Recovery = () => {
               <p>For clients attending Pilates classes at our Reformer studio next door, recovery access can be added at a discounted rate of £4, provided it is pre-purchased at the time of booking.</p>
 
               <p>Discounted membership packages and multi-session passes are available. Full details can be found below.</p>
-              <p>For clients attending Pilates classes at our Reformer studio next door, recovery access can be added at a discounted rate of £4, provided it is pre-purchased at the time of booking.
-
-
-
-
-Discounted membership packages and multi-session passes are available. Full details can be found below.</p>
+              
             </div>
           </div>
           <div className="bg-muted rounded-lg aspect-square flex items-center justify-center">
