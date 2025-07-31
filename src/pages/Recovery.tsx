@@ -45,6 +45,53 @@ const Recovery = () => {
           </div>
         </section>
 
+        {/* Gallery */}
+        <section>
+          <h3 className="text-3xl font-light text-foreground mb-8 text-center">Recovery Space</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img src="/lovable-uploads/86840907-ee69-4e5d-8a4c-4b3936ace326.png" alt="Red light therapy recovery room" className="w-full h-full object-cover" />
+            </div>
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img src="/lovable-uploads/c7d99545-1023-4978-98cd-ec78ab0d58bc.png" alt="Recovery massage table area" className="w-full h-full object-cover" />
+            </div>
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img src="/lovable-uploads/d5bd1570-1542-4706-8224-f1296e1f6dcb.png" alt="Recovery room with wooden lockers" className="w-full h-full object-cover" />
+            </div>
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img src="/lovable-uploads/a3723427-0cb6-40ea-9408-28234f2f8fd1.png" alt="Sauna interior with wooden benches" className="w-full h-full object-cover" />
+            </div>
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img src="/lovable-uploads/8fe03607-e67c-476a-b171-106162aea276.png" alt="Steamy sauna with ambient lighting" className="w-full h-full object-cover" />
+            </div>
+            <div className="rounded-lg aspect-video overflow-hidden">
+              <img src="/lovable-uploads/b3cf33c3-11ae-445a-af1e-3fcc74831dcd.png" alt="Red light therapy session" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </section>
+
+        {/* Practitioner Bio */}
+        <section className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <h3 className="text-3xl font-light text-foreground px-[13px]">Reclaim Your Energy. Renegade the Price.</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <h4 className="text-xl font-medium text-foreground mb-4">Pricing</h4>
+              
+              <p>Access to Renegade Recover is simple and transparent. A flat entry fee of £15 grants you access to one of only 12 strictly limited spaces per hour. We recommend a 60-minute visit to allow for up to four full cycles of contrast therapy across our traditional coal sauna, infrared sauna, cold plunge tanks, bucket pulls and showers. This structure ensures a balanced, safe and restorative session.</p>
+
+              <p>We deliberately limit capacity to avoid overcrowding, giving each visitor the space and tranquillity to engage with the facilities in a calm, non-intrusive environment.</p>
+
+              <p>For clients attending Pilates classes at our Reformer studio next door, recovery access can be added at a discounted rate of £4, provided it is pre-purchased at the time of booking.</p>
+
+              <p>Discounted membership packages and multi-session passes are available. Full details can be found below.</p>
+              
+            </div>
+          </div>
+          <div className="bg-muted rounded-lg aspect-square flex items-center justify-center">
+            <span className="text-muted-foreground">Practitioner Photo Placeholder</span>
+          </div>
+        </section>
+
         {/* Flexible Session Bundles */}
         <section>
           <h3 className="text-3xl font-light text-foreground mb-8 text-center">Flexible Session Bundles</h3>
@@ -99,53 +146,6 @@ const Recovery = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </section>
-
-        {/* Practitioner Bio */}
-        <section className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h3 className="text-3xl font-light text-foreground px-[13px]">Reclaim Your Energy. Renegade the Price.</h3>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <h4 className="text-xl font-medium text-foreground mb-4">Pricing</h4>
-              
-              <p>Access to Renegade Recover is simple and transparent. A flat entry fee of £15 grants you access to one of only 12 strictly limited spaces per hour. We recommend a 60-minute visit to allow for up to four full cycles of contrast therapy across our traditional coal sauna, infrared sauna, cold plunge tanks, bucket pulls and showers. This structure ensures a balanced, safe and restorative session.</p>
-
-              <p>We deliberately limit capacity to avoid overcrowding, giving each visitor the space and tranquillity to engage with the facilities in a calm, non-intrusive environment.</p>
-
-              <p>For clients attending Pilates classes at our Reformer studio next door, recovery access can be added at a discounted rate of £4, provided it is pre-purchased at the time of booking.</p>
-
-              <p>Discounted membership packages and multi-session passes are available. Full details can be found below.</p>
-              
-            </div>
-          </div>
-          <div className="bg-muted rounded-lg aspect-square flex items-center justify-center">
-            <span className="text-muted-foreground">Practitioner Photo Placeholder</span>
-          </div>
-        </section>
-
-        {/* Gallery */}
-        <section>
-          <h3 className="text-3xl font-light text-foreground mb-8 text-center">Recovery Space</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="rounded-lg aspect-video overflow-hidden">
-              <img src="/lovable-uploads/86840907-ee69-4e5d-8a4c-4b3936ace326.png" alt="Red light therapy recovery room" className="w-full h-full object-cover" />
-            </div>
-            <div className="rounded-lg aspect-video overflow-hidden">
-              <img src="/lovable-uploads/c7d99545-1023-4978-98cd-ec78ab0d58bc.png" alt="Recovery massage table area" className="w-full h-full object-cover" />
-            </div>
-            <div className="rounded-lg aspect-video overflow-hidden">
-              <img src="/lovable-uploads/d5bd1570-1542-4706-8224-f1296e1f6dcb.png" alt="Recovery room with wooden lockers" className="w-full h-full object-cover" />
-            </div>
-            <div className="rounded-lg aspect-video overflow-hidden">
-              <img src="/lovable-uploads/a3723427-0cb6-40ea-9408-28234f2f8fd1.png" alt="Sauna interior with wooden benches" className="w-full h-full object-cover" />
-            </div>
-            <div className="rounded-lg aspect-video overflow-hidden">
-              <img src="/lovable-uploads/8fe03607-e67c-476a-b171-106162aea276.png" alt="Steamy sauna with ambient lighting" className="w-full h-full object-cover" />
-            </div>
-            <div className="rounded-lg aspect-video overflow-hidden">
-              <img src="/lovable-uploads/b3cf33c3-11ae-445a-af1e-3fcc74831dcd.png" alt="Red light therapy session" className="w-full h-full object-cover" />
-            </div>
           </div>
         </section>
 
