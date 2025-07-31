@@ -87,8 +87,8 @@ const Recovery = () => {
               
             </div>
           </div>
-          <div className="bg-muted rounded-lg aspect-square flex items-center justify-center">
-            <span className="text-muted-foreground">Practitioner Photo Placeholder</span>
+          <div className="rounded-lg aspect-square overflow-hidden">
+            <img src="/lovable-uploads/d995e283-945b-4021-ad4a-9b8396930652.png" alt="Renegade Recovery Practitioner" className="w-full h-full object-cover" />
           </div>
         </section>
 
