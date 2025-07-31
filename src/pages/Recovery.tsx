@@ -101,24 +101,15 @@ const Recovery = () => {
           <div className="space-y-6">
             <h3 className="text-3xl font-light text-foreground">Reclaim Your Energy. Renegade the Price.</h3>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>Pricing
+              <h4 className="text-xl font-medium text-foreground mb-4">Pricing</h4>
+              
+              <p>Access to Renegade Recover is simple and transparent. A flat entry fee of £15 grants you access to one of only 12 strictly limited spaces per hour. We recommend a 60-minute visit to allow for up to four full cycles of contrast therapy across our traditional coal sauna, infrared sauna, cold plunge tanks, bucket pulls and showers. This structure ensures a balanced, safe and restorative session.</p>
 
-Access to Renegade Recover is simple and transparent. A flat entry fee of £15 grants you access to one of only 12 strictly limited spaces per hour. We recommend a 60-minute visit to allow for up to four full cycles of contrast therapy across our traditional coal sauna, infrared sauna, cold plunge tanks, bucket pulls and showers. This structure ensures a balanced, safe and restorative session.
+              <p>We deliberately limit capacity to avoid overcrowding, giving each visitor the space and tranquillity to engage with the facilities in a calm, non-intrusive environment.</p>
 
+              <p>For clients attending Pilates classes at our Reformer studio next door, recovery access can be added at a discounted rate of £4, provided it is pre-purchased at the time of booking.</p>
 
-
-
-We deliberately limit capacity to avoid overcrowding, giving each visitor the space and tranquillity to engage with the facilities in a calm, non-intrusive environment.
-
-
-
-
-For clients attending Pilates classes at our Reformer studio next door, recovery access can be added at a discounted rate of £4, provided it is pre-purchased at the time of booking.
-
-
-
-
-Discounted membership packages and multi-session passes are available. Full details can be found below.</p>
+              <p>Discounted membership packages and multi-session passes are available. Full details can be found below.</p>
               <p>For clients attending Pilates classes at our Reformer studio next door, recovery access can be added at a discounted rate of £4, provided it is pre-purchased at the time of booking.
 
 
