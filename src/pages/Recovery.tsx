@@ -152,16 +152,8 @@ Discounted membership packages and multi-session passes are available. Full deta
         <section className="text-center space-y-8">
           <h3 className="text-3xl font-light text-foreground">Our Recovery Philosophy</h3>
           <div className="max-w-4xl mx-auto space-y-6 text-muted-foreground leading-relaxed">
-            <p className="text-lg">
-              Recovery is not just about healing—it's about optimization. Our approach integrates 
-              cutting-edge recovery techniques with time-tested therapeutic practices to help you 
-              perform at your peak.
-            </p>
-            <p>
-              We believe in treating the whole person, not just symptoms. Every session is tailored 
-              to your unique needs, goals, and recovery timeline. Our serene environment promotes 
-              deep relaxation and accelerated healing.
-            </p>
+            <p className="text-lg">At Renegade Recovery, we believe recovery is not a luxury — it’s a vital part of sustainable wellbeing. True strength is built not just in movement, but in the moments we slow down, reset and reconnect with ourselves. </p>
+            <p>Through contrast therapy, we harness the science of heat and cold to restore balance to the body, regulate the nervous system, and create space for both physical and mental clarity. Whether you’ve just trained or simply need a pause from daily intensity, our recovery suite is designed to help you feel centred, recharged and ready to go again.</p>
           </div>
         </section>
 
