@@ -159,15 +159,27 @@ const Recovery = () => {
             <div className="space-y-4">
               <h4 className="text-xl font-medium text-foreground">Location</h4>
               <p className="text-muted-foreground">
-                Emery Road, Brislington<br />
-                Bristol, UK
+                Renegade Studios<br />
+                16 Emery Road<br />
+                Brislington<br />
+                Bristol<br />
+                BS4 5PL
               </p>
               <p className="text-muted-foreground">
                 Private entrance with dedicated parking. Appointment-only facility for your privacy and comfort.
               </p>
             </div>
-            <div className="bg-muted rounded-lg h-64 flex items-center justify-center">
-              <span className="text-muted-foreground">Google Maps - Emery Road, Brislington</span>
+            <div className="rounded-lg h-64 overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.089644!2d-2.5394!3d51.4301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48718e7f1e9b8f7f%3A0x1e9b8f7f1e9b8f7f!2s16%20Emery%20Rd%2C%20Brislington%2C%20Bristol%20BS4%205PL!5e0!3m2!1sen!2suk!4v1635785892000!5m2!1sen!2suk&style=feature:all|element:geometry|color:0x242f3e&style=feature:all|element:labels.text.stroke|color:0x242f3e&style=feature:all|element:labels.text.fill|color:0x746855&style=feature:administrative.locality|element:labels.text.fill|color:0xd59563&style=feature:poi|element:labels.text.fill|color:0xd59563&style=feature:poi.park|element:geometry|color:0x263c3f&style=feature:poi.park|element:labels.text.fill|color:0x6b9a76&style=feature:road|element:geometry|color:0x38414e&style=feature:road|element:geometry.stroke|color:0x212a37&style=feature:road|element:labels.text.fill|color:0x9ca5b3&style=feature:road.highway|element:geometry|color:0x746855&style=feature:road.highway|element:geometry.stroke|color:0x1f2835&style=feature:road.highway|element:labels.text.fill|color:0xf3d19c&style=feature:transit|element:geometry|color:0x2f3948&style=feature:transit.station|element:labels.text.fill|color:0xd59563&style=feature:water|element:geometry|color:0x17263c&style=feature:water|element:labels.text.fill|color:0x515c6d&style=feature:water|element:labels.text.stroke|color:0x17263c"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Renegade Studios Location"
+              />
             </div>
           </div>
         </section>
