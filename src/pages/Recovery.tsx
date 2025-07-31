@@ -6,32 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 const Recovery = () => {
   const navigate = useNavigate();
-  const sessionSchedule = [{
-    time: "9:00 AM",
-    service: "Deep Tissue Massage",
-    duration: "60 min",
-    practitioner: "David"
-  }, {
-    time: "10:30 AM",
-    service: "Sports Recovery",
-    duration: "90 min",
-    practitioner: "Emma"
-  }, {
-    time: "1:00 PM",
-    service: "Therapeutic Massage",
-    duration: "60 min",
-    practitioner: "Lisa"
-  }, {
-    time: "2:30 PM",
-    service: "Injury Rehabilitation",
-    duration: "45 min",
-    practitioner: "David"
-  }, {
-    time: "4:00 PM",
-    service: "Relaxation Therapy",
-    duration: "75 min",
-    practitioner: "Emma"
-  }];
   return <div className="min-h-screen bg-background dark font-grotesk text-foreground">
       {/* Header */}
       <header className="py-6 px-4 border-b border-border">
@@ -71,28 +45,60 @@ const Recovery = () => {
           </div>
         </section>
 
-        {/* Session Schedule */}
+        {/* Flexible Session Bundles */}
         <section>
-          <h3 className="text-3xl font-light text-foreground mb-8 text-center">Session Schedule</h3>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse bg-card rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-muted">
-                  <th className="px-6 py-4 text-left font-medium text-foreground">Time</th>
-                  <th className="px-6 py-4 text-left font-medium text-foreground">Service</th>
-                  <th className="px-6 py-4 text-left font-medium text-foreground">Duration</th>
-                  <th className="px-6 py-4 text-left font-medium text-foreground">Practitioner</th>
-                </tr>
-              </thead>
-              <tbody>
-                {sessionSchedule.map((session, index) => <tr key={index} className="border-t border-border">
-                    <td className="px-6 py-4 text-foreground">{session.time}</td>
-                    <td className="px-6 py-4 text-foreground font-medium">{session.service}</td>
-                    <td className="px-6 py-4 text-muted-foreground">{session.duration}</td>
-                    <td className="px-6 py-4 text-foreground">{session.practitioner}</td>
-                  </tr>)}
-              </tbody>
-            </table>
+          <h3 className="text-3xl font-light text-foreground mb-8 text-center">Flexible Session Bundles</h3>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Single Drop-In */}
+            <Card className="bg-card border-border text-center">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-2xl font-light text-foreground">Single Drop-In</CardTitle>
+                <div className="text-3xl font-medium text-foreground mt-2">£15</div>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="text-muted-foreground space-y-2">
+                  <p>• 1-hour session</p>
+                  <p>• Access to all contrast therapy zones</p>
+                  <p>• Book anytime within available slots</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* 5-Session Bundle */}
+            <Card className="bg-card border-border text-center">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-2xl font-light text-foreground">5-Session Bundle</CardTitle>
+                <div className="text-3xl font-medium text-foreground mt-2">£60</div>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="text-muted-foreground space-y-2">
+                  <p>• Save £15 (£12 per session)</p>
+                  <p>• Valid for 3 months</p>
+                  <p>• Ideal for casual but returning guests</p>
+                </div>
+                <div className="pt-4 text-center">
+                  <span className="text-sm text-muted-foreground">⸻</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* 10-Session Bundle */}
+            <Card className="bg-card border-border text-center">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-2xl font-light text-foreground">10-Session Bundle</CardTitle>
+                <div className="text-3xl font-medium text-foreground mt-2">£100</div>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="text-muted-foreground space-y-2">
+                  <p>• Save £50 (£10 per session)</p>
+                  <p>• Valid for 6 months</p>
+                  <p>• Best value for regulars who don't want monthly commitments</p>
+                </div>
+                <div className="pt-4 text-center">
+                  <span className="text-sm text-muted-foreground">⸻</span>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
