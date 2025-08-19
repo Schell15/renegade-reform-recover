@@ -42,7 +42,7 @@ const Home = () => {
           <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button onClick={() => navigate('/reformer-signup')} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Reformer">
               <div className="text-primary font-neogrotesk text-lg font-bold tracking-wider">RENEGADE.</div>
-              <div className="text-primary font-rosaline text-sm tracking-wider -mt-1 ml-8">reformer</div>
+              <div className="text-primary font-rosaline text-sm tracking-wider -mt-1 ml-12">reformer</div>
             </button>
           </div>
           
@@ -52,7 +52,7 @@ const Home = () => {
           <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button onClick={() => navigate('/recover')} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Recovery">
               <div className="text-primary font-neogrotesk text-lg font-bold tracking-wider">RENEGADE.</div>
-              <div className="text-primary font-rosaline text-sm tracking-wider -mt-1 ml-8">recover</div>
+              <div className="text-primary font-rosaline text-sm tracking-wider -mt-1 ml-10">recover</div>
             </button>
           </div>
         </div>
