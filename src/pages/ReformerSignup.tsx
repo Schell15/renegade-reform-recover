@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,6 +12,17 @@ const ReformerSignup = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useEffect(() => {
+    // Load Tally embed script
+    const script = document.createElement('script');
+    script.innerHTML = `var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}`;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -120,59 +131,33 @@ const ReformerSignup = () => {
           </div>
         </div>
 
-        {/* Signup Form */}
+        {/* Tally Signup Form */}
         <div className="max-w-md mx-auto w-full">
-          <Card className="bg-background/80 backdrop-blur-sm border-2 border-primary">
-            <CardContent className="p-6">
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-primary font-neogrotesk tracking-wider">Name</Label>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="Enter your name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="bg-background border-primary text-primary placeholder:text-primary/60"
-                    required
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-primary font-neogrotesk tracking-wider">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="bg-background border-primary text-primary placeholder:text-primary/60"
-                    required
-                  />
-                </div>
+          <div className="bg-background/80 backdrop-blur-sm border-2 border-primary rounded-lg p-6">
+            <iframe 
+              data-tally-src="https://tally.so/embed/wdMvVD?transparentBackground=1&dynamicHeight=1" 
+              loading="lazy" 
+              width="100%" 
+              height={253} 
+              frameBorder={0} 
+              marginHeight={0} 
+              marginWidth={0} 
+              title="For those who move first. Join the Renegade Below."
+              className="rounded-lg"
+            ></iframe>
+          </div>
 
-                <div className="pt-4">
-                  <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
-                    <button type="submit" className="w-full h-16 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Get Notified">
-                      <div className="text-primary font-neogrotesk text-base font-bold tracking-wider">NOTIFY ME</div>
-                      <div className="text-primary font-rosaline text-xs tracking-wider -mt-1 ml-6">when live</div>
-                    </button>
-                  </div>
-                </div>
-              </form>
-
-              <div className="mt-6 text-center">
-                <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
-                  <button onClick={() => navigate('/')} className="w-full h-16 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Back to Home">
-                    <div className="text-primary font-neogrotesk text-base font-bold tracking-wider">BACK TO</div>
-                    <div className="text-primary font-rosaline text-xs tracking-wider -mt-1 ml-6">home</div>
-                  </button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="mt-6 text-center">
+            <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
+              <button onClick={() => navigate('/')} className="w-full h-16 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Back to Home">
+                <div className="text-primary font-neogrotesk text-base font-bold tracking-wider">BACK TO</div>
+                <div className="text-primary font-rosaline text-xs tracking-wider -mt-1 ml-6">home</div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
   );
 };
