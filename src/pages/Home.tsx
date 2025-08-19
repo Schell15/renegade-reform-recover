@@ -52,7 +52,7 @@ const Home = () => {
           <div className="hidden sm:block w-0.5 h-20 bg-primary"></div>
           
           <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
-            <button onClick={() => toast({ title: "coming 2026" })} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Recovery">
+            <button onClick={() => toast({ title: "Coming 2026." })} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Recovery">
               <div className="text-primary font-neogrotesk text-lg font-bold tracking-wider">RENEGADE.</div>
               <div className="text-primary font-rosaline text-sm tracking-wider -mt-1 ml-14">recover</div>
             </button>
