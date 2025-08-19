@@ -13,7 +13,7 @@ const Home = () => {
           {/* White Eagle Logo */}
           <div className="mb-6">
             <img 
-              src="/lovable-uploads/6d24f46b-0611-475f-b70f-81f24ce0e64d.png" 
+              src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" 
               alt="Renegade Studios Eagle Logo" 
               className="w-20 h-20 mx-auto object-contain"
             />
