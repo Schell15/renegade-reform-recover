@@ -21,10 +21,10 @@ const Home = () => {
           
           {/* Studio Name */}
           <div className="mb-4">
-            <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-wider mb-1">
+            <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-wider">
               RENEGADE.
             </h1>
-            <h2 className="text-primary font-neogrotesk text-xl sm:text-3xl font-bold tracking-wider">
+            <h2 className="text-primary font-neogrotesk text-xl sm:text-3xl font-bold tracking-wider -mt-4">
               STUDIOS.
             </h2>
           </div>
