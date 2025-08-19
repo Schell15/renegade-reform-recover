@@ -51,17 +51,19 @@ const Home = () => {
 
         {/* Tally Signup Form */}
         <div className="w-full max-w-lg mx-auto mb-8">
-          <iframe 
-            data-tally-src="https://tally.so/embed/wdMvVD?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
-            loading="lazy" 
-            width="100%" 
-            height="216" 
-            frameBorder="0" 
-            marginHeight={0} 
-            marginWidth={0} 
-            title="For those who move first. Join the Renegade Below."
-            className="border-0"
-          />
+          <div className="bg-gray-900/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+            <iframe 
+              data-tally-src="https://tally.so/embed/wdMvVD?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
+              loading="lazy" 
+              width="100%" 
+              height="216" 
+              frameBorder="0" 
+              marginHeight={0} 
+              marginWidth={0} 
+              title="For those who move first. Join the Renegade Below."
+              className="border-0 rounded-lg"
+            />
+          </div>
         </div>
 
         {/* Navigation Buttons */}
