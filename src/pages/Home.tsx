@@ -15,13 +15,13 @@ const Home = () => {
             <img 
               src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" 
               alt="Renegade Studios Eagle Logo" 
-              className="w-42 h-42 mx-auto object-contain"
+              className="w-60 h-60 mx-auto object-contain"
             />
           </div>
           
           {/* Studio Name */}
           <div className="mb-4">
-            <h1 className="text-primary font-grotesk text-3xl sm:text-4xl font-bold tracking-wider">
+            <h1 className="text-primary font-grotesk text-2xl sm:text-3xl font-bold tracking-wider">
               RENEGADE<br />STUDIOS.
             </h1>
           </div>
