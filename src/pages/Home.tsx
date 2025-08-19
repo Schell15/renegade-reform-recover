@@ -10,7 +10,28 @@ const Home = () => {
         <div className="mb-10 animate-fade-in animate-scale-in" style={{
         animationDelay: '0.2s'
       }}>
+          {/* White Eagle Logo */}
+          <div className="mb-6">
+            <img 
+              src="/lovable-uploads/9d9f45ed-05ad-49f2-92ab-572f5448c9c2.png" 
+              alt="Renegade Studios Eagle Logo" 
+              className="w-20 h-20 mx-auto object-contain"
+            />
+          </div>
           
+          {/* Studio Name */}
+          <div className="mb-4">
+            <h1 className="text-primary font-grotesk text-2xl sm:text-3xl font-bold tracking-wider">
+              RENEGADE<br />STUDIOS.
+            </h1>
+          </div>
+          
+          {/* Tagline */}
+          <div className="mb-8">
+            <p className="text-primary font-grotesk text-sm sm:text-base tracking-wider">
+              reform . repower. recover
+            </p>
+          </div>
         </div>
 
         {/* Navigation Buttons */}
