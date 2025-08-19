@@ -21,6 +21,8 @@ export default {
 			fontFamily: {
 				'grotesk': ['Space Grotesk', 'sans-serif'],
 				'serif': ['Playfair Display', 'serif'],
+				'neogrotesk': ['Neogrotesk', 'sans-serif'],
+				'rosaline': ['Rosaline', 'serif'],
 			},
 			colors: {
 				cream: 'hsl(var(--cream-bg))',
