@@ -1,35 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
-import { useEffect } from "react";
 
 // Updated to use direct image paths
 const Home = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
-
-  useEffect(() => {
-    // Load Tally embed script if not already loaded
-    if (!document.querySelector('script[src="https://tally.so/widgets/embed.js"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://tally.so/widgets/embed.js';
-      script.onload = () => {
-        if (typeof (window as any).Tally !== 'undefined') {
-          (window as any).Tally.loadEmbeds();
-        } else {
-          document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach((iframe) => {
-            (iframe as HTMLIFrameElement).src = (iframe as HTMLElement).dataset.tallySrc || '';
-          });
-        }
-      };
-      script.onerror = () => {
-        document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach((iframe) => {
-          (iframe as HTMLIFrameElement).src = (iframe as HTMLElement).dataset.tallySrc || '';
-        });
-      };
-      document.body.appendChild(script);
-    }
-  }, []);
 
   return (
     <div className="min-h-screen font-grotesk flex flex-col items-center justify-between px-4 py-8 relative overflow-hidden" style={{
@@ -47,24 +23,6 @@ const Home = () => {
             alt="Renegade Studios - reform. repower. recover" 
             className="mx-auto w-full max-w-lg h-auto object-contain"
           />
-        </div>
-
-        {/* Tally Signup Form */}
-        <div className="w-full max-w-lg mx-auto mb-8">
-          <div className="rounded-xl p-6 shadow-lg relative" style={{ backgroundColor: '#5d4a45' }}>
-            <iframe 
-              data-tally-src="https://tally.so/embed/wdMvVD?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
-              loading="lazy" 
-              width="100%" 
-              height="216" 
-              frameBorder="0" 
-              marginHeight={0} 
-              marginWidth={0} 
-              title="For those who move first. Join the Renegade Below."
-              className="border-0 rounded-lg relative z-10"
-              style={{ backgroundColor: 'transparent' }}
-            />
-          </div>
         </div>
 
         {/* Navigation Buttons */}
