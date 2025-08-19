@@ -15,7 +15,7 @@ const Home = () => {
             <img 
               src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" 
               alt="Renegade Studios Eagle Logo" 
-              className="w-30 h-30 mx-auto object-contain"
+              className="w-32 h-32 mx-auto object-contain"
             />
           </div>
           
