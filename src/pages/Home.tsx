@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 // Updated to use direct image paths
 const Home = () => {
   const navigate = useNavigate();
+  const { toast } = useToast();
 
   return (
     <div className="min-h-screen font-grotesk flex flex-col items-center justify-between px-4 py-8 relative overflow-hidden" style={{
@@ -27,7 +29,10 @@ const Home = () => {
         <div className="flex flex-col sm:flex-row gap-10 justify-center items-center">
           <div className="border-2 border-black transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button
-              onClick={() => navigate('/reformer')}
+              onClick={() => toast({
+                title: "Coming Soon!",
+                description: "Renegade Reformer will be available soon. Check back later!",
+              })}
               className="w-[200px] h-20 p-0 border-0 bg-transparent"
               aria-label="Navigate to Renegade Reformer"
             >
@@ -44,7 +49,10 @@ const Home = () => {
           
           <div className="border-2 border-black transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button
-              onClick={() => navigate('/recover')}
+              onClick={() => toast({
+                title: "Coming Soon!",
+                description: "Renegade Recovery will be available soon. Check back later!",
+              })}
               className="w-[200px] h-20 p-0 border-0 bg-transparent"
               aria-label="Navigate to Renegade Recovery"
             >
