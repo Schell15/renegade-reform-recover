@@ -149,9 +149,8 @@ const ReformerSignup = () => {
 
           <div className="mt-6 text-center">
             <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
-              <button onClick={() => navigate('/')} className="w-full h-16 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Back to Home">
-                <div className="text-primary font-neogrotesk text-base font-bold tracking-wider">BACK TO</div>
-                <div className="text-primary font-rosaline text-xs tracking-wider -mt-1 ml-6">home</div>
+              <button onClick={() => navigate('/')} className="w-full h-16 p-4 border-0 bg-transparent flex justify-center items-center relative" aria-label="Back to Home">
+                <div className="text-primary font-neogrotesk text-base font-bold tracking-wider">BACK TO HOME.</div>
               </button>
             </div>
           </div>
