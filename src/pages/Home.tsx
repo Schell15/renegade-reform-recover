@@ -51,7 +51,7 @@ const Home = () => {
 
         {/* Tally Signup Form */}
         <div className="w-full max-w-lg mx-auto mb-8">
-          <div className="bg-gray-900/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+          <div className="bg-amber-900/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
             <iframe 
               data-tally-src="https://tally.so/embed/wdMvVD?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
               loading="lazy" 
