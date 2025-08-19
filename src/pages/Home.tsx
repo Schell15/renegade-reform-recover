@@ -24,13 +24,13 @@ const Home = () => {
             <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-wider">
               RENEGADE.
             </h1>
-            <h2 className="text-primary font-neogrotesk text-xl sm:text-3xl font-bold tracking-wider -mt-4">
+            <h2 className="text-primary font-neogrotesk text-xl sm:text-3xl font-bold tracking-wider -mt-2">
               STUDIOS.
             </h2>
           </div>
           
           {/* Tagline */}
-          <div className="mb-8">
+          <div className="mb-4">
             <p className="text-primary font-rosaline text-base sm:text-xl tracking-wider">
               reform . repower. recover
             </p>
