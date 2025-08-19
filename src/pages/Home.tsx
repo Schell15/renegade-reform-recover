@@ -51,7 +51,7 @@ const Home = () => {
 
         {/* Tally Signup Form */}
         <div className="w-full max-w-lg mx-auto mb-8">
-          <div className="bg-amber-900/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+          <div className="rounded-xl p-6 shadow-lg relative" style={{ backgroundColor: '#5d4a45' }}>
             <iframe 
               data-tally-src="https://tally.so/embed/wdMvVD?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" 
               loading="lazy" 
@@ -61,7 +61,8 @@ const Home = () => {
               marginHeight={0} 
               marginWidth={0} 
               title="For those who move first. Join the Renegade Below."
-              className="border-0 rounded-lg"
+              className="border-0 rounded-lg relative z-10"
+              style={{ backgroundColor: 'transparent' }}
             />
           </div>
         </div>
