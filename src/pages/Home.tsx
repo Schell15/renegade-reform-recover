@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 // Updated to use direct image paths
 const Home = () => {
   const navigate = useNavigate();
+  const { toast } = useToast();
   return <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden bg-background">
       <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
         {/* Main Header Logo */}
@@ -50,7 +52,7 @@ const Home = () => {
           <div className="hidden sm:block w-0.5 h-20 bg-primary"></div>
           
           <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
-            <button onClick={() => navigate('/recover')} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Recovery">
+            <button onClick={() => toast({ title: "coming 2026" })} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Recovery">
               <div className="text-primary font-neogrotesk text-lg font-bold tracking-wider">RENEGADE.</div>
               <div className="text-primary font-rosaline text-sm tracking-wider -mt-1 ml-14">recover</div>
             </button>
