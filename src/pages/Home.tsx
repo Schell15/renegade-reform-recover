@@ -21,14 +21,14 @@ const Home = () => {
           
           {/* Studio Name */}
           <div className="mb-4">
-            <h1 className="text-primary font-grotesk text-2xl sm:text-3xl font-bold tracking-wider">
+            <h1 className="text-primary font-neogrotesk text-2xl sm:text-3xl font-bold tracking-wider">
               RENEGADE<br />STUDIOS.
             </h1>
           </div>
           
           {/* Tagline */}
           <div className="mb-8">
-            <p className="text-primary font-grotesk text-sm sm:text-base tracking-wider">
+            <p className="text-primary font-rosaline text-sm sm:text-base tracking-wider">
               reform . repower. recover
             </p>
           </div>
