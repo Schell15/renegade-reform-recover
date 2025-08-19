@@ -124,7 +124,7 @@ const ReformerSignup = () => {
           </div>
           
           {/* Tagline */}
-          <div className="mb-8">
+          <div className="mb-4">
             <p className="text-primary font-rosaline text-base sm:text-xl tracking-wider">
               A divinely powerful approach to pilates
             </p>
