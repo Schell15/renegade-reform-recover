@@ -21,7 +21,7 @@ const Home = () => {
           
           {/* Studio Name */}
           <div className="mb-4">
-            <h1 className="text-primary font-neogrotesk text-2xl sm:text-3xl font-bold tracking-wider">
+            <h1 className="text-primary font-neogrotesk text-3xl sm:text-5xl font-bold tracking-wider">
               RENEGADE<br />STUDIOS.
             </h1>
           </div>
