@@ -27,7 +27,7 @@ const Home = () => {
         <div className="flex flex-col sm:flex-row gap-10 justify-center items-center">
           <div className="border-2 border-black transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button
-              onClick={() => navigate('/reformer')}
+              onClick={() => navigate('/reformer-signup')}
               className="w-[200px] h-20 p-0 border-0 bg-transparent"
               aria-label="Navigate to Renegade Reformer"
             >

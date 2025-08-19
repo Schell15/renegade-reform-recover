@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Reformer from "./pages/Reformer";
+import ReformerSignup from "./pages/ReformerSignup";
 import Recovery from "./pages/Recovery";
 import NotFound from "./pages/NotFound";
 
@@ -18,6 +19,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/reformer-signup" element={<ReformerSignup />} />
           <Route path="/reformer" element={<Reformer />} />
           <Route path="/recover" element={<Recovery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
