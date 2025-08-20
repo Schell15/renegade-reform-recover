@@ -70,12 +70,12 @@ const ReformerSignup = () => {
             
             {/* Studio Name */}
             <div className="mb-4">
-              <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-wider">
-                RENEGADE.
-              </h1>
-              <h2 className="text-primary font-neogrotesk text-xl sm:text-3xl font-bold tracking-wider -mt-2">
-                STUDIOS.
-              </h2>
+            <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
+              RENEGADE.
+            </h1>
+            <h2 className="text-primary font-neogrotesk text-xl sm:text-3xl font-bold tracking-tight -mt-2">
+              STUDIOS.
+            </h2>
             </div>
             
             {/* Thank you message */}
@@ -127,10 +127,10 @@ const ReformerSignup = () => {
           
           {/* Studio Name */}
           <div className="mb-4">
-            <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-wider">
+            <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
               RENEGADE.
             </h1>
-            <h2 className="text-primary font-neogrotesk text-xl sm:text-3xl font-bold tracking-wider -mt-2">
+            <h2 className="text-primary font-neogrotesk text-xl sm:text-3xl font-bold tracking-tight -mt-2">
               REFORMER.
             </h2>
           </div>
