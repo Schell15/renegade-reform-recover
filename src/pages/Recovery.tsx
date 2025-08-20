@@ -20,7 +20,17 @@ const Recovery = () => {
 
       {/* Logo Section */}
       <section className="text-center py-8">
-        <img src="/lovable-uploads/6d24f46b-0611-475f-b70f-81f24ce0e64d.png" alt="Renegade Recovery Logo" className="mx-auto max-w-md w-full h-auto animate-fade-in" />
+        <button 
+          onClick={() => navigate('/')} 
+          className="mx-auto block transition-transform hover:scale-105"
+          aria-label="Back to Home"
+        >
+          <img 
+            src="/lovable-uploads/6d24f46b-0611-475f-b70f-81f24ce0e64d.png" 
+            alt="Renegade Recovery Logo" 
+            className="mx-auto max-w-md w-full h-auto animate-fade-in cursor-pointer"
+          />
+        </button>
       </section>
 
       {/* Separator Line */}
