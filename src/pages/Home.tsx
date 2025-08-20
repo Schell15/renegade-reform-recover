@@ -40,7 +40,7 @@ const Home = () => {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex flex-col sm:flex-row gap-10 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-10 justify-center items-center -mt-5">
           <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button onClick={() => navigate('/reformer-signup')} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Reformer">
               <div className="text-primary font-neogrotesk text-lg font-bold tracking-wider">RENEGADE.</div>
@@ -57,6 +57,13 @@ const Home = () => {
               <div className="text-primary font-rosaline text-sm tracking-wider -mt-1 ml-14">recover</div>
             </button>
           </div>
+        </div>
+
+        {/* Coming to Bristol Text */}
+        <div className="mt-6">
+          <p className="text-primary font-rosaline text-base tracking-wider">
+            Coming to Bristol 2025.
+          </p>
         </div>
       </div>
     </div>;
