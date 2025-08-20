@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 const Recovery = () => {
   const navigate = useNavigate();
-  return <div className="min-h-screen dark font-grotesk text-foreground" style={{background: 'linear-gradient(to bottom, #8f7668, hsl(var(--background)))'}}>
+  return <div className="min-h-screen dark font-grotesk text-foreground" style={{background: 'linear-gradient(to bottom, #8f7668, #4b362f)'}}>
       {/* Header */}
       <header className="py-6 px-4 border-b border-border">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
