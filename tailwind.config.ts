@@ -23,6 +23,7 @@ export default {
 				'serif': ['Playfair Display', 'serif'],
 				'neogrotesk': ['Neogrotesk', 'sans-serif'],
 				'rosaline': ['Rosaline', 'serif'],
+				'bigcaslon': ['Big Caslon', 'serif'],
 			},
 			colors: {
 				cream: 'hsl(var(--cream-bg))',
