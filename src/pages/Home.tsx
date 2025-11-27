@@ -8,7 +8,9 @@ const Home = () => {
   const {
     toast
   } = useToast();
-  return <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
+  return <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{
+    background: 'linear-gradient(to bottom, #170701, #4f2202)'
+  }}>
       <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
         {/* Main Header Logo */}
         <div className="mb-10 animate-fade-in animate-scale-in" style={{
@@ -24,9 +26,7 @@ const Home = () => {
             <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
               RENEGADE.
             </h1>
-            <h2 className="text-primary font-bigcaslon text-xl sm:text-3xl tracking-tight -mt-2 text-right pr-2">
-              Reformer
-            </h2>
+            <h2 className="text-primary font-bigcaslon text-xl sm:text-3xl tracking-tight -mt-2 text-right pr-2">reformer</h2>
           </div>
           
           {/* Tagline */}
