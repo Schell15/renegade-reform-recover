@@ -24,9 +24,9 @@ const Home = () => {
           {/* Studio Name */}
           <div className="mb-4 inline-block">
             <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
-              EARLY ACCESS
+              RENEGADE.
             </h1>
-            <h2 className="text-primary font-bigcaslon text-4xl sm:text-6xl tracking-tight -mt-2 text-right">sign-up here</h2>
+            <h2 className="text-primary font-bigcaslon text-4xl sm:text-6xl tracking-tight -mt-2 text-right">reformer</h2>
           </div>
           
           {/* Tagline */}
