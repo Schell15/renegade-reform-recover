@@ -57,7 +57,7 @@ const Home = () => {
           })} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Recovery">
               <div className="flex flex-col">
                 <div className="text-primary font-neogrotesk text-lg font-bold tracking-[-0.03em] self-center">DISCOVER.</div>
-                <div className="text-primary font-bigcaslon text-sm tracking-wider -mt-1 self-end">sneakpeak</div>
+                <div className="text-primary font-bigcaslon text-sm tracking-wider -mt-1 self-end">preview</div>
               </div>
             </button>
           </div>
