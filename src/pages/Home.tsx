@@ -8,7 +8,7 @@ const Home = () => {
   const {
     toast
   } = useToast();
-  return <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #8f7668, #4b362f)'}}>
+  return <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
       <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
         {/* Main Header Logo */}
         <div className="mb-10 animate-fade-in animate-scale-in" style={{
