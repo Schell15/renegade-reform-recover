@@ -26,7 +26,7 @@ const Home = () => {
             <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
               RENEGADE.
             </h1>
-            <h2 className="text-primary font-bigcaslon text-3xl sm:text-5xl tracking-tight -mt-2 text-right">reformer</h2>
+            <h2 className="text-primary font-bigcaslon text-4xl sm:text-6xl tracking-tight -mt-2 text-right">reformer</h2>
           </div>
           
           {/* Tagline */}
