@@ -40,7 +40,7 @@ const Home = () => {
         {/* Navigation Buttons */}
         <div className="flex flex-col sm:flex-row gap-10 justify-center items-center -mt-32">
           <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
-            <button onClick={() => navigate('/reformer-signup')} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Reformer">
+            <button onClick={() => navigate('/reformer-signup')} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-end gap-0 relative" aria-label="Navigate to Renegade Reformer">
               <div className="text-primary font-neogrotesk text-lg font-bold tracking-wider">EARLY ACCESS.</div>
               <div className="text-primary font-bigcaslon text-sm tracking-wider -mt-1 text-right">sign up now</div>
             </button>
@@ -52,7 +52,7 @@ const Home = () => {
           <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button onClick={() => toast({
             title: "Coming 2026."
-          })} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Recovery">
+          })} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-end gap-0 relative" aria-label="Navigate to Renegade Recovery">
               <div className="text-primary font-neogrotesk text-lg font-bold tracking-wider">DISCOVER.</div>
               <div className="text-primary font-bigcaslon text-sm tracking-wider -mt-1 text-right">sneakpeak</div>
             </button>
