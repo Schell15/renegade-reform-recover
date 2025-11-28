@@ -64,7 +64,7 @@ const Home = () => {
         </div>
 
         {/* Coming to Bristol Text */}
-        <div className="mt-[60vh] pb-8">
+        <div className="mt-[70vh] pb-8">
           <p className="text-primary font-rosaline text-base tracking-wider">A divinely powerful approach to pilates</p>
           <p className="text-primary font-rosaline text-base tracking-wider">Coming to Bristol 2026</p>
         </div>
