@@ -38,7 +38,7 @@ const Home = () => {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex flex-col sm:flex-row gap-10 justify-center items-center -mt-32">
+        <div className="flex flex-col sm:flex-row gap-10 justify-center items-center -mt-44">
           <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
             <button onClick={() => navigate('/reformer-signup')} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Reformer">
               <div className="flex flex-col">
