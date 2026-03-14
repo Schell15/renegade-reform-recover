@@ -145,10 +145,10 @@ const ReformerSignup = () => {
               A divinely powerful approach to pilates
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-4xl mx-auto">
-              <img src={reformer1} alt="Renegade Reformer studio interior render" className="w-full h-auto rounded-lg object-cover" />
-              <img src={reformer2} alt="Renegade Reformer floor plan and design" className="w-full h-auto rounded-lg object-cover" />
-              <img src={reformer3} alt="Renegade brand color palette" className="w-full h-auto rounded-lg object-cover" />
-              <img src={reformer4} alt="Renegade Reformer exterior sketch" className="w-full h-auto rounded-lg object-cover" />
+              <img src={reformer1} alt="Renegade Reformer studio interior render" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_0.3s_forwards]" />
+              <img src={reformer2} alt="Renegade Reformer floor plan and design" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_0.6s_forwards]" />
+              <img src={reformer3} alt="Renegade brand color palette" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_0.9s_forwards]" />
+              <img src={reformer4} alt="Renegade Reformer exterior sketch" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_1.2s_forwards]" />
             </div>
           </div>
         </div>
