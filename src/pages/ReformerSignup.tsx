@@ -187,6 +187,19 @@ const ReformerSignup = () => {
         </div>
       </div>
 
+      {/* Lightbox overlay */}
+      {expandedImage && (
+        <div 
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 animate-[fadeInSubtle_0.3s_ease-out_forwards] cursor-pointer"
+          onClick={() => setExpandedImage(null)}
+        >
+          <img 
+            src={expandedImage} 
+            alt="Expanded view" 
+            className="max-w-full max-h-[90vh] rounded-lg object-contain animate-[scale-in_0.3s_ease-out]"
+          />
+        </div>
+      )}
     </div>
   );
 };
