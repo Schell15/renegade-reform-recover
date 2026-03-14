@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import ParticleBackground from "@/components/ParticleBackground";
 import reformer1 from "@/assets/renegade_reformer_1.png";
 import reformer2 from "@/assets/renegade_reformer_2.png";
 import reformer3 from "@/assets/renegade_reformer_3.png";
