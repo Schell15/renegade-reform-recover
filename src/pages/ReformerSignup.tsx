@@ -150,6 +150,9 @@ const ReformerSignup = () => {
               <img src={reformer3} alt="Renegade brand color palette" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_0.9s_forwards]" />
               <img src={reformer4} alt="Renegade Reformer exterior sketch" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_1.2s_forwards]" />
             </div>
+            <p className="text-primary font-grotesk text-sm sm:text-base tracking-wide max-w-2xl mx-auto mt-6 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_1.6s_forwards]">
+              Small group classes, immersive playlists and expert coaching designed to build strength, improve mobility and leave you feeling powerful.
+            </p>
           </div>
         </div>
 
