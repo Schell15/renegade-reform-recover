@@ -111,11 +111,9 @@ const ReformerSignup = () => {
     <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
       <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
         {/* Main Header Logo */}
-        <div className="mb-10 animate-fade-in animate-scale-in" style={{
-          animationDelay: '0.2s'
-        }}>
+        <div className="mb-10">
           {/* White Eagle Logo */}
-          <div className="mb-6">
+          <div className="mb-6 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_0.1s_forwards]">
             <button 
               onClick={() => navigate('/')} 
               className="mx-auto block transition-transform hover:scale-105"
@@ -130,7 +128,7 @@ const ReformerSignup = () => {
           </div>
           
           {/* Studio Name */}
-          <div className="mb-4">
+          <div className="mb-4 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_0.5s_forwards]">
             <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
               RENEGADE.
             </h1>
@@ -141,17 +139,23 @@ const ReformerSignup = () => {
           
           {/* Tagline */}
           <div className="mb-4">
-            <p className="text-primary font-rosaline text-base sm:text-xl tracking-wider">
+            <p className="text-primary font-rosaline text-base sm:text-xl tracking-wider opacity-0 animate-[fadeInSubtle_0.8s_ease-out_0.9s_forwards]">
               A divinely powerful approach to pilates
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-4xl mx-auto">
-              <img src={reformer1} alt="Renegade Reformer studio interior render" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_0.3s_forwards]" />
-              <img src={reformer2} alt="Renegade Reformer floor plan and design" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_0.6s_forwards]" />
-              <img src={reformer3} alt="Renegade brand color palette" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_0.9s_forwards]" />
-              <img src={reformer4} alt="Renegade Reformer exterior sketch" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_1.2s_forwards]" />
+              <img src={reformer1} alt="Renegade Reformer studio interior render" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.2s_forwards]" />
+              <img src={reformer2} alt="Renegade Reformer floor plan and design" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_1.5s_forwards]" />
+              <img src={reformer3} alt="Renegade brand color palette" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.8s_forwards]" />
+              <img src={reformer4} alt="Renegade Reformer exterior sketch" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_2.1s_forwards]" />
             </div>
-            <p className="text-primary font-grotesk text-sm sm:text-base tracking-wide max-w-2xl mx-auto mt-6 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_1.6s_forwards]">
+            <p className="text-primary font-grotesk text-sm sm:text-base tracking-wide max-w-2xl mx-auto mt-6 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.5s_forwards]">
               Small group classes, immersive playlists and expert coaching designed to build strength, improve mobility and leave you feeling powerful.
+            </p>
+            <p className="text-primary font-rosaline text-sm sm:text-base tracking-wider max-w-2xl mx-auto mt-4 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.9s_forwards]">
+              Coming to Bristol, Redfield — Spring 2026.
+            </p>
+            <p className="text-primary font-grotesk text-sm sm:text-base tracking-wide max-w-2xl mx-auto mt-1 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_3.1s_forwards]">
+              Sign up below for early access.
             </p>
           </div>
         </div>
