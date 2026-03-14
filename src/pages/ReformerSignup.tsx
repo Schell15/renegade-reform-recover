@@ -144,10 +144,10 @@ const ReformerSignup = () => {
               A divinely powerful approach to pilates
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-4xl mx-auto">
-              <img src={reformer1} alt="Renegade Reformer studio interior render" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.2s_forwards]" />
-              <img src={reformer2} alt="Renegade Reformer floor plan and design" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_1.5s_forwards]" />
-              <img src={reformer3} alt="Renegade brand color palette" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.8s_forwards]" />
-              <img src={reformer4} alt="Renegade Reformer exterior sketch" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_2.1s_forwards]" />
+              <img src={reformer1} alt="Renegade Reformer studio interior render" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.2s_forwards] cursor-pointer transition-transform hover:scale-105" onClick={() => setExpandedImage(reformer1)} />
+              <img src={reformer2} alt="Renegade Reformer floor plan and design" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_1.5s_forwards] cursor-pointer transition-transform hover:scale-105" onClick={() => setExpandedImage(reformer2)} />
+              <img src={reformer3} alt="Renegade brand color palette" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.8s_forwards] cursor-pointer transition-transform hover:scale-105" onClick={() => setExpandedImage(reformer3)} />
+              <img src={reformer4} alt="Renegade Reformer exterior sketch" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_2.1s_forwards] cursor-pointer transition-transform hover:scale-105" onClick={() => setExpandedImage(reformer4)} />
             </div>
             <p className="text-primary font-grotesk text-sm sm:text-base tracking-wide max-w-2xl mx-auto mt-6 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.5s_forwards]">
               Small group classes, immersive playlists and expert coaching designed to build strength, improve mobility and leave you feeling powerful.
