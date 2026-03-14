@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import ParticleBackground from "@/components/ParticleBackground";
 import reformer1 from "@/assets/renegade_reformer_1.png";
 import reformer2 from "@/assets/renegade_reformer_2.png";
 import reformer3 from "@/assets/renegade_reformer_3.png";
@@ -110,6 +111,7 @@ const ReformerSignup = () => {
 
   return (
     <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
+      <ParticleBackground />
       <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
         {/* Main Header Logo */}
         <div className="mb-10">
