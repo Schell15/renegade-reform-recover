@@ -161,7 +161,7 @@ const ReformerSignup = () => {
         </div>
 
         {/* Tally Signup Form */}
-        <div className="max-w-4xl mx-auto w-full -mt-4">
+        <div className="max-w-4xl mx-auto w-full -mt-8 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_3.5s_forwards]">
           <div className="bg-background/80 backdrop-blur-sm border-2 border-primary rounded-lg p-6">
             <iframe 
               data-tally-src="https://tally.so/embed/wdMvVD?transparentBackground=1&dynamicHeight=1" 
