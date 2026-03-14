@@ -12,6 +12,11 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeInSubtle {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @font-face {
   font-family: 'Neogrotesk';
   src: url('/Neogrotesk SC Black Regular.otf') format('opentype');
