@@ -5,6 +5,10 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import reformer1 from "@/assets/renegade_reformer_1.png";
+import reformer2 from "@/assets/renegade_reformer_2.png";
+import reformer3 from "@/assets/renegade_reformer_3.png";
+import reformer4 from "@/assets/renegade_reformer_4.png";
 
 const ReformerSignup = () => {
   const navigate = useNavigate();
@@ -140,6 +144,12 @@ const ReformerSignup = () => {
             <p className="text-primary font-rosaline text-base sm:text-xl tracking-wider">
               A divinely powerful approach to pilates
             </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-4xl mx-auto">
+              <img src={reformer1} alt="Renegade Reformer studio interior render" className="w-full h-auto rounded-lg object-cover" />
+              <img src={reformer2} alt="Renegade Reformer floor plan and design" className="w-full h-auto rounded-lg object-cover" />
+              <img src={reformer3} alt="Renegade brand color palette" className="w-full h-auto rounded-lg object-cover" />
+              <img src={reformer4} alt="Renegade Reformer exterior sketch" className="w-full h-auto rounded-lg object-cover" />
+            </div>
           </div>
         </div>
 
