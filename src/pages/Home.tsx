@@ -1,10 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
-import reformer1 from "@/assets/renegade_reformer_1.png";
-import reformer2 from "@/assets/renegade_reformer_2.png";
-import reformer3 from "@/assets/renegade_reformer_3.png";
-import reformer4 from "@/assets/renegade_reformer_4.png";
 
 // Updated to use direct image paths
 const Home = () => {
