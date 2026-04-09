@@ -151,7 +151,7 @@ const ReformerSignup = () => {
               <img src={reformer3} alt="Renegade brand color palette" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.8s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer3)} />
               <img src={reformer4} alt="Renegade Reformer exterior sketch" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_2.1s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer4)} />
             </div>
-            <p className="text-primary text-sm tracking-wide max-w-2xl mx-auto mt-6 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.5s_forwards] font-sans px-0 py-[50px] font-extrabold sm:text-8xl">
+            <p className="text-primary text-sm tracking-wide max-w-2xl mx-auto mt-6 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.5s_forwards] font-sans px-0 py-[50px] font-extrabold sm:text-base">
               Renegade is a community-led, pilates experience. We introduce a new concept to bristol, fusing pilates, fitness, immersive set design and interactive audio & lighting production to guide your flow. Designed and built by some of bristol’s finest creative minds. The first of its kind in the UK.
             </p>
             <p className="text-primary font-rosaline text-sm sm:text-base tracking-wider max-w-2xl mx-auto mt-4 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.9s_forwards]">
