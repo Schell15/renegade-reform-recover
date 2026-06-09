@@ -9,17 +9,17 @@ const Home = () => {
   const {
     toast
   } = useToast();
-  return <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 pt-[15vh] pb-8 relative overflow-hidden" style={{
-    background: 'linear-gradient(to bottom, #170701, #4f2202)'
+  return <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-8 py-12 relative overflow-hidden" style={{
+    background: 'radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%)'
   }}>
       <SEO
         title="Reformer Pilates Studio in Bristol | Renegade Reformer"
         description="Renegade Reformer is a premium Reformer Pilates studio in Bristol. Strength-led, contemporary classes opening Spring 2026 — get early access now."
         path="/"
       />
-      <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full">
         {/* Main Header Logo */}
-        <div className="mb-10 animate-fade-in animate-scale-in" style={{
+        <div className="animate-fade-in animate-scale-in" style={{
         animationDelay: '0.2s'
       }}>
           {/* White Eagle Logo */}
@@ -34,57 +34,48 @@ const Home = () => {
             </h1>
             <h2 className="text-primary font-bigcaslon text-4xl sm:text-6xl tracking-tight -mt-2 text-right">reformer</h2>
           </div>
-          
-          {/* Tagline */}
-          <div className="mb-4">
-            <p className="text-primary font-rosaline text-base sm:text-xl tracking-wider">
-              reform . repower. recover
-            </p>
-          </div>
         </div>
 
-        {/* Navigation Buttons */}
-        <div className="flex flex-col sm:flex-row gap-10 justify-center items-center -mt-44">
-          <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
-            <button onClick={() => navigate('/reformer-signup')} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Reformer">
-              <div className="flex flex-col">
-                <div className="text-primary font-neogrotesk text-lg font-bold tracking-[-0.03em] self-center">EARLY ACCESS.</div>
-                <div className="text-primary font-bigcaslon text-sm tracking-wider -mt-1 self-end">sign up now</div>
-              </div>
-            </button>
-          </div>
-          
-          {/* Vertical Separator */}
-          <div className="hidden sm:block w-0.5 h-20 bg-primary"></div>
-          
-          <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
-            <button onClick={() => toast({
-            title: "Coming 2026."
-          })} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Renegade Recovery">
-              <div className="flex flex-col">
-                <div className="text-primary font-neogrotesk text-lg font-bold tracking-[-0.03em] self-center">DISCOVER.</div>
-                <div className="text-primary font-bigcaslon text-sm tracking-wider -mt-1 self-end">preview</div>
-              </div>
-            </button>
-          </div>
+        {/* Tagline */}
+        <p className="font-light uppercase text-center mb-[52px]" style={{ fontSize: '11px', letterSpacing: '0.35em', color: '#8a6e50' }}>
+          reform &nbsp;&middot;&nbsp; repower &nbsp;&middot;&nbsp; recover
+        </p>
 
-          {/* Vertical Separator */}
-          <div className="hidden sm:block w-0.5 h-20 bg-primary"></div>
-
-          <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
-            <button onClick={() => navigate('/pricing')} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Navigate to Pricing">
-              <div className="flex flex-col">
-                <div className="text-primary font-neogrotesk text-lg font-bold tracking-[-0.03em] self-center">PRICING.</div>
-                <div className="text-primary font-bigcaslon text-sm tracking-wider -mt-1 self-end">founders discount</div>
-              </div>
+        {/* Divider + CTA grid */}
+        <div className="w-full" style={{ maxWidth: 'min(600px, 86vw)' }}>
+          <div style={{ height: '0.5px', background: '#4a2e12' }} aria-hidden="true"></div>
+          <nav className="grid grid-cols-3" aria-label="Site sections" style={{ borderBottom: '0.5px solid #4a2e12' }}>
+            <button
+              onClick={() => navigate('/reformer-signup')}
+              className="py-6 px-4 text-center transition-colors hover:bg-white/[0.035]"
+              style={{ borderTop: '0.5px solid #4a2e12' }}
+            >
+              <span className="block uppercase font-bold mb-[5px]" style={{ fontSize: '13px', letterSpacing: '0.14em', color: '#f0ebe3' }}>Early Access</span>
+              <span className="block uppercase font-light" style={{ fontSize: '11px', letterSpacing: '0.22em', color: '#6a5035' }}>Sign up now</span>
             </button>
-          </div>
+            <button
+              onClick={() => toast({ title: "Coming 2026." })}
+              className="py-6 px-4 text-center transition-colors hover:bg-white/[0.035]"
+              style={{ borderTop: '0.5px solid #4a2e12', borderLeft: '0.5px solid #4a2e12', borderRight: '0.5px solid #4a2e12' }}
+            >
+              <span className="block uppercase font-bold mb-[5px]" style={{ fontSize: '13px', letterSpacing: '0.14em', color: '#f0ebe3' }}>Discover</span>
+              <span className="block uppercase font-light" style={{ fontSize: '11px', letterSpacing: '0.22em', color: '#6a5035' }}>Preview</span>
+            </button>
+            <button
+              onClick={() => navigate('/pricing')}
+              className="py-6 px-4 text-center transition-colors hover:bg-white/[0.035]"
+              style={{ borderTop: '0.5px solid #4a2e12' }}
+            >
+              <span className="block uppercase font-bold mb-[5px]" style={{ fontSize: '13px', letterSpacing: '0.14em', color: '#f0ebe3' }}>Pricing</span>
+              <span className="block uppercase font-light" style={{ fontSize: '11px', letterSpacing: '0.22em', color: '#6a5035' }}>Founders discount</span>
+            </button>
+          </nav>
         </div>
 
-        {/* Coming to Bristol Text */}
-        <div className="mt-[70vh] pb-8">
-          <p className="text-primary font-rosaline text-base tracking-wider">A divinely powerful approach to pilates</p>
-          <p className="text-primary font-rosaline text-base tracking-wider">Coming to Bristol 2026</p>
+        {/* Bottom */}
+        <div className="mt-9 text-center">
+          <p className="uppercase font-light mb-2" style={{ fontSize: '11px', letterSpacing: '0.28em', color: '#6a5035' }}>A divinely powerful approach to pilates</p>
+          <p className="uppercase" style={{ fontSize: '13px', letterSpacing: '0.12em', color: '#b8a080' }}>Coming to Bristol 2026</p>
         </div>
       </div>
     </main>;
