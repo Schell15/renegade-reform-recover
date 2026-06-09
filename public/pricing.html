@@ -836,5 +836,22 @@
   </footer>
 
 </div>
+<script>
+  (function () {
+    var nav = document.querySelector('.rn-nav');
+    if (!nav) return;
+    var ticking = false;
+    function update() {
+      var y = window.scrollY || window.pageYOffset || 0;
+      var t = Math.min(1, y / 120);
+      nav.style.setProperty('--nav-scroll', t.toFixed(3));
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    update();
+  })();
+</script>
 </body>
 </html>
