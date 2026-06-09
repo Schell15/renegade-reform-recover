@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renegade Reformer — Discover</title>
+  <meta name="description" content="An immersive pilates experience. Coming to Bristol 2026." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0d0400;
+      --bg-mid:    #1a0900;
+      --amber:     #c87c2a;
+      --amber-dim: #7a4a18;
+      --cream:     #f0ebe3;
+      --sand:      #c8b080;
+      --muted:     #6a5035;
+      --rule:      #3a2010;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: linear-gradient(to bottom, rgba(13,4,0,0.95) 0%, transparent 100%);
+    }
+
+    nav .nav-logo svg { width: 120px; height: auto; display: block; }
+
+    nav .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    nav .nav-links a {
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      color: var(--muted);
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav .nav-links a:hover { color: var(--cream); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 40%, #3d1c02 0%, #1c0a00 55%, #0d0400 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .hero-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.4em;
+      color: var(--amber-dim);
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .hero-logo { width: min(320px, 72vw); margin: 0 auto 28px; display: block; }
+
+    .hero-tagline {
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-scroll span {
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .scroll-line {
+      width: 0.5px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--amber-dim), transparent);
+      animation: scrollpulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollpulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    /* ── SECTIONS SHARED ── */
+    section { position: relative; }
+
+    .rule-h {
+      width: 100%;
+      height: 0.5px;
+      background: var(--rule);
+    }
+
+    .section-label {
+      font-size: 9px;
+      letter-spacing: 0.4em;
+      color: var(--amber-dim);
+      text-transform: uppercase;
+    }
+
+    /* ── INTRO COPY ── */
+    .intro {
+      padding: 100px 0;
+      background: linear-gradient(to bottom, #0d0400 0%, #150800 50%, #0d0400 100%);
+    }
+
+    .intro-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .intro-inner .section-label { margin-bottom: 48px; display: block; }
+
+    .intro-headline {
+      font-size: clamp(22px, 3.2vw, 36px);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      color: var(--cream);
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+
+    .intro-headline em {
+      font-style: normal;
+      color: var(--sand);
+    }
+
+    .intro-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 60px;
+    }
+
+    .intro-body p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.85;
+      color: #9a7f60;
+      letter-spacing: 0.02em;
+    }
+
+    .intro-body p strong {
+      font-weight: 500;
+      color: var(--sand);
+    }
+
+    /* ── IMAGE GRID ── */
+    .gallery {
+      padding: 0 0 80px;
+    }
+
+    .gallery-header {
+      padding: 60px 40px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* CSS filter to colour-grade all photos: warm amber overlay, slight contrast boost */
+    .photo-grade {
+      filter: sepia(35%) saturate(90%) brightness(0.88) contrast(1.08) hue-rotate(-8deg);
+      transition: filter 0.4s ease;
+    }
+
+    .photo-grade:hover {
+      filter: sepia(15%) saturate(100%) brightness(0.96) contrast(1.05) hue-rotate(-4deg);
+    }
+
+    /* Mosaic grid */
+    .mosaic {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 320px 260px;
+      gap: 3px;
+      padding: 0 3px;
+    }
+
+    .mosaic-item { overflow: hidden; position: relative; }
+
+    .mosaic-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Specific spans */
+    .m1 { grid-column: 1 / 6;  grid-row: 1; }
+    .m2 { grid-column: 6 / 9;  grid-row: 1; }
+    .m3 { grid-column: 9 / 13; grid-row: 1; }
+    .m4 { grid-column: 1 / 5;  grid-row: 2; }
+    .m5 { grid-column: 5 / 9;  grid-row: 2; }
+    .m6 { grid-column: 9 / 13; grid-row: 2; }
+
+    /* ── VIDEO PLACEHOLDERS ── */
+    .media {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .media-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3px;
+    }
+
+    .video-slot {
+      background: #150a00;
+      border: 0.5px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      cursor: pointer;
+      transition: border-color 0.3s, background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-slot:hover {
+      border-color: var(--amber-dim);
+      background: #1e0e02;
+    }
+
+    .video-slot.large { aspect-ratio: 16/9; }
+    .video-slot.small { aspect-ratio: 9/16; }
+
+    .play-icon {
+      width: 48px;
+      height: 48px;
+      border: 0.5px solid var(--amber-dim);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-icon svg { width: 16px; height: 16px; fill: var(--amber-dim); margin-left: 3px; }
+
+    .video-slot p {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* ── INSTRUCTORS ── */
+    .instructors {
+      padding: 100px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .instructors-header {
+      margin-bottom: 64px;
+    }
+
+    .instructors-header h2 {
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-top: 16px;
+    }
+
+    .instructors-header h2 em {
+      font-style: normal;
+      font-family: Georgia, serif;
+      font-weight: 400;
+      color: var(--sand);
+    }
+
+    .instructor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .instructor-card {
+      background: #110600;
+      border: 0.5px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .instructor-photo {
+      aspect-ratio: 3/4;
+      background: #1e0d02;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .instructor-photo .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border: 0.5px dashed #2a1508;
+    }
+
+    .instructor-photo .photo-placeholder span {
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      color: #3a2010;
+      text-transform: uppercase;
+    }
+
+    .photo-icon {
+      width: 32px;
+      height: 32px;
+      opacity: 0.2;
+    }
+
+    .instructor-info {
+      padding: 28px 24px 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .instructor-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream);
+    }
+
+    .instructor-title {
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      color: var(--amber-dim);
+      text-transform: uppercase;
+    }
+
+    .instructor-bio {
+      font-size: 12px;
+      line-height: 1.8;
+      color: var(--muted);
+      font-style: italic;
+      border-top: 0.5px solid var(--rule);
+      padding-top: 14px;
+      margin-top: 4px;
+      min-height: 80px;
+    }
+
+    /* ── FOOTER NAV ── */
+    .page-footer {
+      border-top: 0.5px solid var(--rule);
+      padding: 48px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-logo svg { width: 100px; height: auto; display: block; }
+
+    .footer-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      color: var(--muted);
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--cream); }
+
+    .footer-copy {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: #3a2010;
+      text-transform: uppercase;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      nav .nav-links { display: none; }
+
+      .intro-inner { padding: 0 20px; }
+      .intro-body { grid-template-columns: 1fr; gap: 20px; }
+
+      .mosaic {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 220px);
+      }
+      .m1 { grid-column: 1 / 3; grid-row: 1; }
+      .m2 { grid-column: 1 / 2; grid-row: 2; }
+      .m3 { grid-column: 2 / 3; grid-row: 2; }
+      .m4 { grid-column: 1 / 2; grid-row: 3; }
+      .m5 { grid-column: 2 / 3; grid-row: 3; }
+      .m6 { display: none; }
+
+      .media { padding: 60px 20px; }
+      .media-grid { grid-template-columns: 1fr; }
+      .video-slot.small { aspect-ratio: 16/9; }
+
+      .instructors { padding: 60px 20px; }
+      .instructor-grid { grid-template-columns: 1fr; gap: 2px; }
+
+      .page-footer { flex-direction: column; gap: 24px; text-align: center; padding: 40px 20px; }
+      .footer-links { justify-content: center; flex-wrap: wrap; gap: 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-line { animation: none; }
+      .photo-grade { transition: none; }
+    }
+
+    /* ── JOURNEY SECTION ── */
+    @keyframes fadeScaleUp {
+      from { opacity: 0; transform: translateY(16px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes pillFade {
+      from { opacity: 0; transform: translateX(-5px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes pulse {
+      0%,100% { border-color: #5a3020; border-top-color: #491E00; }
+      50%      { border-color: #E1D6C8; border-top-color: #E1D6C8; }
+    }
+
+    .journey {
+      padding: 80px 40px;
+    }
+
+    .journey-header {
+      max-width: 1040px;
+      margin: 0 auto 40px;
+    }
+
+    .rn-outer {
+      background: #180800;
+      border-radius: 24px;
+      padding: 48px 44px 52px;
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .rn-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 44px;
+    }
+    .rn-brand {
+      font-size: 22px;
+      font-weight: 600;
+      color: #E1D6C8;
+      letter-spacing: 0.05em;
+    }
+    .rn-tagline-badge {
+      font-size: 11px;
+      color: #491E00;
+      letter-spacing: 0.18em;
+    }
+
+    .rn-grid {
+      display: grid;
+      grid-template-columns: 1fr clamp(40px, 5vw, 72px) 1fr clamp(40px, 5vw, 72px) 1fr;
+      align-items: start;
+      gap: 0;
+    }
+
+    .rn-card {
+      border-radius: 18px;
+      border: 0.5px solid #391500;
+      padding: 28px 28px 28px;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+      opacity: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .rn-card:hover { transform: translateY(-5px); border-color: #9e6030 !important; }
+    .rn-card.visible { animation: fadeScaleUp 0.55s cubic-bezier(0.22,1,0.36,1) forwards; }
+    .rn-card.pulsing {
+      animation: fadeScaleUp 0.55s cubic-bezier(0.22,1,0.36,1) forwards,
+                 pulse 2.8s 0.8s ease-in-out infinite;
+    }
+
+    .c1 { background: #1a0a02; border-top: 2.5px solid #491E00; }
+    .c2 { background: #200d02; border-top: 2.5px solid #6b3010; }
+    .c3 { background: #271100; border-top: 2.5px solid #9e6030; }
+
+    .c1 .rn-level { color: #5a3020; }
+    .c2 .rn-level { color: #7a4a28; }
+    .c3 .rn-level { color: #9e6030; }
+    .c3 .rn-desc  { color: #7a5040; }
+    .c3 .rn-pill  { background: #391500; color: #c09070; border-color: #5a3010; }
+    .c3 .rn-btn   { border-color: #5a3010; color: #9e7050; }
+    .c3 .rn-btn:hover { background: #391500; color: #E1D6C8; border-color: #9e6030; }
+
+    .rn-level {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .rn-name {
+      font-size: clamp(16px, 2.4vw, 34px);
+      font-weight: 700;
+      color: #E1D6C8;
+      letter-spacing: 0.01em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    .rn-desc {
+      font-size: 13px;
+      color: #6b4030;
+      line-height: 1.65;
+      margin-bottom: 22px;
+      min-height: 56px;
+    }
+
+    .rn-dots {
+      display: flex;
+      gap: 7px;
+      margin-bottom: 20px;
+    }
+    .rn-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #270E00;
+      border: 0.5px solid #391500;
+    }
+    .rn-dot.on { background: #E1D6C8; border-color: #E1D6C8; }
+
+    .rn-pills {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 26px;
+    }
+    .rn-pill {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: #270E00;
+      color: #9e8070;
+      border: 0.5px solid #391500;
+      opacity: 0;
+      width: fit-content;
+      letter-spacing: 0.02em;
+    }
+    .rn-pill.visible { animation: pillFade 0.3s ease forwards; }
+
+    .rn-btn {
+      width: 100%;
+      padding: 12px 0;
+      border-radius: 10px;
+      border: 0.5px solid #491E00;
+      background: transparent;
+      color: #9e8070;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s, border-color 0.18s;
+      font-family: inherit;
+    }
+    .rn-btn:hover { background: #270E00; color: #E1D6C8; border-color: #9e6030; }
+
+    .rn-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 4px;
+      padding-top: 88px;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .rn-connector.visible { opacity: 1; }
+
+    .rn-conn-badge {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #3d1a00;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .rn-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.78);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s;
+    }
+    .rn-overlay.open { opacity: 1; pointer-events: all; }
+
+    .rn-expand-box {
+      background: #1a0a02;
+      border-radius: 20px;
+      padding: 40px 40px 36px;
+      max-width: 520px;
+      width: 100%;
+      position: relative;
+      transform: scale(0.94);
+      transition: transform 0.28s cubic-bezier(0.22,1,0.36,1);
+      border-top: 2.5px solid #6b3010;
+      border-left: 0.5px solid #391500;
+      border-right: 0.5px solid #391500;
+      border-bottom: 0.5px solid #391500;
+    }
+    .rn-overlay.open .rn-expand-box { transform: scale(1); }
+
+    .rn-expand-close {
+      position: absolute;
+      top: 18px; right: 18px;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: #270E00;
+      border: 0.5px solid #491E00;
+      color: #9e8070;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s, color 0.15s;
+      font-family: inherit;
+      line-height: 1;
+    }
+    .rn-expand-close:hover { background: #391500; color: #E1D6C8; }
+
+    .rn-expand-level {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .rn-expand-name {
+      font-size: 32px;
+      font-weight: 700;
+      color: #E1D6C8;
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+    .rn-expand-body {
+      font-size: 14px;
+      color: #9e8070;
+      line-height: 1.8;
+    }
+    .rn-expand-body p { margin-bottom: 14px; }
+    .rn-expand-body p:last-child { margin-bottom: 0; }
+    .rn-expand-body em { color: #E1D6C8; font-style: normal; font-weight: 600; }
+
+    @media (max-width: 768px) {
+      .journey { padding: 60px 20px; }
+      .rn-outer { padding: 32px 20px 36px; }
+      .rn-grid { grid-template-columns: 1fr; }
+      .rn-connector {
+        flex-direction: row;
+        padding-top: 0;
+        justify-content: center;
+        margin: 16px 0;
+        opacity: 1;
+        gap: 8px;
+      }
+      .rn-connector svg { transform: rotate(90deg); }
+      .rn-expand-box { padding: 32px 24px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="renegade-reformer.html" class="nav-logo" aria-label="Renegade Reformer home">
+      <svg viewBox="0 0 318.28 197.85" xmlns="http://www.w3.org/2000/svg">
+        <text fill="#f0ebe3" font-family="'Arial Black', sans-serif" font-size="56.57" font-weight="900" letter-spacing="-0.03em" transform="translate(4.19 151.88)">RENEGADE.</text>
+        <text fill="#f0ebe3" font-family="Georgia, serif" font-size="43.3" transform="translate(157.48 193.18)">reformer</text>
+        <path fill="#f0ebe3" d="M193.57,61.92c-18.77-.32-18.76-28.24,0-28.55,18.77.32,18.76,28.24,0,28.55"/>
+        <path fill="#f0ebe3" d="M150.85,61.99c0-15.74,12.73-28.51,28.45-28.59C178.24.36,145.97,4.8,122.63,4.95l28.19,28.29-28.19.22v56.94h28.38"/>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="renegade-reformer.html#early-access">Early Access</a></li>
+      <li><a href="#discover">Discover</a></li>
+      <li><a href="#instructors">Instructors</a></li>
+      <li><a href="renegade-reformer.html#pricing">Pricing</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Bristol &nbsp;·&nbsp; 2026</p>
+      <svg class="hero-logo" viewBox="0 0 318.28 197.85" xmlns="http://www.w3.org/2000/svg" aria-label="Renegade Reformer">
+        <text fill="#f0ebe3" font-family="'Arial Black', sans-serif" font-size="56.57" font-weight="900" letter-spacing="-0.03em" transform="translate(4.19 151.88)">RENEGADE.</text>
+        <text fill="#f0ebe3" font-family="Georgia, serif" font-size="43.3" transform="translate(157.48 193.18)">reformer</text>
+        <path fill="#f0ebe3" d="M193.57,61.92c-18.77-.32-18.76-28.24,0-28.55,18.77.32,18.76,28.24,0,28.55"/>
+        <path fill="#f0ebe3" d="M150.85,61.99c0-15.74,12.73-28.51,28.45-28.59C178.24.36,145.97,4.8,122.63,4.95l28.19,28.29-28.19.22v56.94h28.38"/>
+      </svg>
+      <p class="hero-tagline">reform &nbsp;·&nbsp; repower &nbsp;·&nbsp; recover</p>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Discover</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <div class="rule-h"></div>
+
+  <!-- INTRO -->
+  <section class="intro" id="discover">
+    <div class="intro-inner">
+      <span class="section-label">Our approach</span>
+
+      <h1 class="intro-headline">
+        A divinely powerful approach to pilates &mdash;<br>
+        fusing <em>strength and control</em><br>
+        with rhythm.
+      </h1>
+
+      <div class="intro-body">
+        <p>
+          Movement at Renegade is motivated by music, where tradition is met with progression.
+          We elevate pilates as a source of <strong>personal power</strong> &mdash; one that makes
+          you feel bold and speaks to the inner desire to use movement as a release.
+        </p>
+        <p>
+          Renegade is an <strong>immersive pilates experience</strong>. We introduce a new concept
+          to Bristol, fusing pilates, fitness, set design and world-class audio and lighting
+          production to guide your flow &mdash; designed and built by some of Bristol's finest
+          creative minds. <strong>The first of its kind in the UK.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule-h"></div>
+
+  <!-- PHOTO MOSAIC -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-header">
+      <span class="section-label">Inside the studio</span>
+    </div>
+
+    <div class="mosaic">
+      <div class="mosaic-item m1">
+        <img class="photo-grade" src="IMG_9513.jpg" alt="Renegade Reformer studio floor" loading="lazy" />
+      </div>
+      <div class="mosaic-item m2">
+        <img class="photo-grade" src="IMG_9268.jpg" alt="Reformer equipment and amber-lit shelving" loading="lazy" />
+      </div>
+      <div class="mosaic-item m3">
+        <img class="photo-grade" src="IMG_9543.jpg" alt="Studio mat area with warm ambient lighting" loading="lazy" />
+      </div>
+      <div class="mosaic-item m4">
+        <img class="photo-grade" src="IMG_9545.jpg" alt="Studio view with Renegade mats" loading="lazy" />
+      </div>
+      <div class="mosaic-item m5">
+        <img class="photo-grade" src="IMG_9541.jpg" alt="Sculptural reception desk detail" loading="lazy" />
+      </div>
+      <div class="mosaic-item m6">
+        <img class="photo-grade" src="IMG_9284.jpg" alt="Reformer bed and equipment unit" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <div class="rule-h"></div>
+
+  <!-- JOURNEY -->
+  <section class="journey" id="journey">
+    <div class="journey-header">
+      <span class="section-label">Your journey</span>
+    </div>
+    <div class="rn-outer">
+      <div class="rn-header">
+        <span class="rn-brand">Renegade.</span>
+        <span class="rn-tagline-badge">reform . repower . recover</span>
+      </div>
+
+      <div class="rn-grid">
+
+        <div class="rn-card c1 pulsing" id="card1">
+          <div class="rn-level">01 · Entry</div>
+          <div class="rn-name">FOUNDATIONS.</div>
+          <div class="rn-desc">First timers — get to grips with the basics</div>
+          <div class="rn-dots">
+            <div class="rn-dot on"></div>
+            <div class="rn-dot"></div>
+            <div class="rn-dot"></div>
+          </div>
+          <div class="rn-pills" id="pills1">
+            <span class="rn-pill">No experience needed</span>
+            <span class="rn-pill">Reformer intro</span>
+            <span class="rn-pill">First timers</span>
+          </div>
+          <button class="rn-btn" onclick="openExpand('foundations')">Full Class Info</button>
+        </div>
+
+        <div class="rn-connector" id="conn1">
+          <svg width="36" height="14" viewBox="0 0 36 14">
+            <line x1="1" y1="7" x2="28" y2="7" stroke="#391500" stroke-width="1"
+              stroke-dasharray="80" stroke-dashoffset="80" id="arr1line"/>
+            <polygon points="22,2 34,7 22,12" fill="#391500" id="arr1head" style="opacity:0"/>
+          </svg>
+          <div class="rn-conn-badge">Progress<br>Unlocked</div>
+        </div>
+
+        <div class="rn-card c2" id="card2">
+          <div class="rn-level">02 · Beginner</div>
+          <div class="rn-name">RENEGADE.</div>
+          <div class="rn-desc">Beginners flow — rhythm and confidence on the reformer</div>
+          <div class="rn-dots">
+            <div class="rn-dot on"></div>
+            <div class="rn-dot on"></div>
+            <div class="rn-dot"></div>
+          </div>
+          <div class="rn-pills" id="pills2">
+            <span class="rn-pill">Beginner flow</span>
+            <span class="rn-pill">Movement patterns</span>
+            <span class="rn-pill">Building strength</span>
+          </div>
+          <button class="rn-btn" onclick="openExpand('renegade')">Full Class Info</button>
+        </div>
+
+        <div class="rn-connector" id="conn2">
+          <svg width="36" height="14" viewBox="0 0 36 14">
+            <line x1="1" y1="7" x2="28" y2="7" stroke="#391500" stroke-width="1"
+              stroke-dasharray="80" stroke-dashoffset="80" id="arr2line"/>
+            <polygon points="22,2 34,7 22,12" fill="#391500" id="arr2head" style="opacity:0"/>
+          </svg>
+          <div class="rn-conn-badge">Strength<br>Built</div>
+        </div>
+
+        <div class="rn-card c3" id="card3">
+          <div class="rn-level">03 · Intermediate</div>
+          <div class="rn-name">REBUILD.</div>
+          <div class="rn-desc">Strength × Pilates — your gym workout on the reformer</div>
+          <div class="rn-dots">
+            <div class="rn-dot on"></div>
+            <div class="rn-dot on"></div>
+            <div class="rn-dot on"></div>
+          </div>
+          <div class="rn-pills" id="pills3">
+            <span class="rn-pill">Strength training</span>
+            <span class="rn-pill">Pilates fusion</span>
+            <span class="rn-pill">Intermediate</span>
+          </div>
+          <button class="rn-btn" onclick="openExpand('rebuild')">Full Class Info</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY MODAL -->
+  <div class="rn-overlay" id="overlay" onclick="handleOverlayClick(event)">
+    <div class="rn-expand-box" id="expandBox">
+      <button class="rn-expand-close" onclick="closeExpand()">✕</button>
+      <div class="rn-expand-level" id="expandLevel"></div>
+      <div class="rn-expand-name" id="expandName"></div>
+      <div class="rn-expand-body" id="expandBody"></div>
+    </div>
+  </div>
+
+  <div class="rule-h"></div>
+
+  <!-- VIDEO PLACEHOLDERS -->
+  <div class="media" id="video">
+    <div class="media-header">
+      <span class="section-label">In motion</span>
+    </div>
+    <div class="media-grid">
+      <div class="video-slot large" role="button" tabindex="0" aria-label="Play studio walkthrough video">
+        <div class="play-icon">
+          <svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg>
+        </div>
+        <p>Studio walkthrough</p>
+      </div>
+      <div class="video-slot small" role="button" tabindex="0" aria-label="Play class preview video">
+        <div class="play-icon">
+          <svg viewBox="0 0 10 12"><polygon points="0,0 10,6 0,12"/></svg>
+        </div>
+        <p>Class preview</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule-h"></div>
+
+  <!-- INSTRUCTORS -->
+  <section class="instructors" id="instructors">
+    <div class="instructors-header">
+      <span class="section-label">The team</span>
+      <h2>Meet your<br><em>instructors.</em></h2>
+    </div>
+
+    <div class="instructor-grid">
+
+      <div class="instructor-card">
+        <div class="instructor-photo">
+          <div class="photo-placeholder">
+            <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="#c8b080" stroke-width="1">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="12" cy="10" r="3"/>
+              <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6"/>
+            </svg>
+            <span>Photo coming soon</span>
+          </div>
+        </div>
+        <div class="instructor-info">
+          <div>
+            <p class="instructor-name">Danielle</p>
+            <p class="instructor-title">Lead Instructor</p>
+          </div>
+          <p class="instructor-bio">Bio coming soon &mdash; add Danielle's story here.</p>
+        </div>
+      </div>
+
+      <div class="instructor-card">
+        <div class="instructor-photo">
+          <div class="photo-placeholder">
+            <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="#c8b080" stroke-width="1">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="12" cy="10" r="3"/>
+              <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6"/>
+            </svg>
+            <span>Photo coming soon</span>
+          </div>
+        </div>
+        <div class="instructor-info">
+          <div>
+            <p class="instructor-name">Margot</p>
+            <p class="instructor-title">Instructor</p>
+          </div>
+          <p class="instructor-bio">Bio coming soon &mdash; add Margot's story here.</p>
+        </div>
+      </div>
+
+      <div class="instructor-card">
+        <div class="instructor-photo">
+          <div class="photo-placeholder">
+            <svg class="photo-icon" viewBox="0 0 24 24" fill="none" stroke="#c8b080" stroke-width="1">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="12" cy="10" r="3"/>
+              <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6"/>
+            </svg>
+            <span>Photo coming soon</span>
+          </div>
+        </div>
+        <div class="instructor-info">
+          <div>
+            <p class="instructor-name">Ellie</p>
+            <p class="instructor-title">Instructor</p>
+          </div>
+          <p class="instructor-bio">Bio coming soon &mdash; add Ellie's story here.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="rule-h"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="page-footer">
+      <div class="footer-logo">
+        <svg viewBox="0 0 318.28 197.85" xmlns="http://www.w3.org/2000/svg" aria-label="Renegade Reformer">
+          <text fill="#f0ebe3" font-family="'Arial Black', sans-serif" font-size="56.57" font-weight="900" letter-spacing="-0.03em" transform="translate(4.19 151.88)">RENEGADE.</text>
+          <text fill="#f0ebe3" font-family="Georgia, serif" font-size="43.3" transform="translate(157.48 193.18)">reformer</text>
+          <path fill="#f0ebe3" d="M193.57,61.92c-18.77-.32-18.76-28.24,0-28.55,18.77.32,18.76,28.24,0,28.55"/>
+          <path fill="#f0ebe3" d="M150.85,61.99c0-15.74,12.73-28.51,28.45-28.59C178.24.36,145.97,4.8,122.63,4.95l28.19,28.29-28.19.22v56.94h28.38"/>
+        </svg>
+      </div>
+      <ul class="footer-links">
+        <li><a href="renegade-reformer.html#early-access">Early Access</a></li>
+        <li><a href="renegade-reformer.html#pricing">Founders Pricing</a></li>
+        <li><a href="#instructors">Instructors</a></li>
+      </ul>
+      <p class="footer-copy">Bristol &nbsp;&middot;&nbsp; 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    const content = {
+      foundations: {
+        level: '01 · Entry',
+        name: 'FOUNDATIONS.',
+        levelColor: '#5a3020',
+        topBorder: '#491E00',
+        body: `<p>New to Reformer? <em>Foundations is where your Renegade journey starts!</em></p>
+<p>Our most supportive introduction to Reformer Pilates, designed specifically for first timers, anyone nervous to start, returning to movement, or wanting to build confidence before stepping into our main Reformer classes.</p>
+<p>This class will help you understand the equipment, build confidence and learn the Reformer Pilates basics properly with a classic full-body workout. Expect clear guidance, simple controlled movement and a strong focus on breathing, form, posture and body awareness — all within a welcoming and inclusive space where everyone is learning together.</p>
+<p><em>If you've been waiting for a sign to start... this is it.</em></p>
+<p>Although this class is not mandatory, we highly encourage starting here!</p>`
+      },
+      renegade: {
+        level: '02 · Beginner',
+        name: 'RENEGADE.',
+        levelColor: '#7a4a28',
+        topBorder: '#6b3010',
+        body: `<p><em>Your beginner class.</em></p>
+<p>Designed to build strength, mobility and better posture while learning the core principles of Pilates. Expect a slower pace and a strong focus on form and control to build confidence on the Reformer.</p>`
+      },
+      rebuild: {
+        level: '03 · Intermediate',
+        name: 'REBUILD.',
+        levelColor: '#9e6030',
+        topBorder: '#9e6030',
+        body: `<p><em>Reformer × full body strength training.</em></p>
+<p>Fancy a fitness challenge? Rebuild is your weighted, gym-inspired Reformer class built for strength, sculpt and control.</p>
+<p>Expect heavier resistance, added load and powerful full-body sequences that bring a strength-training edge to Pilates.</p>`
+      }
+    };
+
+    function openExpand(key) {
+      const d = content[key];
+      const box = document.getElementById('expandBox');
+      document.getElementById('expandLevel').textContent = d.level;
+      document.getElementById('expandLevel').style.color = d.levelColor;
+      document.getElementById('expandName').textContent = d.name;
+      document.getElementById('expandBody').innerHTML = d.body;
+      box.style.borderTopColor = d.topBorder;
+      document.getElementById('overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeExpand() {
+      document.getElementById('overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target === document.getElementById('overlay')) closeExpand();
+    }
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeExpand(); });
+
+    function animArrow(lineId, headId, delay) {
+      setTimeout(() => {
+        const line = document.getElementById(lineId);
+        const head = document.getElementById(headId);
+        if (!line || !head) return;
+        line.style.transition = 'stroke-dashoffset 0.38s ease';
+        line.style.strokeDashoffset = '0';
+        setTimeout(() => {
+          head.style.transition = 'opacity 0.15s';
+          head.style.opacity = '1';
+        }, 340);
+      }, delay);
+    }
+
+    // Trigger animations when journey section scrolls into view
+    const journeySection = document.getElementById('journey');
+    let journeyAnimated = false;
+
+    const journeyObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !journeyAnimated) {
+        journeyAnimated = true;
+        const seq = [
+          { card: 'card1', pills: 'pills1', cd: 100 },
+          { conn: 'conn1', al: 'arr1line', ah: 'arr1head', cd: 520 },
+          { card: 'card2', pills: 'pills2', cd: 720 },
+          { conn: 'conn2', al: 'arr2line', ah: 'arr2head', cd: 1120 },
+          { card: 'card3', pills: 'pills3', cd: 1320 },
+        ];
+        seq.forEach(s => {
+          if (s.card) {
+            setTimeout(() => document.getElementById(s.card).classList.add('visible'), s.cd);
+            const pills = document.querySelectorAll('#' + s.pills + ' .rn-pill');
+            pills.forEach((p, i) => setTimeout(() => p.classList.add('visible'), s.cd + 240 + i * 90));
+          }
+          if (s.conn) {
+            setTimeout(() => document.getElementById(s.conn).classList.add('visible'), s.cd);
+            animArrow(s.al, s.ah, s.cd + 80);
+          }
+        });
+      }
+    }, { threshold: 0.15 });
+
+    if (journeySection) journeyObserver.observe(journeySection);
+  </script>
+
+</body>
+</html>
