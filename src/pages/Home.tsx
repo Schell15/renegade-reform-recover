@@ -54,12 +54,12 @@ const Home = () => {
               <span className="block uppercase font-light" style={{ fontSize: '11px', letterSpacing: '0.22em', color: '#6a5035' }}>Sign up now</span>
             </button>
             <button
-              onClick={() => toast({ title: "Coming 2026." })}
+              onClick={() => { window.location.href = '/discover.html'; }}
               className="py-6 px-4 text-center transition-colors hover:bg-white/[0.035]"
               style={{ borderTop: '0.5px solid #4a2e12', borderLeft: '0.5px solid #4a2e12', borderRight: '0.5px solid #4a2e12' }}
             >
-              <span className="block uppercase font-bold mb-[5px]" style={{ fontSize: '13px', letterSpacing: '0.14em', color: '#f0ebe3' }}>Discover</span>
-              <span className="block uppercase font-light" style={{ fontSize: '11px', letterSpacing: '0.22em', color: '#6a5035' }}>Preview</span>
+              <span className="block uppercase font-bold mb-[5px]" style={{ fontSize: '13px', letterSpacing: '0.14em', color: '#f0ebe3' }}>Reformer Pilates</span>
+              <span className="block uppercase font-light" style={{ fontSize: '11px', letterSpacing: '0.22em', color: '#6a5035' }}>Full Class Info</span>
             </button>
             <button
               onClick={() => navigate('/pricing')}
