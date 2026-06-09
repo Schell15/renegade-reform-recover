@@ -24,7 +24,7 @@ const Home = () => {
       }}>
           {/* White Eagle Logo */}
           <div className="mb-6">
-            <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Studios Eagle Logo" className="w-32 h-32 mx-auto object-contain" />
+            <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo — reformer Pilates Bristol" className="w-32 h-32 mx-auto object-contain" />
           </div>
           
           {/* Studio Name */}
