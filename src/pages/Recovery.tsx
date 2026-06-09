@@ -33,7 +33,7 @@ const Recovery = () => {
         >
           <img 
             src="/lovable-uploads/6d24f46b-0611-475f-b70f-81f24ce0e64d.png" 
-            alt="Renegade Recovery Logo" 
+            alt="Renegade Recover logo — recovery wellness Bristol companion to reformer Pilates"
             className="mx-auto max-w-md w-full h-auto animate-fade-in cursor-pointer"
           />
         </button>
@@ -104,7 +104,7 @@ const Recovery = () => {
             </div>
           </div>
           <div className="rounded-lg aspect-square overflow-hidden">
-            <img src="/lovable-uploads/d995e283-945b-4021-ad4a-9b8396930652.png" alt="Renegade Recovery Practitioner" className="w-full h-full object-cover" />
+            <img src="/lovable-uploads/d995e283-945b-4021-ad4a-9b8396930652.png" alt="Renegade Recover practitioner — recovery for reformer Pilates Bristol" className="w-full h-full object-cover" />
           </div>
         </section>
 
