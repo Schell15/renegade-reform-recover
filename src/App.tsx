@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Reformer from "./pages/Reformer";
 import ReformerSignup from "./pages/ReformerSignup";
 import Recovery from "./pages/Recovery";
+import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/reformer-signup" element={<ReformerSignup />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/reformer" element={<Navigate to="/" replace />} />
           <Route path="/recover" element={<Recovery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
