@@ -543,6 +543,7 @@
     }
 
     .rn-card {
+      container-type: inline-size;
       border-radius: 18px;
       border: 0.5px solid #391500;
       padding: 28px 28px 28px;
@@ -579,14 +580,15 @@
       margin-bottom: 12px;
     }
     .rn-name {
-      font-size: clamp(16px, 2.4vw, 34px);
+      font-size: clamp(15px, 11cqi, 34px);
       font-weight: 700;
       color: #E1D6C8;
       letter-spacing: 0.01em;
       line-height: 1.05;
       margin-bottom: 12px;
-      word-break: break-word;
-      overflow-wrap: break-word;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: clip;
     }
     .rn-desc {
       font-size: 13px;
