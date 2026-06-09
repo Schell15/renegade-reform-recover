@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — Renegade Reformer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --canvas:        #E1D6C8;
+    --surface:       #F5F0E8;
+    --surface-raised:#FFFFFF;
+    --ink:           #180800;
+    --ink-muted:     #491E00;
+    --ink-faint:     rgba(24,8,0,0.35);
+    --divider:       rgba(24,8,0,0.1);
+    --border:        rgba(24,8,0,0.1);
+    --border-strong: rgba(24,8,0,0.22);
+    --founding-bg:   #270E00;
+    --founding-deep: #1C0900;
+    --ivory:         #E1D6C8;
+    --btn-bg:        #180800;
+    --btn-text:      #E1D6C8;
+  }
+
+  body {
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 72px 36px 96px;
+  }
+
+  /* ---- HEADER ---- */
+  .header {
+    margin-bottom: 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .wordmark {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 18px;
+  }
+  .page-title {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 0.88;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .header-sub {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--ink-muted);
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+  .header-note {
+    font-size: 13px;
+    color: var(--ink-muted);
+    max-width: 460px;
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 22px;
+  }
+  .urgency-strip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--founding-bg);
+    border-radius: 4px;
+    padding: 10px 16px;
+  }
+  .urgency-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--ivory);
+    flex-shrink: 0;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .urgency-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ivory);
+    letter-spacing: 0.03em;
+  }
+  .urgency-text em { font-style: normal; color: rgba(225,214,200,0.55); font-weight: 400; }
+
+  /* ---- SECTIONS ---- */
+  .section { margin-bottom: 56px; }
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0;
+  }
+  .section-note {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--ink-muted);
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+
+  /* ---- GRIDS ---- */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+
+  /* ---- CARDS ---- */
+  .card {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 28px;
+  }
+  .card-feat { border: 1.5px solid var(--border-strong); }
+  .feat-badge {
+    position: absolute;
+    top: -22px; left: 0; right: 0;
+    text-align: center;
+  }
+  .feat-badge span {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--canvas);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 4px;
+  }
+  .card-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+  .card-sub {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--ink-muted);
+  }
+
+  /* ---- FOUNDING BLOCK ---- */
+  .fb {
+    background: var(--founding-bg);
+    border-radius: 8px;
+    padding: 18px 16px 16px;
+    margin-top: 14px;
+  }
+  .fb-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(225,214,200,0.35);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .fb-label::before {
+    content: '';
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: rgba(225,214,200,0.5);
+    flex-shrink: 0;
+  }
+  .anchor-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .anchor-was {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(225,214,200,0.35);
+    text-decoration: line-through;
+    text-decoration-color: rgba(225,214,200,0.35);
+  }
+  .anchor-unit { font-size: 11px; color: rgba(225,214,200,0.22); }
+  .pct-badge {
+    background: rgba(180,50,40,0.5);
+    color: rgba(255,180,170,0.9);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    white-space: nowrap;
+    margin-left: auto;
+  }
+  .pc-eyebrow {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(225,214,200,0.35);
+    margin-bottom: 2px;
+  }
+  .pc-row { display: flex; align-items: baseline; gap: 2px; }
+  .pc-sym { font-size: 18px; font-weight: 700; color: var(--ivory); line-height: 1; }
+  .pc-num {
+    font-size: 54px;
+    font-weight: 900;
+    color: var(--ivory);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .pc-unit {
+    font-size: 13px;
+    color: rgba(225,214,200,0.4);
+    align-self: flex-end;
+    padding-bottom: 7px;
+    margin-left: 4px;
+  }
+  .fb-divider {
+    border: none;
+    border-top: 1px solid rgba(225,214,200,0.08);
+    margin: 14px 0;
+  }
+  .mo-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .mo-num { font-size: 20px; font-weight: 700; color: rgba(225,214,200,0.8); }
+  .mo-unit { font-size: 12px; color: rgba(225,214,200,0.4); margin-left: 4px; flex: 1; }
+  .mo-was { font-size: 12px; color: rgba(225,214,200,0.22); text-decoration: line-through; margin-right: 6px; }
+  .mo-pct {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(225,214,200,0.5);
+    background: rgba(225,214,200,0.08);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+  .save-block {
+    background: rgba(225,214,200,0.07);
+    border-radius: 5px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+  }
+  .save-eyebrow {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(225,214,200,0.35);
+    margin-bottom: 3px;
+  }
+  .save-num {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--ivory);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .save-unit { font-size: 12px; color: rgba(225,214,200,0.5); margin-left: 3px; }
+  .spots { font-size: 11px; color: rgba(225,214,200,0.22); }
+
+  /* ---- BUTTON ---- */
+  .cta { margin-top: auto; padding-top: 16px; }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 13px 18px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.1s;
+  }
+  .btn:hover { opacity: 0.85; transform: translateY(-1px); }
+
+  /* ---- PACKS ---- */
+  .pack-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 18px 16px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+  }
+  .pk-eyebrow {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 14px 0 2px;
+  }
+  .pk-row { display: flex; align-items: baseline; gap: 2px; }
+  .pk-sym { font-size: 15px; font-weight: 700; color: var(--ink); line-height: 1; }
+  .pk-num { font-size: 44px; font-weight: 900; color: var(--ink); letter-spacing: -0.03em; line-height: 1; }
+  .pk-unit { font-size: 12px; color: var(--ink-muted); align-self: flex-end; padding-bottom: 5px; margin-left: 3px; }
+  .pk-total { font-size: 12px; color: var(--ink-muted); margin-top: 3px; margin-bottom: 4px; }
+  .btn-ghost {
+    display: block;
+    width: 100%;
+    padding: 11px 18px;
+    margin-top: auto;
+    padding-top: 13px;
+    background: transparent;
+    color: var(--ink-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid var(--border-strong);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-ghost:hover { background: rgba(24,8,0,0.06); color: var(--ink); }
+
+  /* ---- PERKS BANNER ---- */
+  .perks-banner {
+    background: var(--founding-deep);
+    border: 1px solid rgba(225,214,200,0.14);
+    border-radius: 12px;
+    padding: 32px 30px 28px;
+    margin-bottom: 56px;
+  }
+  .perks-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .perks-heading {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--ivory);
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .perks-sub {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(225,214,200,0.5);
+    max-width: 340px;
+    line-height: 1.65;
+    font-style: italic;
+  }
+  .perks-lock {
+    background: rgba(225,214,200,0.06);
+    border: 1px solid rgba(225,214,200,0.14);
+    border-radius: 8px;
+    padding: 14px 18px;
+    flex-shrink: 0;
+    max-width: 220px;
+  }
+  .perks-lock-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ivory);
+    margin-bottom: 5px;
+  }
+  .perks-lock-body {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(225,214,200,0.45);
+    line-height: 1.6;
+  }
+  .perks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  .perk {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    background: rgba(225,214,200,0.05);
+    border-radius: 7px;
+    padding: 13px 14px;
+  }
+  .perk-icon {
+    font-size: 18px;
+    color: rgba(225,214,200,0.55);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .perk-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ivory);
+    margin-bottom: 2px;
+  }
+  .perk-body {
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(225,214,200,0.5);
+    line-height: 1.5;
+  }
+
+  /* ---- FOOTER ---- */
+  .footer {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--divider);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .footer p {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--ink-faint);
+    line-height: 1.8;
+    max-width: 500px;
+  }
+  .footer-brand {
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+  .footer-tagline {
+    font-size: 10px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+    margin-top: 3px;
+    text-align: right;
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 660px) {
+    .grid-3, .grid-2 { grid-template-columns: 1fr; }
+    .page-title { font-size: 54px; }
+    .page { padding: 44px 20px 64px; }
+    .pc-num { font-size: 44px; }
+    .perks-lock { max-width: 100%; }
+  }
+  @media print {
+    body { background: #fff; }
+    .page { padding: 32px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="header">
+    <p class="wordmark">Renegade Reformer — Bristol</p>
+    <h1 class="page-title">Pricing.</h1>
+    <p class="header-sub">reform · repower · recover</p>
+    <p class="header-note">Every option includes full access to our class timetable. Monthly memberships roll with no lock-in after your first term.</p>
+    <div class="urgency-strip">
+      <span class="urgency-dot"></span>
+      <p class="urgency-text">Founding member rates — <em>strictly limited to 50 spots</em></p>
+    </div>
+  </header>
+
+  <!-- DROP-IN & INTRO -->
+  <section class="section">
+    <p class="section-label">Drop-in &amp; intro offer</p>
+    <div class="grid-2">
+
+      <div class="card">
+        <p class="card-name">Drop-in class</p>
+        <p class="card-sub">Single session · pay as you go</p>
+        <div class="fb">
+          <p class="fb-label">Founding rate</p>
+          <div class="anchor-row">
+            <span class="anchor-was">£25</span>
+            <span class="anchor-unit">per class normally</span>
+            <span class="pct-badge">-20% off</span>
+          </div>
+          <p class="pc-eyebrow">per class</p>
+          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">20</span><span class="pc-unit">/ class</span></div>
+          <hr class="fb-divider">
+          <div class="save-block">
+            <p class="save-eyebrow">you save</p>
+            <span class="save-num">£5</span><span class="save-unit">on every single class</span>
+          </div>
+          <p class="spots">50 founding spots available</p>
+        </div>
+        <div class="cta">
+          <!-- ↓ replace YOUR_URL_HERE -->
+          <a href="YOUR_URL_HERE" class="btn">Claim founding rate</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="card-name">Intro 3-class pack</p>
+        <p class="card-sub">New clients only · valid 30 days</p>
+        <div class="fb">
+          <p class="fb-label">Founding rate</p>
+          <div class="anchor-row">
+            <span class="anchor-was">£18.33</span>
+            <span class="anchor-unit">per class normally</span>
+            <span class="pct-badge">-9% off</span>
+          </div>
+          <p class="pc-eyebrow">per class</p>
+          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">16.67</span><span class="pc-unit">/ class</span></div>
+          <hr class="fb-divider">
+          <div class="mo-line">
+            <span class="mo-num">£50</span>
+            <span class="mo-unit">total · 3 classes</span>
+            <span class="mo-was">£55</span>
+          </div>
+          <div class="save-block">
+            <p class="save-eyebrow">you save</p>
+            <span class="save-num">£5</span><span class="save-unit">on this pack</span>
+          </div>
+          <p class="spots">50 founding spots available</p>
+        </div>
+        <div class="cta">
+          <!-- ↓ replace YOUR_URL_HERE -->
+          <a href="YOUR_URL_HERE" class="btn">Claim founding rate</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MEMBERSHIPS -->
+  <section class="section">
+    <p class="section-label">Monthly memberships</p>
+    <div class="grid-3">
+
+      <div class="card">
+        <p class="card-name">Renegade Core</p>
+        <p class="card-sub">4 classes / month</p>
+        <div class="fb">
+          <p class="fb-label">Founding rate + all perks</p>
+          <div class="anchor-row">
+            <span class="anchor-was">£21.25</span>
+            <span class="anchor-unit">per class normally</span>
+            <span class="pct-badge">-12%</span>
+          </div>
+          <p class="pc-eyebrow">per class</p>
+          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">18.75</span><span class="pc-unit">/ class</span></div>
+          <hr class="fb-divider">
+          <div class="mo-line">
+            <span class="mo-num">£75</span>
+            <span class="mo-unit">/ month</span>
+            <span class="mo-was">£85</span>
+            <span class="mo-pct">-12%</span>
+          </div>
+          <div class="save-block">
+            <p class="save-eyebrow">you save</p>
+            <span class="save-num">£120</span><span class="save-unit">every year</span>
+          </div>
+          <p class="spots">50 founding spots</p>
+        </div>
+        <div class="cta">
+          <!-- ↓ replace YOUR_URL_HERE -->
+          <a href="YOUR_URL_HERE" class="btn">Join founding</a>
+        </div>
+      </div>
+
+      <div class="card card-feat">
+        <div class="feat-badge"><span>Most popular</span></div>
+        <p class="card-name">Renegade Pro</p>
+        <p class="card-sub">8 classes / month</p>
+        <div class="fb">
+          <p class="fb-label">Founding rate + all perks</p>
+          <div class="anchor-row">
+            <span class="anchor-was">£18.75</span>
+            <span class="anchor-unit">per class normally</span>
+            <span class="pct-badge">-13%</span>
+          </div>
+          <p class="pc-eyebrow">per class</p>
+          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">16.25</span><span class="pc-unit">/ class</span></div>
+          <hr class="fb-divider">
+          <div class="mo-line">
+            <span class="mo-num">£130</span>
+            <span class="mo-unit">/ month</span>
+            <span class="mo-was">£150</span>
+            <span class="mo-pct">-13%</span>
+          </div>
+          <div class="save-block">
+            <p class="save-eyebrow">you save</p>
+            <span class="save-num">£240</span><span class="save-unit">every year</span>
+          </div>
+          <p class="spots">50 founding spots</p>
+        </div>
+        <div class="cta">
+          <!-- ↓ replace YOUR_URL_HERE -->
+          <a href="YOUR_URL_HERE" class="btn">Join founding</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="card-name">Renegade Elite</p>
+        <p class="card-sub">12 classes / month</p>
+        <div class="fb">
+          <p class="fb-label">Founding rate + all perks</p>
+          <div class="anchor-row">
+            <span class="anchor-was">£16.25</span>
+            <span class="anchor-unit">per class normally</span>
+            <span class="pct-badge">-13%</span>
+          </div>
+          <p class="pc-eyebrow">per class</p>
+          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">14.17</span><span class="pc-unit">/ class</span></div>
+          <hr class="fb-divider">
+          <div class="mo-line">
+            <span class="mo-num">£170</span>
+            <span class="mo-unit">/ month</span>
+            <span class="mo-was">£195</span>
+            <span class="mo-pct">-13%</span>
+          </div>
+          <div class="save-block">
+            <p class="save-eyebrow">you save</p>
+            <span class="save-num">£300</span><span class="save-unit">every year</span>
+          </div>
+          <p class="spots">50 founding spots</p>
+        </div>
+        <div class="cta">
+          <!-- ↓ replace YOUR_URL_HERE -->
+          <a href="YOUR_URL_HERE" class="btn">Join founding</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOUNDING PERKS BANNER -->
+  <div class="perks-banner">
+    <div class="perks-top">
+      <div>
+        <p class="perks-heading">Founding member perks.</p>
+        <p class="perks-sub">Be one of the first to join Renegade and receive all of the below — for as long as you stay a member.</p>
+      </div>
+      <div class="perks-lock">
+        <p class="perks-lock-title">Locked in for life</p>
+        <p class="perks-lock-body">Your founding rate stays yours until you pause or cancel. Never pay more.</p>
+      </div>
+    </div>
+    <div class="perks-grid">
+      <div class="perk">
+        <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2"/><path d="M6 12V6a2 2 0 0 1 4 0v2a2 2 0 0 0 4 0V6a2 2 0 0 1 4 0v6"/></svg>
+        <div>
+          <p class="perk-title">Renegade socks</p>
+          <p class="perk-body">Free pair of branded socks on joining</p>
+        </div>
+      </div>
+      <div class="perk">
+        <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></svg>
+        <div>
+          <p class="perk-title">1 guest pass / month</p>
+          <p class="perk-body">Bring a friend to any class, on us</p>
+        </div>
+      </div>
+      <div class="perk">
+        <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/></svg>
+        <div>
+          <p class="perk-title">Priority event booking</p>
+          <p class="perk-body">First access to all community events</p>
+        </div>
+      </div>
+      <div class="perk">
+        <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>
+          <p class="perk-title">Early class booking</p>
+          <p class="perk-body">Book one week ahead of non-members</p>
+        </div>
+      </div>
+      <div class="perk">
+        <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <div>
+          <p class="perk-title">Renegade tote bag</p>
+          <p class="perk-body">Complimentary branded tote on joining</p>
+        </div>
+      </div>
+      <div class="perk">
+        <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg>
+        <div>
+          <p class="perk-title">10% off the bar</p>
+          <p class="perk-body">Coffee &amp; drinks, every visit</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLASS PACKS -->
+  <section class="section">
+    <p class="section-label">Class packs</p>
+    <p class="section-note">Not a member yet? Packs are a great way to try the studio.</p>
+    <div class="grid-3">
+
+      <div class="pack-card">
+        <p class="pk-eyebrow" style="margin-top:0;">4-class pack</p>
+        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:0;">Valid 3 months from first use</p>
+        <p class="pk-eyebrow">per class</p>
+        <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">23.75</span><span class="pk-unit">/ class</span></div>
+        <p class="pk-total">£95 total</p>
+        <!-- ↓ replace YOUR_URL_HERE -->
+        <a href="YOUR_URL_HERE" class="btn-ghost">Buy pack</a>
+      </div>
+
+      <div class="pack-card">
+        <p class="pk-eyebrow" style="margin-top:0;">8-class pack</p>
+        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:0;">Valid 3 months from first use</p>
+        <p class="pk-eyebrow">per class</p>
+        <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">21.88</span><span class="pk-unit">/ class</span></div>
+        <p class="pk-total">£175 total</p>
+        <!-- ↓ replace YOUR_URL_HERE -->
+        <a href="YOUR_URL_HERE" class="btn-ghost">Buy pack</a>
+      </div>
+
+      <div class="pack-card">
+        <p class="pk-eyebrow" style="margin-top:0;">12-class pack</p>
+        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:0;">Valid 3 months from first use</p>
+        <p class="pk-eyebrow">per class</p>
+        <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">21.00</span><span class="pk-unit">/ class</span></div>
+        <p class="pk-total">£252 total</p>
+        <!-- ↓ replace YOUR_URL_HERE -->
+        <a href="YOUR_URL_HERE" class="btn-ghost">Buy pack</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>All memberships roll monthly after an initial 1-month term. Class packs are non-refundable and non-transferable. Founding member rates are strictly limited to 50 spots and locked in for life — your rate never increases as long as your membership remains active.</p>
+    <div>
+      <p class="footer-brand">Renegade.</p>
+      <p class="footer-tagline">reform · repower · recover</p>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
