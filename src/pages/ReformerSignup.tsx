@@ -83,7 +83,7 @@ const ReformerSignup = () => {
             {/* Studio Name */}
             <div className="mb-4">
             <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
-              RENEGADE.
+              Join Renegade Reformer Bristol
             </h1>
             <h2 className="text-primary font-neogrotesk text-xl sm:text-3xl font-bold tracking-tight -mt-2">
               STUDIOS.
@@ -143,7 +143,7 @@ const ReformerSignup = () => {
           {/* Studio Name */}
           <div className="mb-4 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_0.5s_forwards]">
             <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
-              RENEGADE.
+              Join Renegade Reformer Bristol
             </h1>
             <h2 className="text-primary font-neogrotesk text-xl sm:text-3xl font-bold tracking-tight -mt-2">
               REFORMER.

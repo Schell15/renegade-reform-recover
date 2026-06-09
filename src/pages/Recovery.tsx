@@ -20,7 +20,7 @@ const Recovery = () => {
             <ArrowLeft className="h-4 w-4" />
             Back to Home
           </Button>
-          <h1 className="text-2xl font-medium text-foreground">renegade.recover</h1>
+          <h2 className="text-2xl font-medium text-foreground">renegade.recover</h2>
         </div>
       </header>
 
@@ -47,7 +47,7 @@ const Recovery = () => {
       <main className="max-w-7xl mx-auto px-4 py-12 space-y-16">
         {/* Hero Section */}
         <section className="text-center space-y-6">
-          <h2 className="text-4xl md:text-5xl font-light text-foreground">Restore & Renew</h2>
+          <h1 className="text-4xl md:text-5xl font-light text-foreground">Recovery Pilates Classes in Bristol</h1>
           <div className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed space-y-6">
             <p>
               Located next door to our Reformer Pilates studio, Renegade Recover is a purpose-built wellness suite offering contrast therapy for body, mind and muscle. Open to all members of the public aged 18 and over, it is an adults-only space designed for deep recovery and quiet reset.
