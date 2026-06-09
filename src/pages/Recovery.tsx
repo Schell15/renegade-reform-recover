@@ -240,7 +240,7 @@ const Recovery = () => {
             </CardContent>
           </Card>
         </section>
-      </div>
+      </main>
     </div>;
 };
 export default Recovery;
