@@ -47,7 +47,41 @@
   .page {
     max-width: 920px;
     margin: 0 auto;
-    padding: 72px 36px 96px;
+    padding: 120px 36px 96px;
+  }
+
+  /* ── NAV ── */
+  .rn-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: linear-gradient(to bottom, rgba(13,4,0,0.95) 0%, rgba(13,4,0,0.75) 55%, transparent 100%);
+    pointer-events: auto;
+  }
+  .rn-nav .nav-logo img { width: 56px; height: 56px; object-fit: contain; display: block; }
+  .rn-nav .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .rn-nav .nav-links a {
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    color: #8a6e50;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .rn-nav .nav-links a:hover { color: #f0ebe3; }
+  @media (max-width: 720px) {
+    .rn-nav { padding: 16px 20px; }
+    .rn-nav .nav-links { display: none; }
   }
 
   /* ---- HEADER ---- */
@@ -494,6 +528,17 @@
 </style>
 </head>
 <body>
+<nav class="rn-nav">
+  <a href="/" class="nav-logo" aria-label="Renegade Reformer home">
+    <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo — reformer Pilates Bristol" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="/reformer-signup">Early Access</a></li>
+    <li><a href="/discover.html">Discover</a></li>
+    <li><a href="/discover.html#instructors">Instructors</a></li>
+    <li><a href="/pricing">Pricing</a></li>
+  </ul>
+</nav>
 <div class="page">
 
   <header class="header" style="display:flex;align-items:center;justify-content:space-between;gap:32px;">
