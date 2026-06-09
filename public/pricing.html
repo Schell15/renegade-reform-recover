@@ -59,8 +59,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
-    background: linear-gradient(to bottom, rgba(13,4,0,0.95) 0%, rgba(13,4,0,0.75) 55%, transparent 100%);
     pointer-events: auto;
+    transition: background 0.25s ease, backdrop-filter 0.25s ease, box-shadow 0.25s ease;
+    background: linear-gradient(to bottom, rgba(0,0,0,calc(0.55 + var(--nav-scroll, 0) * 0.4)) 0%, rgba(0,0,0,calc(0.35 + var(--nav-scroll, 0) * 0.45)) 55%, rgba(0,0,0,calc(var(--nav-scroll, 0) * 0.25)) 100%);
+    backdrop-filter: blur(calc(var(--nav-scroll, 0) * 14px));
+    -webkit-backdrop-filter: blur(calc(var(--nav-scroll, 0) * 14px));
+    box-shadow: 0 12px 32px -16px rgba(0,0,0, calc(var(--nav-scroll, 0) * 0.85));
   }
   .rn-nav .nav-logo img { width: 56px; height: 56px; object-fit: contain; display: block; }
   .rn-nav .nav-links {
@@ -832,5 +836,22 @@
   </footer>
 
 </div>
+<script>
+  (function () {
+    var nav = document.querySelector('.rn-nav');
+    if (!nav) return;
+    var ticking = false;
+    function update() {
+      var y = window.scrollY || window.pageYOffset || 0;
+      var t = Math.min(1, y / 120);
+      nav.style.setProperty('--nav-scroll', t.toFixed(3));
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    update();
+  })();
+</script>
 </body>
 </html>
