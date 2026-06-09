@@ -661,13 +661,17 @@
     .rn-connector.visible { opacity: 1; }
 
     .rn-conn-badge {
-      font-size: 9px;
+      font-size: clamp(7px, 0.9vw, 9px);
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       color: #3d1a00;
       text-align: center;
-      line-height: 1.6;
+      line-height: 1.4;
+      max-width: 100%;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+      hyphens: auto;
     }
 
     .rn-overlay {
