@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
 
 import reformer1 from "@/assets/renegade_reformer_1.png";
 import reformer2 from "@/assets/renegade_reformer_2.png";
@@ -53,7 +54,12 @@ const ReformerSignup = () => {
 
   if (isSubmitted) {
     return (
-    <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
+    <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
+        <SEO
+          title="Early Access Confirmed | Renegade Reformer"
+          description="Thanks for signing up for Renegade Reformer early access. We'll be in touch when the Bristol studio opens in 2026."
+          path="/reformer-signup"
+        />
         <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
           {/* Main Header Logo */}
           <div className="mb-10 animate-fade-in animate-scale-in" style={{
@@ -105,13 +111,17 @@ const ReformerSignup = () => {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     );
   }
 
   return (
-    <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
-      
+    <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
+      <SEO
+        title="Early Access Signup | Renegade Reformer Bristol"
+        description="Sign up for early access to Renegade Reformer, a new Reformer Pilates studio opening in Bristol in 2026. Founders pricing and priority booking."
+        path="/reformer-signup"
+      />
       <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
         {/* Main Header Logo */}
         <div className="mb-10">
@@ -202,7 +212,7 @@ const ReformerSignup = () => {
           />
         </div>
       )}
-    </div>
+    </main>
   );
 };
 

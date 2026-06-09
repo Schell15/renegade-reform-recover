@@ -4,9 +4,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { SEO } from "@/components/SEO";
 const Recovery = () => {
   const navigate = useNavigate();
   return <div className="min-h-screen dark font-grotesk text-foreground bg-background">
+      <SEO
+        title="Renegade Recover | Wellness & Recovery in Bristol"
+        description="Renegade Recover is a Bristol recovery and wellness space — contrast therapy, sauna and ice bath sessions designed to complement your training."
+        path="/recover"
+      />
       {/* Header */}
       <header className="py-6 px-4 border-b border-border">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -38,7 +44,7 @@ const Recovery = () => {
         <hr className="border-t border-border/30" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-12 space-y-16">
+      <main className="max-w-7xl mx-auto px-4 py-12 space-y-16">
         {/* Hero Section */}
         <section className="text-center space-y-6">
           <h2 className="text-4xl md:text-5xl font-light text-foreground">Restore & Renew</h2>
@@ -234,7 +240,7 @@ const Recovery = () => {
             </CardContent>
           </Card>
         </section>
-      </div>
+      </main>
     </div>;
 };
 export default Recovery;
