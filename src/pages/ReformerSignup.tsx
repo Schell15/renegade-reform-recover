@@ -212,7 +212,7 @@ const ReformerSignup = () => {
           />
         </div>
       )}
-    </div>
+    </main>
   );
 };
 
