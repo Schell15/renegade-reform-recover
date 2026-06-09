@@ -114,7 +114,7 @@
   .urgency-text em { font-style: normal; color: rgba(225,214,200,0.55); font-weight: 400; }
 
   /* ---- SECTIONS ---- */
-  .section { margin-bottom: 56px; }
+  .section { margin-bottom: 72px; }
   .section-label {
     font-size: 36px;
     font-weight: 900;
@@ -139,16 +139,16 @@
 
   /* ---- CARDS ---- */
   .card {
-    background: var(--surface-raised);
-    border: 1px solid var(--border);
+    background: #E1D6C8;
+    border: 1px solid rgba(24,8,0,0.12);
     border-radius: 10px;
-    padding: 22px 20px 20px;
+    padding: 16px 16px 16px;
     display: flex;
     flex-direction: column;
     position: relative;
     margin-top: 28px;
   }
-  .card-feat { border: 1.5px solid var(--border-strong); }
+  .card-feat { border: 1.5px solid rgba(24,8,0,0.28); }
   .feat-badge {
     position: absolute;
     top: -22px; left: 0; right: 0;
@@ -166,14 +166,14 @@
     border-radius: 4px;
   }
   .card-name {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 700;
     color: var(--ink);
     margin-bottom: 3px;
   }
   .card-sub {
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 600;
     color: var(--ink-muted);
   }
 
@@ -181,25 +181,25 @@
   .fb {
     background: var(--founding-bg);
     border-radius: 8px;
-    padding: 18px 16px 16px;
-    margin-top: 14px;
+    padding: 14px 14px 14px;
+    margin-top: 10px;
   }
   .fb-label {
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(225,214,200,0.35);
+    color: rgba(225,214,200,0.7);
     margin-bottom: 12px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
   }
   .fb-label::before {
     content: '';
-    width: 4px; height: 4px;
+    width: 5px; height: 5px;
     border-radius: 50%;
-    background: rgba(225,214,200,0.5);
+    background: rgba(225,214,200,0.7);
     flex-shrink: 0;
   }
   .anchor-row {
@@ -275,7 +275,7 @@
     background: rgba(225,214,200,0.07);
     border-radius: 5px;
     padding: 10px 12px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
   .save-eyebrow {
     font-size: 9px;
@@ -318,10 +318,10 @@
 
   /* ---- PACKS ---- */
   .pack-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: #DDD0C0;
+    border: 0.5px solid rgba(24,8,0,0.1);
     border-radius: 10px;
-    padding: 18px 18px 16px;
+    padding: 14px 14px 14px;
     display: flex;
     flex-direction: column;
     margin-top: 12px;
@@ -527,17 +527,16 @@
             <span class="anchor-unit">per class normally</span>
             <span class="pct-badge">-20% off</span>
           </div>
-          <p class="pc-eyebrow">per class</p>
           <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">20</span><span class="pc-unit">/ class</span></div>
           <hr class="fb-divider">
           <div class="save-block" style="margin-top:auto;">
             <p class="save-eyebrow">you save</p>
             <span class="save-num">£5</span><span class="save-unit">on every single class</span>
           </div>
-          <p class="spots">50 founding spots available</p>
         </div>
         <div class="cta">
           <!-- ↓ replace YOUR_URL_HERE -->
+          <p style="font-size:11px;font-weight:600;color:rgba(225,214,200,0.55);text-align:center;margin-bottom:8px;letter-spacing:0.04em;">⬡ 50 founding spots remaining</p>
           <a href="YOUR_URL_HERE" class="btn">Claim founding rate</a>
         </div>
       </div>
@@ -552,7 +551,6 @@
             <span class="anchor-unit">per pack normally</span>
             <span class="pct-badge">-9% off</span>
           </div>
-          <p class="pc-eyebrow">per class</p>
           <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">16.67</span><span class="pc-unit">/ class</span></div>
           <hr class="fb-divider">
           <div class="mo-line">
@@ -564,10 +562,10 @@
             <p class="save-eyebrow">you save</p>
             <span class="save-num">£5</span><span class="save-unit">on this pack</span>
           </div>
-          <p class="spots">50 founding spots available</p>
         </div>
         <div class="cta">
           <!-- ↓ replace YOUR_URL_HERE -->
+          <p style="font-size:11px;font-weight:600;color:rgba(225,214,200,0.55);text-align:center;margin-bottom:8px;letter-spacing:0.04em;">⬡ 50 founding spots remaining</p>
           <a href="YOUR_URL_HERE" class="btn">Claim founding rate</a>
         </div>
       </div>
@@ -590,23 +588,21 @@
             <span class="anchor-unit">per class normally</span>
             <span class="pct-badge">-12%</span>
           </div>
-          <p class="pc-eyebrow">per class</p>
           <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">18.75</span><span class="pc-unit">/ class</span></div>
           <hr class="fb-divider">
           <div class="mo-line">
             <span class="mo-num">£75</span>
             <span class="mo-unit">/ month</span>
             <span class="mo-was">£85</span>
-            <span class="mo-pct">-12%</span>
           </div>
           <div class="save-block">
             <p class="save-eyebrow">you save</p>
             <span class="save-num">£120</span><span class="save-unit">every year</span>
           </div>
-          <p class="spots">50 founding spots</p>
         </div>
         <div class="cta">
           <!-- ↓ replace YOUR_URL_HERE -->
+          <p style="font-size:11px;font-weight:600;color:rgba(225,214,200,0.55);text-align:center;margin-bottom:8px;letter-spacing:0.04em;">⬡ 50 founding spots remaining</p>
           <a href="YOUR_URL_HERE" class="btn">Join founding</a>
         </div>
       </div>
@@ -622,23 +618,21 @@
             <span class="anchor-unit">per class normally</span>
             <span class="pct-badge">-13%</span>
           </div>
-          <p class="pc-eyebrow">per class</p>
           <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">16.25</span><span class="pc-unit">/ class</span></div>
           <hr class="fb-divider">
           <div class="mo-line">
             <span class="mo-num">£130</span>
             <span class="mo-unit">/ month</span>
             <span class="mo-was">£150</span>
-            <span class="mo-pct">-13%</span>
           </div>
           <div class="save-block">
             <p class="save-eyebrow">you save</p>
             <span class="save-num">£240</span><span class="save-unit">every year</span>
           </div>
-          <p class="spots">50 founding spots</p>
         </div>
         <div class="cta">
           <!-- ↓ replace YOUR_URL_HERE -->
+          <p style="font-size:11px;font-weight:600;color:rgba(225,214,200,0.55);text-align:center;margin-bottom:8px;letter-spacing:0.04em;">⬡ 50 founding spots remaining</p>
           <a href="YOUR_URL_HERE" class="btn">Join founding</a>
         </div>
       </div>
@@ -653,23 +647,21 @@
             <span class="anchor-unit">per class normally</span>
             <span class="pct-badge">-13%</span>
           </div>
-          <p class="pc-eyebrow">per class</p>
           <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">14.17</span><span class="pc-unit">/ class</span></div>
           <hr class="fb-divider">
           <div class="mo-line">
             <span class="mo-num">£170</span>
             <span class="mo-unit">/ month</span>
             <span class="mo-was">£195</span>
-            <span class="mo-pct">-13%</span>
           </div>
           <div class="save-block">
             <p class="save-eyebrow">you save</p>
             <span class="save-num">£300</span><span class="save-unit">every year</span>
           </div>
-          <p class="spots">50 founding spots</p>
         </div>
         <div class="cta">
           <!-- ↓ replace YOUR_URL_HERE -->
+          <p style="font-size:11px;font-weight:600;color:rgba(225,214,200,0.55);text-align:center;margin-bottom:8px;letter-spacing:0.04em;">⬡ 50 founding spots remaining</p>
           <a href="YOUR_URL_HERE" class="btn">Join founding</a>
         </div>
       </div>
@@ -742,9 +734,13 @@
     <div class="grid-3">
 
       <div class="pack-card">
-        <p class="pk-eyebrow" style="margin-top:0;">4-class pack</p>
-        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:0;">Valid 3 months from first use</p>
-        <p class="pk-eyebrow">per class</p>
+        <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
+        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
+        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+          <span style="font-size:72px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1;">4</span>
+          <span style="font-size:18px;font-weight:600;color:var(--ink-muted);align-self:flex-end;padding-bottom:8px;">classes</span>
+        </div>
+        <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">23.75</span><span class="pk-unit">/ class</span></div>
         <p class="pk-total">£95 total</p>
         <!-- ↓ replace YOUR_URL_HERE -->
@@ -752,9 +748,13 @@
       </div>
 
       <div class="pack-card">
-        <p class="pk-eyebrow" style="margin-top:0;">8-class pack</p>
-        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:0;">Valid 3 months from first use</p>
-        <p class="pk-eyebrow">per class</p>
+        <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
+        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
+        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+          <span style="font-size:72px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1;">8</span>
+          <span style="font-size:18px;font-weight:600;color:var(--ink-muted);align-self:flex-end;padding-bottom:8px;">classes</span>
+        </div>
+        <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">21.88</span><span class="pk-unit">/ class</span></div>
         <p class="pk-total">£175 total</p>
         <!-- ↓ replace YOUR_URL_HERE -->
@@ -762,9 +762,13 @@
       </div>
 
       <div class="pack-card">
-        <p class="pk-eyebrow" style="margin-top:0;">12-class pack</p>
-        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:0;">Valid 3 months from first use</p>
-        <p class="pk-eyebrow">per class</p>
+        <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
+        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
+        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+          <span style="font-size:72px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1;">12</span>
+          <span style="font-size:18px;font-weight:600;color:var(--ink-muted);align-self:flex-end;padding-bottom:8px;">classes</span>
+        </div>
+        <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">21.00</span><span class="pk-unit">/ class</span></div>
         <p class="pk-total">£252 total</p>
         <!-- ↓ replace YOUR_URL_HERE -->
