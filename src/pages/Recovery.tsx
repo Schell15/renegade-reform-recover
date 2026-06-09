@@ -9,8 +9,8 @@ const Recovery = () => {
   const navigate = useNavigate();
   return <div className="min-h-screen dark font-grotesk text-foreground bg-background">
       <SEO
-        title="Renegade Recover | Wellness & Recovery in Bristol"
-        description="Renegade Recover is a Bristol recovery and wellness space — contrast therapy, sauna and ice bath sessions designed to complement your training."
+        title="Recovery Pilates Classes Bristol | Renegade Reformer"
+        description="Low-impact reformer Pilates designed for recovery, rehabilitation, and rest days. Book a recovery session at Renegade Reformer in Bristol."
         path="/recover"
       />
       {/* Header */}
