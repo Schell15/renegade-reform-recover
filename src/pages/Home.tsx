@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
 
 // Updated to use direct image paths
 const Home = () => {
@@ -8,9 +9,14 @@ const Home = () => {
   const {
     toast
   } = useToast();
-  return <div className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 pt-[15vh] pb-8 relative overflow-hidden" style={{
+  return <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 pt-[15vh] pb-8 relative overflow-hidden" style={{
     background: 'linear-gradient(to bottom, #170701, #4f2202)'
   }}>
+      <SEO
+        title="Reformer Pilates Studio in Bristol | Renegade Reformer"
+        description="Renegade Reformer is a premium Reformer Pilates studio in Bristol. Strength-led, contemporary classes opening Spring 2026 — get early access now."
+        path="/"
+      />
       <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
         {/* Main Header Logo */}
         <div className="mb-10 animate-fade-in animate-scale-in" style={{
@@ -81,6 +87,6 @@ const Home = () => {
           <p className="text-primary font-rosaline text-base tracking-wider">Coming to Bristol 2026</p>
         </div>
       </div>
-    </div>;
+    </main>;
 };
 export default Home;
