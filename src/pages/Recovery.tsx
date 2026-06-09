@@ -44,7 +44,7 @@ const Recovery = () => {
         <hr className="border-t border-border/30" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-12 space-y-16">
+      <main className="max-w-7xl mx-auto px-4 py-12 space-y-16">
         {/* Hero Section */}
         <section className="text-center space-y-6">
           <h2 className="text-4xl md:text-5xl font-light text-foreground">Restore & Renew</h2>
