@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => ({
       routes: ['/', '/reformer-signup', '/recover'],
       renderer: '@prerenderer/renderer-puppeteer',
       rendererOptions: {
-        renderAfterTime: 2500,
+        renderAfterTime: 4000,
         headless: true,
       },
     }),
