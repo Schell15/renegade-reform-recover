@@ -591,18 +591,18 @@ const PRICING_BODY = `<nav class="rn-nav">
           <div class="anchor-row">
             <span class="anchor-was">£55</span>
             <span class="anchor-unit">per pack normally</span>
-            <span class="pct-badge">-9% off</span>
+            
           </div>
-          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">16.67</span><span class="pc-unit">/ class</span></div>
+          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">16</span><span class="pc-unit">/ class</span></div>
           <hr class="fb-divider">
           <div class="mo-line">
-            <span class="mo-num">£50</span>
+            <span class="mo-num">£48</span>
             <span class="mo-unit">total · 3 classes</span>
             <span class="mo-was">£55</span>
           </div>
           <div class="save-block">
             <p class="save-eyebrow">you save</p>
-            <span class="save-num">£5</span><span class="save-unit">on this pack</span>
+            <span class="save-num">£7</span><span class="save-unit">on this pack</span>
           </div>
         </div>
         <div class="cta">
@@ -628,18 +628,18 @@ const PRICING_BODY = `<nav class="rn-nav">
           <div class="anchor-row">
             <span class="anchor-was">£21.25</span>
             <span class="anchor-unit">per class normally</span>
-            <span class="pct-badge">-12%</span>
+            
           </div>
-          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">18.75</span><span class="pc-unit">/ class</span></div>
+          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">18</span><span class="pc-unit">/ class</span></div>
           <hr class="fb-divider">
           <div class="mo-line">
-            <span class="mo-num">£75</span>
+            <span class="mo-num">£72</span>
             <span class="mo-unit">/ month</span>
             <span class="mo-was">£85</span>
           </div>
           <div class="save-block">
             <p class="save-eyebrow">you save</p>
-            <span class="save-num">£120</span><span class="save-unit">every year</span>
+            <span class="save-num">£108</span><span class="save-unit">every year</span>
           </div>
         </div>
         <div class="cta">
@@ -658,18 +658,17 @@ const PRICING_BODY = `<nav class="rn-nav">
           <div class="anchor-row">
             <span class="anchor-was">£18.75</span>
             <span class="anchor-unit">per class normally</span>
-            <span class="pct-badge">-13%</span>
           </div>
-          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">16.25</span><span class="pc-unit">/ class</span></div>
+          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">16</span><span class="pc-unit">/ class</span></div>
           <hr class="fb-divider">
           <div class="mo-line">
-            <span class="mo-num">£130</span>
+            <span class="mo-num">£128</span>
             <span class="mo-unit">/ month</span>
             <span class="mo-was">£150</span>
           </div>
           <div class="save-block">
             <p class="save-eyebrow">you save</p>
-            <span class="save-num">£240</span><span class="save-unit">every year</span>
+            <span class="save-num">£264</span><span class="save-unit">every year</span>
           </div>
         </div>
         <div class="cta">
@@ -687,18 +686,18 @@ const PRICING_BODY = `<nav class="rn-nav">
           <div class="anchor-row">
             <span class="anchor-was">£16.25</span>
             <span class="anchor-unit">per class normally</span>
-            <span class="pct-badge">-13%</span>
+            
           </div>
-          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">14.17</span><span class="pc-unit">/ class</span></div>
+          <div class="pc-row"><span class="pc-sym">£</span><span class="pc-num">14</span><span class="pc-unit">/ class</span></div>
           <hr class="fb-divider">
           <div class="mo-line">
-            <span class="mo-num">£170</span>
+            <span class="mo-num">£168</span>
             <span class="mo-unit">/ month</span>
             <span class="mo-was">£195</span>
           </div>
           <div class="save-block">
             <p class="save-eyebrow">you save</p>
-            <span class="save-num">£300</span><span class="save-unit">every year</span>
+            <span class="save-num">£324</span><span class="save-unit">every year</span>
           </div>
         </div>
         <div class="cta">
@@ -783,8 +782,8 @@ const PRICING_BODY = `<nav class="rn-nav">
           <span style="font-size:18px;font-weight:600;color:var(--ink-muted);align-self:flex-end;padding-bottom:8px;">classes</span>
         </div>
         <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
-        <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">23.75</span><span class="pk-unit">/ class</span></div>
-        <p class="pk-total">£95 total</p>
+        <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">23</span><span class="pk-unit">/ class</span></div>
+        <p class="pk-total">£92 total</p>
         <!-- ↓ replace YOUR_URL_HERE -->
         <a href="#" class="btn-ghost">Buy pack</a>
       </div>
@@ -797,8 +796,8 @@ const PRICING_BODY = `<nav class="rn-nav">
           <span style="font-size:18px;font-weight:600;color:var(--ink-muted);align-self:flex-end;padding-bottom:8px;">classes</span>
         </div>
         <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
-        <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">21.88</span><span class="pk-unit">/ class</span></div>
-        <p class="pk-total">£175 total</p>
+        <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">22</span><span class="pk-unit">/ class</span></div>
+        <p class="pk-total">£176 total</p>
         <!-- ↓ replace YOUR_URL_HERE -->
         <a href="#" class="btn-ghost">Buy pack</a>
       </div>
