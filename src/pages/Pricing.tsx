@@ -581,7 +581,7 @@ const PRICING_BODY = `<nav class="rn-nav">
   <!-- DROP-IN & INTRO -->
   <div style="margin-bottom:4rem;">
     <p style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;text-align:center;margin:0 0 6px;font-weight:500;">Drop-in &amp; intro offer</p>
-    <p style="color:#f0e6d6;font-size:32px;font-family:'Playfair Display',serif;font-style:italic;text-align:center;margin:0 0 3rem;font-weight:400;">No strings attached.</p>
+    <p style="color:#f0e6d6;font-size:32px;font-family:'Neogrotesk',sans-serif;text-align:center;margin:0 0 3rem;font-weight:400;text-transform:uppercase;letter-spacing:0.05em;">NO STRINGS ATTACHED.</p>
     <div style="border-top:1px solid rgba(255,255,255,0.12);">
       <div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(255,255,255,0.08);">
         <div style="padding:2rem 1.5rem 2rem 0;border-right:1px solid rgba(255,255,255,0.08);">
