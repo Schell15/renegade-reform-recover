@@ -14,7 +14,7 @@ const Home = () => {
   }}>
       <SEO
         title="Reformer Pilates Studio in Bristol | Renegade Reformer"
-        description="Renegade Reformer is a premium Reformer Pilates studio in Bristol. Strength-led, contemporary classes opening Spring 2026 — get early access now."
+        description="Renegade Reformer is a premium Reformer Pilates studio in Bristol. Strength-led, contemporary classes opening Spring 2026, get early access now."
         path="/"
       />
       <div className="relative z-10 flex flex-col items-center justify-center w-full">
@@ -24,7 +24,7 @@ const Home = () => {
       }}>
           {/* White Eagle Logo */}
           <div className="mb-6">
-            <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo — reformer Pilates Bristol" className="w-32 h-32 mx-auto object-contain" />
+            <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo, reformer Pilates Bristol" className="w-32 h-32 mx-auto object-contain" />
           </div>
           
           {/* Studio Name */}
