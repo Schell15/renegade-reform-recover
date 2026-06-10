@@ -81,7 +81,7 @@ const ReformerSignup = () => {
             </div>
             
             {/* Studio Name */}
-            <div className="mb-4">
+            <div className="mb-4 inline-block">
             <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
               RENEGADE.
             </h1>
@@ -140,7 +140,7 @@ const ReformerSignup = () => {
           </div>
           
           {/* Studio Name */}
-          <div className="mb-4 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_0.5s_forwards]">
+          <div className="mb-4 inline-block opacity-0 animate-[fadeInSubtle_0.8s_ease-out_0.5s_forwards]">
             <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
               RENEGADE.
             </h1>
