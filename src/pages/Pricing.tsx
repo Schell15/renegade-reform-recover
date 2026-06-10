@@ -350,8 +350,8 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
 
   /* ---- PACKS ---- */
   .pack-card {
-    background: #DDD0C0;
-    border: 0.5px solid rgba(24,8,0,0.1);
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
     border-radius: 10px;
     padding: 14px 14px 14px;
     display: flex;
@@ -363,14 +363,14 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--ink-faint);
+    color: rgba(255,255,255,0.4);
     margin: 14px 0 2px;
   }
   .pk-row { display: flex; align-items: baseline; gap: 2px; }
-  .pk-sym { font-size: 15px; font-weight: 700; color: var(--ink); line-height: 1; }
-  .pk-num { font-size: 44px; font-weight: 900; color: var(--ink); letter-spacing: -0.03em; line-height: 1; }
-  .pk-unit { font-size: 12px; color: var(--ink-muted); align-self: flex-end; padding-bottom: 5px; margin-left: 3px; }
-  .pk-total { font-size: 12px; color: var(--ink-muted); margin-top: 3px; margin-bottom: 4px; }
+  .pk-sym { font-size: 15px; font-weight: 700; color: #f0e6d6; line-height: 1; }
+  .pk-num { font-size: 44px; font-weight: 900; color: #f0e6d6; letter-spacing: -0.03em; line-height: 1; }
+  .pk-unit { font-size: 12px; color: rgba(255,255,255,0.55); align-self: flex-end; padding-bottom: 5px; margin-left: 3px; }
+  .pk-total { font-size: 12px; color: rgba(255,255,255,0.55); margin-top: 3px; margin-bottom: 4px; }
   .btn-ghost {
     display: block;
     width: 100%;
@@ -378,7 +378,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     margin-top: auto;
     padding-top: 13px;
     background: transparent;
-    color: var(--ink-muted);
+    color: #f0e6d6;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -386,11 +386,11 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     text-align: center;
     text-decoration: none;
     border-radius: 6px;
-    border: 1px solid var(--border-strong);
+    border: 1px solid rgba(255,255,255,0.2);
     cursor: pointer;
     transition: background 0.15s;
   }
-  .btn-ghost:hover { background: rgba(24,8,0,0.06); color: var(--ink); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.06); color: #f0e6d6; }
 
   /* ---- PERKS BANNER ---- */
   .perks-banner {
