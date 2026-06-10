@@ -68,7 +68,12 @@ const Home = () => {
               <span className="block uppercase font-light" style={{ fontSize: '11px', letterSpacing: '0.22em', color: '#6a5035' }}>Full Class Info</span>
             </button>
             <button
-              onClick={() => navigate('/pricing')}
+              onClick={() => {
+                toast({
+                  title: "Coming Soon",
+                  description: "Pricing details will be available shortly.",
+                });
+              }}
               className="py-6 px-4 text-center transition-colors hover:bg-white/[0.035]"
               style={{ borderTop: '0.5px solid #4a2e12' }}
             >
