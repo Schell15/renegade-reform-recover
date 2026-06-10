@@ -9,6 +9,13 @@ const OG_IMAGE = `${SITE}/og-image.png`;
 
 type RouteMeta = { path: string; title: string; description: string };
 
+const REFORMER_SIGNUP_META: RouteMeta = {
+  path: "/reformer-signup",
+  title: "Join Renegade Reformer | Sign Up for Reformer Pilates Bristol",
+  description:
+    "Sign up for early access to Renegade Reformer — Bristol's strength-led reformer Pilates studio. Be the first to book when we open.",
+};
+
 const ROUTES: RouteMeta[] = [
   {
     path: "/",
@@ -16,12 +23,7 @@ const ROUTES: RouteMeta[] = [
     description:
       "Renegade Reformer is a premium Reformer Pilates studio in Bristol. Strength-led, contemporary classes opening Spring 2026 — get early access now.",
   },
-  {
-    path: "/reformer-signup",
-    title: "Join Renegade Reformer | Sign Up for Reformer Pilates Bristol",
-    description:
-      "Sign up for early access to Renegade Reformer — Bristol's strength-led reformer Pilates studio. Be the first to book when we open.",
-  },
+  REFORMER_SIGNUP_META,
   {
     path: "/recover",
     title: "Recovery Pilates Classes Bristol | Renegade Reformer",
@@ -55,7 +57,33 @@ function bakedMetaTags({ title, description, path: routePath }: RouteMeta) {
   ].join("\n    ");
 }
 
+function hardcodedReformerSignupHead() {
+  return [
+    `<title>${escapeAttr(REFORMER_SIGNUP_META.title)}</title>`,
+    `<meta name="description" content="${escapeAttr(REFORMER_SIGNUP_META.description)}" />`,
+    `<link rel="canonical" href="${SITE}/reformer-signup" />`,
+    `<meta property="og:title" content="${escapeAttr(REFORMER_SIGNUP_META.title)}" />`,
+    `<meta property="og:description" content="${escapeAttr(REFORMER_SIGNUP_META.description)}" />`,
+    `<meta property="og:url" content="${SITE}/reformer-signup" />`,
+    `<meta property="og:image" content="${OG_IMAGE}" />`,
+    `<meta name="twitter:card" content="summary_large_image" />`,
+  ].join("\n    ");
+}
+
 function bakeRouteHtml(rootHtml: string, route: RouteMeta) {
+  if (route.path === "/reformer-signup") {
+    return rootHtml
+      .replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(route.title)}</title>`)
+      .replace(
+        /<meta\s+name="description"[^>]*>/,
+        `<meta name="description" content="${escapeAttr(route.description)}" />`,
+      )
+      .replace(
+        /<title>[^<]*<\/title>\s*<meta\s+name="description"[^>]*>/,
+        hardcodedReformerSignupHead(),
+      );
+  }
+
   let html = rootHtml.replace(
     /<title>[^<]*<\/title>/,
     `<title>${escapeAttr(route.title)}</title>`,
