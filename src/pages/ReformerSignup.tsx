@@ -165,7 +165,7 @@ const ReformerSignup = () => {
               Renegade is a community-led, pilates experience. We introduce a new concept to bristol, fusing pilates, fitness, immersive set design and interactive audio & lighting production to guide your flow. Designed and built by some of bristol’s finest creative minds. The first of its kind in the UK.
             </p>
             <p className="text-primary font-rosaline text-sm sm:text-base tracking-wider max-w-2xl mx-auto mt-4 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.9s_forwards]">
-              Coming to Bristol, Redfield — Spring 2026.
+              Coming to Bristol, Redfield — Summer 2026.
             </p>
             <p className="text-primary font-grotesk text-sm sm:text-base tracking-wide max-w-2xl mx-auto mt-1 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_3.1s_forwards]">
               Sign up below for early access.
