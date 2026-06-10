@@ -22,9 +22,9 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/reformer-signup" element={<ReformerSignup />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/reformer" element={<Navigate to="/reformerpilates/" replace />} />
-          <Route path="/discover" element={<Navigate to="/reformerpilates/" replace />} />
-          <Route path="/reformerpilates" element={<Navigate to="/reformerpilates/" replace />} />
+          <Route path="/reformer" element={<ExternalRedirect to="/reformerpilates.html" />} />
+          <Route path="/discover" element={<ExternalRedirect to="/reformerpilates.html" />} />
+          <Route path="/reformerpilates" element={<ExternalRedirect to="/reformerpilates.html" />} />
           <Route path="/recover" element={<Recovery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
