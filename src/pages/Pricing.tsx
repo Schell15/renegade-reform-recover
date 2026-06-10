@@ -625,7 +625,7 @@ const PRICING_BODY = `<nav class="rn-nav">
   </div>
 
   <!-- MEMBERSHIPS -->
-  <div>
+  <div style="margin-bottom:4rem;">
     <p style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;text-align:center;margin:0 0 6px;font-weight:500;">Monthly memberships</p>
     <p style="color:#f0e6d6;font-size:32px;font-family:'Playfair Display',serif;font-style:italic;text-align:center;margin:0 0 3rem;font-weight:400;">Join the renegades.</p>
     <div style="border-top:1px solid rgba(255,255,255,0.12);">
