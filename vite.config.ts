@@ -13,7 +13,7 @@ const REFORMER_SIGNUP_META: RouteMeta = {
   path: "/reformer-signup",
   title: "Join Renegade Reformer | Sign Up for Reformer Pilates Bristol",
   description:
-    "Sign up for early access to Renegade Reformer — Bristol's strength-led reformer Pilates studio. Be the first to book when we open.",
+    "Sign up for early access to Renegade Reformer, Bristol's strength-led reformer Pilates studio. Be the first to book when we open.",
 };
 
 const ROUTES: RouteMeta[] = [
@@ -21,14 +21,14 @@ const ROUTES: RouteMeta[] = [
     path: "/",
     title: "Reformer Pilates Studio in Bristol | Renegade Reformer",
     description:
-      "Renegade Reformer is a premium Reformer Pilates studio in Bristol. Strength-led, contemporary classes opening Spring 2026 — get early access now.",
+      "Renegade Reformer is a premium Reformer Pilates studio in Bristol. Strength-led, contemporary classes opening Spring 2026. Get early access now.",
   },
   REFORMER_SIGNUP_META,
   {
     path: "/pricing",
     title: "Reformer Pilates Pricing Bristol | Renegade Reformer",
     description:
-      "Explore Renegade Reformer's class packages and membership options. Flexible pricing for reformer Pilates in Bristol — find the plan that works for you.",
+      "Explore Renegade Reformer's class packages and membership options. Flexible pricing for reformer Pilates in Bristol. Find the plan that works for you.",
   },
 ];
 
@@ -118,6 +118,55 @@ function bakedMetaPlugin() {
   };
 }
 
+function noEmDashPlugin() {
+  return {
+    name: "no-em-dash-check",
+    apply: "build" as const,
+    closeBundle() {
+      const distDir = path.resolve(__dirname, "dist");
+      if (!fs.existsSync(distDir)) return;
+      const offenders: { file: string; snippets: string[] }[] = [];
+
+      const walk = (dir: string) => {
+        for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+          const full = path.join(dir, entry.name);
+          if (entry.isDirectory()) {
+            walk(full);
+          } else if (entry.isFile() && /\.html?$/i.test(entry.name)) {
+            const raw = fs.readFileSync(full, "utf8");
+            // Strip <script>/<style> blocks and HTML tags so we only check visible page text.
+            const visible = raw
+              .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
+              .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
+              .replace(/<!--[\s\S]*?-->/g, " ")
+              .replace(/<[^>]+>/g, " ");
+            if (visible.includes("\u2014")) {
+              const snippets: string[] = [];
+              const re = /.{0,40}\u2014.{0,40}/g;
+              let m: RegExpExecArray | null;
+              while ((m = re.exec(visible)) !== null) {
+                snippets.push(m[0].replace(/\s+/g, " ").trim());
+                if (snippets.length >= 5) break;
+              }
+              offenders.push({ file: path.relative(distDir, full), snippets });
+            }
+          }
+        }
+      };
+      walk(distDir);
+
+      if (offenders.length > 0) {
+        const report = offenders
+          .map((o) => `  - ${o.file}\n      ${o.snippets.join("\n      ")}`)
+          .join("\n");
+        throw new Error(
+          `Em-dash (\u2014) found in generated page text. Replace with commas, periods, or rewrite:\n${report}`,
+        );
+      }
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
@@ -129,6 +178,7 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
     mode !== 'development' && bakedMetaPlugin(),
+    mode !== 'development' && noEmDashPlugin(),
   ].filter(Boolean),
   resolve: {
     alias: {
