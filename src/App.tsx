@@ -12,7 +12,6 @@ const ExternalRedirect = ({ to }: { to: string }) => {
 import Home from "./pages/Home";
 import Reformer from "./pages/Reformer";
 import ReformerSignup from "./pages/ReformerSignup";
-import Recovery from "./pages/Recovery";
 import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
@@ -31,7 +30,6 @@ const App = () => (
           <Route path="/reformer" element={<ExternalRedirect to="/reformerpilates.html" />} />
           <Route path="/discover" element={<ExternalRedirect to="/reformerpilates.html" />} />
           <Route path="/reformerpilates" element={<ExternalRedirect to="/reformerpilates.html" />} />
-          <Route path="/recover" element={<Recovery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

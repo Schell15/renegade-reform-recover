@@ -786,7 +786,7 @@ const PRICING_BODY = `<nav class="rn-nav">
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">23.75</span><span class="pk-unit">/ class</span></div>
         <p class="pk-total">£95 total</p>
         <!-- ↓ replace YOUR_URL_HERE -->
-        <a href="YOUR_URL_HERE" class="btn-ghost">Buy pack</a>
+        <a href="#" class="btn-ghost">Buy pack</a>
       </div>
 
       <div class="pack-card">
@@ -800,7 +800,7 @@ const PRICING_BODY = `<nav class="rn-nav">
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">21.88</span><span class="pk-unit">/ class</span></div>
         <p class="pk-total">£175 total</p>
         <!-- ↓ replace YOUR_URL_HERE -->
-        <a href="YOUR_URL_HERE" class="btn-ghost">Buy pack</a>
+        <a href="#" class="btn-ghost">Buy pack</a>
       </div>
 
       <div class="pack-card">
@@ -814,7 +814,7 @@ const PRICING_BODY = `<nav class="rn-nav">
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">21.00</span><span class="pk-unit">/ class</span></div>
         <p class="pk-total">£252 total</p>
         <!-- ↓ replace YOUR_URL_HERE -->
-        <a href="YOUR_URL_HERE" class="btn-ghost">Buy pack</a>
+        <a href="#" class="btn-ghost">Buy pack</a>
       </div>
 
     </div>

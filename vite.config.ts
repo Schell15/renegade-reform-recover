@@ -25,12 +25,6 @@ const ROUTES: RouteMeta[] = [
   },
   REFORMER_SIGNUP_META,
   {
-    path: "/recover",
-    title: "Recovery Pilates Classes Bristol | Renegade Reformer",
-    description:
-      "Low-impact reformer Pilates designed for recovery, rehabilitation, and rest days. Book a recovery session at Renegade Reformer in Bristol.",
-  },
-  {
     path: "/pricing",
     title: "Reformer Pilates Pricing Bristol | Renegade Reformer",
     description:
