@@ -3,6 +3,12 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useEffect } from "react";
+
+const ExternalRedirect = ({ to }: { to: string }) => {
+  useEffect(() => { window.location.replace(to); }, [to]);
+  return null;
+};
 import Home from "./pages/Home";
 import Reformer from "./pages/Reformer";
 import ReformerSignup from "./pages/ReformerSignup";
@@ -22,9 +28,9 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/reformer-signup" element={<ReformerSignup />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/reformer" element={<Navigate to="/reformerpilates/" replace />} />
-          <Route path="/discover" element={<Navigate to="/reformerpilates/" replace />} />
-          <Route path="/reformerpilates" element={<Navigate to="/reformerpilates/" replace />} />
+          <Route path="/reformer" element={<ExternalRedirect to="/reformerpilates.html" />} />
+          <Route path="/discover" element={<ExternalRedirect to="/reformerpilates.html" />} />
+          <Route path="/reformerpilates" element={<ExternalRedirect to="/reformerpilates.html" />} />
           <Route path="/recover" element={<Recovery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
