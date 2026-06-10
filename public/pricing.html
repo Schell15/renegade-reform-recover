@@ -854,5 +854,28 @@
     update();
   })();
 </script>
+<div id="cs-toast" role="dialog" aria-modal="true" aria-hidden="true" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.55);z-index:9999;font-family:'Inter',sans-serif;">
+  <div style="position:relative;max-width:420px;width:calc(100% - 32px);background:#5a3a2a;color:#fff;border-radius:14px;padding:24px 28px;box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+    <button type="button" id="cs-toast-close" aria-label="Close" style="position:absolute;top:10px;right:12px;background:transparent;border:0;color:rgba(255,255,255,0.7);font-size:20px;cursor:pointer;line-height:1;">×</button>
+    <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;">Coming Soon</h3>
+    <p style="font-size:15px;line-height:1.5;color:rgba(255,255,255,0.92);">Reformer Pilates class details will be available shortly.</p>
+  </div>
+</div>
+<script>
+  (function () {
+    var toast = document.getElementById('cs-toast');
+    function show() { toast.style.display = 'flex'; toast.setAttribute('aria-hidden','false'); }
+    function hide() { toast.style.display = 'none'; toast.setAttribute('aria-hidden','true'); }
+    document.getElementById('cs-toast-close').addEventListener('click', hide);
+    toast.addEventListener('click', function (e) { if (e.target === toast) hide(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
+    document.querySelectorAll('button.btn').forEach(function (btn) {
+      if ((btn.textContent || '').trim() === 'Founders Discount') {
+        btn.removeAttribute('onclick');
+        btn.addEventListener('click', function (e) { e.preventDefault(); show(); });
+      }
+    });
+  })();
+</script>
 </body>
 </html>
