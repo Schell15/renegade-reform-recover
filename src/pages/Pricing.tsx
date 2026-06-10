@@ -760,10 +760,10 @@ const PRICING_BODY = `<nav class="rn-nav">
 
       <div class="pack-card">
         <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
-        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.55);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
         <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-          <span style="font-size:72px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1;">4</span>
-          <span style="font-size:18px;font-weight:600;color:var(--ink-muted);align-self:flex-end;padding-bottom:8px;">classes</span>
+          <span style="font-size:72px;font-weight:900;color:#f0e6d6;letter-spacing:-0.03em;line-height:1;">4</span>
+          <span style="font-size:18px;font-weight:600;color:rgba(255,255,255,0.55);align-self:flex-end;padding-bottom:8px;">classes</span>
         </div>
         <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">23</span><span class="pk-unit">/ class</span></div>
@@ -774,10 +774,10 @@ const PRICING_BODY = `<nav class="rn-nav">
 
       <div class="pack-card">
         <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
-        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.55);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
         <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-          <span style="font-size:72px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1;">8</span>
-          <span style="font-size:18px;font-weight:600;color:var(--ink-muted);align-self:flex-end;padding-bottom:8px;">classes</span>
+          <span style="font-size:72px;font-weight:900;color:#f0e6d6;letter-spacing:-0.03em;line-height:1;">8</span>
+          <span style="font-size:18px;font-weight:600;color:rgba(255,255,255,0.55);align-self:flex-end;padding-bottom:8px;">classes</span>
         </div>
         <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">22</span><span class="pk-unit">/ class</span></div>
@@ -788,10 +788,10 @@ const PRICING_BODY = `<nav class="rn-nav">
 
       <div class="pack-card">
         <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
-        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.55);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
         <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-          <span style="font-size:72px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1;">12</span>
-          <span style="font-size:18px;font-weight:600;color:var(--ink-muted);align-self:flex-end;padding-bottom:8px;">classes</span>
+          <span style="font-size:72px;font-weight:900;color:#f0e6d6;letter-spacing:-0.03em;line-height:1;">12</span>
+          <span style="font-size:18px;font-weight:600;color:rgba(255,255,255,0.55);align-self:flex-end;padding-bottom:8px;">classes</span>
         </div>
         <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">21.00</span><span class="pk-unit">/ class</span></div>
