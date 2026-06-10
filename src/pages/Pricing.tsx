@@ -350,8 +350,8 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
 
   /* ---- PACKS ---- */
   .pack-card {
-    background: #DDD0C0;
-    border: 0.5px solid rgba(24,8,0,0.1);
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
     border-radius: 10px;
     padding: 14px 14px 14px;
     display: flex;
@@ -363,14 +363,14 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--ink-faint);
+    color: rgba(255,255,255,0.4);
     margin: 14px 0 2px;
   }
   .pk-row { display: flex; align-items: baseline; gap: 2px; }
-  .pk-sym { font-size: 15px; font-weight: 700; color: var(--ink); line-height: 1; }
-  .pk-num { font-size: 44px; font-weight: 900; color: var(--ink); letter-spacing: -0.03em; line-height: 1; }
-  .pk-unit { font-size: 12px; color: var(--ink-muted); align-self: flex-end; padding-bottom: 5px; margin-left: 3px; }
-  .pk-total { font-size: 12px; color: var(--ink-muted); margin-top: 3px; margin-bottom: 4px; }
+  .pk-sym { font-size: 15px; font-weight: 700; color: #f0e6d6; line-height: 1; }
+  .pk-num { font-size: 44px; font-weight: 900; color: #f0e6d6; letter-spacing: -0.03em; line-height: 1; }
+  .pk-unit { font-size: 12px; color: rgba(255,255,255,0.55); align-self: flex-end; padding-bottom: 5px; margin-left: 3px; }
+  .pk-total { font-size: 12px; color: rgba(255,255,255,0.55); margin-top: 3px; margin-bottom: 4px; }
   .btn-ghost {
     display: block;
     width: 100%;
@@ -378,7 +378,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     margin-top: auto;
     padding-top: 13px;
     background: transparent;
-    color: var(--ink-muted);
+    color: #f0e6d6;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -386,11 +386,11 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     text-align: center;
     text-decoration: none;
     border-radius: 6px;
-    border: 1px solid var(--border-strong);
+    border: 1px solid rgba(255,255,255,0.2);
     cursor: pointer;
     transition: background 0.15s;
   }
-  .btn-ghost:hover { background: rgba(24,8,0,0.06); color: var(--ink); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.06); color: #f0e6d6; }
 
   /* ---- PERKS BANNER ---- */
   .perks-banner {
@@ -585,9 +585,9 @@ const PRICING_BODY = `<nav class="rn-nav">
     <div style="border-top:1px solid rgba(255,255,255,0.12);">
       <div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(255,255,255,0.08);">
         <div style="padding:2rem 1.5rem 2rem 0;border-right:1px solid rgba(255,255,255,0.08);">
-          <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:500;">Drop-in</p>
+          <p style="color:rgba(255,255,255,0.4);font-size:13px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Drop-in</p>
           <p style="color:rgba(255,255,255,0.55);font-size:12px;margin:0 0 1.5rem;">Single session · pay as you go</p>
-          <p style="color:#f0e6d6;font-size:56px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£20</p>
+          <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£20</p>
           <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:4px 0 2rem;font-weight:500;">per class</p>
           <div style="display:flex;border:1px solid rgba(255,255,255,0.1);border-radius:6px;overflow:hidden;">
             <div style="flex:1;padding:10px 12px;border-right:1px solid rgba(255,255,255,0.1);background:rgba(160,45,24,0.15);">
@@ -603,9 +603,9 @@ const PRICING_BODY = `<nav class="rn-nav">
           </div>
         </div>
         <div style="padding:2rem 0 2rem 1.5rem;">
-          <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:500;">Intro 3-class pack</p>
+          <p style="color:rgba(255,255,255,0.4);font-size:13px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Intro 3-class pack</p>
           <p style="color:rgba(255,255,255,0.55);font-size:12px;margin:0 0 1.5rem;">New clients only · valid 30 days</p>
-          <p style="color:#f0e6d6;font-size:56px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£16</p>
+          <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£16</p>
           <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:4px 0 2rem;font-weight:500;">per class · £48 total</p>
           <div style="display:flex;border:1px solid rgba(255,255,255,0.1);border-radius:6px;overflow:hidden;">
             <div style="flex:1;padding:10px 12px;border-right:1px solid rgba(255,255,255,0.1);background:rgba(160,45,24,0.15);">
@@ -631,9 +631,9 @@ const PRICING_BODY = `<nav class="rn-nav">
     <div style="border-top:1px solid rgba(255,255,255,0.12);">
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid rgba(255,255,255,0.08);">
         <div style="padding:2rem 1.5rem 2rem 0;border-right:1px solid rgba(255,255,255,0.08);">
-          <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:500;">Core</p>
+          <p style="color:rgba(255,255,255,0.4);font-size:13px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Core</p>
           <p style="color:rgba(255,255,255,0.55);font-size:12px;margin:0 0 1.5rem;">4 classes / month</p>
-          <p style="color:#f0e6d6;font-size:56px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£18</p>
+          <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£18</p>
           <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:4px 0 2rem;font-weight:500;">per class</p>
           <div style="display:flex;border:1px solid rgba(255,255,255,0.1);border-radius:6px;overflow:hidden;">
             <div style="flex:1;padding:10px 12px;border-right:1px solid rgba(255,255,255,0.1);background:rgba(160,45,24,0.15);">
@@ -650,9 +650,9 @@ const PRICING_BODY = `<nav class="rn-nav">
         </div>
         <div style="padding:2rem 1.5rem;border-right:1px solid rgba(255,255,255,0.08);position:relative;">
           <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);background:#a02d18;color:#fff;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;padding:3px 14px;border-radius:0 0 5px 5px;white-space:nowrap;font-weight:600;">Most popular</div>
-          <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:500;">Pro</p>
+          <p style="color:rgba(255,255,255,0.4);font-size:13px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Pro</p>
           <p style="color:rgba(255,255,255,0.55);font-size:12px;margin:0 0 1.5rem;">8 classes / month</p>
-          <p style="color:#f0e6d6;font-size:56px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£16</p>
+          <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£16</p>
           <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:4px 0 2rem;font-weight:500;">per class</p>
           <div style="display:flex;border:1px solid rgba(255,255,255,0.1);border-radius:6px;overflow:hidden;">
             <div style="flex:1;padding:10px 12px;border-right:1px solid rgba(255,255,255,0.1);background:rgba(160,45,24,0.15);">
@@ -668,9 +668,9 @@ const PRICING_BODY = `<nav class="rn-nav">
           </div>
         </div>
         <div style="padding:2rem 0 2rem 1.5rem;">
-          <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:500;">Elite</p>
+          <p style="color:rgba(255,255,255,0.4);font-size:13px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Elite</p>
           <p style="color:rgba(255,255,255,0.55);font-size:12px;margin:0 0 1.5rem;">12 classes / month</p>
-          <p style="color:#f0e6d6;font-size:56px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£14</p>
+          <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£14</p>
           <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:4px 0 2rem;font-weight:500;">per class</p>
           <div style="display:flex;border:1px solid rgba(255,255,255,0.1);border-radius:6px;overflow:hidden;">
             <div style="flex:1;padding:10px 12px;border-right:1px solid rgba(255,255,255,0.1);background:rgba(160,45,24,0.15);">
@@ -760,10 +760,10 @@ const PRICING_BODY = `<nav class="rn-nav">
 
       <div class="pack-card">
         <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
-        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.55);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
         <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-          <span style="font-size:72px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1;">4</span>
-          <span style="font-size:18px;font-weight:600;color:var(--ink-muted);align-self:flex-end;padding-bottom:8px;">classes</span>
+          <span style="font-size:72px;font-weight:900;color:#f0e6d6;letter-spacing:-0.03em;line-height:1;">4</span>
+          <span style="font-size:18px;font-weight:600;color:rgba(255,255,255,0.55);align-self:flex-end;padding-bottom:8px;">classes</span>
         </div>
         <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">23</span><span class="pk-unit">/ class</span></div>
@@ -774,10 +774,10 @@ const PRICING_BODY = `<nav class="rn-nav">
 
       <div class="pack-card">
         <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
-        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.55);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
         <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-          <span style="font-size:72px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1;">8</span>
-          <span style="font-size:18px;font-weight:600;color:var(--ink-muted);align-self:flex-end;padding-bottom:8px;">classes</span>
+          <span style="font-size:72px;font-weight:900;color:#f0e6d6;letter-spacing:-0.03em;line-height:1;">8</span>
+          <span style="font-size:18px;font-weight:600;color:rgba(255,255,255,0.55);align-self:flex-end;padding-bottom:8px;">classes</span>
         </div>
         <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">22</span><span class="pk-unit">/ class</span></div>
@@ -788,10 +788,10 @@ const PRICING_BODY = `<nav class="rn-nav">
 
       <div class="pack-card">
         <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
-        <p style="font-size:12px;color:var(--ink-muted);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.55);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
         <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-          <span style="font-size:72px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1;">12</span>
-          <span style="font-size:18px;font-weight:600;color:var(--ink-muted);align-self:flex-end;padding-bottom:8px;">classes</span>
+          <span style="font-size:72px;font-weight:900;color:#f0e6d6;letter-spacing:-0.03em;line-height:1;">12</span>
+          <span style="font-size:18px;font-weight:600;color:rgba(255,255,255,0.55);align-self:flex-end;padding-bottom:8px;">classes</span>
         </div>
         <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
         <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">21.00</span><span class="pk-unit">/ class</span></div>
