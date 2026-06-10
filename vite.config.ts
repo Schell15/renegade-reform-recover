@@ -96,15 +96,20 @@ function bakedMetaPlugin() {
     apply: "build" as const,
     closeBundle() {
       const distDir = path.resolve(__dirname, "dist");
+      const publicDir = path.resolve(__dirname, "public");
       const rootHtmlPath = path.join(distDir, "index.html");
       if (!fs.existsSync(rootHtmlPath)) return;
       const rootHtml = fs.readFileSync(rootHtmlPath, "utf8");
       for (const route of ROUTES) {
-        const baked = bakeRouteHtml(rootHtml, route);
         if (route.path === "/") {
+          const baked = bakeRouteHtml(rootHtml, route);
           fs.writeFileSync(rootHtmlPath, baked);
           continue;
         }
+        // If a hand-authored static file exists in public/, leave it alone.
+        const publicOverride = path.join(publicDir, route.path.replace(/^\//, ""), "index.html");
+        if (fs.existsSync(publicOverride)) continue;
+        const baked = bakeRouteHtml(rootHtml, route);
         const outDir = path.join(distDir, route.path.replace(/^\//, ""));
         fs.mkdirSync(outDir, { recursive: true });
         fs.writeFileSync(path.join(outDir, "index.html"), baked);
