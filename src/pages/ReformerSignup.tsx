@@ -59,7 +59,7 @@ const ReformerSignup = () => {
     <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
         <SEO
           title="Join Renegade Reformer | Sign Up for Reformer Pilates Bristol"
-          description="Sign up for early access to Renegade Reformer — Bristol's strength-led reformer Pilates studio. Be the first to book when we open."
+          description="Sign up for early access to Renegade Reformer, Bristol's strength-led reformer Pilates studio. Be the first to book when we open."
           path="/reformer-signup"
         />
         <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
@@ -76,7 +76,7 @@ const ReformerSignup = () => {
               >
                 <img 
                   src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" 
-                  alt="Renegade Reformer eagle logo — reformer Pilates Bristol"
+                  alt="Renegade Reformer eagle logo, reformer Pilates Bristol"
                   className="w-32 h-32 mx-auto object-contain cursor-pointer"
                 />
               </button>
@@ -120,7 +120,7 @@ const ReformerSignup = () => {
     <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
       <SEO
         title="Join Renegade Reformer | Sign Up for Reformer Pilates Bristol"
-        description="Sign up for early access to Renegade Reformer — Bristol's strength-led reformer Pilates studio. Be the first to book when we open."
+        description="Sign up for early access to Renegade Reformer, Bristol's strength-led reformer Pilates studio. Be the first to book when we open."
         path="/reformer-signup"
       />
       <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
@@ -135,7 +135,7 @@ const ReformerSignup = () => {
             >
               <img 
                 src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" 
-                alt="Renegade Reformer eagle logo — reformer Pilates Bristol"
+                alt="Renegade Reformer eagle logo, reformer Pilates Bristol"
                 className="w-32 h-32 mx-auto object-contain cursor-pointer"
               />
             </button>
@@ -156,16 +156,16 @@ const ReformerSignup = () => {
               A divinely powerful approach to pilates
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-4xl mx-auto">
-              <img src={reformer1} alt="Renegade Reformer studio interior render — reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.2s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer1)} />
-              <img src={reformer2} alt="Renegade Reformer studio floor plan — reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_1.5s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer2)} />
-              <img src={reformer3} alt="Renegade Reformer brand colour palette — reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.8s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer3)} />
-              <img src={reformer4} alt="Renegade Reformer exterior sketch — reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_2.1s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer4)} />
+              <img src={reformer1} alt="Renegade Reformer studio interior render, reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.2s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer1)} />
+              <img src={reformer2} alt="Renegade Reformer studio floor plan, reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_1.5s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer2)} />
+              <img src={reformer3} alt="Renegade Reformer brand colour palette, reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.8s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer3)} />
+              <img src={reformer4} alt="Renegade Reformer exterior sketch, reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_2.1s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer4)} />
             </div>
             <p className="text-primary text-sm tracking-wide max-w-2xl mx-auto mt-6 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.5s_forwards] font-sans px-0 py-[50px] font-extrabold sm:text-base">
               Renegade is a community-led, pilates experience. We introduce a new concept to bristol, fusing pilates, fitness, immersive set design and interactive audio & lighting production to guide your flow. Designed and built by some of bristol’s finest creative minds. The first of its kind in the UK.
             </p>
             <p className="text-primary font-rosaline text-sm sm:text-base tracking-wider max-w-2xl mx-auto mt-4 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.9s_forwards]">
-              Coming to Bristol, Redfield — Summer 2026.
+              Coming to Bristol, Redfield, Summer 2026.
             </p>
             <p className="text-primary font-grotesk text-sm sm:text-base tracking-wide max-w-2xl mx-auto mt-1 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_3.1s_forwards]">
               Sign up below for early access.
