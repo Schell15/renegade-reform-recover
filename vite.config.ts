@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
     mode !== 'development' && prerender({
-      routes: ['/', '/reformer-signup', '/recover'],
+      routes: ['/', '/reformer-signup', '/recover', '/pricing'],
       renderer: '@prerenderer/renderer-puppeteer',
       rendererOptions: {
         renderAfterTime: 4000,
