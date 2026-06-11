@@ -728,7 +728,7 @@ const PRICING_BODY = `<nav class="rn-nav">
             </div>
           </div>
         </div>
-        <div style="padding:2rem 0;">
+        <div style="padding:2rem 0;height:100%;">
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Elite</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">12 classes / month</p>
           <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£14</p>
