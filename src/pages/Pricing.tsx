@@ -568,12 +568,12 @@ const PRICING_BODY = `<nav class="rn-nav">
       <p style="color:rgba(255,255,255,0.55);font-size:13px;margin:0 0 6px;line-height:1.6;">Drop-in founding rate ends <strong style="color:#f0e6d6;">31 July</strong> &middot; Founding memberships lock in your rate <strong style="color:#f0e6d6;">for life</strong></p>
       <p style="color:rgba(255,255,255,0.3);font-size:12px;margin:0;font-style:italic;">Celebrate our opening with the lowest price Renegade Reformer will ever offer. <a href="/terms" style="text-decoration:underline;text-underline-offset:3px;color:inherit;">T&amp;Cs apply</a></p>
     </div>
-    <div style="display:flex;flex-direction:column;gap:8px;">
-      <div style="border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 20px;text-align:center;min-width:130px;">
+    <div style="display:flex;flex-direction:row;gap:8px;width:100%;">
+      <div style="flex:1;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 20px;text-align:center;">
         <p style="color:rgba(255,255,255,0.35);font-size:9px;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Founding drop-in</p>
         <p style="color:#f0e6d6;font-size:20px;font-weight:900;margin:0;letter-spacing:-0.5px;">£20 <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.4);">/ class</span></p>
       </div>
-      <div style="border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 20px;text-align:center;min-width:130px;">
+      <div style="flex:1;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 20px;text-align:center;">
         <p style="color:rgba(255,255,255,0.35);font-size:9px;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Memberships from</p>
         <p style="color:#f0e6d6;font-size:20px;font-weight:900;margin:0;letter-spacing:-0.5px;">£14 <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.4);">/ class</span></p>
       </div>
