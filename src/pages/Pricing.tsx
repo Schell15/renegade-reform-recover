@@ -515,9 +515,11 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   @media (max-width: 660px) {
     .grid-3, .grid-2 { grid-template-columns: 1fr; }
     .page-title { font-size: 54px; }
-    .page { padding: 44px 20px 64px; }
+    .page { padding: 104px 20px 64px; }
     .pc-num { font-size: 44px; }
     .perks-lock { max-width: 100%; }
+    .header { flex-direction: column !important; align-items: flex-start !important; gap: 20px !important; }
+    .header > div[aria-hidden="true"] { display: none !important; }
   }
   @media print {
     body { background: #fff; }
@@ -583,8 +585,8 @@ const PRICING_BODY = `<nav class="rn-nav">
     <p style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;text-align:center;margin:0 0 6px;font-weight:500;">Drop-in &amp; intro offer</p>
     <p class="section-label" style="text-align:center;margin:0 0 3rem;">NO STRINGS ATTACHED.</p>
     <div style="border-top:1px solid rgba(255,255,255,0.12);">
-      <div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(255,255,255,0.08);">
-        <div style="padding:2rem 1.5rem 2rem 0;border-right:1px solid rgba(255,255,255,0.08);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));border-bottom:1px solid rgba(255,255,255,0.08);">
+        <div style="padding:2rem 1.5rem 2rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Drop-in</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">Single session · pay as you go</p>
           <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£20</p>
@@ -629,8 +631,8 @@ const PRICING_BODY = `<nav class="rn-nav">
     <p style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;text-align:center;margin:0 0 6px;font-weight:500;">Monthly memberships</p>
     <p class="section-label" style="text-align:center;margin:0 0 3rem;">JOIN THE RENEGADES.</p>
     <div style="border-top:1px solid rgba(255,255,255,0.12);">
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid rgba(255,255,255,0.08);">
-        <div style="padding:2rem 1.5rem 2rem 0;border-right:1px solid rgba(255,255,255,0.08);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));border-bottom:1px solid rgba(255,255,255,0.08);">
+        <div style="padding:2rem 1.5rem 2rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Core</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">4 classes / month</p>
           <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£18</p>
@@ -648,7 +650,7 @@ const PRICING_BODY = `<nav class="rn-nav">
             </div>
           </div>
         </div>
-        <div style="padding:2rem 1.5rem;border-right:1px solid rgba(255,255,255,0.08);position:relative;">
+        <div style="padding:2rem 1.5rem;border-bottom:1px solid rgba(255,255,255,0.08);position:relative;">
           <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);background:#a02d18;color:#fff;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;padding:3px 14px;border-radius:0 0 5px 5px;white-space:nowrap;font-weight:600;">Most popular</div>
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Pro</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">8 classes / month</p>
@@ -687,7 +689,7 @@ const PRICING_BODY = `<nav class="rn-nav">
         </div>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;margin-top:1.25rem;gap:10px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));margin-top:1.25rem;gap:10px;">
       <button type="button" onclick="alert('Coming Soon')" style="background:transparent;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);padding:13px;border-radius:6px;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:600;">Get founding rate</button>
       <button type="button" onclick="alert('Coming Soon')" style="background:#a02d18;border:none;color:#fff;padding:13px;border-radius:6px;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:700;">Get founding rate</button>
       <button type="button" onclick="alert('Coming Soon')" style="background:transparent;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);padding:13px;border-radius:6px;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:600;">Get founding rate</button>
