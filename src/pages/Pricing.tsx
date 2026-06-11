@@ -664,144 +664,156 @@ const PRICING_BODY = `<nav class="rn-nav">
     </div>
   </header>
 
-  <!-- DROP-IN & INTRO -->
-  <!-- FOUNDING RATE BANNER -->
-  <div style="border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:2rem 2.5rem;display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:4rem;">
-    <div style="flex:1;min-width:260px;">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:1rem;">
-        <span style="background:#c0391a;color:#fff;font-size:9px;font-weight:700;letter-spacing:0.15em;padding:3px 10px;border-radius:4px;text-transform:uppercase;">Closing 31 July</span>
-        <span style="color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:0.15em;text-transform:uppercase;font-weight:500;">Founding rates</span>
-      </div>
-      <p style="color:#f0e6d6;font-size:26px;font-weight:900;text-transform:uppercase;letter-spacing:-0.5px;margin:0 0 10px;line-height:1.15;">Lock in your founding rate<br>before we open.</p>
-      <p style="color:rgba(255,255,255,0.55);font-size:13px;margin:0 0 6px;line-height:1.6;">Drop-in founding rate ends <strong style="color:#f0e6d6;">31 July</strong> &middot; Founding memberships lock in your rate <strong style="color:#f0e6d6;">for life</strong></p>
-      <p style="color:rgba(255,255,255,0.3);font-size:12px;margin:0;font-style:italic;">Celebrate our opening with the lowest price Renegade Reformer will ever offer. <a href="/terms" style="text-decoration:underline;text-underline-offset:3px;color:inherit;">T&amp;Cs apply</a></p>
-    </div>
-    <div style="display:flex;flex-direction:row;gap:8px;width:100%;">
-      <div style="flex:1;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 20px;text-align:center;">
-        <p style="color:rgba(255,255,255,0.35);font-size:9px;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Founding drop-in</p>
-        <p style="color:#f0e6d6;font-size:20px;font-weight:900;margin:0;letter-spacing:-0.5px;">£20 <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.4);">/ class</span></p>
-      </div>
-      <div style="flex:1;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 20px;text-align:center;">
-        <p style="color:rgba(255,255,255,0.35);font-size:9px;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Memberships from</p>
-        <p style="color:#f0e6d6;font-size:20px;font-weight:900;margin:0;letter-spacing:-0.5px;">£14 <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.4);">/ class</span></p>
-      </div>
-    </div>
-  </div>
+  <div class="pp-scope">
 
-  <!-- DROP-IN & INTRO -->
-  <div style="margin-bottom:4rem;">
-    <p style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;text-align:center;margin:0 0 6px;font-weight:500;">Drop-in &amp; intro offer</p>
-    <p class="section-label" style="text-align:center;margin:0 0 3rem;">DROP IN / INTRO CLASS PACKS</p>
-    <div style="border-top:1px solid rgba(255,255,255,0.12);">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));border-bottom:1px solid rgba(255,255,255,0.08);">
-        <div style="padding:2rem 0;border-right:1px solid rgba(255,255,255,0.08);">
-          <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Drop-in</p>
-          <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">Single session · pay as you go</p>
-          <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£20</p>
-          <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:4px 0 2rem;font-weight:500;">per class</p>
-          <div style="display:flex;border:1px solid rgba(255,255,255,0.1);border-radius:6px;overflow:hidden;">
-            <div style="flex:1;padding:10px 12px;border-right:1px solid rgba(255,255,255,0.1);background:rgba(160,45,24,0.15);">
-              <p style="color:rgba(255,200,180,0.6);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1px;font-weight:600;">Founders</p>
-              <p style="color:rgba(255,200,180,0.6);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Discount</p>
-              <p style="color:#f0e6d6;font-size:14px;font-weight:700;margin:0;">£20<span style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.4);">/class</span></p>
-            </div>
-            <div style="flex:1;padding:10px 12px;">
-              <p style="color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1px;font-weight:600;">General</p>
-              <p style="color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Price</p>
-              <p style="color:rgba(255,255,255,0.3);font-size:14px;font-weight:700;margin:0;">£25<span style="font-size:11px;font-weight:400;">/class</span></p>
-            </div>
-          </div>
+    <!-- FOUNDING RATE BANNER -->
+    <div class="banner">
+      <div class="banner-text">
+        <div class="banner-tag">
+          <span class="tag-red">Closing 31 July</span>
+          <span class="tag-muted">Founding rates</span>
         </div>
-        <div style="padding:2rem 0;">
-          <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Intro 3-class pack</p>
-          <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">New clients only · valid 30 days</p>
-          <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£16</p>
-          <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:4px 0 2rem;font-weight:500;">per class · £48 total</p>
-          <div style="display:flex;border:1px solid rgba(255,255,255,0.1);border-radius:6px;overflow:hidden;">
-            <div style="flex:1;padding:10px 12px;border-right:1px solid rgba(255,255,255,0.1);background:rgba(160,45,24,0.15);">
-              <p style="color:rgba(255,200,180,0.6);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1px;font-weight:600;">Founders</p>
-              <p style="color:rgba(255,200,180,0.6);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Discount</p>
-              <p style="color:#f0e6d6;font-size:14px;font-weight:700;margin:0;">£48<span style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.4);"> total</span></p>
-            </div>
-            <div style="flex:1;padding:10px 12px;">
-              <p style="color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1px;font-weight:600;">General</p>
-              <p style="color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Price</p>
-              <p style="color:rgba(255,255,255,0.3);font-size:14px;font-weight:700;margin:0;">£55<span style="font-size:11px;font-weight:400;"> total</span></p>
-            </div>
-          </div>
+        <p class="banner-heading">Lock in your founding rate<br>before we open.</p>
+        <p class="banner-body">Drop-in founding rate ends <strong>31 July</strong> &middot; Founding memberships lock in your rate <strong>for life</strong> <span style="color:rgba(255,255,255,0.3);font-size:10px;vertical-align:super;line-height:0">*</span></p>
+        <p class="banner-footnote">The lowest price Renegade Reformer will ever offer.</p>
+        <p style="color:rgba(255,255,255,0.2);font-size:10px;margin-top:10px;line-height:1.5">* Founding membership rate is locked for the duration of your active membership. Rate applies only to the original plan selected at sign-up. Subject to standard membership terms.</p>
+      </div>
+      <div class="banner-prices">
+        <div class="banner-pill">
+          <p class="banner-pill-label">Founding drop-in</p>
+          <p class="banner-pill-price">£20 <span class="banner-pill-unit">/class</span></p>
+        </div>
+        <div class="banner-pill">
+          <p class="banner-pill-label">Memberships from</p>
+          <p class="banner-pill-price">£14 <span class="banner-pill-unit">/class</span></p>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- MEMBERSHIPS -->
-  <div style="margin-bottom:4rem;">
-    <p style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;text-align:center;margin:0 0 6px;font-weight:500;">Monthly memberships</p>
-    <p style="font-family:'Playfair Display', Georgia, serif;font-style:italic;font-weight:400;color:#f0e6d6;font-size:clamp(28px, 4vw, 44px);text-align:center;margin:0 0 3rem;letter-spacing:-0.5px;">Join the renegades.</p>
-    <div style="border-top:1px solid rgba(255,255,255,0.12);">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));border-bottom:1px solid rgba(255,255,255,0.08);align-items:stretch;">
-        <div style="padding:3rem 0 2rem;border-right:1px solid rgba(255,255,255,0.08);height:100%;">
-          <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Core</p>
-          <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">4 classes / month</p>
-          <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£18</p>
-          <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:4px 0 2rem;font-weight:500;">per class</p>
-          <div style="display:flex;border:1px solid rgba(255,255,255,0.1);border-radius:6px;overflow:hidden;">
-            <div style="flex:1;padding:10px 12px;border-right:1px solid rgba(255,255,255,0.1);background:rgba(160,45,24,0.15);">
-              <p style="color:rgba(255,200,180,0.6);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1px;font-weight:600;">Founders</p>
-              <p style="color:rgba(255,200,180,0.6);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Discount</p>
-              <p style="color:#f0e6d6;font-size:14px;font-weight:700;margin:0;">£72<span style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.4);">/mo</span></p>
+    <!-- DROP-IN & CLASS PACKS -->
+    <div class="pp-section">
+      <p class="section-heading">Drop-in's &amp; class packs.</p>
+      <div class="grid-2">
+        <div class="product-col divider">
+          <p class="tier-name">Drop-in</p>
+          <p class="tier-sub">Single session &middot; pay as you go</p>
+          <div class="dual-price">
+            <div class="dual-cell">
+              <p class="dual-label">Early access<br>founders<br>drop-in price</p>
+              <p class="dual-num">£20</p>
             </div>
-            <div style="flex:1;padding:10px 12px;">
-              <p style="color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1px;font-weight:600;">General</p>
-              <p style="color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Price</p>
-              <p style="color:rgba(255,255,255,0.3);font-size:14px;font-weight:700;margin:0;">£85<span style="font-size:11px;font-weight:400;">/mo</span></p>
+            <div class="dual-cell dim">
+              <p class="dual-label">General launch price</p>
+              <p class="dual-num">£25</p>
             </div>
           </div>
+          <div class="price-row founders" style="margin-bottom:1.1rem">
+            <span class="row-label-f">Founders Discount</span>
+            <span class="row-price-f">£20<span class="row-unit-f"> /class</span></span>
+          </div>
+          <button type="button" class="btn-ghost">Book founding rate</button>
         </div>
-        <div style="padding:2rem 0;border-right:1px solid rgba(255,255,255,0.08);position:relative;height:100%;">
-          <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);background:#a02d18;color:#fff;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;padding:3px 14px;border-radius:0 0 5px 5px;white-space:nowrap;font-weight:600;">Most popular</div>
-          <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Pro</p>
-          <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">8 classes / month</p>
-          <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£16</p>
-          <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:4px 0 2rem;font-weight:500;">per class</p>
-          <div style="display:flex;border:1px solid rgba(255,255,255,0.1);border-radius:6px;overflow:hidden;">
-            <div style="flex:1;padding:10px 12px;border-right:1px solid rgba(255,255,255,0.1);background:rgba(160,45,24,0.15);">
-              <p style="color:rgba(255,200,180,0.6);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1px;font-weight:600;">Founders</p>
-              <p style="color:rgba(255,200,180,0.6);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Discount</p>
-              <p style="color:#f0e6d6;font-size:14px;font-weight:700;margin:0;">£128<span style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.4);">/mo</span></p>
+        <div class="product-col">
+          <p class="tier-name">Intro pack</p>
+          <p class="tier-sub">3 classes &middot; new clients only &middot; valid 30 days</p>
+          <div class="dual-price">
+            <div class="dual-cell">
+              <p class="dual-label">3 class<br>intro pack</p>
+              <p class="dual-num">£48</p>
             </div>
-            <div style="flex:1;padding:10px 12px;">
-              <p style="color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1px;font-weight:600;">General</p>
-              <p style="color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Price</p>
-              <p style="color:rgba(255,255,255,0.3);font-size:14px;font-weight:700;margin:0;">£150<span style="font-size:11px;font-weight:400;">/mo</span></p>
+            <div class="dual-cell dim">
+              <p class="dual-label">General launch price</p>
+              <p class="dual-num">£55</p>
             </div>
           </div>
-        </div>
-        <div style="padding:2rem 0;height:100%;">
-          <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Elite</p>
-          <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">12 classes / month</p>
-          <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£14</p>
-          <p style="color:rgba(255,255,255,0.4);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin:4px 0 2rem;font-weight:500;">per class</p>
-          <div style="display:flex;border:1px solid rgba(255,255,255,0.1);border-radius:6px;overflow:hidden;">
-            <div style="flex:1;padding:10px 12px;border-right:1px solid rgba(255,255,255,0.1);background:rgba(160,45,24,0.15);">
-              <p style="color:rgba(255,200,180,0.6);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1px;font-weight:600;">Founders</p>
-              <p style="color:rgba(255,200,180,0.6);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Discount</p>
-              <p style="color:#f0e6d6;font-size:14px;font-weight:700;margin:0;">£168<span style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.4);">/mo</span></p>
-            </div>
-            <div style="flex:1;padding:10px 12px;">
-              <p style="color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 1px;font-weight:600;">General</p>
-              <p style="color:rgba(255,255,255,0.3);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Price</p>
-              <p style="color:rgba(255,255,255,0.3);font-size:14px;font-weight:700;margin:0;">£195<span style="font-size:11px;font-weight:400;">/mo</span></p>
-            </div>
+          <div class="price-row founders" style="margin-bottom:1.1rem">
+            <span class="row-label-f">Founders Discount</span>
+            <span class="row-price-f">£16<span class="row-unit-f"> /class</span></span>
           </div>
+          <button type="button" class="btn-ghost">Book founding rate</button>
         </div>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));margin-top:1.25rem;gap:10px;">
-      <button type="button" onclick="alert('Coming Soon')" style="background:transparent;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);padding:13px;border-radius:6px;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:600;">Get founding rate</button>
-      <button type="button" onclick="alert('Coming Soon')" style="background:#a02d18;border:none;color:#fff;padding:13px;border-radius:6px;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:700;">Get founding rate</button>
-      <button type="button" onclick="alert('Coming Soon')" style="background:transparent;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);padding:13px;border-radius:6px;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:600;">Get founding rate</button>
+
+    <!-- MONTHLY MEMBERSHIPS -->
+    <div class="pp-section" style="margin-top:4.5rem">
+      <p class="section-heading">Monthly memberships.</p>
+      <div class="grid-3">
+        <div class="product-col divider">
+          <p class="tier-name">Core</p>
+          <p class="tier-sub">4 classes / month</p>
+          <div class="dual-price">
+            <div class="dual-cell">
+              <p class="dual-label">Per month</p>
+              <p class="dual-num">£72</p>
+            </div>
+            <div class="dual-cell">
+              <p class="dual-label">Per class</p>
+              <p class="dual-num">£18</p>
+            </div>
+          </div>
+          <div class="price-row founders">
+            <span class="row-label-f">Founders Discount</span>
+            <span class="row-price-f">£72<span class="row-unit-f"> /month</span></span>
+          </div>
+          <div class="price-row general">
+            <span class="row-label-g">General Launch Price</span>
+            <span class="row-price-g">£85<span class="row-unit-g"> /month</span></span>
+          </div>
+        </div>
+        <div class="product-col divider relative">
+          <div class="badge">Renegade Recommended</div>
+          <p class="tier-name">Pro</p>
+          <p class="tier-sub">8 classes / month</p>
+          <div class="dual-price">
+            <div class="dual-cell">
+              <p class="dual-label">Per month</p>
+              <p class="dual-num">£128</p>
+            </div>
+            <div class="dual-cell">
+              <p class="dual-label">Per class</p>
+              <p class="dual-num">£16</p>
+            </div>
+          </div>
+          <div class="price-row founders">
+            <span class="row-label-f">Founders Discount</span>
+            <span class="row-price-f">£128<span class="row-unit-f"> /month</span></span>
+          </div>
+          <div class="price-row general">
+            <span class="row-label-g">General Launch Price</span>
+            <span class="row-price-g">£150<span class="row-unit-g"> /month</span></span>
+          </div>
+        </div>
+        <div class="product-col">
+          <p class="tier-name">Elite</p>
+          <p class="tier-sub">12 classes / month</p>
+          <div class="dual-price">
+            <div class="dual-cell">
+              <p class="dual-label">Per month</p>
+              <p class="dual-num">£168</p>
+            </div>
+            <div class="dual-cell">
+              <p class="dual-label">Per class</p>
+              <p class="dual-num">£14</p>
+            </div>
+          </div>
+          <div class="price-row founders">
+            <span class="row-label-f">Founders Discount</span>
+            <span class="row-price-f">£168<span class="row-unit-f"> /month</span></span>
+          </div>
+          <div class="price-row general">
+            <span class="row-label-g">General Launch Price</span>
+            <span class="row-price-g">£195<span class="row-unit-g"> /month</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="cta-row">
+        <button type="button" class="btn-ghost">Get founding rate</button>
+        <button type="button" class="btn-solid">Get founding rate</button>
+        <button type="button" class="btn-ghost">Get founding rate</button>
+      </div>
     </div>
+
   </div>
 
   <!-- FOUNDING PERKS BANNER -->
