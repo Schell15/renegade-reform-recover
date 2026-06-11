@@ -622,6 +622,50 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .pp-scope .badge { position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #8B5E3C; color: #f5dfc5; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 14px; border-radius: 0 0 5px 5px; white-space: nowrap; font-weight: 700; }
   .pp-scope .cta-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 1.25rem; margin-bottom: 4.5rem; }
   .pp-scope .pp-section { margin-bottom: 1rem; }
+
+  /* ── ACCORDION MEMBERSHIPS ── */
+  .pp-scope .accordion { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); margin-bottom: 1.5rem; }
+  .pp-scope .acc-item { border-bottom: 1px solid rgba(255,255,255,0.08); transition: background 0.25s; }
+  .pp-scope .acc-item:last-child { border-bottom: none; }
+  .pp-scope .acc-item.open { background: rgba(160,80,30,0.07); }
+  .pp-scope .acc-header { display: flex; align-items: center; justify-content: space-between; padding: 1.6rem 1.75rem; cursor: pointer; user-select: none; gap: 1rem; }
+  .pp-scope .acc-header:hover { background: rgba(255,255,255,0.02); }
+  .pp-scope .acc-left { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+  .pp-scope .acc-eyebrow { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(180,80,40,0.7); font-weight: 700; transition: color 0.2s; }
+  .pp-scope .acc-item.open .acc-eyebrow { color: #d4603f; }
+  .pp-scope .acc-name { font-size: 30px; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: #f0e6d6; line-height: 1; }
+  .pp-scope .acc-right { display: flex; align-items: center; gap: 1.5rem; }
+  .pp-scope .acc-price-collapsed { text-align: right; }
+  .pp-scope .acc-price-big { font-size: 30px; font-weight: 900; color: #f0e6d6; letter-spacing: -1px; line-height: 1; }
+  .pp-scope .acc-price-big span { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.35); }
+  .pp-scope .acc-price-sub { font-size: 10px; color: rgba(255,255,255,0.28); margin-top: 3px; text-align: right; }
+  .pp-scope .acc-chevron { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.12); border-radius: 50%; flex-shrink: 0; transition: transform 0.25s, border-color 0.2s; }
+  .pp-scope .acc-chevron svg { width: 10px; height: 10px; stroke: rgba(255,255,255,0.4); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
+  .pp-scope .acc-item.open .acc-chevron { border-color: rgba(255,255,255,0.3); transform: rotate(180deg); }
+  .pp-scope .acc-item.open .acc-chevron svg { stroke: rgba(255,255,255,0.7); }
+  .pp-scope .acc-body { display: none; padding: 0.25rem 1.75rem 2rem; }
+  .pp-scope .acc-item.open .acc-body { display: block; }
+  .pp-scope .acc-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: start; }
+  .pp-scope .acc-features { list-style: none; display: flex; flex-direction: column; gap: 0; margin: 0; padding: 0; }
+  .pp-scope .acc-feat { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .pp-scope .acc-feat:last-child { border-bottom: none; }
+  .pp-scope .acc-feat-icon { width: 28px; height: 28px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 6px; }
+  .pp-scope .acc-feat-icon svg { width: 14px; height: 14px; stroke: rgba(210,160,120,0.8); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .pp-scope .acc-feat-text { font-size: 12px; color: rgba(255,255,255,0.65); line-height: 1.4; }
+  .pp-scope .acc-feat-text strong { color: #f0e6d6; font-weight: 600; }
+  .pp-scope .acc-pricing-right { display: flex; flex-direction: column; }
+  .pp-scope .acc-badge-wrap { margin-bottom: 1rem; }
+  .pp-scope .acc-badge { display: inline-block; background: #8B5E3C; color: #f5dfc5; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 12px; border-radius: 3px; font-weight: 700; }
+  .pp-scope .acc-per-class-box { border: 1px solid rgba(255,255,255,0.2); border-radius: 7px; padding: 14px 16px; margin-bottom: 7px; display: flex; align-items: center; justify-content: space-between; }
+  .pp-scope .acc-per-class-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); }
+  .pp-scope .acc-per-class-num { font-size: 26px; font-weight: 900; color: #ffffff; letter-spacing: -1px; }
+  @media (max-width: 700px) {
+    .pp-scope .acc-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .pp-scope .acc-name { font-size: 24px; }
+    .pp-scope .acc-price-big { font-size: 24px; }
+    .pp-scope .acc-header { padding: 1.25rem 1rem; gap: 0.75rem; }
+    .pp-scope .acc-right { gap: 0.75rem; }
+  }
 `;
 
 const PRICING_BODY = `<nav class="rn-nav">
