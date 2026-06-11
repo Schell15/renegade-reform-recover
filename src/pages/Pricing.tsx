@@ -690,8 +690,8 @@ const PRICING_BODY = `<nav class="rn-nav">
     <p style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;text-align:center;margin:0 0 6px;font-weight:500;">Monthly memberships</p>
     <p class="section-label" style="text-align:center;margin:0 0 3rem;">MONTHLY MEMBERSHIPS</p>
     <div style="border-top:1px solid rgba(255,255,255,0.12);">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));border-bottom:1px solid rgba(255,255,255,0.08);">
-        <div style="padding:3rem 0 2rem;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));border-bottom:1px solid rgba(255,255,255,0.08);align-items:stretch;">
+        <div style="padding:3rem 0 2rem;border-bottom:1px solid rgba(255,255,255,0.08);height:100%;">
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Core</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">4 classes / month</p>
           <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£18</p>
