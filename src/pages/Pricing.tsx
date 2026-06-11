@@ -662,8 +662,6 @@ const PRICING_BODY = `<nav class="rn-nav">
               <p style="color:rgba(255,255,255,0.3);font-size:14px;font-weight:700;margin:0;">£25<span style="font-size:11px;font-weight:400;">/class</span></p>
             </div>
           </div>
-          <button type="button" onclick="alert('Coming Soon')" style="display:block;width:100%;margin-top:1rem;background:transparent;border:1px solid rgba(255,255,255,0.15);color:#f0e6d6;padding:13px;border-radius:6px;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:600;">Book founding rate</button>
-        </div>
         </div>
         <div style="padding:2rem 0;">
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Intro 3-class pack</p>
@@ -682,8 +680,6 @@ const PRICING_BODY = `<nav class="rn-nav">
               <p style="color:rgba(255,255,255,0.3);font-size:14px;font-weight:700;margin:0;">£55<span style="font-size:11px;font-weight:400;"> total</span></p>
             </div>
           </div>
-          <button type="button" onclick="alert('Coming Soon')" style="display:block;width:100%;margin-top:1rem;background:transparent;border:1px solid rgba(255,255,255,0.15);color:#f0e6d6;padding:13px;border-radius:6px;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:600;">Book founding rate</button>
-        </div>
         </div>
       </div>
     </div>
