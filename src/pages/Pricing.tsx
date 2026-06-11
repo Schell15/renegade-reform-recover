@@ -689,7 +689,7 @@ const PRICING_BODY = `<nav class="rn-nav">
         </div>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;margin-top:1.25rem;gap:10px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));margin-top:1.25rem;gap:10px;">
       <button type="button" onclick="alert('Coming Soon')" style="background:transparent;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);padding:13px;border-radius:6px;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:600;">Get founding rate</button>
       <button type="button" onclick="alert('Coming Soon')" style="background:#a02d18;border:none;color:#fff;padding:13px;border-radius:6px;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:700;">Get founding rate</button>
       <button type="button" onclick="alert('Coming Soon')" style="background:transparent;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);padding:13px;border-radius:6px;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:600;">Get founding rate</button>
