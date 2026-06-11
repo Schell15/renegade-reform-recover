@@ -585,7 +585,18 @@ const PRICING_BODY = `<nav class="rn-nav">
     <li><a href="/reformerpilates.html#instructors">Instructors</a></li>
     <li><a href="/pricing">Pricing</a></li>
   </ul>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="/reformer-signup">Early Access</a></li>
+    <li><a href="/reformerpilates.html">Reformer Pilates</a></li>
+    <li><a href="/reformerpilates.html#instructors">Instructors</a></li>
+    <li><a href="/pricing">Pricing</a></li>
+  </ul>
+</div>
 <div class="page">
 
   <header class="header" style="display:flex;align-items:center;justify-content:space-between;gap:32px;">
