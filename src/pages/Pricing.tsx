@@ -1087,6 +1087,18 @@ const Pricing = () => {
     toggle?.addEventListener('click', onToggle);
     menu?.addEventListener('click', onMenuLinkClick);
 
+    // Accordion toggle for memberships
+    const onAccClick = (e: Event) => {
+      const header = (e.target as HTMLElement).closest('[data-acc-toggle]');
+      if (!header) return;
+      const item = header.closest('[data-acc]');
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('[data-acc]').forEach((i) => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    };
+    document.addEventListener('click', onAccClick);
+
     // Coming Soon toast
     const toast = document.getElementById('cs-toast');
     const closeBtn = document.getElementById('cs-toast-close');
@@ -1116,6 +1128,7 @@ const Pricing = () => {
       closeBtn?.removeEventListener('click', onCloseClick);
       toast?.removeEventListener('click', onToastClick as EventListener);
       document.removeEventListener('keydown', onKey);
+      document.removeEventListener('click', onAccClick);
       btnHandlers.forEach(([b, h]) => b.removeEventListener('click', h));
     };
   }, []);
