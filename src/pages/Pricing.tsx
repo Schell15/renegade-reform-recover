@@ -573,6 +573,55 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     body { background: #fff; }
     .page { padding: 32px; }
   }
+
+  /* ── PRICING PREVIEW (scoped) ── */
+  .pp-scope { color: #f0e6d6; font-family: 'Inter', sans-serif; }
+  .pp-scope .btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 600; width: 100%; font-family: 'Inter', sans-serif; margin-top: 0; display: inline-block; text-align: center; text-decoration: none; }
+  .pp-scope .btn-solid { background: #a02d18; border: none; color: #fff; padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 700; width: 100%; font-family: 'Inter', sans-serif; }
+  .pp-scope .banner { border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 2rem 2.5rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-bottom: 4.5rem; }
+  .pp-scope .banner-text { flex: 1; min-width: 240px; }
+  .pp-scope .banner-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+  .pp-scope .tag-red { background: #c0391a; color: #fff; font-size: 8px; font-weight: 700; letter-spacing: 0.15em; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; }
+  .pp-scope .tag-muted { color: rgba(255,255,255,0.3); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
+  .pp-scope .banner-heading { color: #f0e6d6; font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 10px; line-height: 1.2; }
+  .pp-scope .banner-body { color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.7; margin-bottom: 6px; }
+  .pp-scope .banner-body strong { color: #f0e6d6; }
+  .pp-scope .banner-footnote { color: rgba(255,255,255,0.3); font-size: 11px; font-style: italic; }
+  .pp-scope .banner-prices { display: flex; flex-direction: column; gap: 8px; min-width: 170px; }
+  .pp-scope .banner-pill { border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 20px; text-align: center; }
+  .pp-scope .banner-pill-label { color: rgba(255,255,255,0.35); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 4px; font-weight: 600; }
+  .pp-scope .banner-pill-price { color: #f0e6d6; font-size: 20px; font-weight: 900; letter-spacing: -0.5px; }
+  .pp-scope .banner-pill-unit { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
+  .pp-scope .section-heading { color: #f0e6d6; font-size: 32px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; margin-bottom: 2.5rem; line-height: 1.1; }
+  .pp-scope .grid-2 { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .pp-scope .grid-3 { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
+  .pp-scope .product-col { padding: 2.25rem 1.75rem; min-width: 0; }
+  .pp-scope .product-col.divider { border-right: 2px solid rgba(255,255,255,0.18); }
+  .pp-scope .product-col.relative { position: relative; }
+  @media (max-width: 700px) {
+    .pp-scope .grid-2, .pp-scope .grid-3 { grid-template-columns: 1fr; }
+    .pp-scope .product-col.divider { border-right: none; border-bottom: 2px solid rgba(255,255,255,0.18); }
+  }
+  .pp-scope .tier-name { color: #f0e6d6; font-size: 32px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; line-height: 1; margin-bottom: 5px; }
+  .pp-scope .tier-sub { color: rgba(255,255,255,0.75); font-size: 12px; text-align: center; margin-bottom: 1.75rem; height: 36px; display: flex; align-items: center; justify-content: center; }
+  .pp-scope .dual-price { display: flex; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; margin-bottom: 1.4rem; height: 136px; }
+  .pp-scope .dual-cell { flex: 1; padding: 18px 14px 18px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .pp-scope .dual-cell + .dual-cell { border-left: 1px solid rgba(255,255,255,0.1); }
+  .pp-scope .dual-cell.dim { opacity: 0.75; }
+  .pp-scope .dual-label { color: rgba(255,255,255,0.75); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; height: 40px; display: flex; align-items: flex-start; justify-content: center; text-align: center; line-height: 1.6; }
+  .pp-scope .dual-num { color: #f0e6d6; font-size: 36px; font-weight: 900; letter-spacing: -2px; line-height: 1; }
+  .pp-scope .price-row { display: flex; align-items: center; justify-content: space-between; padding: 0 16px; height: 56px; border-radius: 7px; margin-bottom: 7px; }
+  .pp-scope .price-row.founders { background: rgba(160,45,24,0.2); border: 1px solid rgba(160,45,24,0.35); }
+  .pp-scope .price-row.general { border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); }
+  .pp-scope .row-label-f { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: rgba(255,200,180,0.6); flex-shrink: 1; min-width: 0; }
+  .pp-scope .row-label-g { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); flex-shrink: 1; min-width: 0; }
+  .pp-scope .row-price-f { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: #f0e6d6; white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
+  .pp-scope .row-price-g { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: rgba(255,255,255,0.7); white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
+  .pp-scope .row-unit-f { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.35); }
+  .pp-scope .row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
+  .pp-scope .badge { position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #8B5E3C; color: #f5dfc5; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 14px; border-radius: 0 0 5px 5px; white-space: nowrap; font-weight: 700; }
+  .pp-scope .cta-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 1.25rem; margin-bottom: 4.5rem; }
+  .pp-scope .pp-section { margin-bottom: 1rem; }
 `;
 
 const PRICING_BODY = `<nav class="rn-nav">
