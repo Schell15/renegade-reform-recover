@@ -901,6 +901,22 @@ const Pricing = () => {
     window.addEventListener('scroll', onScroll, { passive: true });
     update();
 
+    // Mobile hamburger menu
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const setMenu = (open: boolean) => {
+      if (!toggle || !menu) return;
+      toggle.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-hidden', String(!open));
+      menu.classList.toggle('open', open);
+    };
+    const onToggle = () => setMenu(toggle?.getAttribute('aria-expanded') !== 'true');
+    const onMenuLinkClick = (e: Event) => {
+      if ((e.target as HTMLElement).tagName === 'A') setMenu(false);
+    };
+    toggle?.addEventListener('click', onToggle);
+    menu?.addEventListener('click', onMenuLinkClick);
+
     // Coming Soon toast
     const toast = document.getElementById('cs-toast');
     const closeBtn = document.getElementById('cs-toast-close');
@@ -925,6 +941,8 @@ const Pricing = () => {
 
     return () => {
       window.removeEventListener('scroll', onScroll);
+      toggle?.removeEventListener('click', onToggle);
+      menu?.removeEventListener('click', onMenuLinkClick);
       closeBtn?.removeEventListener('click', onCloseClick);
       toast?.removeEventListener('click', onToastClick as EventListener);
       document.removeEventListener('keydown', onKey);
