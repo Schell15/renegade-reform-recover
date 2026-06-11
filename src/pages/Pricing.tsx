@@ -515,9 +515,11 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   @media (max-width: 660px) {
     .grid-3, .grid-2 { grid-template-columns: 1fr; }
     .page-title { font-size: 54px; }
-    .page { padding: 44px 20px 64px; }
+    .page { padding: 104px 20px 64px; }
     .pc-num { font-size: 44px; }
     .perks-lock { max-width: 100%; }
+    .header { flex-direction: column !important; align-items: flex-start !important; gap: 20px !important; }
+    .header > div[aria-hidden="true"] { display: none !important; }
   }
   @media print {
     body { background: #fff; }
