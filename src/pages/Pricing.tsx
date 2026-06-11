@@ -694,13 +694,13 @@ const PRICING_BODY = `<nav class="rn-nav">
 
   <header class="header" style="display:flex;align-items:center;justify-content:space-between;gap:32px;">
     <div style="flex:1;min-width:0;">
-      <p class="wordmark">Renegade Reformer, Bristol</p>
       <h1 class="page-title">JOIN<br>THE<br>RENEGADE.</h1>
-      <p class="header-sub">reform · repower · recover</p>
-      <p class="header-note">Every option includes full access to our class timetable. Monthly memberships roll with no lock-in after your first term.</p>
-      <div class="urgency-strip">
-        <span class="urgency-dot"></span>
-        <p class="urgency-text">Founding member rates, <em>strictly limited to 50 spots</em></p>
+      <p class="header-sub">Reform · Repower · Recover</p>
+      <p class="header-note">Choose the way you move. From flexible class packs to monthly memberships, every option is built to help you find your rhythm, stay consistent and make Renegade part of your routine.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <span style="border:1px solid rgba(160,45,24,0.5);background:rgba(160,45,24,0.12);color:#f0e6d6;font-size:12px;font-weight:600;padding:8px 20px;border-radius:999px;cursor:pointer;">Become a member</span>
+        <span style="border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);font-size:12px;font-weight:600;padding:8px 20px;border-radius:999px;cursor:pointer;">Class packs</span>
+        <span style="border:1px solid rgba(255,255,255,0.1);background:transparent;color:rgba(255,255,255,0.45);font-size:12px;font-weight:600;padding:8px 20px;border-radius:999px;cursor:pointer;">Drop in</span>
       </div>
     </div>
     <div style="flex-shrink:0;width:220px;opacity:0.12;" aria-hidden="true">
