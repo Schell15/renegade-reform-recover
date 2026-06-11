@@ -568,12 +568,12 @@ const PRICING_BODY = `<nav class="rn-nav">
       <p style="color:rgba(255,255,255,0.55);font-size:13px;margin:0 0 6px;line-height:1.6;">Drop-in founding rate ends <strong style="color:#f0e6d6;">31 July</strong> &middot; Founding memberships lock in your rate <strong style="color:#f0e6d6;">for life</strong></p>
       <p style="color:rgba(255,255,255,0.3);font-size:12px;margin:0;font-style:italic;">Celebrate our opening with the lowest price Renegade Reformer will ever offer. <a href="/terms" style="text-decoration:underline;text-underline-offset:3px;color:inherit;">T&amp;Cs apply</a></p>
     </div>
-    <div style="display:flex;flex-direction:column;gap:8px;">
-      <div style="border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 20px;text-align:center;min-width:130px;">
+    <div style="display:flex;flex-direction:row;gap:8px;width:100%;">
+      <div style="flex:1;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 20px;text-align:center;">
         <p style="color:rgba(255,255,255,0.35);font-size:9px;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Founding drop-in</p>
         <p style="color:#f0e6d6;font-size:20px;font-weight:900;margin:0;letter-spacing:-0.5px;">£20 <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.4);">/ class</span></p>
       </div>
-      <div style="border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 20px;text-align:center;min-width:130px;">
+      <div style="flex:1;border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 20px;text-align:center;">
         <p style="color:rgba(255,255,255,0.35);font-size:9px;letter-spacing:0.15em;text-transform:uppercase;margin:0 0 4px;font-weight:600;">Memberships from</p>
         <p style="color:#f0e6d6;font-size:20px;font-weight:900;margin:0;letter-spacing:-0.5px;">£14 <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.4);">/ class</span></p>
       </div>
@@ -586,7 +586,7 @@ const PRICING_BODY = `<nav class="rn-nav">
     <p class="section-label" style="text-align:center;margin:0 0 3rem;">NO STRINGS ATTACHED.</p>
     <div style="border-top:1px solid rgba(255,255,255,0.12);">
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));border-bottom:1px solid rgba(255,255,255,0.08);">
-        <div style="padding:2rem 1.5rem 2rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+        <div style="padding:2rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Drop-in</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">Single session · pay as you go</p>
           <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£20</p>
@@ -604,7 +604,7 @@ const PRICING_BODY = `<nav class="rn-nav">
             </div>
           </div>
         </div>
-        <div style="padding:2rem 0 2rem 1.5rem;">
+        <div style="padding:2rem 0;">
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Intro 3-class pack</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">New clients only · valid 30 days</p>
           <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£16</p>
@@ -632,7 +632,7 @@ const PRICING_BODY = `<nav class="rn-nav">
     <p class="section-label" style="text-align:center;margin:0 0 3rem;">JOIN THE RENEGADES.</p>
     <div style="border-top:1px solid rgba(255,255,255,0.12);">
       <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));border-bottom:1px solid rgba(255,255,255,0.08);">
-        <div style="padding:2rem 1.5rem 2rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+        <div style="padding:3rem 0 2rem;border-bottom:1px solid rgba(255,255,255,0.08);">
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Core</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">4 classes / month</p>
           <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£18</p>
@@ -650,7 +650,7 @@ const PRICING_BODY = `<nav class="rn-nav">
             </div>
           </div>
         </div>
-        <div style="padding:2rem 1.5rem;border-bottom:1px solid rgba(255,255,255,0.08);position:relative;">
+        <div style="padding:2rem 0;border-bottom:1px solid rgba(255,255,255,0.08);position:relative;">
           <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);background:#a02d18;color:#fff;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;padding:3px 14px;border-radius:0 0 5px 5px;white-space:nowrap;font-weight:600;">Most popular</div>
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Pro</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">8 classes / month</p>
@@ -669,7 +669,7 @@ const PRICING_BODY = `<nav class="rn-nav">
             </div>
           </div>
         </div>
-        <div style="padding:2rem 0 2rem 1.5rem;">
+        <div style="padding:2rem 0;">
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Elite</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">12 classes / month</p>
           <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£14</p>
