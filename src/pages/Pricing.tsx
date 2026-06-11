@@ -631,8 +631,8 @@ const PRICING_BODY = `<nav class="rn-nav">
     <p style="color:rgba(255,255,255,0.35);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;text-align:center;margin:0 0 6px;font-weight:500;">Monthly memberships</p>
     <p class="section-label" style="text-align:center;margin:0 0 3rem;">JOIN THE RENEGADES.</p>
     <div style="border-top:1px solid rgba(255,255,255,0.12);">
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid rgba(255,255,255,0.08);">
-        <div style="padding:2rem 1.5rem 2rem 0;border-right:1px solid rgba(255,255,255,0.08);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));border-bottom:1px solid rgba(255,255,255,0.08);">
+        <div style="padding:2rem 1.5rem 2rem 0;border-bottom:1px solid rgba(255,255,255,0.08);">
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Core</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">4 classes / month</p>
           <p style="color:#f0e6d6;font-size:40px;font-weight:900;margin:0;line-height:1;letter-spacing:-2px;">£18</p>
@@ -650,7 +650,7 @@ const PRICING_BODY = `<nav class="rn-nav">
             </div>
           </div>
         </div>
-        <div style="padding:2rem 1.5rem;border-right:1px solid rgba(255,255,255,0.08);position:relative;">
+        <div style="padding:2rem 1.5rem;border-bottom:1px solid rgba(255,255,255,0.08);position:relative;">
           <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);background:#a02d18;color:#fff;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;padding:3px 14px;border-radius:0 0 5px 5px;white-space:nowrap;font-weight:600;">Most popular</div>
           <p style="color:#f0e6d6;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 4px;font-weight:700;">Pro</p>
           <p style="color:rgba(255,255,255,0.75);font-size:13px;margin:0 0 1.5rem;">8 classes / month</p>
