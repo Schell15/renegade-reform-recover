@@ -899,9 +899,9 @@ const PRICING_BODY_HEAD = `<nav class="rn-nav">
       <p class="header-sub">Reform · Repower · Recover</p>
       <p class="header-note">Choose the way you move. From flexible class packs to monthly memberships, every option is built to help you find your rhythm, stay consistent and make Renegade part of your routine.</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <span onclick="document.getElementById('memberships')?.scrollIntoView({behavior:'smooth'})" style="border:1px solid rgba(160,45,24,0.5);background:rgba(160,45,24,0.12);color:#f0e6d6;font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Become a member<span style="font-size:10px;opacity:0.55;margin-left:5px;vertical-align:middle;">↓</span></span>
-        <span onclick="document.getElementById('class-packs')?.scrollIntoView({behavior:'smooth'})" style="border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Class packs<span style="font-size:10px;opacity:0.55;margin-left:5px;vertical-align:middle;">↓</span></span>
-        <span onclick="document.getElementById('drop-in')?.scrollIntoView({behavior:'smooth'})" style="border:1px solid rgba(255,255,255,0.85);background:transparent;color:#ffffff;font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Drop in<span style="font-size:10px;opacity:0.55;margin-left:5px;vertical-align:middle;">↓</span></span>
+        <span onclick="const el=document.getElementById('memberships');const top=el.getBoundingClientRect().top+window.scrollY-100;window.scrollTo({top,behavior:'smooth'})" style="border:1px solid rgba(160,45,24,0.5);background:rgba(160,45,24,0.12);color:#f0e6d6;font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Become a member<span style="font-size:10px;opacity:0.55;margin-left:5px;vertical-align:middle;">↓</span></span>
+        <span onclick="const el=document.getElementById('class-packs');const top=el.getBoundingClientRect().top+window.scrollY-100;window.scrollTo({top,behavior:'smooth'})" style="border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Class packs<span style="font-size:10px;opacity:0.55;margin-left:5px;vertical-align:middle;">↓</span></span>
+        <span onclick="const el=document.getElementById('drop-in');const top=el.getBoundingClientRect().top+window.scrollY-100;window.scrollTo({top,behavior:'smooth'})" style="border:1px solid rgba(255,255,255,0.85);background:transparent;color:#ffffff;font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Drop in<span style="font-size:10px;opacity:0.55;margin-left:5px;vertical-align:middle;">↓</span></span>
       </div>
     </div>
     <div style="flex-shrink:0;width:220px;opacity:0.12;" aria-hidden="true">
@@ -1188,7 +1188,7 @@ const Pricing = () => {
   .rr-acc-header { display: flex; align-items: center; justify-content: space-between; padding: 1.6rem 1.75rem; cursor: pointer; user-select: none; }
   .rr-acc-header:hover { background: rgba(255,255,255,0.02); }
   .rr-acc-left { display: flex; flex-direction: column; gap: 5px; }
-  .rr-acc-eyebrow { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(180,80,40,0.7); font-weight: 700; transition: color 0.2s; }
+  .rr-acc-eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(210,110,60,1); font-weight: 700; transition: color 0.2s; }
   .rr-acc-item.open .rr-acc-eyebrow { color: #d4603f; }
   .rr-acc-name { font-size: 30px; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: #f0e6d6; line-height: 1; }
   .rr-acc-right { display: flex; align-items: center; gap: 1.5rem; }
