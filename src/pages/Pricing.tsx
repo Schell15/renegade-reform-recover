@@ -869,7 +869,339 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   
 `;
 
-const PRICING_BODY_BELOW = `<div class="page">
+const PRICING_BODY = `<nav class="rn-nav">
+  <a href="/" class="nav-logo" aria-label="Renegade Reformer home">
+    <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo, reformer Pilates Bristol" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="/reformer-signup">Early Access</a></li>
+    <li><a href="/reformerpilates.html">Reformer Pilates</a></li>
+    <li><a href="/reformerpilates.html#instructors">Instructors</a></li>
+    <li><a href="/pricing">Pricing</a></li>
+  </ul>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="/reformer-signup">Early Access</a></li>
+    <li><a href="/reformerpilates.html">Reformer Pilates</a></li>
+    <li><a href="/reformerpilates.html#instructors">Instructors</a></li>
+    <li><a href="/pricing">Pricing</a></li>
+  </ul>
+</div>
+<div class="page">
+
+  <header class="header" style="display:flex;align-items:center;justify-content:space-between;gap:32px;">
+    <div style="flex:1;min-width:0;">
+      <h1 class="page-title">JOIN<br>THE<br>RENEGADE.</h1>
+      <p class="header-sub">Reform · Repower · Recover</p>
+      <p class="header-note">Choose the way you move. From flexible class packs to monthly memberships, every option is built to help you find your rhythm, stay consistent and make Renegade part of your routine.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <span onclick="document.getElementById('memberships')?.scrollIntoView({behavior:'smooth'})" style="border:1px solid rgba(160,45,24,0.5);background:rgba(160,45,24,0.12);color:#f0e6d6;font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Become a member</span>
+        <span onclick="document.getElementById('class-packs')?.scrollIntoView({behavior:'smooth'})" style="border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Class packs</span>
+        <span onclick="document.getElementById('drop-in')?.scrollIntoView({behavior:'smooth'})" style="border:1px solid rgba(255,255,255,0.1);background:transparent;color:rgba(255,255,255,0.45);font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Drop in</span>
+      </div>
+    </div>
+    <div style="flex-shrink:0;width:220px;opacity:0.12;" aria-hidden="true">
+      <img alt="Renegade Reformer wordmark, reformer Pilates Bristol" src="data:image/png;base64,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" alt="" style="width:100%;height:auto;opacity:0.85;">
+    </div>
+  </header>
+
+  <div class="pp-scope">
+
+
+  <!-- FOUNDING RATE BANNER -->
+  <div class="banner">
+    <div class="banner-inner">
+      <div class="banner-text">
+        <div class="banner-tag">
+          <span class="tag-brown">Ends 31 July</span>
+          <span class="tag-muted">Founding rates</span>
+        </div>
+        <p class="banner-heading">FOUNDING RATES.</p>
+        <p class="banner-body">Founding memberships lock in your rate <strong>for life.</strong> Join now and this price is yours for as long as you stay a member.<sup style="font-size:9px;color:rgba(26,8,0,0.3)">*</sup></p>
+        <p class="banner-tc">* Founding membership rate is locked for the duration of your active membership. Standard membership terms and cancellation policy applies.</p>
+      </div>
+      <div class="banner-prices">
+        <div class="banner-price-col">
+          <p class="banner-pill-label">Founding drop-in</p>
+          <p class="banner-pill-price">£20</p>
+          <p class="banner-pill-unit">/class</p>
+        </div>
+        <div class="banner-price-col">
+          <p class="banner-pill-label">Memberships from</p>
+          <p class="banner-pill-price">£14</p>
+          <p class="banner-pill-unit">/class</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DROP-IN — FULL WIDTH -->
+  <div class="dropin-section" id="drop-in">
+    <div class="dropin-header">
+      <p class="dropin-headline">Drop-in.</p>
+      <p class="dropin-strapline">No membership. Experience Renegade with no commitment.</p>
+    </div>
+    <div class="dropin-body">
+      <div class="dropin-left">
+        <p class="dropin-desc">New to Reformer, curious about Renegade, or not ready to commit yet? Book a single class and experience the studio on your own terms.<br><br>Early access founding rate available for a limited time as we open the doors.</p>
+        <ul class="dropin-bullets">
+          <li class="dropin-bullet">All levels welcome, including complete beginners</li>
+          <li class="dropin-bullet">Book any eligible class with available spaces</li>
+          <li class="dropin-bullet">Free cancellation up to 24 hours before class</li>
+        </ul>
+      </div>
+      <div class="dropin-right">
+        <div class="dropin-price-block">
+          <p class="dropin-rate-label">Founding rate</p>
+          <p class="dropin-big-price">£20<span class="dropin-big-unit"> /class</span></p>
+          <p class="dropin-standard">£25 standard rate</p>
+        </div>
+        <button type="button" class="btn-ghost">Book a class</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MONTHLY MEMBERSHIPS -->
+  <div class="section" id="memberships" style="margin-top:4.5rem">
+    <p class="section-heading">Monthly memberships.</p>
+
+    <div class="accordion">
+
+      <!-- CORE -->
+      <div class="acc-item" data-acc>
+        <div class="acc-header" data-acc-toggle>
+          <div class="acc-left">
+            <span class="acc-eyebrow">4 classes / month</span>
+            <span class="acc-name">Core</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-price-collapsed">
+              <div class="acc-price-big">£72 <span>/month</span></div>
+              <div class="acc-price-sub">£18 per class</div>
+            </div>
+            <div class="acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
+          </div>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <!-- LEFT: features -->
+            <ul class="acc-features">
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                <span class="acc-feat-text"><strong>Founding rate locked for life</strong> &mdash; your price never increases*</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                <span class="acc-feat-text"><strong>4 classes per month</strong>, credits roll over monthly</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <span class="acc-feat-text"><strong>1 guest pass</strong> per month</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+                <span class="acc-feat-text"><strong>Early booking</strong> &mdash; 1 week ahead of non-members</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+                <span class="acc-feat-text">Rolls monthly &mdash; <strong>no lock-in</strong> after first term</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+                <span class="acc-feat-text"><strong>Founding welcome gift</strong> &mdash; branded socks &amp; tote</span>
+              </li>
+            </ul>
+            <!-- RIGHT: price + CTA -->
+            <div class="acc-pricing-right">
+              <div class="acc-per-class-box">
+                <span class="acc-per-class-label">Per class</span>
+                <span class="acc-per-class-num">£18</span>
+              </div>
+              <div class="price-row founders" style="margin-bottom:7px">
+                <span class="row-label-f">Founders Discount</span>
+                <span class="row-price-f">£72<span class="row-unit-f"> /mo</span></span>
+              </div>
+              <div class="price-row general" style="margin-bottom:1.25rem">
+                <span class="row-label-g">Standard Rate</span>
+                <span class="row-price-g">£85<span class="row-unit-g"> /mo</span></span>
+              </div>
+              <button type="button" class="btn-ghost">Get founding rate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRO (open by default) -->
+      <div class="acc-item" data-acc>
+        <div class="acc-header" data-acc-toggle>
+          <div class="acc-left">
+            <span class="acc-eyebrow">8 classes / month</span>
+            <span class="acc-name">Pro</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-price-collapsed">
+              <div class="acc-price-big">£128 <span>/month</span></div>
+              <div class="acc-price-sub">£16 per class</div>
+            </div>
+            <div class="acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
+          </div>
+        </div>
+        <div class="acc-body">
+          <div class="acc-badge-wrap">
+            <span class="acc-badge">Renegade Recommended</span>
+          </div>
+          <div class="acc-inner">
+            <!-- LEFT: features -->
+            <ul class="acc-features">
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                <span class="acc-feat-text"><strong>Founding rate locked for life</strong> &mdash; your price never increases*</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                <span class="acc-feat-text"><strong>8 classes per month</strong>, credits roll over monthly</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <span class="acc-feat-text"><strong>1 guest pass</strong> per month</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+                <span class="acc-feat-text"><strong>Early booking</strong> &mdash; 1 week ahead of non-members</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <span class="acc-feat-text"><strong>Priority event booking</strong> &mdash; first access to all events</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+                <span class="acc-feat-text"><strong>Founding welcome gift</strong> &mdash; branded socks &amp; tote</span>
+              </li>
+            </ul>
+            <!-- RIGHT: price + CTA -->
+            <div class="acc-pricing-right">
+              <div class="acc-per-class-box">
+                <span class="acc-per-class-label">Per class</span>
+                <span class="acc-per-class-num">£16</span>
+              </div>
+              <div class="price-row founders" style="margin-bottom:7px">
+                <span class="row-label-f">Founders Discount</span>
+                <span class="row-price-f">£128<span class="row-unit-f"> /mo</span></span>
+              </div>
+              <div class="price-row general" style="margin-bottom:1.25rem">
+                <span class="row-label-g">Standard Rate</span>
+                <span class="row-price-g">£150<span class="row-unit-g"> /mo</span></span>
+              </div>
+              <button type="button" class="btn-solid">Get founding rate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ELITE -->
+      <div class="acc-item" data-acc>
+        <div class="acc-header" data-acc-toggle>
+          <div class="acc-left">
+            <span class="acc-eyebrow">12 classes / month</span>
+            <span class="acc-name">Elite</span>
+          </div>
+          <div class="acc-right">
+            <div class="acc-price-collapsed">
+              <div class="acc-price-big">£168 <span>/month</span></div>
+              <div class="acc-price-sub">£14 per class</div>
+            </div>
+            <div class="acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
+          </div>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <!-- LEFT: features -->
+            <ul class="acc-features">
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                <span class="acc-feat-text"><strong>Founding rate locked for life</strong> &mdash; your price never increases*</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                <span class="acc-feat-text"><strong>12 classes per month</strong>, credits roll over monthly</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <span class="acc-feat-text"><strong>1 guest pass</strong> per month</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <span class="acc-feat-text"><strong>Priority event booking</strong> &mdash; first access to all events</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+                <span class="acc-feat-text"><strong>Early booking</strong> &mdash; 1 week ahead of non-members</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                <span class="acc-feat-text"><strong>Best value</strong> &mdash; lowest per-class price of any tier</span>
+              </li>
+            </ul>
+            <!-- RIGHT: price + CTA -->
+            <div class="acc-pricing-right">
+              <div class="acc-per-class-box">
+                <span class="acc-per-class-label">Per class</span>
+                <span class="acc-per-class-num">£14</span>
+              </div>
+              <div class="price-row founders" style="margin-bottom:7px">
+                <span class="row-label-f">Founders Discount</span>
+                <span class="row-price-f">£168<span class="row-unit-f"> /mo</span></span>
+              </div>
+              <div class="price-row general" style="margin-bottom:1.25rem">
+                <span class="row-label-g">Standard Rate</span>
+                <span class="row-price-g">£195<span class="row-unit-g"> /mo</span></span>
+              </div>
+              <button type="button" class="btn-ghost">Get founding rate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INTRO PACK — STANDALONE -->
+  <div class="intro-section">
+    <div class="intro-inner">
+      <div class="intro-left">
+        <p class="intro-tag">New clients only &middot; valid 30 days</p>
+        <p class="intro-title">Intro pack</p>
+        <p class="intro-sub">3 classes to find your feet. The best way to try Renegade properly before committing to a membership.</p>
+        <div class="intro-prices">
+          <span class="dropin-price-f">£48 <span>founding rate</span></span>
+          <span class="dropin-price-g" style="color:rgba(255,255,255,0.25);text-decoration:line-through">£55 <span style="text-decoration:none;color:rgba(255,255,255,0.25)">standard rate</span></span>
+        </div>
+        <ul class="dropin-bullets">
+          <li class="dropin-bullet" style="color:rgba(255,255,255,0.45)">£16 per class at founding rate (£18.33 standard)</li>
+          <li class="dropin-bullet" style="color:rgba(255,255,255,0.45)">Use across any 3 classes in the schedule</li>
+          <li class="dropin-bullet" style="color:rgba(255,255,255,0.45)">All levels welcome &mdash; great for complete beginners</li>
+        </ul>
+      </div>
+      <div class="intro-right">
+        <div style="text-align:right">
+          <p style="font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.3);font-weight:600;margin-bottom:4px">3 classes</p>
+          <p style="font-size:52px;font-weight:900;color:#f0e6d6;letter-spacing:-3px;line-height:1">£48</p>
+          <p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px;text-decoration:line-through">£55 standard</p>
+        </div>
+        <button type="button" class="btn-ghost" style="width:auto;padding:13px 28px">Book intro pack</button>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  </div>
+
   <!-- FOUNDING PERKS BANNER -->
   <div class="perks-banner">
     <div class="perks-top">
@@ -996,248 +1328,8 @@ const PRICING_BODY_BELOW = `<div class="page">
     <p style="font-size:15px;line-height:1.5;color:rgba(255,255,255,0.92);">Reformer Pilates class details will be available shortly.</p>
   </div>
 </div>
+
 `;
-
-const NEW_TOP_CSS = `
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #140800; color: #f0e6d6; font-family: 'Inter', sans-serif; padding: 4rem 2rem; }
-    .container { max-width: 1100px; margin: 0 auto; }
-
-    /* ── BUTTONS ── */
-    .btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 600; width: 100%; font-family: 'Inter', sans-serif; }
-    .btn-solid { background: #a02d18; border: none; color: #fff; padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 700; width: 100%; font-family: 'Inter', sans-serif; }
-
-    /* ── BANNER ── */
-    .banner { border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 2rem 2.5rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-bottom: 4.5rem; }
-    .banner-text { flex: 1; min-width: 240px; }
-    .banner-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
-    .tag-red { background: #c0391a; color: #fff; font-size: 8px; font-weight: 700; letter-spacing: 0.15em; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; }
-    .tag-muted { color: rgba(255,255,255,0.3); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
-    .banner-heading { color: #f0e6d6; font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 10px; line-height: 1.2; }
-    .banner-body { color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.7; margin-bottom: 6px; }
-    .banner-body strong { color: #f0e6d6; }
-    .banner-footnote { color: rgba(255,255,255,0.3); font-size: 11px; font-style: italic; }
-    .banner-prices { display: flex; flex-direction: column; gap: 8px; min-width: 170px; }
-    .banner-pill { border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 20px; text-align: center; }
-    .banner-pill-label { color: rgba(255,255,255,0.35); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 4px; font-weight: 600; }
-    .banner-pill-price { color: #f0e6d6; font-size: 20px; font-weight: 900; letter-spacing: -0.5px; }
-    .banner-pill-unit { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
-
-    /* ── SECTION HEADINGS ── */
-    .section-heading { color: #f0e6d6; font-size: 32px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; margin-bottom: 2.5rem; line-height: 1.1; }
-
-    /* ── GRIDS ── */
-    .grid-2 { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); display: grid; grid-template-columns: 1fr 1fr; }
-    .grid-3 { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); display: grid; grid-template-columns: 1fr 1fr 1fr; }
-    .product-col { padding: 2.25rem 1.75rem; min-width: 0; }
-    .product-col.divider { border-right: 2px solid rgba(255,255,255,0.18); }
-    .product-col.relative { position: relative; }
-    @media (max-width: 700px) {
-      .grid-2, .grid-3 { grid-template-columns: 1fr; }
-      .product-col.divider { border-right: none; border-bottom: 2px solid rgba(255,255,255,0.18); }
-    }
-
-    /* ── TIER NAME ── */
-    .tier-name { color: #f0e6d6; font-size: 32px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; line-height: 1; margin-bottom: 5px; }
-    .tier-sub { color: rgba(255,255,255,0.75); font-size: 12px; text-align: center; margin-bottom: 1.75rem; height: 36px; display: flex; align-items: center; justify-content: center; }
-
-    /* ── DUAL PRICE BOX ── */
-    .dual-price { display: flex; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; margin-bottom: 1.4rem; height: 136px; }
-    .dual-cell { flex: 1; padding: 18px 14px 18px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-    .dual-cell + .dual-cell { border-left: 1px solid rgba(255,255,255,0.1); }
-    .dual-cell.dim { opacity: 0.75; }
-    .dual-label { color: rgba(255,255,255,0.75); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; height: 40px; display: flex; align-items: flex-start; justify-content: center; text-align: center; line-height: 1.6; }
-    .dual-num { color: #f0e6d6; font-size: 36px; font-weight: 900; letter-spacing: -2px; line-height: 1; }
-
-    /* ── PRICE ROWS ── */
-    .price-row { display: flex; align-items: center; justify-content: space-between; padding: 0 16px; height: 56px; border-radius: 7px; margin-bottom: 7px; }
-    .price-row.founders { background: rgba(160,45,24,0.2); border: 1px solid rgba(160,45,24,0.35); }
-    .price-row.general { border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); }
-    .row-label-f { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: rgba(255,200,180,0.6); flex-shrink: 1; min-width: 0; }
-    .row-label-g { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); flex-shrink: 1; min-width: 0; }
-    .row-price-f { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: #f0e6d6; white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
-    .row-price-g { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: rgba(255,255,255,0.7); white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
-    .row-unit-f { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.35); }
-    .row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
-
-    /* ── BADGE ── */
-    .badge { position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #8B5E3C; color: #f5dfc5; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 14px; border-radius: 0 0 5px 5px; white-space: nowrap; font-weight: 700; }
-
-    /* ── CTA ROW ── */
-    .cta-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 1.25rem; margin-bottom: 4.5rem; }
-
-    /* ── SECTION SPACING ── */
-    .section { margin-bottom: 1rem; }
-`;
-
-const NewPricingTop = () => (
-  <>
-    <style>{NEW_TOP_CSS}</style>
-    <div className="container">
-
-      {/* FOUNDING RATE BANNER */}
-      <div className="banner">
-        <div className="banner-text">
-          <div className="banner-tag">
-            <span className="tag-red">Closing 31 July</span>
-            <span className="tag-muted">Founding rates</span>
-          </div>
-          <p className="banner-heading">Lock in your founding rate<br />before we open.</p>
-          <p className="banner-body">Drop-in founding rate ends <strong>31 July</strong> &middot; Founding memberships lock in your rate <strong>for life</strong> <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '10px', verticalAlign: 'super', lineHeight: 0 }}>*</span></p>
-          <p className="banner-footnote">The lowest price Renegade Reformer will ever offer.</p>
-          <p style={{ color: 'rgba(255,255,255,0.2)', fontSize: '10px', marginTop: '10px', lineHeight: 1.5 }}>* Founding membership rate is locked for the duration of your active membership. Rate applies only to the original plan selected at sign-up. Subject to standard membership terms.</p>
-        </div>
-        <div className="banner-prices">
-          <div className="banner-pill">
-            <p className="banner-pill-label">Founding drop-in</p>
-            <p className="banner-pill-price">£20 <span className="banner-pill-unit">/class</span></p>
-          </div>
-          <div className="banner-pill">
-            <p className="banner-pill-label">Memberships from</p>
-            <p className="banner-pill-price">£14 <span className="banner-pill-unit">/class</span></p>
-          </div>
-        </div>
-      </div>
-
-      {/* DROP-IN & CLASS PACKS */}
-      <div className="section">
-        <p className="section-heading">Drop-in's &amp; class packs.</p>
-        <div className="grid-2">
-
-          {/* Drop-in */}
-          <div className="product-col divider">
-            <p className="tier-name">Drop-in</p>
-            <p className="tier-sub">Single session &middot; pay as you go</p>
-            <div className="dual-price">
-              <div className="dual-cell">
-                <p className="dual-label">Early access<br />founders<br />drop-in price</p>
-                <p className="dual-num">£20</p>
-              </div>
-              <div className="dual-cell dim">
-                <p className="dual-label">General launch price</p>
-                <p className="dual-num">£25</p>
-              </div>
-            </div>
-            <div className="price-row founders" style={{ marginBottom: '1.1rem' }}>
-              <span className="row-label-f">Founders Discount</span>
-              <span className="row-price-f">£20<span className="row-unit-f"> /class</span></span>
-            </div>
-            <button className="btn-ghost">Book founding rate</button>
-          </div>
-
-          {/* Intro pack */}
-          <div className="product-col">
-            <p className="tier-name">Intro pack</p>
-            <p className="tier-sub">3 classes &middot; new clients only &middot; valid 30 days</p>
-            <div className="dual-price">
-              <div className="dual-cell">
-                <p className="dual-label">3 class<br />intro pack</p>
-                <p className="dual-num">£48</p>
-              </div>
-              <div className="dual-cell dim">
-                <p className="dual-label">General launch price</p>
-                <p className="dual-num">£55</p>
-              </div>
-            </div>
-            <div className="price-row founders" style={{ marginBottom: '1.1rem' }}>
-              <span className="row-label-f">Founders Discount</span>
-              <span className="row-price-f">£16<span className="row-unit-f"> /class</span></span>
-            </div>
-            <button className="btn-ghost">Book founding rate</button>
-          </div>
-
-        </div>
-      </div>
-
-      {/* MONTHLY MEMBERSHIPS */}
-      <div className="section" style={{ marginTop: '4.5rem' }}>
-        <p className="section-heading">Monthly memberships.</p>
-        <div className="grid-3">
-
-          {/* Core */}
-          <div className="product-col divider">
-            <p className="tier-name">Core</p>
-            <p className="tier-sub">4 classes / month</p>
-            <div className="dual-price">
-              <div className="dual-cell">
-                <p className="dual-label">Per month</p>
-                <p className="dual-num">£72</p>
-              </div>
-              <div className="dual-cell">
-                <p className="dual-label">Per class</p>
-                <p className="dual-num">£18</p>
-              </div>
-            </div>
-            <div className="price-row founders">
-              <span className="row-label-f">Founders Discount</span>
-              <span className="row-price-f">£72<span className="row-unit-f"> /month</span></span>
-            </div>
-            <div className="price-row general">
-              <span className="row-label-g">General Launch Price</span>
-              <span className="row-price-g">£85<span className="row-unit-g"> /month</span></span>
-            </div>
-          </div>
-
-          {/* Pro */}
-          <div className="product-col divider relative">
-            <div className="badge">Renegade Recommended</div>
-            <p className="tier-name">Pro</p>
-            <p className="tier-sub">8 classes / month</p>
-            <div className="dual-price">
-              <div className="dual-cell">
-                <p className="dual-label">Per month</p>
-                <p className="dual-num">£128</p>
-              </div>
-              <div className="dual-cell">
-                <p className="dual-label">Per class</p>
-                <p className="dual-num">£16</p>
-              </div>
-            </div>
-            <div className="price-row founders">
-              <span className="row-label-f">Founders Discount</span>
-              <span className="row-price-f">£128<span className="row-unit-f"> /month</span></span>
-            </div>
-            <div className="price-row general">
-              <span className="row-label-g">General Launch Price</span>
-              <span className="row-price-g">£150<span className="row-unit-g"> /month</span></span>
-            </div>
-          </div>
-
-          {/* Elite */}
-          <div className="product-col">
-            <p className="tier-name">Elite</p>
-            <p className="tier-sub">12 classes / month</p>
-            <div className="dual-price">
-              <div className="dual-cell">
-                <p className="dual-label">Per month</p>
-                <p className="dual-num">£168</p>
-              </div>
-              <div className="dual-cell">
-                <p className="dual-label">Per class</p>
-                <p className="dual-num">£14</p>
-              </div>
-            </div>
-            <div className="price-row founders">
-              <span className="row-label-f">Founders Discount</span>
-              <span className="row-price-f">£168<span className="row-unit-f"> /month</span></span>
-            </div>
-            <div className="price-row general">
-              <span className="row-label-g">General Launch Price</span>
-              <span className="row-price-g">£195<span className="row-unit-g"> /month</span></span>
-            </div>
-          </div>
-
-        </div>
-        <div className="cta-row">
-          <button className="btn-ghost">Get founding rate</button>
-          <button className="btn-solid">Get founding rate</button>
-          <button className="btn-ghost">Get founding rate</button>
-        </div>
-      </div>
-
-    </div>
-  </>
-);
 
 const Pricing = () => {
   useEffect(() => {
@@ -1326,8 +1418,7 @@ const Pricing = () => {
         path="/pricing"
       />
       <style dangerouslySetInnerHTML={{ __html: PRICING_CSS }} />
-      <NewPricingTop />
-      <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_BELOW }} />
+      <div dangerouslySetInnerHTML={{ __html: PRICING_BODY }} />
     </>
   );
 };
