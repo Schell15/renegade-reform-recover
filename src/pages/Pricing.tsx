@@ -735,9 +735,11 @@ const PRICING_BODY = `<nav class="rn-nav">
     </div>
 
     <!-- DROP-IN & CLASS PACKS -->
-    <div class="pp-section">
+    <div class="pp-section" id="drop-in">
       <p class="section-heading">Drop-in's &amp; class packs.</p>
       <div class="grid-2">
+
+        <!-- Drop-in -->
         <div class="product-col divider">
           <p class="tier-name">Drop-in</p>
           <p class="tier-sub">Single session &middot; pay as you go</p>
@@ -757,6 +759,8 @@ const PRICING_BODY = `<nav class="rn-nav">
           </div>
           <button type="button" class="btn-ghost">Book founding rate</button>
         </div>
+
+        <!-- Intro pack -->
         <div class="product-col">
           <p class="tier-name">Intro pack</p>
           <p class="tier-sub">3 classes &middot; new clients only &middot; valid 30 days</p>
@@ -776,150 +780,93 @@ const PRICING_BODY = `<nav class="rn-nav">
           </div>
           <button type="button" class="btn-ghost">Book founding rate</button>
         </div>
+
       </div>
     </div>
 
     <!-- MONTHLY MEMBERSHIPS -->
-    <div class="pp-section" style="margin-top:4.5rem">
+    <div class="pp-section" id="memberships" style="margin-top:4.5rem">
       <p class="section-heading">Monthly memberships.</p>
+      <div class="grid-3">
 
-      <div class="accordion">
-
-        <!-- CORE -->
-        <div class="acc-item" data-acc>
-          <div class="acc-header" data-acc-toggle>
-            <div class="acc-left">
-              <span class="acc-eyebrow">4 classes / month</span>
-              <span class="acc-name">Core</span>
+        <!-- Core -->
+        <div class="product-col divider">
+          <p class="tier-name">Core</p>
+          <p class="tier-sub">4 classes / month</p>
+          <div class="dual-price">
+            <div class="dual-cell">
+              <p class="dual-label">Per month</p>
+              <p class="dual-num">£72</p>
             </div>
-            <div class="acc-right">
-              <div class="acc-price-collapsed">
-                <div class="acc-price-big">£72 <span>/month</span></div>
-                <div class="acc-price-sub">£18 per class</div>
-              </div>
-              <div class="acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
+            <div class="dual-cell">
+              <p class="dual-label">Per class</p>
+              <p class="dual-num">£18</p>
             </div>
           </div>
-          <div class="acc-body">
-            <div class="acc-inner">
-              <ul class="acc-features">
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span class="acc-feat-text"><strong>Founding rate locked for life</strong> &mdash; your price never increases</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><span class="acc-feat-text"><strong>4 classes per month</strong>, credits roll over monthly</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span class="acc-feat-text"><strong>1 guest pass</strong> per quarter</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><span class="acc-feat-text"><strong>Early booking</strong> &mdash; 1 week ahead of non-members</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><span class="acc-feat-text">Rolls monthly &mdash; <strong>no lock-in</strong> after first term</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div><span class="acc-feat-text"><strong>Founding welcome gift</strong> &mdash; branded socks &amp; tote</span></li>
-              </ul>
-              <div class="acc-pricing-right">
-                <div class="acc-per-class-box">
-                  <span class="acc-per-class-label">Per class</span>
-                  <span class="acc-per-class-num">£18</span>
-                </div>
-                <div class="price-row founders" style="margin-bottom:7px">
-                  <span class="row-label-f">Founders Discount</span>
-                  <span class="row-price-f">£72<span class="row-unit-f"> /mo</span></span>
-                </div>
-                <div class="price-row general" style="margin-bottom:1.25rem">
-                  <span class="row-label-g">General Launch Price</span>
-                  <span class="row-price-g">£85<span class="row-unit-g"> /mo</span></span>
-                </div>
-                <button type="button" class="btn-ghost">Get founding rate</button>
-              </div>
-            </div>
+          <div class="price-row founders">
+            <span class="row-label-f">Founders Discount</span>
+            <span class="row-price-f">£72<span class="row-unit-f"> /month</span></span>
+          </div>
+          <div class="price-row general">
+            <span class="row-label-g">General Launch Price</span>
+            <span class="row-price-g">£85<span class="row-unit-g"> /month</span></span>
           </div>
         </div>
 
-        <!-- PRO (open by default) -->
-        <div class="acc-item open" data-acc>
-          <div class="acc-header" data-acc-toggle>
-            <div class="acc-left">
-              <span class="acc-eyebrow">8 classes / month</span>
-              <span class="acc-name">Pro</span>
+        <!-- Pro -->
+        <div class="product-col divider relative">
+          <div class="badge">Renegade Recommended</div>
+          <p class="tier-name">Pro</p>
+          <p class="tier-sub">8 classes / month</p>
+          <div class="dual-price">
+            <div class="dual-cell">
+              <p class="dual-label">Per month</p>
+              <p class="dual-num">£128</p>
             </div>
-            <div class="acc-right">
-              <div class="acc-price-collapsed">
-                <div class="acc-price-big">£128 <span>/month</span></div>
-                <div class="acc-price-sub">£16 per class</div>
-              </div>
-              <div class="acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
+            <div class="dual-cell">
+              <p class="dual-label">Per class</p>
+              <p class="dual-num">£16</p>
             </div>
           </div>
-          <div class="acc-body">
-            <div class="acc-badge-wrap">
-              <span class="acc-badge">Renegade Recommended</span>
-            </div>
-            <div class="acc-inner">
-              <ul class="acc-features">
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span class="acc-feat-text"><strong>Founding rate locked for life</strong> &mdash; your price never increases</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><span class="acc-feat-text"><strong>8 classes per month</strong>, credits roll over monthly</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span class="acc-feat-text"><strong>1 guest pass</strong> per month</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><span class="acc-feat-text"><strong>Early booking</strong> &mdash; 1 week ahead of non-members</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><span class="acc-feat-text"><strong>Priority event booking</strong> &mdash; first access to all events</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div><span class="acc-feat-text"><strong>Founding welcome gift</strong> &mdash; branded socks &amp; tote</span></li>
-              </ul>
-              <div class="acc-pricing-right">
-                <div class="acc-per-class-box">
-                  <span class="acc-per-class-label">Per class</span>
-                  <span class="acc-per-class-num">£16</span>
-                </div>
-                <div class="price-row founders" style="margin-bottom:7px">
-                  <span class="row-label-f">Founders Discount</span>
-                  <span class="row-price-f">£128<span class="row-unit-f"> /mo</span></span>
-                </div>
-                <div class="price-row general" style="margin-bottom:1.25rem">
-                  <span class="row-label-g">General Launch Price</span>
-                  <span class="row-price-g">£150<span class="row-unit-g"> /mo</span></span>
-                </div>
-                <button type="button" class="btn-solid">Get founding rate</button>
-              </div>
-            </div>
+          <div class="price-row founders">
+            <span class="row-label-f">Founders Discount</span>
+            <span class="row-price-f">£128<span class="row-unit-f"> /month</span></span>
+          </div>
+          <div class="price-row general">
+            <span class="row-label-g">General Launch Price</span>
+            <span class="row-price-g">£150<span class="row-unit-g"> /month</span></span>
           </div>
         </div>
 
-        <!-- ELITE -->
-        <div class="acc-item" data-acc>
-          <div class="acc-header" data-acc-toggle>
-            <div class="acc-left">
-              <span class="acc-eyebrow">12 classes / month</span>
-              <span class="acc-name">Elite</span>
+        <!-- Elite -->
+        <div class="product-col">
+          <p class="tier-name">Elite</p>
+          <p class="tier-sub">12 classes / month</p>
+          <div class="dual-price">
+            <div class="dual-cell">
+              <p class="dual-label">Per month</p>
+              <p class="dual-num">£168</p>
             </div>
-            <div class="acc-right">
-              <div class="acc-price-collapsed">
-                <div class="acc-price-big">£168 <span>/month</span></div>
-                <div class="acc-price-sub">£14 per class</div>
-              </div>
-              <div class="acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
+            <div class="dual-cell">
+              <p class="dual-label">Per class</p>
+              <p class="dual-num">£14</p>
             </div>
           </div>
-          <div class="acc-body">
-            <div class="acc-inner">
-              <ul class="acc-features">
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span class="acc-feat-text"><strong>Founding rate locked for life</strong> &mdash; your price never increases</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><span class="acc-feat-text"><strong>12 classes per month</strong>, credits roll over monthly</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span class="acc-feat-text"><strong>1 guest pass</strong> per month</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><span class="acc-feat-text"><strong>Priority event booking</strong> &mdash; first access to all events</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><span class="acc-feat-text"><strong>Early booking</strong> &mdash; 1 week ahead of non-members</span></li>
-                <li class="acc-feat"><div class="acc-feat-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><span class="acc-feat-text"><strong>Best value</strong> &mdash; lowest per-class price of any tier</span></li>
-              </ul>
-              <div class="acc-pricing-right">
-                <div class="acc-per-class-box">
-                  <span class="acc-per-class-label">Per class</span>
-                  <span class="acc-per-class-num">£14</span>
-                </div>
-                <div class="price-row founders" style="margin-bottom:7px">
-                  <span class="row-label-f">Founders Discount</span>
-                  <span class="row-price-f">£168<span class="row-unit-f"> /mo</span></span>
-                </div>
-                <div class="price-row general" style="margin-bottom:1.25rem">
-                  <span class="row-label-g">General Launch Price</span>
-                  <span class="row-price-g">£195<span class="row-unit-g"> /mo</span></span>
-                </div>
-                <button type="button" class="btn-ghost">Get founding rate</button>
-              </div>
-            </div>
+          <div class="price-row founders">
+            <span class="row-label-f">Founders Discount</span>
+            <span class="row-price-f">£168<span class="row-unit-f"> /month</span></span>
+          </div>
+          <div class="price-row general">
+            <span class="row-label-g">General Launch Price</span>
+            <span class="row-price-g">£195<span class="row-unit-g"> /month</span></span>
           </div>
         </div>
 
+      </div>
+      <div class="cta-row">
+        <button type="button" class="btn-ghost">Get founding rate</button>
+        <button type="button" class="btn-solid">Get founding rate</button>
+        <button type="button" class="btn-ghost">Get founding rate</button>
       </div>
     </div>
 
@@ -984,7 +931,7 @@ const PRICING_BODY = `<nav class="rn-nav">
   </div>
 
   <!-- CLASS PACKS -->
-  <section class="section">
+  <section class="section" id="class-packs">
     <p class="section-label">Class packs</p>
     <p class="section-note">Not a member yet? Packs are a great way to try the studio.</p>
     <div class="grid-3">
