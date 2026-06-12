@@ -1194,8 +1194,8 @@ const Pricing = () => {
   .rr-acc-right { display: flex; align-items: center; gap: 1.5rem; }
   .rr-acc-price-collapsed { text-align: right; }
   .rr-acc-price-big { font-size: 30px; font-weight: 900; color: #f0e6d6; letter-spacing: -1px; line-height: 1; }
-  .rr-acc-price-big span { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.35); }
-  .rr-acc-price-sub { font-size: 10px; color: rgba(255,255,255,0.28); margin-top: 3px; text-align: right; }
+  .rr-acc-price-big span { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.7); }
+  .rr-acc-price-sub { font-size: 10px; color: rgba(255,255,255,0.6); margin-top: 3px; text-align: right; }
   .rr-acc-chevron { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.12); border-radius: 50%; flex-shrink: 0; transition: transform 0.25s, border-color 0.2s; }
   .rr-acc-chevron svg { width: 10px; height: 10px; stroke: rgba(255,255,255,0.85); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
   .rr-acc-item.open .rr-acc-chevron { border-color: rgba(255,255,255,0.3); transform: rotate(180deg); }
