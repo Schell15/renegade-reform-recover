@@ -955,8 +955,8 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
       <div class="perk">
         <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         <div>
-          <p class="perk-title">Renegade tote bag</p>
-          <p class="perk-body">Complimentary branded tote on joining</p>
+          <p class="perk-title">Renegade tote bag*</p>
+          <p class="perk-body">Complimentary branded tote on joining — *Elite membership only</p>
         </div>
       </div>
       <div class="perk">
@@ -1294,7 +1294,7 @@ const Pricing = () => {
       <p className="rr-intro-sub">3 classes to find your feet. The best way to try Renegade properly before committing to a membership.</p>
       <div className="rr-intro-prices">
         <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>£48 <span style={{fontWeight:400,fontSize:'12px',color:'rgba(255,255,255,0.5)'}}>founding rate</span></span>
-        <span style={{color:'rgba(255,255,255,0.25)',textDecoration:'line-through',fontSize:'14px'}}>£55 <span style={{textDecoration:'none',color:'rgba(255,255,255,0.25)',fontSize:'12px'}}>from 31.07</span></span>
+        <span style={{color:'rgba(255,255,255,0.55)',fontSize:'14px'}}>£55 <span style={{color:'rgba(255,255,255,0.55)',fontSize:'12px'}}>from 31.07</span></span>
       </div>
       <ul className="rr-dropin-bullets">
         <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>£16 per class at founding rate (£18.33 standard)</li>
@@ -1306,7 +1306,7 @@ const Pricing = () => {
       <div style={{textAlign:'right'}}>
         <p style={{fontSize:'9px',letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)',fontWeight:600,marginBottom:'4px'}}>3 classes</p>
         <p style={{fontSize:'52px',fontWeight:900,color:'#f0e6d6',letterSpacing:'-3px',lineHeight:1}}>£48</p>
-        <p style={{fontSize:'11px',color:'rgba(255,255,255,0.3)',marginTop:'4px',textDecoration:'line-through'}}>£55 from 31.07</p>
+        <p style={{fontSize:'11px',color:'rgba(255,255,255,0.55)',marginTop:'4px'}}>£55 from 31.07</p>
       </div>
       <button className="rr-btn-ghost" style={{width:'auto',padding:'13px 28px'}} onClick={() => window.open('https://momence.com/Renegade-Reformer/membership/Intro-Offer---Class-Pack/763559', '_blank')}>Book intro pack</button>
     </div>
