@@ -1,10 +1,5 @@
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 
 import reformer1 from "@/assets/renegade_reformer_1.png";
@@ -12,109 +7,29 @@ import reformer2 from "@/assets/renegade_reformer_2.png";
 import reformer3 from "@/assets/renegade_reformer_3.png";
 import reformer4 from "@/assets/renegade_reformer_4.png";
 
+const momenceEmbed = `<div id="momence-plugin-lead-form"></div>
+<script
+    async
+    type="module"
+    id="momence-plugin-lead-form-src"
+    host_id="227483"
+    fields="fullName,email,phoneNumber,A45Frrq"
+    token="zQ7OKzkB7l"
+    country_code="gb"
+    data-field-def='{"fullName":{"type":"text","label":"Full name","required":true,"hidden":false},"email":{"type":"email","label":"Email","required":true},"phoneNumber":{"type":"phone-number","label":"Phone number","required":true},"A45Frrq":{"type":"text","label":"What elevates a Reformer class or studio for you? ","required":true,"hidden":false}}'
+    src="https://momence.com/plugin/lead-form/lead-form.js"
+></script>
+<style>
+:root {
+    --momenceColorBackground: #140800;
+    --momenceColorPrimary: 240, 230, 214;
+    --momenceColorBlack: 240, 230, 214;
+}
+</style>`;
+
 const ReformerSignup = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [expandedImage, setExpandedImage] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Skip Tally embed during prerender/puppeteer snapshots so Helmet can flush meta tags
-    if (typeof navigator !== 'undefined' && (navigator as any).webdriver) return;
-    // Load Tally embed script
-    const script = document.createElement('script');
-    script.innerHTML = `var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}`;
-    document.body.appendChild(script);
-    
-    return () => {
-      try { document.body.removeChild(script); } catch { /* ignore */ }
-    };
-  }, []);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!email || !name) {
-      toast({
-        title: "Please fill in all fields",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // TODO: Save to database when backend is implemented
-    console.log("Signup data:", { name, email });
-    
-    setIsSubmitted(true);
-    toast({
-      title: "Thank you!",
-      description: "We'll notify you when Renegade Reformer goes live.",
-    });
-  };
-
-  if (isSubmitted) {
-    return (
-    <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
-        <SEO
-          title="Join Renegade Reformer | Sign Up for Reformer Pilates Bristol"
-          description="Sign up for early access to Renegade Reformer, Bristol's strength-led reformer Pilates studio. Be the first to book when we open."
-          path="/reformer-signup"
-        />
-        <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">
-          {/* Main Header Logo */}
-          <div className="mb-10 animate-fade-in animate-scale-in" style={{
-            animationDelay: '0.2s'
-          }}>
-            {/* White Eagle Logo */}
-            <div className="mb-6">
-              <button 
-                onClick={() => navigate('/')} 
-                className="mx-auto block transition-transform hover:scale-105"
-                aria-label="Back to Home"
-              >
-                <img 
-                  src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" 
-                  alt="Renegade Reformer eagle logo, reformer Pilates Bristol"
-                  className="w-32 h-32 mx-auto object-contain cursor-pointer"
-                />
-              </button>
-            </div>
-            
-            {/* Studio Name */}
-            <div className="mb-4 inline-block">
-            <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
-              RENEGADE.
-            </h1>
-            <h2 className="text-primary font-bigcaslon text-4xl sm:text-6xl tracking-tight -mt-2 text-right">reformer</h2>
-            </div>
-            <p className="sr-only">Join Renegade Reformer Bristol</p>
-            
-            {/* Thank you message */}
-            <div className="mb-4">
-              <p className="text-primary font-rosaline text-base sm:text-xl tracking-wider">
-                Thank you for your interest!
-              </p>
-              <p className="text-primary font-rosaline text-sm sm:text-base tracking-wider mt-2">
-                We'll notify you when Renegade Reformer goes live.
-              </p>
-            </div>
-          </div>
-
-          {/* Back to Home Button */}
-          <div className="flex justify-center">
-            <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
-              <button onClick={() => navigate('/')} className="w-[200px] h-20 p-4 border-0 bg-transparent flex flex-col justify-center items-center gap-0 relative" aria-label="Back to Home">
-                <div className="text-primary font-neogrotesk text-lg font-bold tracking-wider">BACK TO</div>
-                <div className="text-primary font-rosaline text-sm tracking-wider -mt-1 ml-8">home</div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </main>
-    );
-  }
 
   return (
     <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
@@ -164,30 +79,12 @@ const ReformerSignup = () => {
             <p className="text-primary text-sm tracking-wide max-w-2xl mx-auto mt-6 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.5s_forwards] font-sans px-0 py-[50px] font-extrabold sm:text-base">
               Renegade is a community-led, pilates experience. We introduce a new concept to bristol, fusing pilates, fitness, immersive set design and interactive audio & lighting production to guide your flow. Designed and built by some of bristol’s finest creative minds. The first of its kind in the UK.
             </p>
-            <p className="text-primary font-rosaline text-sm sm:text-base tracking-wider max-w-2xl mx-auto mt-4 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.9s_forwards]">
-              Coming to Bristol, Redfield, Summer 2026.
-            </p>
-            <p className="text-primary font-grotesk text-sm sm:text-base tracking-wide max-w-2xl mx-auto mt-1 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_3.1s_forwards]">
-              Sign up below for early access.
-            </p>
           </div>
         </div>
 
-        {/* Tally Signup Form */}
+        {/* Momence Lead Form */}
         <div className="max-w-4xl mx-auto w-full -mt-8 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_3.5s_forwards]">
-          <div className="bg-background/80 backdrop-blur-sm border-2 border-primary rounded-lg p-6">
-            <iframe 
-              data-tally-src="https://tally.so/embed/wdMvVD?transparentBackground=1&dynamicHeight=1" 
-              loading="lazy" 
-              width="100%" 
-              height={253} 
-              frameBorder={0} 
-              marginHeight={0} 
-              marginWidth={0} 
-              title="For those who move first. Join the Renegade Below."
-              className="rounded-lg"
-            ></iframe>
-          </div>
+          <div dangerouslySetInnerHTML={{ __html: momenceEmbed }} />
 
           <div className="mt-6 text-center">
             <div className="border-2 border-primary transition-all duration-300 hover:scale-105 hover:brightness-110 hover:shadow-lg">
