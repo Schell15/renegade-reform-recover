@@ -689,10 +689,174 @@ const PRICING_BODY = `<nav class="rn-nav">
   </header>
 
   <div class="pp-scope">
-
+  <div class="container">
 
   <!-- FOUNDING RATE BANNER -->
   <div class="banner">
+    <div class="banner-text">
+      <div class="banner-tag">
+        <span class="tag-red">Closing 31 July</span>
+        <span class="tag-muted">Founding rates</span>
+      </div>
+      <p class="banner-heading">Lock in your founding rate<br>before we open.</p>
+      <p class="banner-body">Drop-in founding rate ends <strong>31 July</strong> &middot; Founding memberships lock in your rate <strong>for life</strong> <span style="color:rgba(255,255,255,0.3);font-size:10px;vertical-align:super;line-height:0">*</span></p>
+      <p class="banner-footnote">The lowest price Renegade Reformer will ever offer.</p>
+      <p style="color:rgba(255,255,255,0.2);font-size:10px;margin-top:10px;line-height:1.5">* Founding membership rate is locked for the duration of your active membership. Rate applies only to the original plan selected at sign-up. Subject to standard membership terms.</p>
+    </div>
+    <div class="banner-prices">
+      <div class="banner-pill">
+        <p class="banner-pill-label">Founding drop-in</p>
+        <p class="banner-pill-price">&pound;20 <span class="banner-pill-unit">/class</span></p>
+      </div>
+      <div class="banner-pill">
+        <p class="banner-pill-label">Memberships from</p>
+        <p class="banner-pill-price">&pound;14 <span class="banner-pill-unit">/class</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DROP-IN & CLASS PACKS -->
+  <div class="section" id="class-packs">
+    <p class="section-heading">Drop-in's &amp; class packs.</p>
+    <div class="grid-2">
+
+      <!-- Drop-in -->
+      <div class="product-col divider" id="drop-in">
+        <p class="tier-name">Drop-in</p>
+        <p class="tier-sub">Single session &middot; pay as you go</p>
+        <div class="dual-price">
+          <div class="dual-cell">
+            <p class="dual-label">Early access<br>founders<br>drop-in price</p>
+            <p class="dual-num">&pound;20</p>
+          </div>
+          <div class="dual-cell dim">
+            <p class="dual-label">General launch price</p>
+            <p class="dual-num">&pound;25</p>
+          </div>
+        </div>
+        <div class="price-row founders" style="margin-bottom:1.1rem">
+          <span class="row-label-f">Founders Discount</span>
+          <span class="row-price-f">&pound;20<span class="row-unit-f"> /class</span></span>
+        </div>
+        <button class="btn-ghost">Book founding rate</button>
+      </div>
+
+      <!-- Intro pack -->
+      <div class="product-col">
+        <p class="tier-name">Intro pack</p>
+        <p class="tier-sub">3 classes &middot; new clients only &middot; valid 30 days</p>
+        <div class="dual-price">
+          <div class="dual-cell">
+            <p class="dual-label">3 class<br>intro pack</p>
+            <p class="dual-num">&pound;48</p>
+          </div>
+          <div class="dual-cell dim">
+            <p class="dual-label">General launch price</p>
+            <p class="dual-num">&pound;55</p>
+          </div>
+        </div>
+        <div class="price-row founders" style="margin-bottom:1.1rem">
+          <span class="row-label-f">Founders Discount</span>
+          <span class="row-price-f">&pound;16<span class="row-unit-f"> /class</span></span>
+        </div>
+        <button class="btn-ghost">Book founding rate</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MONTHLY MEMBERSHIPS -->
+  <div class="section" id="memberships" style="margin-top:4.5rem">
+    <p class="section-heading">Monthly memberships.</p>
+    <div class="grid-3">
+
+      <!-- Core -->
+      <div class="product-col divider">
+        <p class="tier-name">Core</p>
+        <p class="tier-sub">4 classes / month</p>
+        <div class="dual-price">
+          <div class="dual-cell">
+            <p class="dual-label">Per month</p>
+            <p class="dual-num">&pound;72</p>
+          </div>
+          <div class="dual-cell">
+            <p class="dual-label">Per class</p>
+            <p class="dual-num">&pound;18</p>
+          </div>
+        </div>
+        <div class="price-row founders">
+          <span class="row-label-f">Founders Discount</span>
+          <span class="row-price-f">&pound;72<span class="row-unit-f"> /month</span></span>
+        </div>
+        <div class="price-row general">
+          <span class="row-label-g">General Launch Price</span>
+          <span class="row-price-g">&pound;85<span class="row-unit-g"> /month</span></span>
+        </div>
+      </div>
+
+      <!-- Pro -->
+      <div class="product-col divider relative">
+        <div class="badge">Renegade Recommended</div>
+        <p class="tier-name">Pro</p>
+        <p class="tier-sub">8 classes / month</p>
+        <div class="dual-price">
+          <div class="dual-cell">
+            <p class="dual-label">Per month</p>
+            <p class="dual-num">&pound;128</p>
+          </div>
+          <div class="dual-cell">
+            <p class="dual-label">Per class</p>
+            <p class="dual-num">&pound;16</p>
+          </div>
+        </div>
+        <div class="price-row founders">
+          <span class="row-label-f">Founders Discount</span>
+          <span class="row-price-f">&pound;128<span class="row-unit-f"> /month</span></span>
+        </div>
+        <div class="price-row general">
+          <span class="row-label-g">General Launch Price</span>
+          <span class="row-price-g">&pound;150<span class="row-unit-g"> /month</span></span>
+        </div>
+      </div>
+
+      <!-- Elite -->
+      <div class="product-col">
+        <p class="tier-name">Elite</p>
+        <p class="tier-sub">12 classes / month</p>
+        <div class="dual-price">
+          <div class="dual-cell">
+            <p class="dual-label">Per month</p>
+            <p class="dual-num">&pound;168</p>
+          </div>
+          <div class="dual-cell">
+            <p class="dual-label">Per class</p>
+            <p class="dual-num">&pound;14</p>
+          </div>
+        </div>
+        <div class="price-row founders">
+          <span class="row-label-f">Founders Discount</span>
+          <span class="row-price-f">&pound;168<span class="row-unit-f"> /month</span></span>
+        </div>
+        <div class="price-row general">
+          <span class="row-label-g">General Launch Price</span>
+          <span class="row-price-g">&pound;195<span class="row-unit-g"> /month</span></span>
+        </div>
+      </div>
+
+    </div>
+    <div class="cta-row">
+      <button class="btn-ghost">Get founding rate</button>
+      <button class="btn-solid">Get founding rate</button>
+      <button class="btn-ghost">Get founding rate</button>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <!-- OLD PRICING CONTENT REMOVED -->
+  <div style="display:none">
+  <div class="banner-old-removed">
     <div class="banner-inner">
       <div class="banner-text">
         <div class="banner-tag">
@@ -979,6 +1143,7 @@ const PRICING_BODY = `<nav class="rn-nav">
   
 
 
+  </div>
   </div>
 
   <!-- FOUNDING PERKS BANNER -->
