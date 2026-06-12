@@ -899,9 +899,9 @@ const PRICING_BODY_HEAD = `<nav class="rn-nav">
       <p class="header-sub">Reform · Repower · Recover</p>
       <p class="header-note">Choose the way you move. From flexible class packs to monthly memberships, every option is built to help you find your rhythm, stay consistent and make Renegade part of your routine.</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <span onclick="const el=document.getElementById('drop-in');const top=el.getBoundingClientRect().top+window.scrollY-100;window.scrollTo({top,behavior:'smooth'})" style="border:1px solid rgba(255,255,255,0.85);background:transparent;color:#ffffff;font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Drop in<span style="font-size:10px;opacity:0.55;margin-left:5px;vertical-align:middle;">↓</span></span>
         <span onclick="const el=document.getElementById('memberships');const top=el.getBoundingClientRect().top+window.scrollY-100;window.scrollTo({top,behavior:'smooth'})" style="border:1px solid rgba(160,45,24,0.5);background:rgba(160,45,24,0.12);color:#f0e6d6;font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Become a member<span style="font-size:10px;opacity:0.55;margin-left:5px;vertical-align:middle;">↓</span></span>
         <span onclick="const el=document.getElementById('class-packs');const top=el.getBoundingClientRect().top+window.scrollY-100;window.scrollTo({top,behavior:'smooth'})" style="border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.75);font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Class packs<span style="font-size:10px;opacity:0.55;margin-left:5px;vertical-align:middle;">↓</span></span>
-        <span onclick="const el=document.getElementById('drop-in');const top=el.getBoundingClientRect().top+window.scrollY-100;window.scrollTo({top,behavior:'smooth'})" style="border:1px solid rgba(255,255,255,0.85);background:transparent;color:#ffffff;font-size:12px;font-weight:600;padding:13px 28px;border-radius:8px;cursor:pointer;">Drop in<span style="font-size:10px;opacity:0.55;margin-left:5px;vertical-align:middle;">↓</span></span>
       </div>
     </div>
     <div style="flex-shrink:0;width:220px;opacity:0.12;" aria-hidden="true">
@@ -1368,11 +1368,11 @@ const Pricing = () => {
               <span className="rr-acc-per-class-num">£18</span>
             </div>
             <div className="rr-price-row founders" style={{marginBottom:'7px'}}>
-              <span className="rr-row-label-f">Founders Discount</span>
+              <span className="rr-row-label-f">Founders Rate</span>
               <span className="rr-row-price-f">£72<span className="rr-row-unit-f"> /mo</span></span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">from 31.07</span>
+              <span className="rr-row-label-g">Non-founders rate from 31.07</span>
               <span className="rr-row-price-g">£85<span className="rr-row-unit-g"> /mo</span></span>
             </div>
             <button className="rr-btn-ghost" style={{cursor:'pointer'}} onClick={() => window.open('https://momence.com/m/811786', '_blank')}>Get founding rate</button>
@@ -1433,11 +1433,11 @@ const Pricing = () => {
               <span className="rr-acc-per-class-num">£16</span>
             </div>
             <div className="rr-price-row founders" style={{marginBottom:'7px'}}>
-              <span className="rr-row-label-f">Founders Discount</span>
+              <span className="rr-row-label-f">Founders Rate</span>
               <span className="rr-row-price-f">£128<span className="rr-row-unit-f"> /mo</span></span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">from 31.07</span>
+              <span className="rr-row-label-g">Non-founders rate from 31.07</span>
               <span className="rr-row-price-g">£150<span className="rr-row-unit-g"> /mo</span></span>
             </div>
             <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/812640', '_blank')}>Get founding rate</button>
@@ -1499,11 +1499,11 @@ const Pricing = () => {
               <span className="rr-acc-per-class-num">£14</span>
             </div>
             <div className="rr-price-row founders" style={{marginBottom:'7px'}}>
-              <span className="rr-row-label-f">Founders Discount</span>
+              <span className="rr-row-label-f">Founders Rate</span>
               <span className="rr-row-price-f">£168<span className="rr-row-unit-f"> /mo</span></span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">from 31.07</span>
+              <span className="rr-row-label-g">Non-founders rate from 31.07</span>
               <span className="rr-row-price-g">£195<span className="rr-row-unit-g"> /mo</span></span>
             </div>
             <button className="rr-btn-ghost" onClick={() => window.open('https://momence.com/m/812642', '_blank')}>Get founding rate</button>
