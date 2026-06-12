@@ -1068,37 +1068,11 @@ const Pricing = () => {
     };
     document.addEventListener('click', onAccClick);
 
-    // Coming Soon toast
-    const toast = document.getElementById('cs-toast');
-    const closeBtn = document.getElementById('cs-toast-close');
-    const show = () => { if (toast) { toast.style.display = 'flex'; toast.setAttribute('aria-hidden','false'); } };
-    const hide = () => { if (toast) { toast.style.display = 'none'; toast.setAttribute('aria-hidden','true'); } };
-    const onCloseClick = () => hide();
-    const onToastClick = (e: MouseEvent) => { if (e.target === toast) hide(); };
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') hide(); };
-    closeBtn?.addEventListener('click', onCloseClick);
-    toast?.addEventListener('click', onToastClick as EventListener);
-    document.addEventListener('keydown', onKey);
-
-    const btnHandlers: Array<[HTMLButtonElement, (e: Event) => void]> = [];
-    document.querySelectorAll<HTMLButtonElement>('button.btn').forEach((btn) => {
-      if ((btn.textContent || '').trim() === 'Founders Discount') {
-        btn.removeAttribute('onclick');
-        const h = (e: Event) => { e.preventDefault(); show(); };
-        btn.addEventListener('click', h);
-        btnHandlers.push([btn, h]);
-      }
-    });
-
     return () => {
       window.removeEventListener('scroll', onScroll);
       toggle?.removeEventListener('click', onToggle);
       menu?.removeEventListener('click', onMenuLinkClick);
-      closeBtn?.removeEventListener('click', onCloseClick);
-      toast?.removeEventListener('click', onToastClick as EventListener);
-      document.removeEventListener('keydown', onKey);
       document.removeEventListener('click', onAccClick);
-      btnHandlers.forEach(([b, h]) => b.removeEventListener('click', h));
     };
   }, []);
 
