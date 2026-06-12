@@ -75,8 +75,8 @@ const Home = () => {
 
         {/* Bottom */}
         <div className="mt-9 text-center">
-          <p className="uppercase font-light mb-2" style={{ fontSize: '11px', letterSpacing: '0.28em', color: '#6a5035' }}>A divinely powerful approach to pilates</p>
-          <p className="uppercase" style={{ fontSize: '13px', letterSpacing: '0.12em', color: '#b8a080' }}>Coming to Bristol 2026</p>
+          <p className="uppercase font-light mb-2" style={{ fontSize: '11px', letterSpacing: '0.28em', color: '#6a5035' }}>FOUNDERS RATES NOW LIVE FOR:</p>
+          <p className="uppercase" style={{ fontSize: '13px', letterSpacing: '0.12em', color: '#b8a080' }}>Drop ins · Memberships · Intro Packs</p>
         </div>
       </div>
 
