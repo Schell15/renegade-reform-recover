@@ -1136,7 +1136,7 @@ const Pricing = () => {
   .rr-btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 600; width: 100%; font-family: inherit; }
   .rr-btn-solid { background: #a02d18; border: none; color: #fff; padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 700; width: 100%; font-family: inherit; }
 
-  .rr-banner { background: #f0e6d6; border-radius: 0; overflow: hidden; margin-bottom: 4.5rem; margin-left: -2rem; margin-right: -2rem; min-height: 85vh; display: flex; align-items: center; }
+  .rr-banner { background: #f0e6d6; border-radius: 0; overflow: hidden; margin-bottom: 4.5rem; width: 100vw; position: relative; left: 50%; transform: translateX(-50%); min-height: 85vh; display: flex; align-items: center; }
   .rr-banner-inner { display: grid; grid-template-columns: 1fr auto; align-items: center; width: 100%; max-width: 1100px; margin: 0 auto; padding: 8rem 0; }
   .rr-banner-text { padding: 0 3rem 0 4rem; }
   .rr-banner-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; }
