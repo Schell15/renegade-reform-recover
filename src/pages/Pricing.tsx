@@ -1131,6 +1131,7 @@ const Pricing = () => {
       />
       <style dangerouslySetInnerHTML={{ __html: PRICING_CSS }} />
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_HEAD }} />
+      <div className="page" style={{paddingTop:0,paddingBottom:0}}>
       <style>{`
   .rr-btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 600; width: 100%; font-family: inherit; }
   .rr-btn-solid { background: #a02d18; border: none; color: #fff; padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 700; width: 100%; font-family: inherit; }
@@ -1521,6 +1522,7 @@ const Pricing = () => {
     </div>
   </div>
 </div>
+      </div>
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
     </>
   );
