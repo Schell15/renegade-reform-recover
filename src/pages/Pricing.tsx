@@ -878,6 +878,7 @@ const PRICING_BODY_HEAD = `<nav class="rn-nav">
     <li><a href="/reformerpilates.html">Reformer Pilates</a></li>
     <li><a href="/reformerpilates.html#journey">Classes</a></li>
     <li><a href="/pricing">Pricing</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
   <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
     <span></span><span></span><span></span>
@@ -889,6 +890,7 @@ const PRICING_BODY_HEAD = `<nav class="rn-nav">
     <li><a href="/reformerpilates.html">Reformer Pilates</a></li>
     <li><a href="/reformerpilates.html#journey">Classes</a></li>
     <li><a href="/pricing">Pricing</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
 </div>
 <div class="page">

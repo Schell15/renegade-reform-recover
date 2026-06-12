@@ -1,43 +1,9 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 
 // Updated to use direct image paths
 const Home = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
-
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-
-    const data = new FormData();
-    data.append("name", formData.name);
-    data.append("email", formData.email);
-    data.append("message", formData.message);
-    data.append("_replyto", formData.email);
-
-    try {
-      const response = await fetch("https://formspree.io/f/mykabygl", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: data,
-      });
-      if (response.ok) {
-        setSubmitted(true);
-      }
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <main
@@ -202,7 +168,7 @@ const Home = () => {
             FOUNDERS RATES NOW LIVE FOR:
           </p>
           <p
-            className="uppercase"
+            className="uppercase mb-6"
             style={{
               fontSize: "13px",
               letterSpacing: "0.12em",
@@ -211,6 +177,20 @@ const Home = () => {
           >
             Drop ins · Memberships · Intro Packs
           </p>
+          <button
+            onClick={() => navigate("/contact")}
+            className="inline-block uppercase font-bold transition-colors hover:bg-white/[0.035]"
+            style={{
+              fontSize: "13px",
+              letterSpacing: "0.14em",
+              color: "#f0ebe3",
+              border: "0.5px solid #4a2e12",
+              padding: "14px 28px",
+              background: "transparent",
+            }}
+          >
+            Get In Touch
+          </button>
         </div>
       </div>
 
@@ -250,138 +230,6 @@ const Home = () => {
         </a>
       </div>
 
-      {/* Get In Touch section */}
-      <div
-        className="relative z-10 w-full mt-12"
-        style={{ maxWidth: "min(600px, 86vw)" }}
-      >
-        <div
-          style={{ height: "0.5px", background: "#4a2e12" }}
-          aria-hidden="true"
-        ></div>
-        <div className="py-12 px-4">
-          <h2
-            className="text-center font-neogrotesk text-3xl sm:text-4xl font-bold tracking-tight mb-2"
-            style={{ color: "#f0ebe3" }}
-          >
-            Get In Touch
-          </h2>
-          <p
-            className="text-center font-light mb-8"
-            style={{
-              fontSize: "13px",
-              letterSpacing: "0.12em",
-              color: "#8a6e50",
-            }}
-          >
-            We'd love to hear from you
-          </p>
-
-          {submitted ? (
-            <div className="text-center py-8">
-              <p
-                className="font-neogrotesk text-xl mb-2"
-                style={{ color: "#f0ebe3" }}
-              >
-                Thank you!
-              </p>
-              <p
-                className="font-light"
-                style={{ fontSize: "13px", color: "#8a6e50" }}
-              >
-                We'll be in touch soon.
-              </p>
-            </div>
-          ) : (
-            <form
-              action="https://formspree.io/f/mykabygl"
-              method="POST"
-              onSubmit={handleSubmit}
-              className="space-y-4"
-            >
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                required
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                className="w-full px-4 py-3 rounded-md text-sm outline-none transition-colors placeholder:text-[#6a5035] focus:bg-white/[0.08]"
-                style={{
-                  background: "rgba(240, 235, 227, 0.05)",
-                  border: "0.5px solid #4a2e12",
-                  color: "#f0ebe3",
-                  letterSpacing: "0.06em",
-                }}
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-                className="w-full px-4 py-3 rounded-md text-sm outline-none transition-colors placeholder:text-[#6a5035] focus:bg-white/[0.08]"
-                style={{
-                  background: "rgba(240, 235, 227, 0.05)",
-                  border: "0.5px solid #4a2e12",
-                  color: "#f0ebe3",
-                  letterSpacing: "0.06em",
-                }}
-              />
-              <input type="hidden" name="_replyto" value={formData.email} />
-              <textarea
-                name="message"
-                placeholder="Message"
-                required
-                rows={4}
-                value={formData.message}
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-                className="w-full px-4 py-3 rounded-md text-sm outline-none transition-colors resize-none placeholder:text-[#6a5035] focus:bg-white/[0.08]"
-                style={{
-                  background: "rgba(240, 235, 227, 0.05)",
-                  border: "0.5px solid #4a2e12",
-                  color: "#f0ebe3",
-                  letterSpacing: "0.06em",
-                }}
-              />
-              <Button
-                type="submit"
-                disabled={loading}
-                className="w-full py-6 h-auto rounded-none uppercase font-bold transition-colors disabled:opacity-50 hover:opacity-90"
-                style={{
-                  background: "#f0ebe3",
-                  color: "#1c0a00",
-                  fontSize: "13px",
-                  letterSpacing: "0.14em",
-                }}
-              >
-                {loading ? "Sending..." : "Send Message"}
-              </Button>
-            </form>
-          )}
-
-          <div className="mt-8 text-center">
-            <a
-              href="mailto:studio@renegadereformer.co.uk"
-              className="transition-colors hover:opacity-80"
-              style={{
-                fontSize: "13px",
-                letterSpacing: "0.12em",
-                color: "#b8a080",
-              }}
-            >
-              studio@renegadereformer.co.uk
-            </a>
-          </div>
-        </div>
-      </div>
     </main>
   );
 };

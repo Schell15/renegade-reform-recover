@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import Reformer from "./pages/Reformer";
 import ReformerSignup from "./pages/ReformerSignup";
 import Pricing from "./pages/Pricing";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/reformer-signup" element={<ReformerSignup />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/reformer" element={<ExternalRedirect to="/reformerpilates.html" />} />
           <Route path="/discover" element={<ExternalRedirect to="/reformerpilates.html" />} />
           <Route path="/reformerpilates" element={<ExternalRedirect to="/reformerpilates.html" />} />
