@@ -1197,9 +1197,9 @@ const Pricing = () => {
   .rr-acc-price-big span { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.35); }
   .rr-acc-price-sub { font-size: 10px; color: rgba(255,255,255,0.28); margin-top: 3px; text-align: right; }
   .rr-acc-chevron { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.12); border-radius: 50%; flex-shrink: 0; transition: transform 0.25s, border-color 0.2s; }
-  .rr-acc-chevron svg { width: 10px; height: 10px; stroke: rgba(255,255,255,0.4); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
+  .rr-acc-chevron svg { width: 10px; height: 10px; stroke: rgba(255,255,255,0.85); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
   .rr-acc-item.open .rr-acc-chevron { border-color: rgba(255,255,255,0.3); transform: rotate(180deg); }
-  .rr-acc-item.open .rr-acc-chevron svg { stroke: rgba(255,255,255,0.7); }
+  .rr-acc-item.open .rr-acc-chevron svg { stroke: rgba(255,255,255,1); }
   .rr-acc-body { display: none; padding: 0.25rem 1.75rem 2rem; }
   .rr-acc-item.open .rr-acc-body { display: block; }
   .rr-acc-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: start; }
@@ -1272,7 +1272,7 @@ const Pricing = () => {
 </div>
 
 {/* DROP-IN */}
-<div className="rr-dropin-section">
+<div className="rr-dropin-section" id="drop-in">
   <div className="rr-dropin-header">
     <p className="rr-dropin-headline">Drop in.</p>
     <p className="rr-dropin-strapline">No membership. Experience Renegade with no commitment.</p>
@@ -1326,7 +1326,7 @@ const Pricing = () => {
 </div>
 
 {/* MONTHLY MEMBERSHIPS */}
-<div style={{marginTop:'4.5rem',marginBottom:'1rem'}}>
+<div id="memberships" style={{marginTop:'4.5rem',marginBottom:'1rem'}}>
   <p className="rr-section-heading">Monthly memberships.</p>
 
   <div className="rr-accordion">
