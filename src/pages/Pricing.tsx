@@ -1263,9 +1263,9 @@ const Pricing = () => {
         <p className="rr-banner-pill-unit">/class</p>
       </div>
       <div className="rr-banner-price-col">
-        <p className="rr-banner-pill-label">Memberships from</p>
-        <p className="rr-banner-pill-price">£14</p>
-        <p className="rr-banner-pill-unit">/class</p>
+        <p className="rr-banner-pill-label">Intro Pack</p>
+        <p className="rr-banner-pill-unit" style={{marginTop:0,marginBottom:'0.5rem'}}>3 classes</p>
+        <p className="rr-banner-pill-price">£48</p>
       </div>
     </div>
   </div>
@@ -1274,7 +1274,7 @@ const Pricing = () => {
 {/* DROP-IN */}
 <div className="rr-dropin-section">
   <div className="rr-dropin-header">
-    <p className="rr-dropin-headline">Drop-in.</p>
+    <p className="rr-dropin-headline">Drop in.</p>
     <p className="rr-dropin-strapline">No membership. Experience Renegade with no commitment.</p>
   </div>
   <div className="rr-dropin-body">
@@ -1282,15 +1282,15 @@ const Pricing = () => {
       <p className="rr-dropin-desc">New to Reformer, curious about Renegade, or not ready to commit yet? Book a single class and experience the studio on your own terms.<br /><br />Early access founding rate available for a limited time as we open the doors.</p>
       <ul className="rr-dropin-bullets">
         <li className="rr-dropin-bullet">All levels welcome, including complete beginners</li>
-        <li className="rr-dropin-bullet">Book any eligible class with available spaces</li>
-        <li className="rr-dropin-bullet">Free cancellation up to 24 hours before class</li>
+        <li className="rr-dropin-bullet">Book any reformer class with available spaces</li>
+        <li className="rr-dropin-bullet">Free cancellation up to 12 hours before class</li>
       </ul>
     </div>
     <div className="rr-dropin-right">
       <div>
         <p className="rr-dropin-rate-label">Founding rate</p>
         <p className="rr-dropin-big-price">£20<span className="rr-dropin-big-unit"> /class</span></p>
-        <p className="rr-dropin-standard">£25 standard rate</p>
+        <p className="rr-dropin-standard" style={{textDecoration:'none',color:'rgba(255,255,255,0.5)',fontSize:'14px'}}>£25 from 31.07</p>
       </div>
       <button className="rr-btn-ghost">Book a class</button>
     </div>
