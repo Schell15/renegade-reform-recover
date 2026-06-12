@@ -912,7 +912,7 @@ const PRICING_BODY_HEAD = `<nav class="rn-nav">
 
 const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom:0;">
   <!-- FOUNDING PERKS BANNER -->
-  <div class="perks-banner">
+  <div class="perks-banner" style="margin-top: 4rem;">
     <div class="perks-top">
       <div>
         <p class="perks-heading">Founding member perks.</p>
@@ -1496,7 +1496,7 @@ const Pricing = () => {
 </div>
 
 {/* INTRO PACK */}
-<div className="rr-intro-section">
+<div className="rr-intro-section" style={{ marginBottom: '4rem' }}>
   <div className="rr-intro-inner">
     <div>
       <p className="rr-intro-tag">New clients only · valid 30 days</p>
