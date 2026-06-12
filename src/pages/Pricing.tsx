@@ -590,7 +590,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
 
 
     
-    .pp-scope .banner { background: #f0e6d6; border-radius: 0; overflow: hidden; margin-bottom: 4.5rem; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
+    .pp-scope .banner { background: #f0e6d6; border-radius: 0; overflow: hidden; margin-bottom: 4.5rem; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; min-height: 100vh; padding-top: 5rem; padding-bottom: 5rem; display: flex; align-items: center; }
 
     .pp-scope .banner-inner { display: grid; grid-template-columns: 1fr auto; align-items: stretch; max-width: 1100px; margin: 0 auto; }
 
