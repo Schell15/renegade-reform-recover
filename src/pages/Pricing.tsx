@@ -577,75 +577,296 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   /* ── PRICING PREVIEW (scoped) ── */
 
     .pp-scope *, .pp-scope *::before, .pp-scope *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     .pp-scope { background: transparent; color: #f0e6d6; font-family: 'Inter', sans-serif; padding: 4rem 2rem; }
+
     .pp-scope .container { max-width: 1100px; margin: 0 auto; }
 
-    /* ── BUTTONS ── */
+
+    
     .pp-scope .btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 600; width: 100%; font-family: 'Inter', sans-serif; }
+
     .pp-scope .btn-solid { background: #a02d18; border: none; color: #fff; padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 700; width: 100%; font-family: 'Inter', sans-serif; }
 
-    /* ── BANNER ── */
-    .pp-scope .banner { border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 2rem 2.5rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-bottom: 4.5rem; }
-    .pp-scope .banner-text { flex: 1; min-width: 240px; }
-    .pp-scope .banner-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
-    .pp-scope .tag-red { background: #c0391a; color: #fff; font-size: 8px; font-weight: 700; letter-spacing: 0.15em; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; }
-    .pp-scope .tag-muted { color: rgba(255,255,255,0.3); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
-    .pp-scope .banner-heading { color: #f0e6d6; font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 10px; line-height: 1.2; }
-    .pp-scope .banner-body { color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.7; margin-bottom: 6px; }
-    .pp-scope .banner-body strong { color: #f0e6d6; }
-    .pp-scope .banner-footnote { color: rgba(255,255,255,0.3); font-size: 11px; font-style: italic; }
-    .pp-scope .banner-prices { display: flex; flex-direction: column; gap: 8px; min-width: 170px; }
-    .pp-scope .banner-pill { border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 20px; text-align: center; }
-    .pp-scope .banner-pill-label { color: rgba(255,255,255,0.35); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 4px; font-weight: 600; }
-    .pp-scope .banner-pill-price { color: #f0e6d6; font-size: 20px; font-weight: 900; letter-spacing: -0.5px; }
-    .pp-scope .banner-pill-unit { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
 
-    /* ── SECTION HEADINGS ── */
-    .pp-scope .section-heading { color: #f0e6d6; font-size: 32px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; margin-bottom: 2.5rem; line-height: 1.1; }
+    
+    .pp-scope .banner { background: #f0e6d6; border-radius: 0; overflow: hidden; margin-bottom: 4.5rem; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; min-height: 100vh; padding-top: 5rem; padding-bottom: 5rem; display: flex; align-items: center; }
 
-    /* ── GRIDS ── */
-    .pp-scope .grid-2 { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); display: grid; grid-template-columns: 1fr 1fr; }
-    .pp-scope .grid-3 { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); display: grid; grid-template-columns: 1fr 1fr 1fr; }
-    .pp-scope .product-col { padding: 2.25rem 1.75rem; min-width: 0; }
-    .pp-scope .product-col.divider { border-right: 2px solid rgba(255,255,255,0.18); }
-    .pp-scope .product-col.relative { position: relative; }
+    .pp-scope .banner-inner { display: grid; grid-template-columns: 1fr auto; align-items: stretch; max-width: 1100px; margin: 0 auto; width: 100%; }
+
+    .pp-scope .banner-text { padding: 3.5rem 2.5rem; }
+
+    .pp-scope .banner-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; }
+
+    .pp-scope .tag-brown { background: #7a4a28; color: #f5dfc5; font-size: 8px; font-weight: 700; letter-spacing: 0.15em; padding: 4px 12px; border-radius: 4px; text-transform: uppercase; }
+
+    .pp-scope .tag-muted { color: rgba(30,10,0,0.35); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
+
+    .pp-scope .banner-heading { color: #1a0800; font-size: 26px; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 0.6rem; line-height: 1.15; }
+
+    .pp-scope .banner-heading em { font-style: italic; font-weight: 400; color: rgba(26,8,0,0.55); font-size: 22px; }
+
+    .pp-scope .banner-body { color: rgba(26,8,0,0.55); font-size: 12.5px; line-height: 1.6; margin-bottom: 1.5rem; }
+
+    .pp-scope .banner-body strong { color: #1a0800; font-weight: 700; }
+
+    .pp-scope .banner-tc { color: rgba(26,8,0,0.25); font-size: 10px; line-height: 1.6; }
+
+    .pp-scope .banner-prices { display: flex; border-left: 1px solid rgba(26,8,0,0.1); }
+
+    .pp-scope .banner-price-col { padding: 3.5rem 2.25rem; display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 150px; }
+
+    .pp-scope .banner-price-col + .banner-price-col { border-left: 1px solid rgba(26,8,0,0.1); }
+
+    .pp-scope .banner-pill-label { color: rgba(26,8,0,0.35); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; text-align: center; }
+
+    .pp-scope .banner-pill-price { color: #1a0800; font-size: 40px; font-weight: 900; letter-spacing: -2px; line-height: 1; }
+
+    .pp-scope .banner-pill-unit { font-size: 12px; font-weight: 400; color: rgba(26,8,0,0.4); margin-top: 4px; }
+
     @media (max-width: 700px) {
-      .pp-scope .grid-2, .pp-scope .grid-3 { grid-template-columns: 1fr; }
-      .pp-scope .product-col.divider { border-right: none; border-bottom: 2px solid rgba(255,255,255,0.18); }
+      .pp-scope .banner-inner { grid-template-columns: 1fr; }
+
+      .pp-scope .banner-prices { border-left: none; border-top: 1px solid rgba(26,8,0,0.1); }
+
     }
 
-    /* ── TIER NAME ── */
+    
+    .pp-scope .section-heading { color: #f0e6d6; font-size: 32px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; margin-bottom: 2.5rem; line-height: 1.1; }
+
+
+    
+    .pp-scope .grid-2 { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); display: grid; grid-template-columns: 1fr 1fr; }
+
+    .pp-scope .grid-3 { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); display: grid; grid-template-columns: 1fr 1fr 1fr; }
+
+    .pp-scope .product-col { padding: 2.25rem 1.75rem; min-width: 0; }
+
+    .pp-scope .product-col.divider { border-right: 2px solid rgba(255,255,255,0.18); }
+
+    .pp-scope .product-col.relative { position: relative; }
+
+    @media (max-width: 700px) {
+      .pp-scope .grid-2, .pp-scope .grid-3 { grid-template-columns: 1fr; }
+
+      .pp-scope .product-col.divider { border-right: none; border-bottom: 2px solid rgba(255,255,255,0.18); }
+
+    }
+
+    
     .pp-scope .tier-name { color: #f0e6d6; font-size: 32px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; line-height: 1; margin-bottom: 5px; }
+
     .pp-scope .tier-sub { color: rgba(255,255,255,0.75); font-size: 12px; text-align: center; margin-bottom: 1.75rem; height: 36px; display: flex; align-items: center; justify-content: center; }
 
-    /* ── DUAL PRICE BOX ── */
+
+    
     .pp-scope .dual-price { display: flex; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; margin-bottom: 1.4rem; height: 136px; }
+
     .pp-scope .dual-cell { flex: 1; padding: 18px 14px 18px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
     .pp-scope .dual-cell + .dual-cell { border-left: 1px solid rgba(255,255,255,0.1); }
+
     .pp-scope .dual-cell.dim { opacity: 0.75; }
+
     .pp-scope .dual-label { color: rgba(255,255,255,0.75); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; height: 40px; display: flex; align-items: flex-start; justify-content: center; text-align: center; line-height: 1.6; }
+
     .pp-scope .dual-num { color: #f0e6d6; font-size: 36px; font-weight: 900; letter-spacing: -2px; line-height: 1; }
 
-    /* ── PRICE ROWS ── */
+
+    
     .pp-scope .price-row { display: flex; align-items: center; justify-content: space-between; padding: 0 16px; height: 56px; border-radius: 7px; margin-bottom: 7px; }
+
     .pp-scope .price-row.founders { background: rgba(160,45,24,0.2); border: 1px solid rgba(160,45,24,0.35); }
+
     .pp-scope .price-row.general { border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); }
+
     .pp-scope .row-label-f { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: rgba(255,200,180,0.6); flex-shrink: 1; min-width: 0; }
+
     .pp-scope .row-label-g { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); flex-shrink: 1; min-width: 0; }
+
     .pp-scope .row-price-f { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: #f0e6d6; white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
+
     .pp-scope .row-price-g { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: rgba(255,255,255,0.7); white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
+
     .pp-scope .row-unit-f { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.35); }
+
     .pp-scope .row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
 
-    /* ── BADGE ── */
+
+    
     .pp-scope .badge { position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #8B5E3C; color: #f5dfc5; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 14px; border-radius: 0 0 5px 5px; white-space: nowrap; font-weight: 700; }
 
-    /* ── CTA ROW ── */
+
+    
     .pp-scope .cta-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 1.25rem; margin-bottom: 4.5rem; }
 
-    /* ── SECTION SPACING ── */
+
+    
     .pp-scope .section { margin-bottom: 1rem; }
 
+
+    
+    .pp-scope .dropin-section { background: transparent; border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); border-radius: 0; overflow: hidden; margin-bottom: 4.5rem; }
+
+    .pp-scope .dropin-header { padding: 2.5rem 2.5rem 1.75rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+    .pp-scope .dropin-headline { font-size: 32px; font-weight: 900; color: #f0e6d6; text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 0.75rem; }
+
+    .pp-scope .dropin-strapline { font-size: 14px; color: rgba(255,255,255,0.4); font-style: italic; letter-spacing: 0.01em; }
+
+    .pp-scope .dropin-body { display: grid; grid-template-columns: 1fr 300px; }
+
+    .pp-scope .dropin-left { padding: 2rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.08); }
+
+    .pp-scope .dropin-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 1.5rem; max-width: 520px; }
+
+    .pp-scope .dropin-bullets { list-style: none; display: flex; flex-direction: column; gap: 0; }
+
+    .pp-scope .dropin-bullet { display: flex; align-items: center; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.45); padding: 9px 0; border-top: 1px solid rgba(255,255,255,0.06); }
+
+    .pp-scope .dropin-bullet:last-child { border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+    .pp-scope .dropin-bullet::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.25); flex-shrink: 0; }
+
+    .pp-scope .dropin-right { padding: 2rem 2rem; display: flex; flex-direction: column; justify-content: space-between; }
+
+    .pp-scope .dropin-price-block {  }
+
+    .pp-scope .dropin-rate-label { font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); font-weight: 700; margin-bottom: 4px; }
+
+    .pp-scope .dropin-big-price { font-size: 72px; font-weight: 900; color: #f0e6d6; letter-spacing: -4px; line-height: 1; }
+
+    .pp-scope .dropin-big-unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.4); letter-spacing: 0; }
+
+    .pp-scope .dropin-standard { font-size: 12px; color: rgba(255,255,255,0.25); margin-top: 8px; text-decoration: line-through; }
+
+    @media (max-width: 700px) {
+      .pp-scope .dropin-body { grid-template-columns: 1fr; }
+
+      .pp-scope .dropin-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+
+      .pp-scope .dropin-right { padding: 1.5rem 2rem; }
+
+    }
+
+    
+    .pp-scope .intro-section { margin-top: 4rem; }
+
+    .pp-scope .intro-inner { border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 2.5rem; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 3rem; align-items: center; }
+
+    .pp-scope .intro-left {  }
+
+    .pp-scope .intro-tag { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
+
+    .pp-scope .intro-title { font-size: 28px; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: #f0e6d6; margin-bottom: 6px; }
+
+    .pp-scope .intro-sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 1.25rem; }
+
+    .pp-scope .intro-prices { display: flex; gap: 1.5rem; align-items: baseline; margin-bottom: 1.25rem; }
+
+    .pp-scope .intro-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+
+    @media (max-width: 700px) {
+      .pp-scope .intro-inner { grid-template-columns: 1fr; }
+
+      .pp-scope .intro-right { align-items: flex-start; }
+
+    }
+
+    
+    .pp-scope .accordion { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); margin-bottom: 1.5rem; }
+
+    .pp-scope .acc-item { border-bottom: 1px solid rgba(255,255,255,0.08); transition: background 0.25s; }
+
+    .pp-scope .acc-item:last-child { border-bottom: none; }
+
+    .pp-scope .acc-item.open { background: rgba(160,80,30,0.07); }
+
+
+    .pp-scope .acc-header { display: flex; align-items: center; justify-content: space-between;
+      padding: 1.6rem 1.75rem; cursor: pointer; user-select: none; }
+
+    .pp-scope .acc-header:hover { background: rgba(255,255,255,0.02); }
+
+
+    .pp-scope .acc-left { display: flex; flex-direction: column; gap: 5px; }
+
+    .pp-scope .acc-eyebrow { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(180,80,40,0.7); font-weight: 700; transition: color 0.2s; }
+
+    .pp-scope .acc-item.open .acc-eyebrow { color: #d4603f; }
+
+    .pp-scope .acc-name { font-size: 30px; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: #f0e6d6; line-height: 1; }
+
+
+    .pp-scope .acc-right { display: flex; align-items: center; gap: 1.5rem; }
+
+    .pp-scope .acc-price-collapsed { text-align: right; }
+
+    .pp-scope .acc-price-big { font-size: 30px; font-weight: 900; color: #f0e6d6; letter-spacing: -1px; line-height: 1; }
+
+    .pp-scope .acc-price-big span { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.35); }
+
+    .pp-scope .acc-price-sub { font-size: 10px; color: rgba(255,255,255,0.28); margin-top: 3px; text-align: right; }
+
+
+    .pp-scope .acc-chevron { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.12); border-radius: 50%; flex-shrink: 0; transition: transform 0.25s, border-color 0.2s; }
+
+    .pp-scope .acc-chevron svg { width: 10px; height: 10px; stroke: rgba(255,255,255,0.4); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
+
+    .pp-scope .acc-item.open .acc-chevron { border-color: rgba(255,255,255,0.3); transform: rotate(180deg); }
+
+    .pp-scope .acc-item.open .acc-chevron svg { stroke: rgba(255,255,255,0.7); }
+
+
+    
+    .pp-scope .acc-body { display: none; padding: 0.25rem 1.75rem 2rem; }
+
+    .pp-scope .acc-item.open .acc-body { display: block; }
+
+    .pp-scope .acc-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: start; }
+
+
+    
+    .pp-scope .acc-features { list-style: none; display: flex; flex-direction: column; gap: 0; }
+
+    .pp-scope .acc-feat { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+    .pp-scope .acc-feat:last-child { border-bottom: none; }
+
+    .pp-scope .acc-feat-icon { width: 28px; height: 28px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 6px; }
+
+    .pp-scope .acc-feat-icon svg { width: 14px; height: 14px; stroke: rgba(210,160,120,0.8); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    .pp-scope .acc-feat-text { font-size: 12px; color: rgba(255,255,255,0.65); line-height: 1.4; }
+
+    .pp-scope .acc-feat-text strong { color: #f0e6d6; font-weight: 600; }
+
+
+    
+    .pp-scope .acc-pricing-right { display: flex; flex-direction: column; }
+
+    .pp-scope .acc-badge-wrap { margin-bottom: 1rem; }
+
+    .pp-scope .acc-badge { display: inline-block; background: #8B5E3C; color: #f5dfc5; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 12px; border-radius: 3px; font-weight: 700; }
+
+    .pp-scope .acc-per-class-box { border: 1px solid rgba(255,255,255,0.2); border-radius: 7px; padding: 14px 16px; margin-bottom: 7px; display: flex; align-items: center; justify-content: space-between; }
+
+    .pp-scope .acc-per-class-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); }
+
+    .pp-scope .acc-per-class-num { font-size: 26px; font-weight: 900; color: #ffffff; letter-spacing: -1px; }
+
+
+    @media (max-width: 700px) {
+      .pp-scope .acc-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+
+      .pp-scope .acc-name { font-size: 24px; }
+
+      .pp-scope .acc-price-big { font-size: 24px; }
+
+      .pp-scope .acc-price-main { font-size: 40px; }
+
+    }
+  
 `;
 
 const PRICING_BODY = `<nav class="rn-nav">
@@ -689,171 +910,297 @@ const PRICING_BODY = `<nav class="rn-nav">
   </header>
 
   <div class="pp-scope">
-  <div class="container">
+
 
   <!-- FOUNDING RATE BANNER -->
   <div class="banner">
-    <div class="banner-text">
-      <div class="banner-tag">
-        <span class="tag-red">Closing 31 July</span>
-        <span class="tag-muted">Founding rates</span>
+    <div class="banner-inner">
+      <div class="banner-text">
+        <div class="banner-tag">
+          <span class="tag-brown">Ends 31 July</span>
+          <span class="tag-muted">Founding rates</span>
+        </div>
+        <p class="banner-heading">FOUNDING RATES.</p>
+        <p class="banner-body">Founding memberships lock in your rate <strong>for life.</strong> Join now and this price is yours for as long as you stay a member.<sup style="font-size:9px;color:rgba(26,8,0,0.3)">*</sup></p>
+        <p class="banner-tc">* Founding membership rate is locked for the duration of your active membership. Standard membership terms and cancellation policy applies.</p>
       </div>
-      <p class="banner-heading">Lock in your founding rate<br>before we open.</p>
-      <p class="banner-body">Drop-in founding rate ends <strong>31 July</strong> &middot; Founding memberships lock in your rate <strong>for life</strong> <span style="color:rgba(255,255,255,0.3);font-size:10px;vertical-align:super;line-height:0">*</span></p>
-      <p class="banner-footnote">The lowest price Renegade Reformer will ever offer.</p>
-      <p style="color:rgba(255,255,255,0.2);font-size:10px;margin-top:10px;line-height:1.5">* Founding membership rate is locked for the duration of your active membership. Rate applies only to the original plan selected at sign-up. Subject to standard membership terms.</p>
-    </div>
-    <div class="banner-prices">
-      <div class="banner-pill">
-        <p class="banner-pill-label">Founding drop-in</p>
-        <p class="banner-pill-price">&pound;20 <span class="banner-pill-unit">/class</span></p>
-      </div>
-      <div class="banner-pill">
-        <p class="banner-pill-label">Memberships from</p>
-        <p class="banner-pill-price">&pound;14 <span class="banner-pill-unit">/class</span></p>
+      <div class="banner-prices">
+        <div class="banner-price-col">
+          <p class="banner-pill-label">Founding drop-in</p>
+          <p class="banner-pill-price">£20</p>
+          <p class="banner-pill-unit">/class</p>
+        </div>
+        <div class="banner-price-col">
+          <p class="banner-pill-label">Memberships from</p>
+          <p class="banner-pill-price">£14</p>
+          <p class="banner-pill-unit">/class</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- DROP-IN & CLASS PACKS -->
-  <div class="section" id="class-packs">
-    <p class="section-heading">Drop-in's &amp; class packs.</p>
-    <div class="grid-2">
-
-      <!-- Drop-in -->
-      <div class="product-col divider" id="drop-in">
-        <p class="tier-name">Drop-in</p>
-        <p class="tier-sub">Single session &middot; pay as you go</p>
-        <div class="dual-price">
-          <div class="dual-cell">
-            <p class="dual-label">Early access<br>founders<br>drop-in price</p>
-            <p class="dual-num">&pound;20</p>
-          </div>
-          <div class="dual-cell dim">
-            <p class="dual-label">General launch price</p>
-            <p class="dual-num">&pound;25</p>
-          </div>
-        </div>
-        <div class="price-row founders" style="margin-bottom:1.1rem">
-          <span class="row-label-f">Founders Discount</span>
-          <span class="row-price-f">&pound;20<span class="row-unit-f"> /class</span></span>
-        </div>
-        <button class="btn-ghost">Book founding rate</button>
+  <!-- DROP-IN — FULL WIDTH -->
+  <div class="dropin-section" id="drop-in">
+    <div class="dropin-header">
+      <p class="dropin-headline">Drop-in.</p>
+      <p class="dropin-strapline">No membership. Experience Renegade with no commitment.</p>
+    </div>
+    <div class="dropin-body">
+      <div class="dropin-left">
+        <p class="dropin-desc">New to Reformer, curious about Renegade, or not ready to commit yet? Book a single class and experience the studio on your own terms.<br><br>Early access founding rate available for a limited time as we open the doors.</p>
+        <ul class="dropin-bullets">
+          <li class="dropin-bullet">All levels welcome, including complete beginners</li>
+          <li class="dropin-bullet">Book any eligible class with available spaces</li>
+          <li class="dropin-bullet">Free cancellation up to 24 hours before class</li>
+        </ul>
       </div>
-
-      <!-- Intro pack -->
-      <div class="product-col">
-        <p class="tier-name">Intro pack</p>
-        <p class="tier-sub">3 classes &middot; new clients only &middot; valid 30 days</p>
-        <div class="dual-price">
-          <div class="dual-cell">
-            <p class="dual-label">3 class<br>intro pack</p>
-            <p class="dual-num">&pound;48</p>
-          </div>
-          <div class="dual-cell dim">
-            <p class="dual-label">General launch price</p>
-            <p class="dual-num">&pound;55</p>
-          </div>
+      <div class="dropin-right">
+        <div class="dropin-price-block">
+          <p class="dropin-rate-label">Founding rate</p>
+          <p class="dropin-big-price">£20<span class="dropin-big-unit"> /class</span></p>
+          <p class="dropin-standard">£25 standard rate</p>
         </div>
-        <div class="price-row founders" style="margin-bottom:1.1rem">
-          <span class="row-label-f">Founders Discount</span>
-          <span class="row-price-f">&pound;16<span class="row-unit-f"> /class</span></span>
-        </div>
-        <button class="btn-ghost">Book founding rate</button>
+        <button type="button" class="btn-ghost">Book a class</button>
       </div>
-
     </div>
   </div>
 
   <!-- MONTHLY MEMBERSHIPS -->
   <div class="section" id="memberships" style="margin-top:4.5rem">
     <p class="section-heading">Monthly memberships.</p>
-    <div class="grid-3">
 
-      <!-- Core -->
-      <div class="product-col divider">
-        <p class="tier-name">Core</p>
-        <p class="tier-sub">4 classes / month</p>
-        <div class="dual-price">
-          <div class="dual-cell">
-            <p class="dual-label">Per month</p>
-            <p class="dual-num">&pound;72</p>
+    <div class="accordion">
+
+      <!-- CORE -->
+      <div class="acc-item" data-acc>
+        <div class="acc-header" data-acc-toggle>
+          <div class="acc-left">
+            <span class="acc-eyebrow">4 classes / month</span>
+            <span class="acc-name">Core</span>
           </div>
-          <div class="dual-cell">
-            <p class="dual-label">Per class</p>
-            <p class="dual-num">&pound;18</p>
+          <div class="acc-right">
+            <div class="acc-price-collapsed">
+              <div class="acc-price-big">£72 <span>/month</span></div>
+              <div class="acc-price-sub">£18 per class</div>
+            </div>
+            <div class="acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
           </div>
         </div>
-        <div class="price-row founders">
-          <span class="row-label-f">Founders Discount</span>
-          <span class="row-price-f">&pound;72<span class="row-unit-f"> /month</span></span>
-        </div>
-        <div class="price-row general">
-          <span class="row-label-g">General Launch Price</span>
-          <span class="row-price-g">&pound;85<span class="row-unit-g"> /month</span></span>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <!-- LEFT: features -->
+            <ul class="acc-features">
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                <span class="acc-feat-text"><strong>Founding rate locked for life</strong> &mdash; your price never increases*</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                <span class="acc-feat-text"><strong>4 classes per month</strong>, credits roll over monthly</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <span class="acc-feat-text"><strong>1 guest pass</strong> per month</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+                <span class="acc-feat-text"><strong>Early booking</strong> &mdash; 1 week ahead of non-members</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+                <span class="acc-feat-text">Rolls monthly &mdash; <strong>no lock-in</strong> after first term</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+                <span class="acc-feat-text"><strong>Founding welcome gift</strong> &mdash; branded socks &amp; tote</span>
+              </li>
+            </ul>
+            <!-- RIGHT: price + CTA -->
+            <div class="acc-pricing-right">
+              <div class="acc-per-class-box">
+                <span class="acc-per-class-label">Per class</span>
+                <span class="acc-per-class-num">£18</span>
+              </div>
+              <div class="price-row founders" style="margin-bottom:7px">
+                <span class="row-label-f">Founders Discount</span>
+                <span class="row-price-f">£72<span class="row-unit-f"> /mo</span></span>
+              </div>
+              <div class="price-row general" style="margin-bottom:1.25rem">
+                <span class="row-label-g">Standard Rate</span>
+                <span class="row-price-g">£85<span class="row-unit-g"> /mo</span></span>
+              </div>
+              <button type="button" class="btn-ghost">Get founding rate</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Pro -->
-      <div class="product-col divider relative">
-        <div class="badge">Renegade Recommended</div>
-        <p class="tier-name">Pro</p>
-        <p class="tier-sub">8 classes / month</p>
-        <div class="dual-price">
-          <div class="dual-cell">
-            <p class="dual-label">Per month</p>
-            <p class="dual-num">&pound;128</p>
+      <!-- PRO (open by default) -->
+      <div class="acc-item open" data-acc>
+        <div class="acc-header" data-acc-toggle>
+          <div class="acc-left">
+            <span class="acc-eyebrow">8 classes / month</span>
+            <span class="acc-name">Pro</span>
           </div>
-          <div class="dual-cell">
-            <p class="dual-label">Per class</p>
-            <p class="dual-num">&pound;16</p>
+          <div class="acc-right">
+            <div class="acc-price-collapsed">
+              <div class="acc-price-big">£128 <span>/month</span></div>
+              <div class="acc-price-sub">£16 per class</div>
+            </div>
+            <div class="acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
           </div>
         </div>
-        <div class="price-row founders">
-          <span class="row-label-f">Founders Discount</span>
-          <span class="row-price-f">&pound;128<span class="row-unit-f"> /month</span></span>
-        </div>
-        <div class="price-row general">
-          <span class="row-label-g">General Launch Price</span>
-          <span class="row-price-g">&pound;150<span class="row-unit-g"> /month</span></span>
+        <div class="acc-body">
+          <div class="acc-badge-wrap">
+            <span class="acc-badge">Renegade Recommended</span>
+          </div>
+          <div class="acc-inner">
+            <!-- LEFT: features -->
+            <ul class="acc-features">
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                <span class="acc-feat-text"><strong>Founding rate locked for life</strong> &mdash; your price never increases*</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                <span class="acc-feat-text"><strong>8 classes per month</strong>, credits roll over monthly</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <span class="acc-feat-text"><strong>1 guest pass</strong> per month</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+                <span class="acc-feat-text"><strong>Early booking</strong> &mdash; 1 week ahead of non-members</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <span class="acc-feat-text"><strong>Priority event booking</strong> &mdash; first access to all events</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+                <span class="acc-feat-text"><strong>Founding welcome gift</strong> &mdash; branded socks &amp; tote</span>
+              </li>
+            </ul>
+            <!-- RIGHT: price + CTA -->
+            <div class="acc-pricing-right">
+              <div class="acc-per-class-box">
+                <span class="acc-per-class-label">Per class</span>
+                <span class="acc-per-class-num">£16</span>
+              </div>
+              <div class="price-row founders" style="margin-bottom:7px">
+                <span class="row-label-f">Founders Discount</span>
+                <span class="row-price-f">£128<span class="row-unit-f"> /mo</span></span>
+              </div>
+              <div class="price-row general" style="margin-bottom:1.25rem">
+                <span class="row-label-g">Standard Rate</span>
+                <span class="row-price-g">£150<span class="row-unit-g"> /mo</span></span>
+              </div>
+              <button type="button" class="btn-solid">Get founding rate</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Elite -->
-      <div class="product-col">
-        <p class="tier-name">Elite</p>
-        <p class="tier-sub">12 classes / month</p>
-        <div class="dual-price">
-          <div class="dual-cell">
-            <p class="dual-label">Per month</p>
-            <p class="dual-num">&pound;168</p>
+      <!-- ELITE -->
+      <div class="acc-item" data-acc>
+        <div class="acc-header" data-acc-toggle>
+          <div class="acc-left">
+            <span class="acc-eyebrow">12 classes / month</span>
+            <span class="acc-name">Elite</span>
           </div>
-          <div class="dual-cell">
-            <p class="dual-label">Per class</p>
-            <p class="dual-num">&pound;14</p>
+          <div class="acc-right">
+            <div class="acc-price-collapsed">
+              <div class="acc-price-big">£168 <span>/month</span></div>
+              <div class="acc-price-sub">£14 per class</div>
+            </div>
+            <div class="acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
           </div>
         </div>
-        <div class="price-row founders">
-          <span class="row-label-f">Founders Discount</span>
-          <span class="row-price-f">&pound;168<span class="row-unit-f"> /month</span></span>
-        </div>
-        <div class="price-row general">
-          <span class="row-label-g">General Launch Price</span>
-          <span class="row-price-g">&pound;195<span class="row-unit-g"> /month</span></span>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <!-- LEFT: features -->
+            <ul class="acc-features">
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                <span class="acc-feat-text"><strong>Founding rate locked for life</strong> &mdash; your price never increases*</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                <span class="acc-feat-text"><strong>12 classes per month</strong>, credits roll over monthly</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <span class="acc-feat-text"><strong>1 guest pass</strong> per month</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <span class="acc-feat-text"><strong>Priority event booking</strong> &mdash; first access to all events</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+                <span class="acc-feat-text"><strong>Early booking</strong> &mdash; 1 week ahead of non-members</span>
+              </li>
+              <li class="acc-feat">
+                <div class="acc-feat-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                <span class="acc-feat-text"><strong>Best value</strong> &mdash; lowest per-class price of any tier</span>
+              </li>
+            </ul>
+            <!-- RIGHT: price + CTA -->
+            <div class="acc-pricing-right">
+              <div class="acc-per-class-box">
+                <span class="acc-per-class-label">Per class</span>
+                <span class="acc-per-class-num">£14</span>
+              </div>
+              <div class="price-row founders" style="margin-bottom:7px">
+                <span class="row-label-f">Founders Discount</span>
+                <span class="row-price-f">£168<span class="row-unit-f"> /mo</span></span>
+              </div>
+              <div class="price-row general" style="margin-bottom:1.25rem">
+                <span class="row-label-g">Standard Rate</span>
+                <span class="row-price-g">£195<span class="row-unit-g"> /mo</span></span>
+              </div>
+              <button type="button" class="btn-ghost">Get founding rate</button>
+            </div>
+          </div>
         </div>
       </div>
 
     </div>
-    <div class="cta-row">
-      <button class="btn-ghost">Get founding rate</button>
-      <button class="btn-solid">Get founding rate</button>
-      <button class="btn-ghost">Get founding rate</button>
+  </div>
+
+  <!-- INTRO PACK — STANDALONE -->
+  <div class="intro-section">
+    <div class="intro-inner">
+      <div class="intro-left">
+        <p class="intro-tag">New clients only &middot; valid 30 days</p>
+        <p class="intro-title">Intro pack</p>
+        <p class="intro-sub">3 classes to find your feet. The best way to try Renegade properly before committing to a membership.</p>
+        <div class="intro-prices">
+          <span class="dropin-price-f">£48 <span>founding rate</span></span>
+          <span class="dropin-price-g" style="color:rgba(255,255,255,0.25);text-decoration:line-through">£55 <span style="text-decoration:none;color:rgba(255,255,255,0.25)">standard rate</span></span>
+        </div>
+        <ul class="dropin-bullets">
+          <li class="dropin-bullet" style="color:rgba(255,255,255,0.45)">£16 per class at founding rate (£18.33 standard)</li>
+          <li class="dropin-bullet" style="color:rgba(255,255,255,0.45)">Use across any 3 classes in the schedule</li>
+          <li class="dropin-bullet" style="color:rgba(255,255,255,0.45)">All levels welcome &mdash; great for complete beginners</li>
+        </ul>
+      </div>
+      <div class="intro-right">
+        <div style="text-align:right">
+          <p style="font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.3);font-weight:600;margin-bottom:4px">3 classes</p>
+          <p style="font-size:52px;font-weight:900;color:#f0e6d6;letter-spacing:-3px;line-height:1">£48</p>
+          <p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px;text-decoration:line-through">£55 standard</p>
+        </div>
+        <button type="button" class="btn-ghost" style="width:auto;padding:13px 28px">Book intro pack</button>
+      </div>
     </div>
   </div>
 
-  </div>
-  </div>
+  
 
+
+  </div>
 
   <!-- FOUNDING PERKS BANNER -->
   <div class="perks-banner">
