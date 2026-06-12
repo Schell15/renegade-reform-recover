@@ -1263,9 +1263,9 @@ const Pricing = () => {
         <p className="rr-banner-pill-unit">/class</p>
       </div>
       <div className="rr-banner-price-col">
-        <p className="rr-banner-pill-label">Intro Pack</p>
-        <p className="rr-banner-pill-unit" style={{marginTop:0,marginBottom:'0.5rem'}}>3 classes</p>
+        <p className="rr-banner-pill-label">INTRO PACK</p>
         <p className="rr-banner-pill-price">£48</p>
+        <p className="rr-banner-pill-unit">3 classes</p>
       </div>
     </div>
   </div>
