@@ -1496,7 +1496,7 @@ const Pricing = () => {
 </div>
 
 {/* INTRO PACK */}
-<div className="rr-intro-section">
+<div className="rr-intro-section" style={{ marginBottom: '4rem' }}>
   <div className="rr-intro-inner">
     <div>
       <p className="rr-intro-tag">New clients only · valid 30 days</p>
