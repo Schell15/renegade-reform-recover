@@ -577,296 +577,75 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   /* ── PRICING PREVIEW (scoped) ── */
 
     .pp-scope *, .pp-scope *::before, .pp-scope *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     .pp-scope { background: transparent; color: #f0e6d6; font-family: 'Inter', sans-serif; padding: 4rem 2rem; }
-
     .pp-scope .container { max-width: 1100px; margin: 0 auto; }
 
-
-    
+    /* ── BUTTONS ── */
     .pp-scope .btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 600; width: 100%; font-family: 'Inter', sans-serif; }
-
     .pp-scope .btn-solid { background: #a02d18; border: none; color: #fff; padding: 13px; border-radius: 6px; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 700; width: 100%; font-family: 'Inter', sans-serif; }
 
+    /* ── BANNER ── */
+    .pp-scope .banner { border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 2rem 2.5rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-bottom: 4.5rem; }
+    .pp-scope .banner-text { flex: 1; min-width: 240px; }
+    .pp-scope .banner-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
+    .pp-scope .tag-red { background: #c0391a; color: #fff; font-size: 8px; font-weight: 700; letter-spacing: 0.15em; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; }
+    .pp-scope .tag-muted { color: rgba(255,255,255,0.3); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
+    .pp-scope .banner-heading { color: #f0e6d6; font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: -0.5px; margin-bottom: 10px; line-height: 1.2; }
+    .pp-scope .banner-body { color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.7; margin-bottom: 6px; }
+    .pp-scope .banner-body strong { color: #f0e6d6; }
+    .pp-scope .banner-footnote { color: rgba(255,255,255,0.3); font-size: 11px; font-style: italic; }
+    .pp-scope .banner-prices { display: flex; flex-direction: column; gap: 8px; min-width: 170px; }
+    .pp-scope .banner-pill { border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 20px; text-align: center; }
+    .pp-scope .banner-pill-label { color: rgba(255,255,255,0.35); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 4px; font-weight: 600; }
+    .pp-scope .banner-pill-price { color: #f0e6d6; font-size: 20px; font-weight: 900; letter-spacing: -0.5px; }
+    .pp-scope .banner-pill-unit { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
 
-    
-    .pp-scope .banner { background: #f0e6d6; border-radius: 0; overflow: hidden; margin-bottom: 4.5rem; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; min-height: 100vh; padding-top: 5rem; padding-bottom: 5rem; display: flex; align-items: center; }
-
-    .pp-scope .banner-inner { display: grid; grid-template-columns: 1fr auto; align-items: stretch; max-width: 1100px; margin: 0 auto; width: 100%; }
-
-    .pp-scope .banner-text { padding: 3.5rem 2.5rem; }
-
-    .pp-scope .banner-tag { display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; }
-
-    .pp-scope .tag-brown { background: #7a4a28; color: #f5dfc5; font-size: 8px; font-weight: 700; letter-spacing: 0.15em; padding: 4px 12px; border-radius: 4px; text-transform: uppercase; }
-
-    .pp-scope .tag-muted { color: rgba(30,10,0,0.35); font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; }
-
-    .pp-scope .banner-heading { color: #1a0800; font-size: 26px; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 0.6rem; line-height: 1.15; }
-
-    .pp-scope .banner-heading em { font-style: italic; font-weight: 400; color: rgba(26,8,0,0.55); font-size: 22px; }
-
-    .pp-scope .banner-body { color: rgba(26,8,0,0.55); font-size: 12.5px; line-height: 1.6; margin-bottom: 1.5rem; }
-
-    .pp-scope .banner-body strong { color: #1a0800; font-weight: 700; }
-
-    .pp-scope .banner-tc { color: rgba(26,8,0,0.25); font-size: 10px; line-height: 1.6; }
-
-    .pp-scope .banner-prices { display: flex; border-left: 1px solid rgba(26,8,0,0.1); }
-
-    .pp-scope .banner-price-col { padding: 3.5rem 2.25rem; display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 150px; }
-
-    .pp-scope .banner-price-col + .banner-price-col { border-left: 1px solid rgba(26,8,0,0.1); }
-
-    .pp-scope .banner-pill-label { color: rgba(26,8,0,0.35); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; text-align: center; }
-
-    .pp-scope .banner-pill-price { color: #1a0800; font-size: 40px; font-weight: 900; letter-spacing: -2px; line-height: 1; }
-
-    .pp-scope .banner-pill-unit { font-size: 12px; font-weight: 400; color: rgba(26,8,0,0.4); margin-top: 4px; }
-
-    @media (max-width: 700px) {
-      .pp-scope .banner-inner { grid-template-columns: 1fr; }
-
-      .pp-scope .banner-prices { border-left: none; border-top: 1px solid rgba(26,8,0,0.1); }
-
-    }
-
-    
+    /* ── SECTION HEADINGS ── */
     .pp-scope .section-heading { color: #f0e6d6; font-size: 32px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; margin-bottom: 2.5rem; line-height: 1.1; }
 
-
-    
+    /* ── GRIDS ── */
     .pp-scope .grid-2 { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); display: grid; grid-template-columns: 1fr 1fr; }
-
     .pp-scope .grid-3 { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); display: grid; grid-template-columns: 1fr 1fr 1fr; }
-
     .pp-scope .product-col { padding: 2.25rem 1.75rem; min-width: 0; }
-
     .pp-scope .product-col.divider { border-right: 2px solid rgba(255,255,255,0.18); }
-
     .pp-scope .product-col.relative { position: relative; }
-
     @media (max-width: 700px) {
       .pp-scope .grid-2, .pp-scope .grid-3 { grid-template-columns: 1fr; }
-
       .pp-scope .product-col.divider { border-right: none; border-bottom: 2px solid rgba(255,255,255,0.18); }
-
     }
 
-    
+    /* ── TIER NAME ── */
     .pp-scope .tier-name { color: #f0e6d6; font-size: 32px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; line-height: 1; margin-bottom: 5px; }
-
     .pp-scope .tier-sub { color: rgba(255,255,255,0.75); font-size: 12px; text-align: center; margin-bottom: 1.75rem; height: 36px; display: flex; align-items: center; justify-content: center; }
 
-
-    
+    /* ── DUAL PRICE BOX ── */
     .pp-scope .dual-price { display: flex; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; margin-bottom: 1.4rem; height: 136px; }
-
     .pp-scope .dual-cell { flex: 1; padding: 18px 14px 18px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-
     .pp-scope .dual-cell + .dual-cell { border-left: 1px solid rgba(255,255,255,0.1); }
-
     .pp-scope .dual-cell.dim { opacity: 0.75; }
-
     .pp-scope .dual-label { color: rgba(255,255,255,0.75); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; height: 40px; display: flex; align-items: flex-start; justify-content: center; text-align: center; line-height: 1.6; }
-
     .pp-scope .dual-num { color: #f0e6d6; font-size: 36px; font-weight: 900; letter-spacing: -2px; line-height: 1; }
 
-
-    
+    /* ── PRICE ROWS ── */
     .pp-scope .price-row { display: flex; align-items: center; justify-content: space-between; padding: 0 16px; height: 56px; border-radius: 7px; margin-bottom: 7px; }
-
     .pp-scope .price-row.founders { background: rgba(160,45,24,0.2); border: 1px solid rgba(160,45,24,0.35); }
-
     .pp-scope .price-row.general { border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.04); }
-
     .pp-scope .row-label-f { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: rgba(255,200,180,0.6); flex-shrink: 1; min-width: 0; }
-
     .pp-scope .row-label-g { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); flex-shrink: 1; min-width: 0; }
-
     .pp-scope .row-price-f { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: #f0e6d6; white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
-
     .pp-scope .row-price-g { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: rgba(255,255,255,0.7); white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
-
     .pp-scope .row-unit-f { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.35); }
-
     .pp-scope .row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
 
-
-    
+    /* ── BADGE ── */
     .pp-scope .badge { position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #8B5E3C; color: #f5dfc5; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 14px; border-radius: 0 0 5px 5px; white-space: nowrap; font-weight: 700; }
 
-
-    
+    /* ── CTA ROW ── */
     .pp-scope .cta-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 1.25rem; margin-bottom: 4.5rem; }
 
-
-    
+    /* ── SECTION SPACING ── */
     .pp-scope .section { margin-bottom: 1rem; }
 
-
-    
-    .pp-scope .dropin-section { background: transparent; border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); border-radius: 0; overflow: hidden; margin-bottom: 4.5rem; }
-
-    .pp-scope .dropin-header { padding: 2.5rem 2.5rem 1.75rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
-
-    .pp-scope .dropin-headline { font-size: 32px; font-weight: 900; color: #f0e6d6; text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 0.75rem; }
-
-    .pp-scope .dropin-strapline { font-size: 14px; color: rgba(255,255,255,0.4); font-style: italic; letter-spacing: 0.01em; }
-
-    .pp-scope .dropin-body { display: grid; grid-template-columns: 1fr 300px; }
-
-    .pp-scope .dropin-left { padding: 2rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.08); }
-
-    .pp-scope .dropin-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 1.5rem; max-width: 520px; }
-
-    .pp-scope .dropin-bullets { list-style: none; display: flex; flex-direction: column; gap: 0; }
-
-    .pp-scope .dropin-bullet { display: flex; align-items: center; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.45); padding: 9px 0; border-top: 1px solid rgba(255,255,255,0.06); }
-
-    .pp-scope .dropin-bullet:last-child { border-bottom: 1px solid rgba(255,255,255,0.06); }
-
-    .pp-scope .dropin-bullet::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.25); flex-shrink: 0; }
-
-    .pp-scope .dropin-right { padding: 2rem 2rem; display: flex; flex-direction: column; justify-content: space-between; }
-
-    .pp-scope .dropin-price-block {  }
-
-    .pp-scope .dropin-rate-label { font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); font-weight: 700; margin-bottom: 4px; }
-
-    .pp-scope .dropin-big-price { font-size: 72px; font-weight: 900; color: #f0e6d6; letter-spacing: -4px; line-height: 1; }
-
-    .pp-scope .dropin-big-unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.4); letter-spacing: 0; }
-
-    .pp-scope .dropin-standard { font-size: 12px; color: rgba(255,255,255,0.25); margin-top: 8px; text-decoration: line-through; }
-
-    @media (max-width: 700px) {
-      .pp-scope .dropin-body { grid-template-columns: 1fr; }
-
-      .pp-scope .dropin-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
-
-      .pp-scope .dropin-right { padding: 1.5rem 2rem; }
-
-    }
-
-    
-    .pp-scope .intro-section { margin-top: 4rem; }
-
-    .pp-scope .intro-inner { border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 2.5rem; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 3rem; align-items: center; }
-
-    .pp-scope .intro-left {  }
-
-    .pp-scope .intro-tag { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
-
-    .pp-scope .intro-title { font-size: 28px; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: #f0e6d6; margin-bottom: 6px; }
-
-    .pp-scope .intro-sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 1.25rem; }
-
-    .pp-scope .intro-prices { display: flex; gap: 1.5rem; align-items: baseline; margin-bottom: 1.25rem; }
-
-    .pp-scope .intro-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
-
-    @media (max-width: 700px) {
-      .pp-scope .intro-inner { grid-template-columns: 1fr; }
-
-      .pp-scope .intro-right { align-items: flex-start; }
-
-    }
-
-    
-    .pp-scope .accordion { border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); margin-bottom: 1.5rem; }
-
-    .pp-scope .acc-item { border-bottom: 1px solid rgba(255,255,255,0.08); transition: background 0.25s; }
-
-    .pp-scope .acc-item:last-child { border-bottom: none; }
-
-    .pp-scope .acc-item.open { background: rgba(160,80,30,0.07); }
-
-
-    .pp-scope .acc-header { display: flex; align-items: center; justify-content: space-between;
-      padding: 1.6rem 1.75rem; cursor: pointer; user-select: none; }
-
-    .pp-scope .acc-header:hover { background: rgba(255,255,255,0.02); }
-
-
-    .pp-scope .acc-left { display: flex; flex-direction: column; gap: 5px; }
-
-    .pp-scope .acc-eyebrow { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(180,80,40,0.7); font-weight: 700; transition: color 0.2s; }
-
-    .pp-scope .acc-item.open .acc-eyebrow { color: #d4603f; }
-
-    .pp-scope .acc-name { font-size: 30px; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: #f0e6d6; line-height: 1; }
-
-
-    .pp-scope .acc-right { display: flex; align-items: center; gap: 1.5rem; }
-
-    .pp-scope .acc-price-collapsed { text-align: right; }
-
-    .pp-scope .acc-price-big { font-size: 30px; font-weight: 900; color: #f0e6d6; letter-spacing: -1px; line-height: 1; }
-
-    .pp-scope .acc-price-big span { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.35); }
-
-    .pp-scope .acc-price-sub { font-size: 10px; color: rgba(255,255,255,0.28); margin-top: 3px; text-align: right; }
-
-
-    .pp-scope .acc-chevron { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.12); border-radius: 50%; flex-shrink: 0; transition: transform 0.25s, border-color 0.2s; }
-
-    .pp-scope .acc-chevron svg { width: 10px; height: 10px; stroke: rgba(255,255,255,0.4); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
-
-    .pp-scope .acc-item.open .acc-chevron { border-color: rgba(255,255,255,0.3); transform: rotate(180deg); }
-
-    .pp-scope .acc-item.open .acc-chevron svg { stroke: rgba(255,255,255,0.7); }
-
-
-    
-    .pp-scope .acc-body { display: none; padding: 0.25rem 1.75rem 2rem; }
-
-    .pp-scope .acc-item.open .acc-body { display: block; }
-
-    .pp-scope .acc-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: start; }
-
-
-    
-    .pp-scope .acc-features { list-style: none; display: flex; flex-direction: column; gap: 0; }
-
-    .pp-scope .acc-feat { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-
-    .pp-scope .acc-feat:last-child { border-bottom: none; }
-
-    .pp-scope .acc-feat-icon { width: 28px; height: 28px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 6px; }
-
-    .pp-scope .acc-feat-icon svg { width: 14px; height: 14px; stroke: rgba(210,160,120,0.8); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-
-    .pp-scope .acc-feat-text { font-size: 12px; color: rgba(255,255,255,0.65); line-height: 1.4; }
-
-    .pp-scope .acc-feat-text strong { color: #f0e6d6; font-weight: 600; }
-
-
-    
-    .pp-scope .acc-pricing-right { display: flex; flex-direction: column; }
-
-    .pp-scope .acc-badge-wrap { margin-bottom: 1rem; }
-
-    .pp-scope .acc-badge { display: inline-block; background: #8B5E3C; color: #f5dfc5; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 12px; border-radius: 3px; font-weight: 700; }
-
-    .pp-scope .acc-per-class-box { border: 1px solid rgba(255,255,255,0.2); border-radius: 7px; padding: 14px 16px; margin-bottom: 7px; display: flex; align-items: center; justify-content: space-between; }
-
-    .pp-scope .acc-per-class-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); }
-
-    .pp-scope .acc-per-class-num { font-size: 26px; font-weight: 900; color: #ffffff; letter-spacing: -1px; }
-
-
-    @media (max-width: 700px) {
-      .pp-scope .acc-inner { grid-template-columns: 1fr; gap: 1.5rem; }
-
-      .pp-scope .acc-name { font-size: 24px; }
-
-      .pp-scope .acc-price-big { font-size: 24px; }
-
-      .pp-scope .acc-price-main { font-size: 40px; }
-
-    }
-  
 `;
 
 const PRICING_BODY = `<nav class="rn-nav">
