@@ -1368,11 +1368,11 @@ const Pricing = () => {
               <span className="rr-acc-per-class-num">£18</span>
             </div>
             <div className="rr-price-row founders" style={{marginBottom:'7px'}}>
-              <span className="rr-row-label-f">Founders Discount</span>
+              <span className="rr-row-label-f">Founders Rate</span>
               <span className="rr-row-price-f">£72<span className="rr-row-unit-f"> /mo</span></span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">from 31.07</span>
+              <span className="rr-row-label-g">Non-founders rate from 31.07</span>
               <span className="rr-row-price-g">£85<span className="rr-row-unit-g"> /mo</span></span>
             </div>
             <button className="rr-btn-ghost" style={{cursor:'pointer'}} onClick={() => window.open('https://momence.com/m/811786', '_blank')}>Get founding rate</button>
@@ -1433,11 +1433,11 @@ const Pricing = () => {
               <span className="rr-acc-per-class-num">£16</span>
             </div>
             <div className="rr-price-row founders" style={{marginBottom:'7px'}}>
-              <span className="rr-row-label-f">Founders Discount</span>
+              <span className="rr-row-label-f">Founders Rate</span>
               <span className="rr-row-price-f">£128<span className="rr-row-unit-f"> /mo</span></span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">from 31.07</span>
+              <span className="rr-row-label-g">Non-founders rate from 31.07</span>
               <span className="rr-row-price-g">£150<span className="rr-row-unit-g"> /mo</span></span>
             </div>
             <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/812640', '_blank')}>Get founding rate</button>
@@ -1499,11 +1499,11 @@ const Pricing = () => {
               <span className="rr-acc-per-class-num">£14</span>
             </div>
             <div className="rr-price-row founders" style={{marginBottom:'7px'}}>
-              <span className="rr-row-label-f">Founders Discount</span>
+              <span className="rr-row-label-f">Founders Rate</span>
               <span className="rr-row-price-f">£168<span className="rr-row-unit-f"> /mo</span></span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">from 31.07</span>
+              <span className="rr-row-label-g">Non-founders rate from 31.07</span>
               <span className="rr-row-price-g">£195<span className="rr-row-unit-g"> /mo</span></span>
             </div>
             <button className="rr-btn-ghost" onClick={() => window.open('https://momence.com/m/812642', '_blank')}>Get founding rate</button>
