@@ -1297,6 +1297,34 @@ const Pricing = () => {
   </div>
 </div>
 
+{/* INTRO PACK */}
+<div className="rr-intro-section" style={{ marginBottom: '4rem' }}>
+  <div className="rr-intro-inner">
+    <div>
+      <p className="rr-intro-tag">New clients only · valid 30 days</p>
+      <p className="rr-intro-title">Intro pack</p>
+      <p className="rr-intro-sub">3 classes to find your feet. The best way to try Renegade properly before committing to a membership.</p>
+      <div className="rr-intro-prices">
+        <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>£48 <span style={{fontWeight:400,fontSize:'12px',color:'rgba(255,255,255,0.5)'}}>founding rate</span></span>
+        <span style={{color:'rgba(255,255,255,0.25)',textDecoration:'line-through',fontSize:'14px'}}>£55 <span style={{textDecoration:'none',color:'rgba(255,255,255,0.25)',fontSize:'12px'}}>standard rate</span></span>
+      </div>
+      <ul className="rr-dropin-bullets">
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>£16 per class at founding rate (£18.33 standard)</li>
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>Use across any 3 classes in the schedule</li>
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>All levels welcome — great for complete beginners</li>
+      </ul>
+    </div>
+    <div className="rr-intro-right">
+      <div style={{textAlign:'right'}}>
+        <p style={{fontSize:'9px',letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)',fontWeight:600,marginBottom:'4px'}}>3 classes</p>
+        <p style={{fontSize:'52px',fontWeight:900,color:'#f0e6d6',letterSpacing:'-3px',lineHeight:1}}>£48</p>
+        <p style={{fontSize:'11px',color:'rgba(255,255,255,0.3)',marginTop:'4px',textDecoration:'line-through'}}>£55 standard</p>
+      </div>
+      <button className="rr-btn-ghost" style={{width:'auto',padding:'13px 28px'}}>Book intro pack</button>
+    </div>
+  </div>
+</div>
+
 {/* MONTHLY MEMBERSHIPS */}
 <div style={{marginTop:'4.5rem',marginBottom:'1rem'}}>
   <p className="rr-section-heading">Monthly memberships.</p>
@@ -1499,33 +1527,6 @@ const Pricing = () => {
   </div>
 </div>
 
-{/* INTRO PACK */}
-<div className="rr-intro-section" style={{ marginBottom: '4rem' }}>
-  <div className="rr-intro-inner">
-    <div>
-      <p className="rr-intro-tag">New clients only · valid 30 days</p>
-      <p className="rr-intro-title">Intro pack</p>
-      <p className="rr-intro-sub">3 classes to find your feet. The best way to try Renegade properly before committing to a membership.</p>
-      <div className="rr-intro-prices">
-        <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>£48 <span style={{fontWeight:400,fontSize:'12px',color:'rgba(255,255,255,0.5)'}}>founding rate</span></span>
-        <span style={{color:'rgba(255,255,255,0.25)',textDecoration:'line-through',fontSize:'14px'}}>£55 <span style={{textDecoration:'none',color:'rgba(255,255,255,0.25)',fontSize:'12px'}}>standard rate</span></span>
-      </div>
-      <ul className="rr-dropin-bullets">
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>£16 per class at founding rate (£18.33 standard)</li>
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>Use across any 3 classes in the schedule</li>
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>All levels welcome — great for complete beginners</li>
-      </ul>
-    </div>
-    <div className="rr-intro-right">
-      <div style={{textAlign:'right'}}>
-        <p style={{fontSize:'9px',letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)',fontWeight:600,marginBottom:'4px'}}>3 classes</p>
-        <p style={{fontSize:'52px',fontWeight:900,color:'#f0e6d6',letterSpacing:'-3px',lineHeight:1}}>£48</p>
-        <p style={{fontSize:'11px',color:'rgba(255,255,255,0.3)',marginTop:'4px',textDecoration:'line-through'}}>£55 standard</p>
-      </div>
-      <button className="rr-btn-ghost" style={{width:'auto',padding:'13px 28px'}}>Book intro pack</button>
-    </div>
-  </div>
-</div>
       </div>
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
     </>
