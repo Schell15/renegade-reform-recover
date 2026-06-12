@@ -1306,7 +1306,7 @@ const Pricing = () => {
       <div style={{textAlign:'right'}}>
         <p style={{fontSize:'9px',letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)',fontWeight:600,marginBottom:'4px'}}>3 classes</p>
         <p style={{fontSize:'52px',fontWeight:900,color:'#f0e6d6',letterSpacing:'-3px',lineHeight:1}}>£48</p>
-        <p style={{fontSize:'11px',color:'rgba(255,255,255,0.3)',marginTop:'4px',textDecoration:'line-through'}}>£55 standard</p>
+        <p style={{fontSize:'11px',color:'rgba(255,255,255,0.3)',marginTop:'4px',textDecoration:'line-through'}}>£55 from 31.07</p>
       </div>
       <button className="rr-btn-ghost" style={{width:'auto',padding:'13px 28px'}} onClick={() => window.open('https://momence.com/Renegade-Reformer/membership/Intro-Offer---Class-Pack/763559', '_blank')}>Book intro pack</button>
     </div>
@@ -1372,7 +1372,7 @@ const Pricing = () => {
               <span className="rr-row-price-f">£72<span className="rr-row-unit-f"> /mo</span></span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">Standard Rate</span>
+              <span className="rr-row-label-g">from 31.07</span>
               <span className="rr-row-price-g">£85<span className="rr-row-unit-g"> /mo</span></span>
             </div>
             <button className="rr-btn-ghost" style={{cursor:'pointer'}} onClick={() => window.open('https://momence.com/m/811786', '_blank')}>Get founding rate</button>
@@ -1437,7 +1437,7 @@ const Pricing = () => {
               <span className="rr-row-price-f">£128<span className="rr-row-unit-f"> /mo</span></span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">Standard Rate</span>
+              <span className="rr-row-label-g">from 31.07</span>
               <span className="rr-row-price-g">£150<span className="rr-row-unit-g"> /mo</span></span>
             </div>
             <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/812640', '_blank')}>Get founding rate</button>
@@ -1503,7 +1503,7 @@ const Pricing = () => {
               <span className="rr-row-price-f">£168<span className="rr-row-unit-f"> /mo</span></span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">Standard Rate</span>
+              <span className="rr-row-label-g">from 31.07</span>
               <span className="rr-row-price-g">£195<span className="rr-row-unit-g"> /mo</span></span>
             </div>
             <button className="rr-btn-ghost" onClick={() => window.open('https://momence.com/m/812642', '_blank')}>Get founding rate</button>
