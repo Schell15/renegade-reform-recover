@@ -1,43 +1,9 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 
 // Updated to use direct image paths
 const Home = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
-
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-
-    const data = new FormData();
-    data.append("name", formData.name);
-    data.append("email", formData.email);
-    data.append("message", formData.message);
-    data.append("_replyto", formData.email);
-
-    try {
-      const response = await fetch("https://formspree.io/f/mykabygl", {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: data,
-      });
-      if (response.ok) {
-        setSubmitted(true);
-      }
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <main
