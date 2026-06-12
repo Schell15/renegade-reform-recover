@@ -910,7 +910,7 @@ const PRICING_BODY_HEAD = `<nav class="rn-nav">
   </header>
 `;
 
-const PRICING_BODY_TAIL = `
+const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom:0;">
   <!-- FOUNDING PERKS BANNER -->
   <div class="perks-banner">
     <div class="perks-top">
