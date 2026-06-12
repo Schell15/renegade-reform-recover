@@ -1002,11 +1002,7 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
           <span style="font-size:72px;font-weight:900;color:#f0e6d6;letter-spacing:-0.03em;line-height:1;">12</span>
           <span style="font-size:18px;font-weight:600;color:rgba(255,255,255,0.55);align-self:flex-end;padding-bottom:8px;">classes</span>
         </div>
-        <p class="pk-eyebrow" style="margin-top:8px;">per class</p>
-        <div class="pk-row"><span class="pk-sym">£</span><span class="pk-num">21.00</span><span class="pk-unit">/ class</span></div>
-        <p class="pk-total">£252 total</p>
-        <!-- ↓ replace YOUR_URL_HERE -->
-        <a href="#" class="btn-ghost">Buy pack</a>
+        <button class="btn-ghost" disabled style="opacity:0.5;cursor:not-allowed">Coming soon</button>
       </div>
 
     </div>
