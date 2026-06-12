@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
@@ -6,12 +7,46 @@ import { SEO } from "@/components/SEO";
 // Updated to use direct image paths
 const Home = () => {
   const navigate = useNavigate();
-  const {
-    toast
-  } = useToast();
-  return <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-8 py-12 relative overflow-hidden" style={{
-    background: 'radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%)'
-  }}>
+  const { toast } = useToast();
+
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const data = new FormData();
+    data.append("name", formData.name);
+    data.append("email", formData.email);
+    data.append("message", formData.message);
+    data.append("_replyto", formData.email);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mykabygl", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      if (response.ok) {
+        setSubmitted(true);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <main
+      className="min-h-screen font-grotesk flex flex-col items-center justify-center px-8 py-12 relative overflow-hidden"
+      style={{
+        background:
+          "radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%)",
+      }}
+    >
       <SEO
         title="Reformer Pilates Studio in Bristol | Renegade Reformer"
         description="Renegade Reformer is a premium Reformer Pilates studio in Bristol. Strength-led, contemporary classes opening Spring 2026, get early access now."
@@ -19,82 +54,335 @@ const Home = () => {
       />
       <div className="relative z-10 flex flex-col items-center justify-center w-full">
         {/* Main Header Logo */}
-        <div className="animate-fade-in animate-scale-in" style={{
-        animationDelay: '0.2s'
-      }}>
+        <div
+          className="animate-fade-in animate-scale-in"
+          style={{ animationDelay: "0.2s" }}
+        >
           {/* White Eagle Logo */}
           <div className="mb-6">
-            <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo, reformer Pilates Bristol" className="w-32 h-32 mx-auto object-contain" />
+            <img
+              src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
+              alt="Renegade Reformer eagle logo, reformer Pilates Bristol"
+              className="w-32 h-32 mx-auto object-contain"
+            />
           </div>
-          
+
           {/* Studio Name */}
           <div className="mb-4 inline-block">
             <h1 className="text-primary font-neogrotesk text-4xl sm:text-7xl font-bold tracking-tight">
               RENEGADE.
             </h1>
-            <h2 className="text-primary font-bigcaslon text-4xl sm:text-6xl tracking-tight -mt-2 text-right">reformer</h2>
+            <h2 className="text-primary font-bigcaslon text-4xl sm:text-6xl tracking-tight -mt-2 text-right">
+              reformer
+            </h2>
           </div>
         </div>
         <p className="sr-only">Reformer Pilates Studio in Bristol</p>
 
         {/* Tagline */}
-        <p className="font-light uppercase text-center mb-[52px]" style={{ fontSize: '11px', letterSpacing: '0.35em', color: '#8a6e50' }}>
+        <p
+          className="font-light uppercase text-center mb-[52px]"
+          style={{
+            fontSize: "11px",
+            letterSpacing: "0.35em",
+            color: "#8a6e50",
+          }}
+        >
           reform &nbsp;&middot;&nbsp; repower &nbsp;&middot;&nbsp; recover
         </p>
 
         {/* Divider + CTA grid */}
-        <div className="w-full" style={{ maxWidth: 'min(600px, 86vw)' }}>
-          <div style={{ height: '0.5px', background: '#4a2e12' }} aria-hidden="true"></div>
-          <nav className="grid grid-cols-3" aria-label="Site sections" style={{ borderBottom: '0.5px solid #4a2e12' }}>
+        <div className="w-full" style={{ maxWidth: "min(600px, 86vw)" }}>
+          <div
+            style={{ height: "0.5px", background: "#4a2e12" }}
+            aria-hidden="true"
+          ></div>
+          <nav
+            className="grid grid-cols-3"
+            aria-label="Site sections"
+            style={{ borderBottom: "0.5px solid #4a2e12" }}
+          >
             <button
-              onClick={() => navigate('/reformer-signup')}
+              onClick={() => navigate("/reformer-signup")}
               className="py-6 px-4 text-center transition-colors hover:bg-white/[0.035]"
-              style={{ borderTop: '0.5px solid #4a2e12' }}
+              style={{ borderTop: "0.5px solid #4a2e12" }}
             >
-              <span className="block uppercase font-bold mb-[5px]" style={{ fontSize: '13px', letterSpacing: '0.14em', color: '#f0ebe3' }}>Early Access</span>
-              <span className="block uppercase font-light" style={{ fontSize: '11px', letterSpacing: '0.22em', color: '#6a5035' }}>Sign up now</span>
+              <span
+                className="block uppercase font-bold mb-[5px]"
+                style={{
+                  fontSize: "13px",
+                  letterSpacing: "0.14em",
+                  color: "#f0ebe3",
+                }}
+              >
+                Early Access
+              </span>
+              <span
+                className="block uppercase font-light"
+                style={{
+                  fontSize: "11px",
+                  letterSpacing: "0.22em",
+                  color: "#6a5035",
+                }}
+              >
+                Sign up now
+              </span>
             </button>
             <button
-              onClick={() => { window.location.href = '/reformerpilates.html'; }}
+              onClick={() => {
+                window.location.href = "/reformerpilates.html";
+              }}
               className="py-6 px-4 text-center transition-colors hover:bg-white/[0.035]"
-              style={{ borderTop: '0.5px solid #4a2e12', borderLeft: '0.5px solid #4a2e12', borderRight: '0.5px solid #4a2e12' }}
+              style={{
+                borderTop: "0.5px solid #4a2e12",
+                borderLeft: "0.5px solid #4a2e12",
+                borderRight: "0.5px solid #4a2e12",
+              }}
             >
-              <span className="block uppercase font-bold mb-[5px]" style={{ fontSize: '13px', letterSpacing: '0.14em', color: '#f0ebe3' }}>Reformer Pilates</span>
-              <span className="block uppercase font-light" style={{ fontSize: '11px', letterSpacing: '0.22em', color: '#6a5035' }}>Full Class Info</span>
+              <span
+                className="block uppercase font-bold mb-[5px]"
+                style={{
+                  fontSize: "13px",
+                  letterSpacing: "0.14em",
+                  color: "#f0ebe3",
+                }}
+              >
+                Reformer Pilates
+              </span>
+              <span
+                className="block uppercase font-light"
+                style={{
+                  fontSize: "11px",
+                  letterSpacing: "0.22em",
+                  color: "#6a5035",
+                }}
+              >
+                Full Class Info
+              </span>
             </button>
             <button
-              onClick={() => navigate('/pricing')}
+              onClick={() => navigate("/pricing")}
               className="py-6 px-4 text-center transition-colors hover:bg-white/[0.035]"
-              style={{ borderTop: '0.5px solid #4a2e12' }}
+              style={{ borderTop: "0.5px solid #4a2e12" }}
             >
-              <span className="block uppercase font-bold mb-[5px]" style={{ fontSize: '13px', letterSpacing: '0.14em', color: '#f0ebe3' }}>Pricing</span>
-              <span className="block uppercase font-light" style={{ fontSize: '11px', letterSpacing: '0.22em', color: '#6a5035' }}>Founders discount</span>
+              <span
+                className="block uppercase font-bold mb-[5px]"
+                style={{
+                  fontSize: "13px",
+                  letterSpacing: "0.14em",
+                  color: "#f0ebe3",
+                }}
+              >
+                Pricing
+              </span>
+              <span
+                className="block uppercase font-light"
+                style={{
+                  fontSize: "11px",
+                  letterSpacing: "0.22em",
+                  color: "#6a5035",
+                }}
+              >
+                Founders discount
+              </span>
             </button>
           </nav>
         </div>
 
         {/* Bottom */}
         <div className="mt-9 text-center">
-          <p className="uppercase font-light mb-2" style={{ fontSize: '11px', letterSpacing: '0.28em', color: '#6a5035' }}>FOUNDERS RATES NOW LIVE FOR:</p>
-          <p className="uppercase" style={{ fontSize: '13px', letterSpacing: '0.12em', color: '#b8a080' }}>Drop ins · Memberships · Intro Packs</p>
+          <p
+            className="uppercase font-light mb-2"
+            style={{
+              fontSize: "11px",
+              letterSpacing: "0.28em",
+              color: "#6a5035",
+            }}
+          >
+            FOUNDERS RATES NOW LIVE FOR:
+          </p>
+          <p
+            className="uppercase"
+            style={{
+              fontSize: "13px",
+              letterSpacing: "0.12em",
+              color: "#b8a080",
+            }}
+          >
+            Drop ins · Memberships · Intro Packs
+          </p>
         </div>
       </div>
 
       {/* Journal section */}
-      <div className="relative z-10 w-full mt-12" style={{ maxWidth: 'min(600px, 86vw)', display: 'none' }}>
-        <div style={{ height: '0.5px', background: '#4a2e12' }} aria-hidden="true"></div>
+      <div
+        className="relative z-10 w-full mt-12"
+        style={{ maxWidth: "min(600px, 86vw)", display: "none" }}
+      >
+        <div
+          style={{ height: "0.5px", background: "#4a2e12" }}
+          aria-hidden="true"
+        ></div>
         <a
           href="/journal.html"
           className="block py-8 px-4 text-center transition-colors hover:bg-white/[0.035]"
         >
-          <span className="block uppercase font-bold mb-[6px]" style={{ fontSize: '13px', letterSpacing: '0.22em', color: '#f0ebe3' }}>
+          <span
+            className="block uppercase font-bold mb-[6px]"
+            style={{
+              fontSize: "13px",
+              letterSpacing: "0.22em",
+              color: "#f0ebe3",
+            }}
+          >
             The Renegade Journal
           </span>
-          <span className="block font-light" style={{ fontSize: '12px', letterSpacing: '0.06em', color: '#8a5035' }}>
+          <span
+            className="block font-light"
+            style={{
+              fontSize: "12px",
+              letterSpacing: "0.06em",
+              color: "#8a5035",
+            }}
+          >
             Pilates guides, class breakdowns &amp; studio news
           </span>
         </a>
       </div>
-    </main>;
+
+      {/* Get In Touch section */}
+      <div
+        className="relative z-10 w-full mt-12"
+        style={{ maxWidth: "min(600px, 86vw)" }}
+      >
+        <div
+          style={{ height: "0.5px", background: "#4a2e12" }}
+          aria-hidden="true"
+        ></div>
+        <div className="py-12 px-4">
+          <h2
+            className="text-center font-neogrotesk text-3xl sm:text-4xl font-bold tracking-tight mb-2"
+            style={{ color: "#f0ebe3" }}
+          >
+            Get In Touch
+          </h2>
+          <p
+            className="text-center font-light mb-8"
+            style={{
+              fontSize: "13px",
+              letterSpacing: "0.12em",
+              color: "#8a6e50",
+            }}
+          >
+            We'd love to hear from you
+          </p>
+
+          {submitted ? (
+            <div className="text-center py-8">
+              <p
+                className="font-neogrotesk text-xl mb-2"
+                style={{ color: "#f0ebe3" }}
+              >
+                Thank you!
+              </p>
+              <p
+                className="font-light"
+                style={{ fontSize: "13px", color: "#8a6e50" }}
+              >
+                We'll be in touch soon.
+              </p>
+            </div>
+          ) : (
+            <form
+              action="https://formspree.io/f/mykabygl"
+              method="POST"
+              onSubmit={handleSubmit}
+              className="space-y-4"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                className="w-full px-4 py-3 rounded-md text-sm outline-none transition-colors placeholder:text-[#6a5035] focus:bg-white/[0.08]"
+                style={{
+                  background: "rgba(240, 235, 227, 0.05)",
+                  border: "0.5px solid #4a2e12",
+                  color: "#f0ebe3",
+                  letterSpacing: "0.06em",
+                }}
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                className="w-full px-4 py-3 rounded-md text-sm outline-none transition-colors placeholder:text-[#6a5035] focus:bg-white/[0.08]"
+                style={{
+                  background: "rgba(240, 235, 227, 0.05)",
+                  border: "0.5px solid #4a2e12",
+                  color: "#f0ebe3",
+                  letterSpacing: "0.06em",
+                }}
+              />
+              <input type="hidden" name="_replyto" value={formData.email} />
+              <textarea
+                name="message"
+                placeholder="Message"
+                required
+                rows={4}
+                value={formData.message}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
+                className="w-full px-4 py-3 rounded-md text-sm outline-none transition-colors resize-none placeholder:text-[#6a5035] focus:bg-white/[0.08]"
+                style={{
+                  background: "rgba(240, 235, 227, 0.05)",
+                  border: "0.5px solid #4a2e12",
+                  color: "#f0ebe3",
+                  letterSpacing: "0.06em",
+                }}
+              />
+              <Button
+                type="submit"
+                disabled={loading}
+                className="w-full py-6 h-auto rounded-none uppercase font-bold transition-colors disabled:opacity-50 hover:opacity-90"
+                style={{
+                  background: "#f0ebe3",
+                  color: "#1c0a00",
+                  fontSize: "13px",
+                  letterSpacing: "0.14em",
+                }}
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
+          )}
+
+          <div className="mt-8 text-center">
+            <a
+              href="mailto:studio@renegadereformer.co.uk"
+              className="transition-colors hover:opacity-80"
+              style={{
+                fontSize: "13px",
+                letterSpacing: "0.12em",
+                color: "#b8a080",
+              }}
+            >
+              studio@renegadereformer.co.uk
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
 };
 export default Home;
