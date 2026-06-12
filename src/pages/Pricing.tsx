@@ -578,7 +578,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
 
     .pp-scope *, .pp-scope *::before, .pp-scope *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .pp-scope { background: #140800; color: #f0e6d6; font-family: 'Inter', sans-serif; padding: 4rem 2rem; }
+    .pp-scope { background: transparent; color: #f0e6d6; font-family: 'Inter', sans-serif; padding: 4rem 2rem; }
 
     .pp-scope .container { max-width: 1100px; margin: 0 auto; }
 
@@ -590,7 +590,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
 
 
     
-    .pp-scope .banner { background: #f0e6d6; border-radius: 0; overflow: hidden; margin-bottom: 4.5rem; margin-left: -2rem; margin-right: -2rem; }
+    .pp-scope .banner { background: #f0e6d6; border-radius: 0; overflow: hidden; margin-bottom: 4.5rem; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
 
     .pp-scope .banner-inner { display: grid; grid-template-columns: 1fr auto; align-items: stretch; max-width: 1100px; margin: 0 auto; }
 
