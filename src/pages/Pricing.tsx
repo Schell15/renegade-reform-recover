@@ -1294,7 +1294,7 @@ const Pricing = () => {
       <p className="rr-intro-sub">3 classes to find your feet. The best way to try Renegade properly before committing to a membership.</p>
       <div className="rr-intro-prices">
         <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>£48 <span style={{fontWeight:400,fontSize:'12px',color:'rgba(255,255,255,0.5)'}}>founding rate</span></span>
-        <span style={{color:'rgba(255,255,255,0.25)',textDecoration:'line-through',fontSize:'14px'}}>£55 <span style={{textDecoration:'none',color:'rgba(255,255,255,0.25)',fontSize:'12px'}}>standard rate</span></span>
+        <span style={{color:'rgba(255,255,255,0.25)',textDecoration:'line-through',fontSize:'14px'}}>£55 <span style={{textDecoration:'none',color:'rgba(255,255,255,0.25)',fontSize:'12px'}}>from 31.07</span></span>
       </div>
       <ul className="rr-dropin-bullets">
         <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>£16 per class at founding rate (£18.33 standard)</li>
