@@ -1036,7 +1036,7 @@ const PRICING_BODY = `<nav class="rn-nav">
       </div>
 
       <!-- PRO (open by default) -->
-      <div class="acc-item open" data-acc>
+      <div class="acc-item" data-acc>
         <div class="acc-header" data-acc-toggle>
           <div class="acc-left">
             <span class="acc-eyebrow">8 classes / month</span>
