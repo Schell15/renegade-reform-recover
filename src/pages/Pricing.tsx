@@ -1472,6 +1472,10 @@ const Pricing = () => {
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><text x="12" y="17" textAnchor="middle" fontSize="15" fontFamily="Georgia,serif" fill="rgba(210,160,120,0.8)" stroke="none">£</text></svg></div>
               <span className="rr-acc-feat-text"><strong>Best value</strong> — lowest per-class price of any tier</span>
             </li>
+            <li className="rr-acc-feat">
+              <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+              <span className="rr-acc-feat-text"><strong>Founding welcome gift</strong> — branded socks & tote</span>
+            </li>
           </ul>
           <div className="rr-acc-pricing-right">
             <div className="rr-acc-per-class-box">
