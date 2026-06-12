@@ -1018,14 +1018,6 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
 
 </div>
 
-<div id="cs-toast" role="dialog" aria-modal="true" aria-hidden="true" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.55);z-index:9999;font-family:'Inter',sans-serif;">
-  <div style="position:relative;max-width:420px;width:calc(100% - 32px);background:#5a3a2a;color:#fff;border-radius:14px;padding:24px 28px;box-shadow:0 20px 60px rgba(0,0,0,0.5);">
-    <button type="button" id="cs-toast-close" aria-label="Close" style="position:absolute;top:10px;right:12px;background:transparent;border:0;color:rgba(255,255,255,0.7);font-size:20px;cursor:pointer;line-height:1;">×</button>
-    <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;">Coming Soon</h3>
-    <p style="font-size:15px;line-height:1.5;color:rgba(255,255,255,0.92);">Reformer Pilates class details will be available shortly.</p>
-  </div>
-</div>
-
 `;
 
 
