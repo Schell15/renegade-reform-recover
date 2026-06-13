@@ -1485,6 +1485,7 @@ const Pricing = () => {
 </div>
 
       </div>
+      <LeadCaptureSection />
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
     </>
   );
