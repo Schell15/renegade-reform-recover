@@ -1010,6 +1010,31 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
     </div>
   </section>
 
+  <div style="margin:3rem 0;">
+    <button
+      type="button"
+      id="rr-toggle-notify"
+      onclick="toggleNotifyRR()"
+      aria-expanded="false"
+      style="width:100%;display:flex;align-items:center;justify-content:space-between;background:transparent;border:1px solid rgba(240,230,214,0.3);border-radius:8px;padding:1.1rem 1.4rem;cursor:pointer;color:#f0e6d6;font-family:inherit;"
+    >
+      <span style="display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;color:#f0e6d6;">
+        <span aria-hidden="true" style="font-size:14px;opacity:0.85;">〰</span>
+        Click here to be notified when live
+      </span>
+      <span id="rr-chevron-notify" aria-hidden="true" style="font-size:18px;color:#f0e6d6;display:inline-block;transition:transform 0.3s ease;transform:rotate(0deg);">›</span>
+    </button>
+    <div
+      id="rr-panel-notify"
+      style="overflow:hidden;max-height:0px;opacity:0;transition:max-height 0.5s ease, opacity 0.4s ease;"
+    >
+      <div style="padding:1.25rem 0 0;">
+        <style>:root { --momenceColorBackground: #230e00; --momenceColorPrimary: 255, 255, 255; --momenceColorBlack: 255, 255, 255; }</style>
+        <div id="momence-plugin-lead-form-notify"></div>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
     <p>All memberships roll monthly after an initial 1-month term. Class packs are non-refundable and non-transferable. Founding member rates are strictly limited to 50 spots and locked in for life, your rate never increases as long as your membership remains active.</p>
     <div>
@@ -1057,6 +1082,54 @@ const Pricing = () => {
     s.src = `https://momence.com/plugin/lead-form/lead-form.js?t=${Date.now()}`;
     if (container) container.appendChild(s);
   }, [leadOpen, leadFormKey]);
+
+  useEffect(() => {
+    const btn = document.getElementById('rr-toggle-notify');
+    const panel = document.getElementById('rr-panel-notify');
+    const chevron = document.getElementById('rr-chevron-notify');
+    const container = document.getElementById('momence-plugin-lead-form-notify');
+    if (!btn || !panel || !chevron || !container) return;
+
+    let isOpen = false;
+
+    const toggle = () => {
+      isOpen = !isOpen;
+      btn.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen) {
+        panel.style.maxHeight = '2000px';
+        panel.style.opacity = '1';
+        chevron.style.transform = 'rotate(90deg)';
+        container.innerHTML = '';
+        const s = document.createElement('script');
+        s.async = true;
+        s.type = 'module';
+        s.id = 'momence-plugin-lead-form-src-notify';
+        s.setAttribute('host_id', '227483');
+        s.setAttribute('fields', 'fullName,email,phoneNumber,rrrrrrrr');
+        s.setAttribute('token', 'zQ7OKzkB7l');
+        s.setAttribute('country_code', 'gb');
+        s.setAttribute('source_id', '216491');
+        s.setAttribute('data-field-def', '{"fullName":{"type":"text","label":"Full name","required":true,"hidden":false},"email":{"type":"email","label":"Email","required":true},"phoneNumber":{"type":"phone-number","label":"Phone number","required":true},"rrrrrrrr":{"type":"text","label":"Any questions or just want to be kept in the loop?","required":false,"hidden":false,"placeholder":"Any questions or just want to be kept in the loop?"}}');
+        s.src = `https://momence.com/plugin/lead-form/lead-form.js?t=${Date.now()}`;
+        container.appendChild(s);
+      } else {
+        panel.style.maxHeight = '0px';
+        panel.style.opacity = '0';
+        chevron.style.transform = 'rotate(0deg)';
+        setTimeout(() => {
+          const existing = document.getElementById('momence-plugin-lead-form-src-notify');
+          if (existing) existing.remove();
+          container.innerHTML = '';
+        }, 500);
+      }
+    };
+
+    (window as any).toggleNotifyRR = toggle;
+
+    return () => {
+      delete (window as any).toggleNotifyRR;
+    };
+  }, []);
   useEffect(() => {
     // Nav scroll effect
     const nav = document.querySelector('.rn-nav') as HTMLElement | null;
