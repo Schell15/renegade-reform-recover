@@ -1027,9 +1027,21 @@ const Pricing = () => {
   const [openAcc, setOpenAcc] = useState<string | null>(null);
   const toggleAcc = (name: string) => setOpenAcc(prev => (prev === name ? null : name));
   const [leadOpen, setLeadOpen] = useState(false);
+  const [leadFormKey, setLeadFormKey] = useState(0);
+
+  const toggleLeadForm = () => {
+    setLeadOpen(prev => {
+      const nextOpen = !prev;
+      if (nextOpen) setLeadFormKey(key => key + 1);
+      return nextOpen;
+    });
+  };
 
   useEffect(() => {
+    const existing = document.getElementById('momence-plugin-lead-form-src');
+    if (existing) existing.remove();
     if (!leadOpen) return;
+
     const existing = document.getElementById('momence-plugin-lead-form-src');
     if (existing) existing.remove();
     const container = document.getElementById('momence-plugin-lead-form');
@@ -1046,7 +1058,7 @@ const Pricing = () => {
     s.setAttribute('data-field-def', '{"fullName":{"type":"text","label":"Full name","required":true,"hidden":false},"email":{"type":"email","label":"Email","required":true},"phoneNumber":{"type":"phone-number","label":"Phone number","required":true},"aaawwee":{"type":"text","label":"How can we help?","required":true,"hidden":false}}');
     s.src = `https://momence.com/plugin/lead-form/lead-form.js?t=${Date.now()}`;
     if (container) container.appendChild(s);
-  }, [leadOpen]);
+  }, [leadOpen, leadFormKey]);
   useEffect(() => {
     // Nav scroll effect
     const nav = document.querySelector('.rn-nav') as HTMLElement | null;
