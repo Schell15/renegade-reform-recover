@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { SEO } from "@/components/SEO";
-import LeadCaptureSection from "@/components/LeadCaptureSection";
 
 const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1485,7 +1484,6 @@ const Pricing = () => {
 </div>
 
       </div>
-      <LeadCaptureSection />
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
     </>
   );
