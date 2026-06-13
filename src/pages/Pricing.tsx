@@ -1027,11 +1027,21 @@ const Pricing = () => {
   const [openAcc, setOpenAcc] = useState<string | null>(null);
   const toggleAcc = (name: string) => setOpenAcc(prev => (prev === name ? null : name));
   const [leadOpen, setLeadOpen] = useState(false);
+  const [leadFormKey, setLeadFormKey] = useState(0);
+
+  const toggleLeadForm = () => {
+    setLeadOpen(prev => {
+      const nextOpen = !prev;
+      if (nextOpen) setLeadFormKey(key => key + 1);
+      return nextOpen;
+    });
+  };
 
   useEffect(() => {
-    if (!leadOpen) return;
     const existing = document.getElementById('momence-plugin-lead-form-src');
     if (existing) existing.remove();
+    if (!leadOpen) return;
+
     const container = document.getElementById('momence-plugin-lead-form');
     if (container) container.innerHTML = '';
     const s = document.createElement('script');
@@ -1046,7 +1056,7 @@ const Pricing = () => {
     s.setAttribute('data-field-def', '{"fullName":{"type":"text","label":"Full name","required":true,"hidden":false},"email":{"type":"email","label":"Email","required":true},"phoneNumber":{"type":"phone-number","label":"Phone number","required":true},"aaawwee":{"type":"text","label":"How can we help?","required":true,"hidden":false}}');
     s.src = `https://momence.com/plugin/lead-form/lead-form.js?t=${Date.now()}`;
     if (container) container.appendChild(s);
-  }, [leadOpen]);
+  }, [leadOpen, leadFormKey]);
   useEffect(() => {
     // Nav scroll effect
     const nav = document.querySelector('.rn-nav') as HTMLElement | null;
@@ -1508,7 +1518,7 @@ const Pricing = () => {
 <div style={{margin:'3rem 0'}}>
   <button
     type="button"
-    onClick={() => setLeadOpen(v => !v)}
+    onClick={toggleLeadForm}
     aria-expanded={leadOpen}
     style={{
       width:'100%', display:'flex', alignItems:'center', justifyContent:'space-between',
@@ -1532,7 +1542,7 @@ const Pricing = () => {
   >
     <div style={{padding:'1.25rem 0 0'}}>
       <style>{`:root { --momenceColorBackground: #140800; --momenceColorPrimary: 255, 255, 255; --momenceColorBlack: 255, 255, 255; }`}</style>
-      <div id="momence-plugin-lead-form"></div>
+      {leadOpen && <div key={leadFormKey} id="momence-plugin-lead-form"></div>}
     </div>
   </div>
 </div>
