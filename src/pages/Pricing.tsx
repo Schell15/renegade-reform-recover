@@ -1026,6 +1026,27 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
 const Pricing = () => {
   const [openAcc, setOpenAcc] = useState<string | null>(null);
   const toggleAcc = (name: string) => setOpenAcc(prev => (prev === name ? null : name));
+  const [leadOpen, setLeadOpen] = useState(false);
+
+  useEffect(() => {
+    if (!leadOpen) return;
+    const existing = document.getElementById('momence-plugin-lead-form-src');
+    if (existing) existing.remove();
+    const container = document.getElementById('momence-plugin-lead-form');
+    if (container) container.innerHTML = '';
+    const s = document.createElement('script');
+    s.async = true;
+    s.type = 'module';
+    s.id = 'momence-plugin-lead-form-src';
+    s.setAttribute('host_id', '227483');
+    s.setAttribute('fields', 'fullName,email,phoneNumber,aaawwee');
+    s.setAttribute('token', 'zQ7OKzkB7l');
+    s.setAttribute('country_code', 'gb');
+    s.setAttribute('source_id', '216491');
+    s.setAttribute('data-field-def', '{"fullName":{"type":"text","label":"Full name","required":true,"hidden":false},"email":{"type":"email","label":"Email","required":true},"phoneNumber":{"type":"phone-number","label":"Phone number","required":true},"aaawwee":{"type":"text","label":"How can we help?","required":true,"hidden":false}}');
+    s.src = 'https://momence.com/plugin/lead-form/lead-form.js';
+    document.body.appendChild(s);
+  }, [leadOpen]);
   useEffect(() => {
     // Nav scroll effect
     const nav = document.querySelector('.rn-nav') as HTMLElement | null;
@@ -1480,6 +1501,54 @@ const Pricing = () => {
       </div>
     </div>
 
+  </div>
+</div>
+
+{/* LEAD CAPTURE ROW */}
+<div style={{margin:'3rem 0'}}>
+  <button
+    type="button"
+    onClick={() => setLeadOpen(v => !v)}
+    aria-expanded={leadOpen}
+    style={{
+      width:'100%', display:'flex', alignItems:'center', justifyContent:'space-between',
+      background:'transparent', border:'1px solid rgba(240,230,214,0.3)', borderRadius:8,
+      padding:'1.1rem 1.4rem', cursor:'pointer', color:'#f0e6d6', fontFamily:'inherit'
+    }}
+  >
+    <span style={{display:'flex',alignItems:'center',gap:12,fontSize:11,letterSpacing:'0.22em',textTransform:'uppercase',fontWeight:600,color:'#f0e6d6'}}>
+      <span aria-hidden="true" style={{fontSize:14,opacity:0.85}}>〰</span>
+      Want to talk it through first?
+    </span>
+    <span aria-hidden="true" style={{fontSize:18,color:'#f0e6d6',display:'inline-block',transition:'transform 0.3s ease',transform:leadOpen?'rotate(90deg)':'rotate(0deg)'}}>›</span>
+  </button>
+  <div
+    style={{
+      overflow:'hidden',
+      maxHeight: leadOpen ? '2000px' : '0px',
+      opacity: leadOpen ? 1 : 0,
+      transition:'max-height 0.5s ease, opacity 0.4s ease',
+    }}
+  >
+    <div style={{padding:'1.25rem 0 0'}}>
+      <style>{`
+        #momence-plugin-lead-form input,
+        #momence-plugin-lead-form select,
+        #momence-plugin-lead-form textarea {
+          background: rgba(240,230,214,0.06) !important;
+          border: 1px solid rgba(240,230,214,0.12) !important;
+          color: #f0e6d6 !important;
+        }
+        #momence-plugin-lead-form input::placeholder,
+        #momence-plugin-lead-form textarea::placeholder { color: rgba(240,230,214,0.5) !important; }
+        #momence-plugin-lead-form button[type="submit"] {
+          background: #f0e6d6 !important;
+          color: #140800 !important;
+          border: none !important;
+        }
+      `}</style>
+      <div id="momence-plugin-lead-form"></div>
+    </div>
   </div>
 </div>
 
