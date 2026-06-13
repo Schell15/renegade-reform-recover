@@ -81,7 +81,7 @@ const Home = () => {
                   color: "#f0ebe3",
                 }}
               >
-                Early Access
+                Our Story
               </span>
               <span
                 className="block uppercase font-light"
@@ -91,7 +91,7 @@ const Home = () => {
                   color: "#6a5035",
                 }}
               >
-                Sign up now
+                We Are Renegade
               </span>
             </button>
             <button

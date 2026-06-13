@@ -32,7 +32,7 @@ const ReformerSignup = () => {
   const [expandedImage, setExpandedImage] = useState<string | null>(null);
 
   return (
-    <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
+    <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%)'}}>
       <SEO
         title="Join Renegade Reformer | Sign Up for Reformer Pilates Bristol"
         description="Sign up for early access to Renegade Reformer, Bristol's strength-led reformer Pilates studio. Be the first to book when we open."
