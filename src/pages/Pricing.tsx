@@ -1531,6 +1531,7 @@ const Pricing = () => {
     }}
   >
     <div style={{padding:'1.25rem 0 0'}}>
+      <style>{`:root { --momenceColorBackground: #140800; --momenceColorPrimary: 255, 255, 255; --momenceColorBlack: 255, 255, 255; }`}</style>
       <div id="momence-plugin-lead-form"></div>
     </div>
   </div>
