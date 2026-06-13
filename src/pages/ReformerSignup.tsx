@@ -32,7 +32,7 @@ const ReformerSignup = () => {
   const [expandedImage, setExpandedImage] = useState<string | null>(null);
 
   return (
-    <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'linear-gradient(to bottom, #170701, #4f2202)'}}>
+    <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%)'}}>
       <SEO
         title="Join Renegade Reformer | Sign Up for Reformer Pilates Bristol"
         description="Sign up for early access to Renegade Reformer, Bristol's strength-led reformer Pilates studio. Be the first to book when we open."
@@ -77,7 +77,7 @@ const ReformerSignup = () => {
               <img src={reformer4} alt="Renegade Reformer exterior sketch, reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_2.1s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer4)} />
             </div>
             <p className="text-primary text-sm tracking-wide max-w-2xl mx-auto mt-6 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.5s_forwards] font-sans px-0 py-[50px] font-extrabold sm:text-base">
-              Renegade is a community-led, pilates experience. We introduce a new concept to bristol, fusing pilates, fitness, immersive set design and interactive audio & lighting production to guide your flow. Designed and built by some of bristol’s finest creative minds. The first of its kind in the UK.
+              Our full build story coming soon!
             </p>
           </div>
         </div>
