@@ -1026,6 +1026,27 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
 const Pricing = () => {
   const [openAcc, setOpenAcc] = useState<string | null>(null);
   const toggleAcc = (name: string) => setOpenAcc(prev => (prev === name ? null : name));
+  const [leadOpen, setLeadOpen] = useState(false);
+
+  useEffect(() => {
+    if (!leadOpen) return;
+    const existing = document.getElementById('momence-plugin-lead-form-src');
+    if (existing) existing.remove();
+    const container = document.getElementById('momence-plugin-lead-form');
+    if (container) container.innerHTML = '';
+    const s = document.createElement('script');
+    s.async = true;
+    s.type = 'module';
+    s.id = 'momence-plugin-lead-form-src';
+    s.setAttribute('host_id', '227483');
+    s.setAttribute('fields', 'fullName,email,phoneNumber,aaawwee');
+    s.setAttribute('token', 'zQ7OKzkB7l');
+    s.setAttribute('country_code', 'gb');
+    s.setAttribute('source_id', '216491');
+    s.setAttribute('data-field-def', '{"fullName":{"type":"text","label":"Full name","required":true,"hidden":false},"email":{"type":"email","label":"Email","required":true},"phoneNumber":{"type":"phone-number","label":"Phone number","required":true},"aaawwee":{"type":"text","label":"How can we help?","required":true,"hidden":false}}');
+    s.src = 'https://momence.com/plugin/lead-form/lead-form.js';
+    document.body.appendChild(s);
+  }, [leadOpen]);
   useEffect(() => {
     // Nav scroll effect
     const nav = document.querySelector('.rn-nav') as HTMLElement | null;
