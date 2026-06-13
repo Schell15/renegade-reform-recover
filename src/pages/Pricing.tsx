@@ -1082,6 +1082,54 @@ const Pricing = () => {
     s.src = `https://momence.com/plugin/lead-form/lead-form.js?t=${Date.now()}`;
     if (container) container.appendChild(s);
   }, [leadOpen, leadFormKey]);
+
+  useEffect(() => {
+    const btn = document.getElementById('rr-toggle-notify');
+    const panel = document.getElementById('rr-panel-notify');
+    const chevron = document.getElementById('rr-chevron-notify');
+    const container = document.getElementById('momence-plugin-lead-form-notify');
+    if (!btn || !panel || !chevron || !container) return;
+
+    let isOpen = false;
+
+    const toggle = () => {
+      isOpen = !isOpen;
+      btn.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen) {
+        panel.style.maxHeight = '2000px';
+        panel.style.opacity = '1';
+        chevron.style.transform = 'rotate(90deg)';
+        container.innerHTML = '';
+        const s = document.createElement('script');
+        s.async = true;
+        s.type = 'module';
+        s.id = 'momence-plugin-lead-form-src-notify';
+        s.setAttribute('host_id', '227483');
+        s.setAttribute('fields', 'fullName,email,phoneNumber,rrrrrrrr');
+        s.setAttribute('token', 'zQ7OKzkB7l');
+        s.setAttribute('country_code', 'gb');
+        s.setAttribute('source_id', '216491');
+        s.setAttribute('data-field-def', '{"fullName":{"type":"text","label":"Full name","required":true,"hidden":false},"email":{"type":"email","label":"Email","required":true},"phoneNumber":{"type":"phone-number","label":"Phone number","required":true},"rrrrrrrr":{"type":"text","label":"Any questions or just want to be kept in the loop?","required":false,"hidden":false,"placeholder":"Any questions or just want to be kept in the loop?"}}');
+        s.src = `https://momence.com/plugin/lead-form/lead-form.js?t=${Date.now()}`;
+        container.appendChild(s);
+      } else {
+        panel.style.maxHeight = '0px';
+        panel.style.opacity = '0';
+        chevron.style.transform = 'rotate(0deg)';
+        setTimeout(() => {
+          const existing = document.getElementById('momence-plugin-lead-form-src-notify');
+          if (existing) existing.remove();
+          container.innerHTML = '';
+        }, 500);
+      }
+    };
+
+    (window as any).toggleNotifyRR = toggle;
+
+    return () => {
+      delete (window as any).toggleNotifyRR;
+    };
+  }, []);
   useEffect(() => {
     // Nav scroll effect
     const nav = document.querySelector('.rn-nav') as HTMLElement | null;
