@@ -1010,7 +1010,7 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
     </div>
   </section>
 
-  <div style="margin:3rem 0;">
+  <div style="margin:1rem 0;">
     <button
       type="button"
       id="rr-toggle-notify"
