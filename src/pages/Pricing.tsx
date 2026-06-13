@@ -1531,32 +1531,7 @@ const Pricing = () => {
     }}
   >
     <div style={{padding:'1.25rem 0 0'}}>
-      <style>{`
-        #momence-plugin-lead-form input,
-        #momence-plugin-lead-form select,
-        #momence-plugin-lead-form textarea {
-          background: rgba(240,230,214,0.06) !important;
-          border: 1px solid rgba(240,230,214,0.12) !important;
-          color: #f0e6d6 !important;
-        }
-        #momence-plugin-lead-form input::placeholder,
-        #momence-plugin-lead-form textarea::placeholder { color: rgba(240,230,214,0.5) !important; }
-        #momence-plugin-lead-form button[type="submit"] {
-          background: #f0e6d6 !important;
-          color: #140800 !important;
-          border: none !important;
-        }
-        #momence-plugin-lead-form > div {
-          background: #140800 !important;
-          border: none !important;
-          border-radius: 0 !important;
-          box-shadow: none !important;
-          padding: 1.5rem !important;
-        }
-      `}</style>
-      <div style={{background:'#140800', borderRadius:'0 0 8px 8px', overflow:'hidden'}}>
-        <div id="momence-plugin-lead-form"></div>
-      </div>
+      <div id="momence-plugin-lead-form"></div>
     </div>
   </div>
 </div>
