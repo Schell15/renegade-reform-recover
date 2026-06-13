@@ -1044,7 +1044,7 @@ const Pricing = () => {
     s.setAttribute('country_code', 'gb');
     s.setAttribute('source_id', '216491');
     s.setAttribute('data-field-def', '{"fullName":{"type":"text","label":"Full name","required":true,"hidden":false},"email":{"type":"email","label":"Email","required":true},"phoneNumber":{"type":"phone-number","label":"Phone number","required":true},"aaawwee":{"type":"text","label":"How can we help?","required":true,"hidden":false}}');
-    s.src = 'https://momence.com/plugin/lead-form/lead-form.js';
+    s.src = `https://momence.com/plugin/lead-form/lead-form.js?t=${Date.now()}`;
     if (container) container.appendChild(s);
   }, [leadOpen]);
   useEffect(() => {
