@@ -1546,8 +1546,17 @@ const Pricing = () => {
           color: #140800 !important;
           border: none !important;
         }
+        #momence-plugin-lead-form > div {
+          background: #140800 !important;
+          border: none !important;
+          border-radius: 0 !important;
+          box-shadow: none !important;
+          padding: 1.5rem !important;
+        }
       `}</style>
-      <div id="momence-plugin-lead-form"></div>
+      <div style={{background:'#140800', borderRadius:'0 0 8px 8px', overflow:'hidden'}}>
+        <div id="momence-plugin-lead-form"></div>
+      </div>
     </div>
   </div>
 </div>
