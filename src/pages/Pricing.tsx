@@ -1010,6 +1010,31 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
     </div>
   </section>
 
+  <div style="margin:3rem 0;">
+    <button
+      type="button"
+      id="rr-toggle-notify"
+      onclick="toggleNotifyRR()"
+      aria-expanded="false"
+      style="width:100%;display:flex;align-items:center;justify-content:space-between;background:transparent;border:1px solid rgba(240,230,214,0.3);border-radius:8px;padding:1.1rem 1.4rem;cursor:pointer;color:#f0e6d6;font-family:inherit;"
+    >
+      <span style="display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;color:#f0e6d6;">
+        <span aria-hidden="true" style="font-size:14px;opacity:0.85;">〰</span>
+        Click here to be notified when live
+      </span>
+      <span id="rr-chevron-notify" aria-hidden="true" style="font-size:18px;color:#f0e6d6;display:inline-block;transition:transform 0.3s ease;transform:rotate(0deg);">›</span>
+    </button>
+    <div
+      id="rr-panel-notify"
+      style="overflow:hidden;max-height:0px;opacity:0;transition:max-height 0.5s ease, opacity 0.4s ease;"
+    >
+      <div style="padding:1.25rem 0 0;">
+        <style>:root { --momenceColorBackground: #230e00; --momenceColorPrimary: 255, 255, 255; --momenceColorBlack: 255, 255, 255; }</style>
+        <div id="momence-plugin-lead-form-notify"></div>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
     <p>All memberships roll monthly after an initial 1-month term. Class packs are non-refundable and non-transferable. Founding member rates are strictly limited to 50 spots and locked in for life, your rate never increases as long as your membership remains active.</p>
     <div>
