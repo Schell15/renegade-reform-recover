@@ -1042,8 +1042,6 @@ const Pricing = () => {
     if (existing) existing.remove();
     if (!leadOpen) return;
 
-    const existing = document.getElementById('momence-plugin-lead-form-src');
-    if (existing) existing.remove();
     const container = document.getElementById('momence-plugin-lead-form');
     if (container) container.innerHTML = '';
     const s = document.createElement('script');
@@ -1520,7 +1518,7 @@ const Pricing = () => {
 <div style={{margin:'3rem 0'}}>
   <button
     type="button"
-    onClick={() => setLeadOpen(v => !v)}
+    onClick={toggleLeadForm}
     aria-expanded={leadOpen}
     style={{
       width:'100%', display:'flex', alignItems:'center', justifyContent:'space-between',
@@ -1544,7 +1542,7 @@ const Pricing = () => {
   >
     <div style={{padding:'1.25rem 0 0'}}>
       <style>{`:root { --momenceColorBackground: #140800; --momenceColorPrimary: 255, 255, 255; --momenceColorBlack: 255, 255, 255; }`}</style>
-      <div id="momence-plugin-lead-form"></div>
+      {leadOpen && <div key={leadFormKey} id="momence-plugin-lead-form"></div>}
     </div>
   </div>
 </div>
