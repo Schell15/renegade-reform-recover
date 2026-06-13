@@ -1504,6 +1504,54 @@ const Pricing = () => {
   </div>
 </div>
 
+{/* LEAD CAPTURE ROW */}
+<div style={{margin:'3rem 0'}}>
+  <button
+    type="button"
+    onClick={() => setLeadOpen(v => !v)}
+    aria-expanded={leadOpen}
+    style={{
+      width:'100%', display:'flex', alignItems:'center', justifyContent:'space-between',
+      background:'transparent', border:'1px solid rgba(240,230,214,0.3)', borderRadius:8,
+      padding:'1.1rem 1.4rem', cursor:'pointer', color:'#f0e6d6', fontFamily:'inherit'
+    }}
+  >
+    <span style={{display:'flex',alignItems:'center',gap:12,fontSize:11,letterSpacing:'0.22em',textTransform:'uppercase',fontWeight:600,color:'#f0e6d6'}}>
+      <span aria-hidden="true" style={{fontSize:14,opacity:0.85}}>〰</span>
+      Want to talk it through first?
+    </span>
+    <span aria-hidden="true" style={{fontSize:18,color:'#f0e6d6',display:'inline-block',transition:'transform 0.3s ease',transform:leadOpen?'rotate(90deg)':'rotate(0deg)'}}>›</span>
+  </button>
+  <div
+    style={{
+      overflow:'hidden',
+      maxHeight: leadOpen ? '2000px' : '0px',
+      opacity: leadOpen ? 1 : 0,
+      transition:'max-height 0.5s ease, opacity 0.4s ease',
+    }}
+  >
+    <div style={{padding:'1.25rem 0 0'}}>
+      <style>{`
+        #momence-plugin-lead-form input,
+        #momence-plugin-lead-form select,
+        #momence-plugin-lead-form textarea {
+          background: rgba(240,230,214,0.06) !important;
+          border: 1px solid rgba(240,230,214,0.12) !important;
+          color: #f0e6d6 !important;
+        }
+        #momence-plugin-lead-form input::placeholder,
+        #momence-plugin-lead-form textarea::placeholder { color: rgba(240,230,214,0.5) !important; }
+        #momence-plugin-lead-form button[type="submit"] {
+          background: #f0e6d6 !important;
+          color: #140800 !important;
+          border: none !important;
+        }
+      `}</style>
+      <div id="momence-plugin-lead-form"></div>
+    </div>
+  </div>
+</div>
+
       </div>
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
     </>
