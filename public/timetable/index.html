@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timetable — Renegade Reformer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --espresso:  #180800;
+    --truffle:   #491E00;
+    --mocha:     #391500;
+    --ivory:     #E1D6C8;
+    --ivory-dim: #C8BAA8;
+  }
+
+  body {
+    background: var(--espresso);
+    color: var(--ivory);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    background: rgba(24,8,0,0.95);
+    border-bottom: 1px solid rgba(225,214,200,0.12);
+    backdrop-filter: blur(16px);
+  }
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 13px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ivory); text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 40px; list-style: none; }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400; font-size: 12px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ivory-dim); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ivory); }
+  .nav-cta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500; font-size: 12px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--espresso); background: var(--ivory);
+    padding: 9px 22px; text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--ivory-dim); }
+
+  /* HERO */
+  .hero { padding: 152px 48px 56px; }
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; font-weight: 400;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ivory-dim);
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 20px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block;
+    width: 40px; height: 1px;
+    background: var(--ivory-dim); flex-shrink: 0;
+  }
+  h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: clamp(64px, 10vw, 120px);
+    line-height: 0.9; text-transform: uppercase;
+    color: var(--ivory);
+  }
+  h1 em {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 300;
+    font-size: clamp(56px, 9vw, 108px);
+    color: var(--ivory-dim);
+  }
+  .hero-sub {
+    margin-top: 28px; max-width: 440px;
+    font-size: 14px; font-weight: 300; line-height: 1.75;
+    color: var(--ivory-dim);
+    border-left: 1px solid rgba(225,214,200,0.2);
+    padding-left: 20px;
+  }
+
+  /* CLASS LEGEND */
+  .legend {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 48px;
+    border-top: 1px solid rgba(225,214,200,0.1);
+    border-bottom: 1px solid rgba(225,214,200,0.1);
+  }
+  .legend-item {
+    padding: 28px 28px 28px 0;
+    border-right: 1px solid rgba(225,214,200,0.08);
+  }
+  .legend-item:last-child { border-right: none; }
+  .legend-item:not(:first-child) { padding-left: 28px; }
+  .legend-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 13px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ivory); margin-bottom: 5px;
+  }
+  .legend-desc {
+    font-size: 13px; font-weight: 300; line-height: 1.55;
+    color: var(--ivory-dim); margin-bottom: 14px;
+  }
+  .btn-info {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px; font-weight: 400;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(225,214,200,1);
+    background: none; border: none; padding: 0;
+    cursor: pointer;
+    display: inline-flex; align-items: center; gap: 7px;
+    transition: color 0.2s;
+  }
+  .btn-info::after {
+    content: '';
+    display: inline-block; width: 8px; height: 8px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(-45deg) translateY(1px);
+  }
+  .btn-info:hover { color: var(--ivory); }
+
+  /* SCHEDULE WIDGET BOX */
+  .schedule-box {
+    margin: 40px 48px 80px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  /* MODAL */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300;
+    background: rgba(24,8,0,0.85);
+    backdrop-filter: blur(8px);
+    align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .modal-overlay.active { display: flex; }
+  .modal {
+    background: var(--mocha);
+    border: 1px solid rgba(225,214,200,0.12);
+    max-width: 560px; width: 100%; padding: 48px;
+    position: relative;
+    animation: modalIn 0.25s ease;
+  }
+  @keyframes modalIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .modal-close {
+    position: absolute; top: 20px; right: 20px;
+    width: 32px; height: 32px;
+    background: none; border: 1px solid rgba(225,214,200,0.15);
+    color: var(--ivory-dim); cursor: pointer; font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .modal-close:hover { border-color: rgba(225,214,200,1); color: var(--ivory); }
+  .modal-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ivory-dim); background: rgba(225,214,200,0.1);
+    display: inline-block; padding: 4px 10px; margin-bottom: 20px;
+  }
+  .modal-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 32px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ivory); margin-bottom: 4px;
+  }
+  .modal-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 300; font-size: 18px;
+    color: var(--ivory-dim); margin-bottom: 24px;
+  }
+  .modal-divider { height: 1px; background: rgba(225,214,200,0.1); margin-bottom: 24px; }
+  .modal-body {
+    font-size: 14px; font-weight: 300; line-height: 1.8;
+    color: rgba(225,214,200,0.7);
+  }
+  .modal-body p + p { margin-top: 12px; }
+  .modal-note {
+    margin-top: 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ivory-dim);
+    border-left: 2px solid var(--truffle);
+    background: rgba(73,30,0,0.2);
+    padding: 8px 12px;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid rgba(225,214,200,0.1);
+    padding: 40px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ivory-dim);
+  }
+  .footer-note { font-size: 12px; font-weight: 300; color: rgba(225,214,200,0.35); }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 120px 24px 40px; }
+    .legend { grid-template-columns: 1fr; margin: 0 24px; }
+    .legend-item { border-right: none; border-bottom: 1px solid rgba(225,214,200,0.08); padding: 20px 0; }
+    .legend-item:not(:first-child) { padding-left: 0; }
+    .schedule-box { margin: 24px 24px 60px; }
+    .modal { padding: 32px 24px; }
+    footer { padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Renegade Reformer</a>
+  <ul class="nav-links">
+    <li><a href="#">Classes</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <a class="nav-cta" href="#">Book a class</a>
+</nav>
+
+<section class="hero">
+  <p class="hero-eyebrow">Bristol's boutique reformer studio</p>
+  <h1>Find<em>your class.</em></h1>
+  <p class="hero-sub">Every session is 50 minutes. Every class is capped small. Browse the week ahead and secure your spot.</p>
+</section>
+
+<div class="legend">
+  <div class="legend-item">
+    <div class="legend-label">Foundations</div>
+    <div class="legend-desc">First timers, get to grips with the basics.</div>
+    <button class="btn-info" onclick="openModal('foundations')">Class info</button>
+  </div>
+  <div class="legend-item">
+    <div class="legend-label">Renegade.</div>
+    <div class="legend-desc">Beginners flow, rhythm and confidence on the reformer.</div>
+    <button class="btn-info" onclick="openModal('renegade')">Class info</button>
+  </div>
+  <div class="legend-item">
+    <div class="legend-label">Rebuild.</div>
+    <div class="legend-desc">Strength × Pilates, your gym workout on the reformer.</div>
+    <button class="btn-info" onclick="openModal('rebuild')">Class info</button>
+  </div>
+</div>
+
+<!-- MOMENCE — isolated in its own iframe so its scripts cannot affect this page -->
+<div class="schedule-box">
+  <iframe
+    src="momence-embed.html"
+    id="momence-frame"
+    scrolling="no"
+    frameborder="0"
+    style="width:100%; border:none; display:block; min-height:2400px;"
+   
+  ></iframe>
+</div>
+
+<footer>
+  <span class="footer-brand">Renegade Reformer · Bristol</span>
+  <span class="footer-note">renegadereformer.co.uk</span>
+</footer>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">&#215;</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+  const classData = {
+    foundations: {
+      tag: 'Entry level', name: 'Foundations.', sub: 'New to Reformer? Start here.',
+      body: `<p>Our most supportive introduction to Reformer Pilates, designed specifically for first timers, anyone nervous to start, returning to movement, or wanting to build confidence before stepping into our main classes.</p>
+             <p>This class will help you understand the equipment, build confidence and learn the basics properly with a classic full-body workout. Expect clear guidance, simple controlled movement and a strong focus on breathing, form, posture and body awareness — all within a welcoming, inclusive space where everyone is learning together.</p>
+             <p>If you've been waiting for a sign to start... this is it.</p>`,
+      note: 'Not mandatory, but highly encouraged.'
+    },
+    renegade: {
+      tag: 'Beginner', name: 'Renegade.', sub: 'Your beginner class.',
+      body: `<p>Designed to build strength, mobility and better posture while learning the core principles of Pilates.</p>
+             <p>Expect a slower pace and a strong focus on form and control to build confidence on the Reformer.</p>`,
+      note: null
+    },
+    rebuild: {
+      tag: 'Intermediate', name: 'Rebuild.', sub: 'Reformer × full body strength training.',
+      body: `<p>Fancy a fitness challenge? Rebuild is your weighted, gym-inspired Reformer class built for strength, sculpt and control.</p>
+             <p>Expect heavier resistance, added load and powerful full-body sequences that bring a strength-training edge to Pilates.</p>`,
+      note: null
+    }
+  };
+
+  function openModal(key) {
+    const d = classData[key];
+    const noteHtml = d.note ? `<div class="modal-note">${d.note}</div>` : '';
+    document.getElementById('modal-content').innerHTML = `
+      <div class="modal-tag">${d.tag}</div>
+      <div class="modal-name">${d.name}</div>
+      <div class="modal-sub">${d.sub}</div>
+      <div class="modal-divider"></div>
+      <div class="modal-body">${d.body}${noteHtml}</div>
+    `;
+    document.getElementById('modal-overlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('modal-overlay')) closeModal();
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // Auto-resize iframe to match its content height
+  function resizeFrame(frame) {
+    try {
+      const resize = () => {
+        const h = frame.contentDocument.body.scrollHeight;
+        if (h > 100) frame.style.height = h + 'px';
+      };
+      resize();
+      // Poll for content changes (Momence loads async)
+      let last = 0;
+      const poll = setInterval(() => {
+        try {
+          const h = frame.contentDocument.body.scrollHeight;
+          if (h !== last) { frame.style.height = h + 'px'; last = h; }
+        } catch(e) { clearInterval(poll); }
+      }, 300);
+      // Stop polling after 15s
+      setTimeout(() => clearInterval(poll), 15000);
+    } catch(e) {}
+  }
+</script>
+</body>
+</html>
