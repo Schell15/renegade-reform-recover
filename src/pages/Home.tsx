@@ -253,7 +253,8 @@ const Home = () => {
           >
             Get In Touch
           </button>
-          <button
+          <a
+            href="/teachwithus"
             className="inline-block uppercase font-bold transition-colors hover:bg-white/[0.035]"
             style={{
               fontSize: "13px",
@@ -262,10 +263,11 @@ const Home = () => {
               border: "0.5px solid #4a2e12",
               padding: "14px 28px",
               background: "transparent",
+              textDecoration: "none",
             }}
           >
             Instructor Application
-          </button>
+          </a>
         </div>
       </div>
 
