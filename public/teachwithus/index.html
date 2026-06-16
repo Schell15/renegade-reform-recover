@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)file:///Users/steffanchelland/Downloads/renegade-instructor-application.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instructor Application | Renegade Reformer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Instructor Application - Renegade Reformer_files/css2" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --espresso:  #180800;
+    --truffle:   #491E00;
+    --mocha:     #391500;
+    --cacao:     #270E00;
+    --ivory:     #E1D6C8;
+    --ivory-dim: #C8BAA8;
+  }
+
+  body {
+    background: var(--espresso);
+    color: var(--ivory);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: 72px; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px;
+    background: rgba(24,8,0,0.95);
+    border-bottom: 1px solid rgba(225,214,200,0.1);
+    backdrop-filter: blur(16px);
+  }
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 13px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--ivory); text-decoration: none;
+  }
+  .nav-back {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400; font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--ivory-dim); text-decoration: none;
+    display: flex; align-items: center; gap: 10px; transition: color 0.2s;
+  }
+  .nav-back::before {
+    content: '';
+    display: inline-block; width: 8px; height: 8px;
+    border-left: 1px solid currentColor; border-bottom: 1px solid currentColor;
+    transform: rotate(45deg);
+  }
+  .nav-back:hover { color: var(--ivory); }
+
+  /* HERO */
+  .hero {
+    padding: 152px 48px 64px;
+    border-bottom: 1px solid rgba(225,214,200,0.08);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: end;
+  }
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; font-weight: 400; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--ivory-dim);
+    display: flex; align-items: center; gap: 16px; margin-bottom: 20px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block; width: 40px; height: 1px;
+    background: var(--ivory-dim); flex-shrink: 0;
+  }
+  h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: clamp(52px, 8vw, 100px);
+    line-height: 0.9; text-transform: uppercase; color: var(--ivory);
+  }
+  h1 em {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 300;
+    font-size: clamp(44px, 7vw, 90px); color: var(--ivory-dim);
+  }
+  .hero-right {
+    padding-bottom: 8px;
+  }
+  .hero-intro {
+    font-size: 14px; font-weight: 300; line-height: 1.8;
+    color: var(--ivory-dim); margin-bottom: 24px;
+  }
+  .hero-detail {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ivory);
+  }
+
+  /* BODY LAYOUT */
+  .content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 48px 56px 48px 0;
+    border-bottom: 1px solid rgba(225,214,200,0.08);
+  }
+  .section:nth-child(even) {
+    padding: 48px 0 48px 56px;
+    border-left: 1px solid rgba(225,214,200,0.08);
+  }
+  .section:last-child, .section:nth-last-child(2) {
+    border-bottom: none;
+  }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px; font-weight: 500; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--ivory);
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: rgba(225,214,200,0.08);
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 22px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ivory); margin-bottom: 20px;
+  }
+
+  .section-body {
+    font-size: 14px; font-weight: 300; line-height: 1.8;
+    color: rgba(225,214,200,0.65);
+  }
+
+  .section-body p + p { margin-top: 12px; }
+
+  /* LISTS */
+  ul.clean {
+    list-style: none; margin-top: 4px;
+  }
+  ul.clean li {
+    font-size: 14px; font-weight: 300; line-height: 1.7;
+    color: rgba(225,214,200,0.65);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(225,214,200,0.06);
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  ul.clean li:last-child { border-bottom: none; }
+  ul.clean li::before {
+    content: '';
+    display: block; flex-shrink: 0;
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--truffle);
+    margin-top: 9px;
+  }
+
+  /* NOTE BOX */
+  .note-box {
+    margin-top: 20px;
+    border-left: 2px solid var(--truffle);
+    background: rgba(73,30,0,0.2);
+    padding: 14px 16px;
+    font-size: 13px; font-weight: 300; line-height: 1.7;
+    color: rgba(225,214,200,0.55);
+  }
+
+  /* APPLY SECTION - full width */
+  .apply-section {
+    grid-column: 1 / -1;
+    padding: 64px 0 0;
+    border-top: 1px solid rgba(225,214,200,0.08);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: start;
+  }
+
+  .apply-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 36px; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ivory); margin-bottom: 12px;
+  }
+  .apply-title em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 300; font-size: 32px;
+    color: var(--ivory-dim);
+  }
+  .apply-body {
+    font-size: 14px; font-weight: 300; line-height: 1.8;
+    color: rgba(225,214,200,0.6);
+  }
+  .apply-body p + p { margin-top: 12px; }
+
+  .apply-right { padding-top: 4px; }
+
+  .apply-steps {
+    list-style: none; margin-bottom: 32px;
+  }
+  .apply-steps li {
+    display: grid; grid-template-columns: 28px 1fr;
+    gap: 16px; align-items: start;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(225,214,200,0.06);
+    font-size: 13px; font-weight: 300; line-height: 1.6;
+    color: rgba(225,214,200,0.6);
+  }
+  .apply-steps li:last-child { border-bottom: none; }
+  .step-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 11px; letter-spacing: 0.1em;
+    color: rgba(225,214,200,0.25); padding-top: 2px;
+  }
+
+  .apply-cta {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 12px; letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--espresso); background: var(--ivory);
+    padding: 14px 40px; text-decoration: none;
+    transition: background 0.2s;
+  }
+  .apply-cta:hover { background: var(--ivory-dim); }
+
+  .apply-email {
+    display: block; margin-top: 14px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: rgba(225,214,200,0.35);
+  }
+
+  /* DISCIPLINES STRIP */
+  .disciplines {
+    grid-column: 1 / -1;
+    padding: 32px 0;
+    border-top: 1px solid rgba(225,214,200,0.08);
+    display: flex; align-items: center; justify-content: center;
+    gap: 0;
+  }
+  .disc-item {
+    flex: 1; text-align: center;
+    border-right: 1px solid rgba(225,214,200,0.08);
+    padding: 0 24px;
+  }
+  .disc-item:last-child { border-right: none; }
+  .disc-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 13px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--ivory); margin-bottom: 4px;
+  }
+  .disc-status {
+    font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(225,214,200,0.35);
+  }
+  .disc-status.open { color: rgba(225,214,200,0.6); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid rgba(225,214,200,0.08);
+    padding: 40px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 12px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--ivory-dim);
+  }
+  .footer-note { font-size: 12px; font-weight: 300; color: rgba(225,214,200,0.3); }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .hero { grid-template-columns: 1fr; gap: 32px; padding: 120px 24px 48px; }
+    .content { grid-template-columns: 1fr; padding: 48px 24px; }
+    .section, .section:nth-child(even) { padding: 36px 0; border-left: none; }
+    .apply-section { grid-template-columns: 1fr; gap: 40px; }
+    .disciplines { flex-direction: column; gap: 0; }
+    .disc-item { border-right: none; border-bottom: 1px solid rgba(225,214,200,0.08); padding: 16px 0; width: 100%; }
+    .disc-item:last-child { border-bottom: none; }
+    footer { padding: 32px 24px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Renegade Reformer</a>
+  <a class="nav-back" href="/">Back</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Join the team</p>
+    <h1>Teach<em>with us.</em></h1>
+  </div>
+  <div class="hero-right">
+    <p class="hero-intro">Renegade Reformer is a community-focused movement studio offering Reformer Pilates, Mat Pilates, Yoga and Barre. We are looking for instructors who take real pride in their craft and want to be part of a studio that values both teaching and teaching environment.</p>
+    <p class="hero-detail">Bristol, UK &nbsp;·&nbsp; Freelance with growth potential &nbsp;·&nbsp; Now recruiting</p>
+  </div>
+</section>
+
+<div class="content">
+
+  <!-- About the studio -->
+  <div class="section">
+    <div class="section-label">The Studio</div>
+    <div class="section-title">Who we are.</div>
+    <div class="section-body">
+      <p>Our focus is on delivering exceptionally taught classes rooted in strong technique, innovative programming and a high standard of client experience. Our mission is to provide an inclusive and empowering fitness environment that caters to individuals of all fitness levels.</p>
+      <p>We have created a spacious, well-equipped studio designed to support Pilates sessions that feel intimate and personal. Our studio environment, sound and lighting have been carefully considered to support focus, energy and flow within each class - creating an experience that feels distinctive and immersive.</p>
+    </div>
+  </div>
+
+  <!-- Who we want -->
+  <div class="section">
+    <div class="section-label">The Person</div>
+    <div class="section-title">Who you are.</div>
+    <ul class="clean">
+      <li>Take real pride in your craft and hold yourself to a high standard</li>
+      <li>Warm, professional and confident in the room</li>
+      <li>Bring energy, control and a strong sense of presence to each class</li>
+      <li>Care deeply about teaching correct technique, not just delivering a routine</li>
+      <li>Have a strong knowledge of anatomy relevant to Pilates and injury prevention</li>
+      <li>Understand the power of music and atmosphere to motivate movement</li>
+      <li>Maintain exceptional standards of cleanliness and care within the studio</li>
+    </ul>
+  </div>
+
+  <!-- The Role -->
+  <div class="section">
+    <div class="section-label">The Role</div>
+    <div class="section-title">What you'll do.</div>
+    <ul class="clean">
+      <li>Deliver high-quality Reformer Pilates classes with a strong technical foundation</li>
+      <li>Confidently coach clients of mixed abilities with clear regressions and progressions</li>
+      <li>Lead the room with energy, precision and control</li>
+      <li>Contribute to a consistent class experience aligned with the Renegade standard</li>
+      <li>Represent the studio at community events and brand collaborations where required</li>
+    </ul>
+  </div>
+
+  <!-- Requirements -->
+  <div class="section">
+    <div class="section-label">Requirements</div>
+    <div class="section-title">What we need.</div>
+    <ul class="clean">
+      <li>A minimum of 1 year's teaching experience post-qualification</li>
+      <li>A recognised Reformer Pilates qualification - STOTT, BASI or APPI preferred, including Level 3 Mat Pilates</li>
+      <li>A strong understanding of movement mechanics and class programming</li>
+    </ul>
+    <div class="note-box">We will only consider applicants with a full Reformer Pilates qualification as a minimum. If you don't meet every criteria, use your cover letter to outline relevant background - dance, ballet, gymnastics, athletic performance, personal training or other movement disciplines are all welcomed.</div>
+  </div>
+
+  <!-- Disciplines strip -->
+  <div class="disciplines">
+    <div class="disc-item">
+      <div class="disc-name">Reformer Pilates</div>
+      <div class="disc-status open">Now recruiting</div>
+    </div>
+    <div class="disc-item">
+      <div class="disc-name">Mat Pilates</div>
+      <div class="disc-status">Recruiting soon</div>
+    </div>
+    <div class="disc-item">
+      <div class="disc-name">Yoga</div>
+      <div class="disc-status">Recruiting soon</div>
+    </div>
+    <div class="disc-item">
+      <div class="disc-name">Barre</div>
+      <div class="disc-status">Recruiting soon</div>
+    </div>
+  </div>
+
+  <!-- Apply -->
+  <div class="apply-section">
+    <div class="apply-left">
+      <div class="apply-title">Need a space<em>to apply?</em></div>
+      <div class="apply-body">
+        <p>We are very keen to meet you and potentially welcome you to the founding Renegade team. Initially, this role will be offered on a freelance basis, with scope to grow into a full-time position if it is the right fit for all parties.</p>
+        <p>If you are competent in more than one discipline - Reformer, Mat, Yoga or Barre - please specify this in your application.</p>
+      </div>
+    </div>
+    <div class="apply-right">
+      <ol class="apply-steps">
+        <li><span class="step-num">01</span><span>Send your CV and a detailed cover letter to <strong style="color:var(--ivory-dim)">danielle@renegadereformer.co.uk</strong></span></li>
+        <li><span class="step-num">02</span><span>Shortlisted candidates will be invited to the studio for an initial chat</span></li>
+        <li><span class="step-num">03</span><span>Final interviews take place shortly afterwards</span></li>
+        <li><span class="step-num">04</span><span>You may be asked to teach a 30-minute demonstration class in the studio as part of the final stage</span></li>
+      </ol>
+      <a class="apply-cta" href="mailto:danielle@renegadereformer.co.uk">Send your application</a>
+      <span class="apply-email">danielle@renegadereformer.co.uk</span>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-brand">Renegade Reformer · Bristol</span>
+  <span class="footer-note">renegadereformer.co.uk</span>
+</footer>
+
+
+
+</body></html>
