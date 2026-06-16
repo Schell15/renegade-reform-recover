@@ -155,28 +155,7 @@ const Home = () => {
           </nav>
         </div>
 
-        {/* Timetable CTA */}
-        <a
-          href="/timetable"
-          style={{
-            display: "inline-block",
-            marginTop: "24px",
-            background: "#E1D6C8",
-            color: "#180800",
-            fontFamily: "'Barlow Condensed', sans-serif",
-            fontWeight: 600,
-            fontSize: "12px",
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            padding: "14px 48px",
-            borderRadius: 0,
-            textDecoration: "none",
-          }}
-        >
-          Timetable
-        </a>
-
-        {/* Bottom */}
+        {/* Founders Rates */}
         <div className="mt-9 text-center">
           <p
             className="uppercase font-light mb-2"
@@ -198,6 +177,68 @@ const Home = () => {
           >
             Drop ins · Memberships · Intro Packs
           </p>
+        </div>
+
+        {/* Timetable CTA */}
+        <a
+          href="/timetable"
+          style={{
+            display: "inline-block",
+            marginTop: "0px",
+            background: "#E1D6C8",
+            color: "#180800",
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontWeight: 600,
+            fontSize: "12px",
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            padding: "14px 48px",
+            borderRadius: 0,
+            textDecoration: "none",
+          }}
+        >
+          REFORMER CLASS TIMETABLE
+        </a>
+
+        {/* Coming Soon Bar */}
+        <div
+          className="w-full text-center"
+          style={{
+            marginTop: "24px",
+            borderTop: "1px solid rgba(225,214,200,0.12)",
+            borderBottom: "1px solid rgba(225,214,200,0.12)",
+            padding: "20px 0",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 600,
+              fontSize: "13px",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "#E1D6C8",
+            }}
+          >
+            MAT PILATES · YOGA · BARRE
+          </p>
+          <p
+            style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 400,
+              fontSize: "10px",
+              letterSpacing: "0.24em",
+              textTransform: "uppercase",
+              color: "rgba(225,214,200,0.38)",
+              marginTop: "4px",
+            }}
+          >
+            COMING SOON
+          </p>
+        </div>
+
+        {/* Buttons */}
+        <div className="mt-9 flex justify-center gap-4">
           <button
             onClick={() => navigate("/contact")}
             className="inline-block uppercase font-bold transition-colors hover:bg-white/[0.035]"
@@ -211,6 +252,19 @@ const Home = () => {
             }}
           >
             Get In Touch
+          </button>
+          <button
+            className="inline-block uppercase font-bold transition-colors hover:bg-white/[0.035]"
+            style={{
+              fontSize: "13px",
+              letterSpacing: "0.14em",
+              color: "#f0ebe3",
+              border: "0.5px solid #4a2e12",
+              padding: "14px 28px",
+              background: "transparent",
+            }}
+          >
+            Instructor Application
           </button>
         </div>
       </div>
