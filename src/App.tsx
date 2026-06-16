@@ -32,6 +32,7 @@ const App = () => (
           <Route path="/reformer" element={<ExternalRedirect to="/reformerpilates.html" />} />
           <Route path="/discover" element={<ExternalRedirect to="/reformerpilates.html" />} />
           <Route path="/reformerpilates" element={<ExternalRedirect to="/reformerpilates.html" />} />
+          <Route path="/timetable" element={<ExternalRedirect to="/timetable/index.html" />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

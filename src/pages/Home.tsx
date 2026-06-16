@@ -155,6 +155,27 @@ const Home = () => {
           </nav>
         </div>
 
+        {/* Timetable CTA */}
+        <a
+          href="/timetable"
+          style={{
+            display: "inline-block",
+            marginTop: "24px",
+            background: "#E1D6C8",
+            color: "#180800",
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontWeight: 600,
+            fontSize: "12px",
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            padding: "14px 48px",
+            borderRadius: 0,
+            textDecoration: "none",
+          }}
+        >
+          Timetable
+        </a>
+
         {/* Bottom */}
         <div className="mt-9 text-center">
           <p
