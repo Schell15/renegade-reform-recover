@@ -290,13 +290,26 @@
 </div>
 
 <div class="schedule-box">
-  <iframe
-    src="momence-embed.html"
-    id="momence-frame"
-    scrolling="no"
-    frameborder="0"
-    style="width:100%; border:none; display:block; min-height:2400px;"
-  ></iframe>
+  <div id="ribbon-schedule"></div>
+  <script
+    async
+    type="module"
+    host_id="227483"
+    teacher_ids="[]"
+    location_ids="[]"
+    tag_ids="[]"
+    lite_mode="true"
+    default_filter="show-all"
+    locale="en"
+    src="https://momence.com/plugin/host-schedule/host-schedule.js"
+  ></script>
+  <style>
+    :root {
+      --momenceColorBackground: #E1D6C8;
+      --momenceColorPrimary: 73, 30, 0;
+      --momenceColorBlack: 73, 30, 0;
+    }
+  </style>
 </div>
 
 <footer>
@@ -360,26 +373,6 @@
 
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-  // Auto-resize iframe to match its content height
-  function resizeFrame(frame) {
-    try {
-      const resize = () => {
-        const h = frame.contentDocument.body.scrollHeight;
-        if (h > 100) frame.style.height = h + 'px';
-      };
-      resize();
-      // Poll for content changes (Momence loads async)
-      let last = 0;
-      const poll = setInterval(() => {
-        try {
-          const h = frame.contentDocument.body.scrollHeight;
-          if (h !== last) { frame.style.height = h + 'px'; last = h; }
-        } catch(e) { clearInterval(poll); }
-      }, 300);
-      // Stop polling after 15s
-      setTimeout(() => clearInterval(poll), 15000);
-    } catch(e) {}
-  }
 </script>
 </body>
 </html>
