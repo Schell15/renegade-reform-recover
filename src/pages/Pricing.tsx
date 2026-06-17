@@ -1130,6 +1130,23 @@ const Pricing = () => {
       delete (window as any).toggleNotifyRR;
     };
   }, []);
+
+  useEffect(() => {
+    const s = document.createElement('script');
+    s.async = true;
+    s.type = 'module';
+    s.setAttribute('host-id', '227483');
+    s.setAttribute('token', 'zQ7OKzkB7l');
+    s.setAttribute('position', 'bottom-right');
+    s.src = 'https://momence.com/plugin/webchat/webchat.js';
+    s.id = 'momence-webchat-script';
+    document.body.appendChild(s);
+    return () => {
+      const existing = document.getElementById('momence-webchat-script');
+      if (existing) existing.remove();
+    };
+  }, []);
+
   useEffect(() => {
     // Nav scroll effect
     const nav = document.querySelector('.rn-nav') as HTMLElement | null;
