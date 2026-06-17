@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: transparent; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: transparent; }
+    :root {
+      --momenceColorBackground: #E1D6C8;
+      --momenceColorPrimary: 73, 30, 0;
+      --momenceColorBlack: 73, 30, 0;
+    }
+  </style>
 </head>
 <body>
-<div class="timetable-section">
-
   <div id="ribbon-schedule"></div>
-
   <script
     async
     type="module"
@@ -25,14 +27,5 @@
     locale="en"
     src="https://momence.com/plugin/host-schedule/host-schedule.js"
   ></script>
-</div>
-
-<style>
-:root {
-  --momenceColorBackground: #E1D6C8;
-  --momenceColorPrimary: 73, 30, 0;
-  --momenceColorBlack: 73, 30, 0;
-}
-</style>
 </body>
 </html>
