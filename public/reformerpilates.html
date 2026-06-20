@@ -771,6 +771,41 @@
       }
       .rn-connector svg { transform: rotate(90deg); }
       .rn-expand-box { padding: 32px 24px 28px; }
+
+      .cta-row { flex-direction: column; align-items: stretch; }
+      .cta-btn { width: 100%; }
+    }
+
+    /* ── CTA BUTTONS ── */
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding-top: 72px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 56px;
+      border-radius: 18px;
+      background: #E1D6C8;
+      color: #0d0400;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      font-family: inherit;
+      border: none;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.92;
+      transform: scale(1.03);
     }
   </style>
 </head>
