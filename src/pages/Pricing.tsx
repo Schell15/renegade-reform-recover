@@ -156,13 +156,13 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .header-sub {
     font-size: 13px;
     font-style: italic;
-    color: var(--page-ink-muted);
+    color: rgba(225,214,200,0.82);
     font-weight: 300;
     margin-bottom: 8px;
   }
   .header-note {
     font-size: 13px;
-    color: var(--page-ink-muted);
+    color: rgba(225,214,200,0.75);
     max-width: 460px;
     line-height: 1.75;
     font-weight: 300;
