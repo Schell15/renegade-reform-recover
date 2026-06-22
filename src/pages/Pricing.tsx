@@ -1290,14 +1290,14 @@ const Pricing = () => {
   .rr-dropin-left { padding: 2rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.08); }
   .rr-dropin-desc { font-size: 13px; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 1.5rem; max-width: 520px; }
   .rr-dropin-bullets { list-style: none; display: flex; flex-direction: column; gap: 0; padding: 0; }
-  .rr-dropin-bullet { display: flex; align-items: center; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.45); padding: 9px 0; border-top: 1px solid rgba(255,255,255,0.06); }
+  .rr-dropin-bullet { display: flex; align-items: center; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.9); padding: 9px 0; border-top: 1px solid rgba(255,255,255,0.06); }
   .rr-dropin-bullet:last-child { border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .rr-dropin-bullet::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.25); flex-shrink: 0; }
+  .rr-dropin-bullet::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.6); flex-shrink: 0; }
   .rr-dropin-right { padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; }
-  .rr-dropin-rate-label { font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); font-weight: 700; margin-bottom: 4px; }
+  .rr-dropin-rate-label { font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.85); font-weight: 700; margin-bottom: 4px; }
   .rr-dropin-big-price { font-size: 72px; font-weight: 900; color: #f0e6d6; letter-spacing: -4px; line-height: 1; }
   .rr-dropin-big-unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 0; }
-  .rr-dropin-standard { font-size: 12px; color: rgba(255,255,255,0.25); margin-top: 8px; text-decoration: line-through; }
+  .rr-dropin-standard { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 8px; text-decoration: line-through; }
   @media (max-width: 700px) {
     .rr-dropin-body { grid-template-columns: 1fr; }
     .rr-dropin-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
@@ -1317,8 +1317,8 @@ const Pricing = () => {
   .rr-acc-right { display: flex; align-items: center; gap: 1.5rem; }
   .rr-acc-price-collapsed { text-align: right; }
   .rr-acc-price-big { font-size: 30px; font-weight: 900; color: #f0e6d6; letter-spacing: -1px; line-height: 1; }
-  .rr-acc-price-big span { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.7); }
-  .rr-acc-price-sub { font-size: 10px; color: rgba(255,255,255,0.6); margin-top: 3px; text-align: right; }
+  .rr-acc-price-big span { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.9); }
+  .rr-acc-price-sub { font-size: 10px; color: rgba(255,255,255,0.9); margin-top: 3px; text-align: right; }
   .rr-acc-chevron { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.12); border-radius: 50%; flex-shrink: 0; transition: transform 0.25s, border-color 0.2s; }
   .rr-acc-chevron svg { width: 10px; height: 10px; stroke: rgba(255,255,255,0.85); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
   .rr-acc-item.open .rr-acc-chevron { border-color: rgba(255,255,255,0.3); transform: rotate(180deg); }
@@ -1331,13 +1331,13 @@ const Pricing = () => {
   .rr-acc-feat:last-child { border-bottom: none; }
   .rr-acc-feat-icon { width: 28px; height: 28px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 6px; }
   .rr-acc-feat-icon svg { width: 14px; height: 14px; stroke: rgba(210,160,120,0.8); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-  .rr-acc-feat-text { font-size: 12px; color: rgba(255,255,255,0.65); line-height: 1.4; }
+  .rr-acc-feat-text { font-size: 12px; color: rgba(255,255,255,0.9); line-height: 1.4; }
   .rr-acc-feat-text strong { color: #f0e6d6; font-weight: 600; }
   .rr-acc-pricing-right { display: flex; flex-direction: column; }
   .rr-acc-badge-wrap { margin-bottom: 1rem; }
   .rr-acc-badge { display: inline-block; background: #8B5E3C; color: #f5dfc5; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 12px; border-radius: 3px; font-weight: 700; }
   .rr-acc-per-class-box { border: 1px solid rgba(255,255,255,0.2); border-radius: 7px; padding: 14px 16px; margin-bottom: 7px; display: flex; align-items: center; justify-content: space-between; }
-  .rr-acc-per-class-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); }
+  .rr-acc-per-class-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.9); }
   .rr-acc-per-class-num { font-size: 26px; font-weight: 900; color: #ffffff; letter-spacing: -1px; }
   .rr-price-row { display: flex; align-items: center; justify-content: space-between; padding: 0 16px; height: 56px; border-radius: 7px; margin-bottom: 7px; }
   .rr-price-row.founders { background: rgba(160,45,24,0.2); border: 1px solid rgba(160,45,24,0.35); }
@@ -1346,7 +1346,7 @@ const Pricing = () => {
   .rr-row-label-g { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); flex-shrink: 1; min-width: 0; }
   .rr-row-price-f { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: #f0e6d6; white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
   .rr-row-price-g { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: rgba(255,255,255,0.7); white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
-  .rr-row-unit-f { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.35); }
+  .rr-row-unit-f { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.8); }
   .rr-row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.85); }
   @media (max-width: 700px) {
     .rr-acc-inner { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -1356,9 +1356,9 @@ const Pricing = () => {
 
   .rr-intro-section { margin-top: 4rem; }
   .rr-intro-inner { border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 2.5rem; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 3rem; align-items: center; }
-  .rr-intro-tag { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
+  .rr-intro-tag { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.85); margin-bottom: 8px; }
   .rr-intro-title { font-size: 28px; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: #f0e6d6; margin-bottom: 6px; }
-  .rr-intro-sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 1.25rem; }
+  .rr-intro-sub { font-size: 12px; color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
   .rr-intro-prices { display: flex; gap: 1.5rem; align-items: baseline; margin-bottom: 1.25rem; }
   .rr-intro-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
   @media (max-width: 700px) {
