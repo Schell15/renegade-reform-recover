@@ -141,7 +141,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 600;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--page-ink-muted);
+    color: rgba(255,255,255,0.9);
     margin-bottom: 18px;
   }
   .page-title {
@@ -156,13 +156,13 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .header-sub {
     font-size: 13px;
     font-style: italic;
-    color: rgba(225,214,200,0.82);
+    color: rgba(255,255,255,0.95);
     font-weight: 300;
     margin-bottom: 8px;
   }
   .header-note {
     font-size: 13px;
-    color: rgba(225,214,200,0.75);
+    color: rgba(255,255,255,0.9);
     max-width: 460px;
     line-height: 1.75;
     font-weight: 300;
@@ -191,7 +191,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     color: var(--ivory);
     letter-spacing: 0.03em;
   }
-  .urgency-text em { font-style: normal; color: rgba(225,214,200,0.55); font-weight: 400; }
+  .urgency-text em { font-style: normal; color: rgba(255,255,255,0.8); font-weight: 400; }
 
   /* ---- SECTIONS ---- */
   .section { margin-bottom: 72px; }
@@ -208,7 +208,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-size: 13px;
     font-style: italic;
     font-weight: 300;
-    color: var(--page-ink-muted);
+    color: rgba(255,255,255,0.9);
     margin-top: 6px;
     margin-bottom: 0;
   }
@@ -269,7 +269,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(225,214,200,0.7);
+    color: rgba(255,255,255,0.9);
     margin-bottom: 12px;
     display: flex;
     align-items: center;
@@ -279,7 +279,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     content: '';
     width: 5px; height: 5px;
     border-radius: 50%;
-    background: rgba(225,214,200,0.7);
+    background: rgba(255,255,255,0.9);
     flex-shrink: 0;
   }
   .anchor-row {
@@ -291,11 +291,11 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .anchor-was {
     font-size: 14px;
     font-weight: 700;
-    color: rgba(225,214,200,0.35);
+    color: rgba(255,255,255,0.85);
     text-decoration: line-through;
-    text-decoration-color: rgba(225,214,200,0.35);
+    text-decoration-color: rgba(255,255,255,0.85);
   }
-  .anchor-unit { font-size: 11px; color: rgba(225,214,200,0.22); }
+  .anchor-unit { font-size: 11px; color: rgba(255,255,255,0.7); }
   .pct-badge {
     background: rgba(180,50,40,0.5);
     color: rgba(255,180,170,0.9);
@@ -311,7 +311,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(225,214,200,0.35);
+    color: rgba(255,255,255,0.85);
     margin-bottom: 2px;
   }
   .pc-row { display: flex; align-items: baseline; gap: 2px; }
@@ -325,7 +325,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   }
   .pc-unit {
     font-size: 13px;
-    color: rgba(225,214,200,0.4);
+    color: rgba(255,255,255,0.85);
     align-self: flex-end;
     padding-bottom: 7px;
     margin-left: 4px;
@@ -341,12 +341,12 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     margin-bottom: 10px;
   }
   .mo-num { font-size: 20px; font-weight: 700; color: rgba(225,214,200,0.8); }
-  .mo-unit { font-size: 12px; color: rgba(225,214,200,0.4); margin-left: 4px; flex: 1; }
-  .mo-was { font-size: 12px; color: rgba(225,214,200,0.22); text-decoration: line-through; margin-right: 6px; }
+  .mo-unit { font-size: 12px; color: rgba(255,255,255,0.85); margin-left: 4px; flex: 1; }
+  .mo-was { font-size: 12px; color: rgba(255,255,255,0.7); text-decoration: line-through; margin-right: 6px; }
   .mo-pct {
     font-size: 10px;
     font-weight: 700;
-    color: rgba(225,214,200,0.5);
+    color: rgba(255,255,255,0.9);
     background: rgba(225,214,200,0.08);
     padding: 2px 6px;
     border-radius: 3px;
@@ -362,7 +362,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(225,214,200,0.35);
+    color: rgba(255,255,255,0.85);
     margin-bottom: 3px;
   }
   .save-num {
@@ -372,8 +372,8 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     letter-spacing: -0.02em;
     line-height: 1;
   }
-  .save-unit { font-size: 12px; color: rgba(225,214,200,0.5); margin-left: 3px; }
-  .spots { font-size: 11px; color: rgba(225,214,200,0.22); }
+  .save-unit { font-size: 12px; color: rgba(255,255,255,0.9); margin-left: 3px; }
+  .spots { font-size: 11px; color: rgba(255,255,255,0.7); }
 
   /* ---- BUTTON ---- */
   .cta { margin-top: auto; padding-top: 16px; }
@@ -449,14 +449,14 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.85);
     margin: 14px 0 2px;
   }
   .pk-row { display: flex; align-items: baseline; gap: 2px; }
   .pk-sym { font-size: 15px; font-weight: 700; color: #f0e6d6; line-height: 1; }
   .pk-num { font-size: 44px; font-weight: 900; color: #f0e6d6; letter-spacing: -0.03em; line-height: 1; }
-  .pk-unit { font-size: 12px; color: rgba(255,255,255,0.55); align-self: flex-end; padding-bottom: 5px; margin-left: 3px; }
-  .pk-total { font-size: 12px; color: rgba(255,255,255,0.55); margin-top: 3px; margin-bottom: 4px; }
+  .pk-unit { font-size: 12px; color: rgba(255,255,255,0.85); align-self: flex-end; padding-bottom: 5px; margin-left: 3px; }
+  .pk-total { font-size: 12px; color: rgba(255,255,255,0.85); margin-top: 3px; margin-bottom: 4px; }
   .btn-ghost {
     display: block;
     width: 100%;
@@ -504,7 +504,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .perks-sub {
     font-size: 13px;
     font-weight: 300;
-    color: rgba(225,214,200,0.5);
+    color: rgba(255,255,255,0.9);
     max-width: 340px;
     line-height: 1.65;
     font-style: italic;
@@ -526,7 +526,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .perks-lock-body {
     font-size: 12px;
     font-weight: 300;
-    color: rgba(225,214,200,0.45);
+    color: rgba(255,255,255,0.9);
     line-height: 1.6;
   }
   .perks-grid {
@@ -544,7 +544,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   }
   .perk-icon {
     font-size: 18px;
-    color: rgba(225,214,200,0.55);
+    color: rgba(255,255,255,0.85);
     flex-shrink: 0;
     margin-top: 1px;
   }
@@ -557,7 +557,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .perk-body {
     font-size: 12px;
     font-weight: 300;
-    color: rgba(225,214,200,0.5);
+    color: rgba(255,255,255,0.9);
     line-height: 1.5;
   }
 
@@ -575,7 +575,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .footer p {
     font-size: 11px;
     font-weight: 300;
-    color: var(--page-ink-faint);
+    color: rgba(255,255,255,0.8);
     line-height: 1.8;
     max-width: 500px;
   }
@@ -584,14 +584,14 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 900;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--page-ink-faint);
+    color: rgba(255,255,255,0.8);
     white-space: nowrap;
   }
   .footer-tagline {
     font-size: 10px;
     font-weight: 300;
     font-style: italic;
-    color: var(--page-ink-faint);
+    color: rgba(255,255,255,0.8);
     letter-spacing: 0.06em;
     margin-top: 3px;
     text-align: right;
@@ -728,7 +728,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
 
     .pp-scope .row-unit-f { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.35); }
 
-    .pp-scope .row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
+    .pp-scope .row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.85); }
 
 
     
@@ -750,13 +750,13 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
 
     .pp-scope .dropin-headline { font-size: 32px; font-weight: 900; color: #f0e6d6; text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 0.75rem; }
 
-    .pp-scope .dropin-strapline { font-size: 14px; color: rgba(255,255,255,0.4); font-style: italic; letter-spacing: 0.01em; }
+    .pp-scope .dropin-strapline { font-size: 14px; color: rgba(255,255,255,0.85); font-style: italic; letter-spacing: 0.01em; }
 
     .pp-scope .dropin-body { display: grid; grid-template-columns: 1fr 300px; }
 
     .pp-scope .dropin-left { padding: 2rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.08); }
 
-    .pp-scope .dropin-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 1.5rem; max-width: 520px; }
+    .pp-scope .dropin-desc { font-size: 13px; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 1.5rem; max-width: 520px; }
 
     .pp-scope .dropin-bullets { list-style: none; display: flex; flex-direction: column; gap: 0; }
 
@@ -774,7 +774,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
 
     .pp-scope .dropin-big-price { font-size: 72px; font-weight: 900; color: #f0e6d6; letter-spacing: -4px; line-height: 1; }
 
-    .pp-scope .dropin-big-unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.4); letter-spacing: 0; }
+    .pp-scope .dropin-big-unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 0; }
 
     .pp-scope .dropin-standard { font-size: 12px; color: rgba(255,255,255,0.25); margin-top: 8px; text-decoration: line-through; }
 
@@ -1285,10 +1285,10 @@ const Pricing = () => {
   .rr-dropin-section { background: transparent; border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); overflow: hidden; margin-bottom: 4.5rem; }
   .rr-dropin-header { padding: 2.5rem 2.5rem 1.75rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .rr-dropin-headline { font-size: 32px; font-weight: 900; color: #f0e6d6; text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 0.75rem; }
-  .rr-dropin-strapline { font-size: 14px; color: rgba(255,255,255,0.4); font-style: italic; letter-spacing: 0.01em; }
+  .rr-dropin-strapline { font-size: 14px; color: rgba(255,255,255,0.85); font-style: italic; letter-spacing: 0.01em; }
   .rr-dropin-body { display: grid; grid-template-columns: 1fr 300px; }
   .rr-dropin-left { padding: 2rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.08); }
-  .rr-dropin-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 1.5rem; max-width: 520px; }
+  .rr-dropin-desc { font-size: 13px; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 1.5rem; max-width: 520px; }
   .rr-dropin-bullets { list-style: none; display: flex; flex-direction: column; gap: 0; padding: 0; }
   .rr-dropin-bullet { display: flex; align-items: center; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.45); padding: 9px 0; border-top: 1px solid rgba(255,255,255,0.06); }
   .rr-dropin-bullet:last-child { border-bottom: 1px solid rgba(255,255,255,0.06); }
@@ -1296,7 +1296,7 @@ const Pricing = () => {
   .rr-dropin-right { padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; }
   .rr-dropin-rate-label { font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); font-weight: 700; margin-bottom: 4px; }
   .rr-dropin-big-price { font-size: 72px; font-weight: 900; color: #f0e6d6; letter-spacing: -4px; line-height: 1; }
-  .rr-dropin-big-unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.4); letter-spacing: 0; }
+  .rr-dropin-big-unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 0; }
   .rr-dropin-standard { font-size: 12px; color: rgba(255,255,255,0.25); margin-top: 8px; text-decoration: line-through; }
   @media (max-width: 700px) {
     .rr-dropin-body { grid-template-columns: 1fr; }
@@ -1347,7 +1347,7 @@ const Pricing = () => {
   .rr-row-price-f { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: #f0e6d6; white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
   .rr-row-price-g { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: rgba(255,255,255,0.7); white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
   .rr-row-unit-f { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.35); }
-  .rr-row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
+  .rr-row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.85); }
   @media (max-width: 700px) {
     .rr-acc-inner { grid-template-columns: 1fr; gap: 1.5rem; }
     .rr-acc-name { font-size: 24px; }
