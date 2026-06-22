@@ -141,7 +141,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 600;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--page-ink-muted);
+    color: rgba(255,255,255,0.9);
     margin-bottom: 18px;
   }
   .page-title {
@@ -156,13 +156,13 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .header-sub {
     font-size: 13px;
     font-style: italic;
-    color: rgba(225,214,200,0.82);
+    color: rgba(255,255,255,0.95);
     font-weight: 300;
     margin-bottom: 8px;
   }
   .header-note {
     font-size: 13px;
-    color: rgba(225,214,200,0.75);
+    color: rgba(255,255,255,0.9);
     max-width: 460px;
     line-height: 1.75;
     font-weight: 300;
@@ -191,7 +191,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     color: var(--ivory);
     letter-spacing: 0.03em;
   }
-  .urgency-text em { font-style: normal; color: rgba(225,214,200,0.55); font-weight: 400; }
+  .urgency-text em { font-style: normal; color: rgba(255,255,255,0.8); font-weight: 400; }
 
   /* ---- SECTIONS ---- */
   .section { margin-bottom: 72px; }
@@ -208,7 +208,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-size: 13px;
     font-style: italic;
     font-weight: 300;
-    color: var(--page-ink-muted);
+    color: rgba(255,255,255,0.9);
     margin-top: 6px;
     margin-bottom: 0;
   }
@@ -269,7 +269,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(225,214,200,0.7);
+    color: rgba(255,255,255,0.9);
     margin-bottom: 12px;
     display: flex;
     align-items: center;
@@ -279,7 +279,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     content: '';
     width: 5px; height: 5px;
     border-radius: 50%;
-    background: rgba(225,214,200,0.7);
+    background: rgba(255,255,255,0.9);
     flex-shrink: 0;
   }
   .anchor-row {
@@ -291,11 +291,11 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .anchor-was {
     font-size: 14px;
     font-weight: 700;
-    color: rgba(225,214,200,0.35);
+    color: rgba(255,255,255,0.85);
     text-decoration: line-through;
-    text-decoration-color: rgba(225,214,200,0.35);
+    text-decoration-color: rgba(255,255,255,0.85);
   }
-  .anchor-unit { font-size: 11px; color: rgba(225,214,200,0.22); }
+  .anchor-unit { font-size: 11px; color: rgba(255,255,255,0.7); }
   .pct-badge {
     background: rgba(180,50,40,0.5);
     color: rgba(255,180,170,0.9);
@@ -311,7 +311,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(225,214,200,0.35);
+    color: rgba(255,255,255,0.85);
     margin-bottom: 2px;
   }
   .pc-row { display: flex; align-items: baseline; gap: 2px; }
@@ -325,7 +325,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   }
   .pc-unit {
     font-size: 13px;
-    color: rgba(225,214,200,0.4);
+    color: rgba(255,255,255,0.85);
     align-self: flex-end;
     padding-bottom: 7px;
     margin-left: 4px;
@@ -341,12 +341,12 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     margin-bottom: 10px;
   }
   .mo-num { font-size: 20px; font-weight: 700; color: rgba(225,214,200,0.8); }
-  .mo-unit { font-size: 12px; color: rgba(225,214,200,0.4); margin-left: 4px; flex: 1; }
-  .mo-was { font-size: 12px; color: rgba(225,214,200,0.22); text-decoration: line-through; margin-right: 6px; }
+  .mo-unit { font-size: 12px; color: rgba(255,255,255,0.85); margin-left: 4px; flex: 1; }
+  .mo-was { font-size: 12px; color: rgba(255,255,255,0.7); text-decoration: line-through; margin-right: 6px; }
   .mo-pct {
     font-size: 10px;
     font-weight: 700;
-    color: rgba(225,214,200,0.5);
+    color: rgba(255,255,255,0.9);
     background: rgba(225,214,200,0.08);
     padding: 2px 6px;
     border-radius: 3px;
@@ -362,7 +362,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(225,214,200,0.35);
+    color: rgba(255,255,255,0.85);
     margin-bottom: 3px;
   }
   .save-num {
@@ -372,8 +372,8 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     letter-spacing: -0.02em;
     line-height: 1;
   }
-  .save-unit { font-size: 12px; color: rgba(225,214,200,0.5); margin-left: 3px; }
-  .spots { font-size: 11px; color: rgba(225,214,200,0.22); }
+  .save-unit { font-size: 12px; color: rgba(255,255,255,0.9); margin-left: 3px; }
+  .spots { font-size: 11px; color: rgba(255,255,255,0.7); }
 
   /* ---- BUTTON ---- */
   .cta { margin-top: auto; padding-top: 16px; }
@@ -449,14 +449,14 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.85);
     margin: 14px 0 2px;
   }
   .pk-row { display: flex; align-items: baseline; gap: 2px; }
   .pk-sym { font-size: 15px; font-weight: 700; color: #f0e6d6; line-height: 1; }
   .pk-num { font-size: 44px; font-weight: 900; color: #f0e6d6; letter-spacing: -0.03em; line-height: 1; }
-  .pk-unit { font-size: 12px; color: rgba(255,255,255,0.55); align-self: flex-end; padding-bottom: 5px; margin-left: 3px; }
-  .pk-total { font-size: 12px; color: rgba(255,255,255,0.55); margin-top: 3px; margin-bottom: 4px; }
+  .pk-unit { font-size: 12px; color: rgba(255,255,255,0.85); align-self: flex-end; padding-bottom: 5px; margin-left: 3px; }
+  .pk-total { font-size: 12px; color: rgba(255,255,255,0.85); margin-top: 3px; margin-bottom: 4px; }
   .btn-ghost {
     display: block;
     width: 100%;
@@ -504,7 +504,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .perks-sub {
     font-size: 13px;
     font-weight: 300;
-    color: rgba(225,214,200,0.5);
+    color: rgba(255,255,255,0.9);
     max-width: 340px;
     line-height: 1.65;
     font-style: italic;
@@ -526,7 +526,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .perks-lock-body {
     font-size: 12px;
     font-weight: 300;
-    color: rgba(225,214,200,0.45);
+    color: rgba(255,255,255,0.9);
     line-height: 1.6;
   }
   .perks-grid {
@@ -544,7 +544,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   }
   .perk-icon {
     font-size: 18px;
-    color: rgba(225,214,200,0.55);
+    color: rgba(255,255,255,0.85);
     flex-shrink: 0;
     margin-top: 1px;
   }
@@ -557,7 +557,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .perk-body {
     font-size: 12px;
     font-weight: 300;
-    color: rgba(225,214,200,0.5);
+    color: rgba(255,255,255,0.9);
     line-height: 1.5;
   }
 
@@ -575,7 +575,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   .footer p {
     font-size: 11px;
     font-weight: 300;
-    color: var(--page-ink-faint);
+    color: rgba(255,255,255,0.8);
     line-height: 1.8;
     max-width: 500px;
   }
@@ -584,14 +584,14 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     font-weight: 900;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--page-ink-faint);
+    color: rgba(255,255,255,0.8);
     white-space: nowrap;
   }
   .footer-tagline {
     font-size: 10px;
     font-weight: 300;
     font-style: italic;
-    color: var(--page-ink-faint);
+    color: rgba(255,255,255,0.8);
     letter-spacing: 0.06em;
     margin-top: 3px;
     text-align: right;
@@ -728,7 +728,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
 
     .pp-scope .row-unit-f { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.35); }
 
-    .pp-scope .row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
+    .pp-scope .row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.85); }
 
 
     
@@ -750,13 +750,13 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
 
     .pp-scope .dropin-headline { font-size: 32px; font-weight: 900; color: #f0e6d6; text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 0.75rem; }
 
-    .pp-scope .dropin-strapline { font-size: 14px; color: rgba(255,255,255,0.4); font-style: italic; letter-spacing: 0.01em; }
+    .pp-scope .dropin-strapline { font-size: 14px; color: rgba(255,255,255,0.85); font-style: italic; letter-spacing: 0.01em; }
 
     .pp-scope .dropin-body { display: grid; grid-template-columns: 1fr 300px; }
 
     .pp-scope .dropin-left { padding: 2rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.08); }
 
-    .pp-scope .dropin-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 1.5rem; max-width: 520px; }
+    .pp-scope .dropin-desc { font-size: 13px; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 1.5rem; max-width: 520px; }
 
     .pp-scope .dropin-bullets { list-style: none; display: flex; flex-direction: column; gap: 0; }
 
@@ -774,7 +774,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
 
     .pp-scope .dropin-big-price { font-size: 72px; font-weight: 900; color: #f0e6d6; letter-spacing: -4px; line-height: 1; }
 
-    .pp-scope .dropin-big-unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.4); letter-spacing: 0; }
+    .pp-scope .dropin-big-unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 0; }
 
     .pp-scope .dropin-standard { font-size: 12px; color: rgba(255,255,255,0.25); margin-top: 8px; text-decoration: line-through; }
 
@@ -1285,19 +1285,19 @@ const Pricing = () => {
   .rr-dropin-section { background: transparent; border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); overflow: hidden; margin-bottom: 4.5rem; }
   .rr-dropin-header { padding: 2.5rem 2.5rem 1.75rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .rr-dropin-headline { font-size: 32px; font-weight: 900; color: #f0e6d6; text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.1; margin-bottom: 0.75rem; }
-  .rr-dropin-strapline { font-size: 14px; color: rgba(255,255,255,0.4); font-style: italic; letter-spacing: 0.01em; }
+  .rr-dropin-strapline { font-size: 14px; color: rgba(255,255,255,0.85); font-style: italic; letter-spacing: 0.01em; }
   .rr-dropin-body { display: grid; grid-template-columns: 1fr 300px; }
   .rr-dropin-left { padding: 2rem 2.5rem; border-right: 1px solid rgba(255,255,255,0.08); }
-  .rr-dropin-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 1.5rem; max-width: 520px; }
+  .rr-dropin-desc { font-size: 13px; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 1.5rem; max-width: 520px; }
   .rr-dropin-bullets { list-style: none; display: flex; flex-direction: column; gap: 0; padding: 0; }
-  .rr-dropin-bullet { display: flex; align-items: center; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.45); padding: 9px 0; border-top: 1px solid rgba(255,255,255,0.06); }
+  .rr-dropin-bullet { display: flex; align-items: center; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.9); padding: 9px 0; border-top: 1px solid rgba(255,255,255,0.06); }
   .rr-dropin-bullet:last-child { border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .rr-dropin-bullet::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.25); flex-shrink: 0; }
+  .rr-dropin-bullet::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.6); flex-shrink: 0; }
   .rr-dropin-right { padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; }
-  .rr-dropin-rate-label { font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); font-weight: 700; margin-bottom: 4px; }
+  .rr-dropin-rate-label { font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.85); font-weight: 700; margin-bottom: 4px; }
   .rr-dropin-big-price { font-size: 72px; font-weight: 900; color: #f0e6d6; letter-spacing: -4px; line-height: 1; }
-  .rr-dropin-big-unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.4); letter-spacing: 0; }
-  .rr-dropin-standard { font-size: 12px; color: rgba(255,255,255,0.25); margin-top: 8px; text-decoration: line-through; }
+  .rr-dropin-big-unit { font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.85); letter-spacing: 0; }
+  .rr-dropin-standard { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 8px; text-decoration: line-through; }
   @media (max-width: 700px) {
     .rr-dropin-body { grid-template-columns: 1fr; }
     .rr-dropin-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
@@ -1317,8 +1317,8 @@ const Pricing = () => {
   .rr-acc-right { display: flex; align-items: center; gap: 1.5rem; }
   .rr-acc-price-collapsed { text-align: right; }
   .rr-acc-price-big { font-size: 30px; font-weight: 900; color: #f0e6d6; letter-spacing: -1px; line-height: 1; }
-  .rr-acc-price-big span { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.7); }
-  .rr-acc-price-sub { font-size: 10px; color: rgba(255,255,255,0.6); margin-top: 3px; text-align: right; }
+  .rr-acc-price-big span { font-size: 12px; font-weight: 400; color: rgba(255,255,255,0.9); }
+  .rr-acc-price-sub { font-size: 10px; color: rgba(255,255,255,0.9); margin-top: 3px; text-align: right; }
   .rr-acc-chevron { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.12); border-radius: 50%; flex-shrink: 0; transition: transform 0.25s, border-color 0.2s; }
   .rr-acc-chevron svg { width: 10px; height: 10px; stroke: rgba(255,255,255,0.85); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
   .rr-acc-item.open .rr-acc-chevron { border-color: rgba(255,255,255,0.3); transform: rotate(180deg); }
@@ -1331,13 +1331,13 @@ const Pricing = () => {
   .rr-acc-feat:last-child { border-bottom: none; }
   .rr-acc-feat-icon { width: 28px; height: 28px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 6px; }
   .rr-acc-feat-icon svg { width: 14px; height: 14px; stroke: rgba(210,160,120,0.8); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-  .rr-acc-feat-text { font-size: 12px; color: rgba(255,255,255,0.65); line-height: 1.4; }
+  .rr-acc-feat-text { font-size: 12px; color: rgba(255,255,255,0.9); line-height: 1.4; }
   .rr-acc-feat-text strong { color: #f0e6d6; font-weight: 600; }
   .rr-acc-pricing-right { display: flex; flex-direction: column; }
   .rr-acc-badge-wrap { margin-bottom: 1rem; }
   .rr-acc-badge { display: inline-block; background: #8B5E3C; color: #f5dfc5; font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 12px; border-radius: 3px; font-weight: 700; }
   .rr-acc-per-class-box { border: 1px solid rgba(255,255,255,0.2); border-radius: 7px; padding: 14px 16px; margin-bottom: 7px; display: flex; align-items: center; justify-content: space-between; }
-  .rr-acc-per-class-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); }
+  .rr-acc-per-class-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.9); }
   .rr-acc-per-class-num { font-size: 26px; font-weight: 900; color: #ffffff; letter-spacing: -1px; }
   .rr-price-row { display: flex; align-items: center; justify-content: space-between; padding: 0 16px; height: 56px; border-radius: 7px; margin-bottom: 7px; }
   .rr-price-row.founders { background: rgba(160,45,24,0.2); border: 1px solid rgba(160,45,24,0.35); }
@@ -1346,8 +1346,8 @@ const Pricing = () => {
   .rr-row-label-g { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.7); flex-shrink: 1; min-width: 0; }
   .rr-row-price-f { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: #f0e6d6; white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
   .rr-row-price-g { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: rgba(255,255,255,0.7); white-space: nowrap; flex-shrink: 0; margin-left: 8px; }
-  .rr-row-unit-f { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.35); }
-  .rr-row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4); }
+  .rr-row-unit-f { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.8); }
+  .rr-row-unit-g { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.85); }
   @media (max-width: 700px) {
     .rr-acc-inner { grid-template-columns: 1fr; gap: 1.5rem; }
     .rr-acc-name { font-size: 24px; }
@@ -1356,9 +1356,9 @@ const Pricing = () => {
 
   .rr-intro-section { margin-top: 4rem; }
   .rr-intro-inner { border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 2.5rem; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 3rem; align-items: center; }
-  .rr-intro-tag { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
+  .rr-intro-tag { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.85); margin-bottom: 8px; }
   .rr-intro-title { font-size: 28px; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: #f0e6d6; margin-bottom: 6px; }
-  .rr-intro-sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 1.25rem; }
+  .rr-intro-sub { font-size: 12px; color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
   .rr-intro-prices { display: flex; gap: 1.5rem; align-items: baseline; margin-bottom: 1.25rem; }
   .rr-intro-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
   @media (max-width: 700px) {
@@ -1413,7 +1413,7 @@ const Pricing = () => {
       <div>
         <p className="rr-dropin-rate-label">Founding rate</p>
         <p className="rr-dropin-big-price">£20<span className="rr-dropin-big-unit"> /class</span></p>
-        <p className="rr-dropin-standard" style={{textDecoration:'none',color:'rgba(255,255,255,0.5)',fontSize:'14px'}}>£25 from 13.07</p>
+        <p className="rr-dropin-standard" style={{textDecoration:'none',color:'rgba(255,255,255,0.8)',fontSize:'14px'}}>£25 from 13.07</p>
       </div>
       <button className="rr-btn-ghost" onClick={() => window.open('https://momence.com/u/renegade-reformer-ltd-74tF03', '_blank')}>Book a class</button>
     </div>
@@ -1428,20 +1428,20 @@ const Pricing = () => {
       <p className="rr-intro-title">Intro pack</p>
       <p className="rr-intro-sub">3 classes to find your feet. The best way to try Renegade properly before committing to a membership.</p>
       <div className="rr-intro-prices">
-        <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>£48 <span style={{fontWeight:400,fontSize:'12px',color:'rgba(255,255,255,0.5)'}}>founding rate</span></span>
-        <span style={{color:'rgba(255,255,255,0.55)',fontSize:'14px'}}>£55 <span style={{color:'rgba(255,255,255,0.55)',fontSize:'12px'}}>from 13.07</span></span>
+        <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>£48 <span style={{fontWeight:400,fontSize:'12px',color:'rgba(255,255,255,0.85)'}}>founding rate</span></span>
+        <span style={{color:'rgba(255,255,255,0.75)',fontSize:'14px'}}>£55 <span style={{color:'rgba(255,255,255,0.75)',fontSize:'12px'}}>from 13.07</span></span>
       </div>
       <ul className="rr-dropin-bullets">
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>£16 per class at founding rate (£18.33 standard)</li>
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>Use across any 3 classes in the schedule</li>
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>All levels welcome — great for complete beginners</li>
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>£16 per class at founding rate (£18.33 standard)</li>
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>Use across any 3 classes in the schedule</li>
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>All levels welcome — great for complete beginners</li>
       </ul>
     </div>
     <div className="rr-intro-right">
       <div style={{textAlign:'right'}}>
-        <p style={{fontSize:'9px',letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)',fontWeight:600,marginBottom:'4px'}}>3 classes</p>
+        <p style={{fontSize:'9px',letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.85)',fontWeight:600,marginBottom:'4px'}}>3 classes</p>
         <p style={{fontSize:'52px',fontWeight:900,color:'#f0e6d6',letterSpacing:'-3px',lineHeight:1}}>£48</p>
-        <p style={{fontSize:'11px',color:'rgba(255,255,255,0.55)',marginTop:'4px'}}>£55 from 13.07</p>
+        <p style={{fontSize:'11px',color:'rgba(255,255,255,0.85)',marginTop:'4px'}}>£55 from 13.07</p>
       </div>
       <button className="rr-btn-ghost" style={{width:'auto',padding:'13px 28px'}} onClick={() => window.open('https://momence.com/Renegade-Reformer/membership/Intro-Offer---Class-Pack/763559', '_blank')}>Book intro pack</button>
     </div>
