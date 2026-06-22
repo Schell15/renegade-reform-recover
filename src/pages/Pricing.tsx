@@ -1413,7 +1413,7 @@ const Pricing = () => {
       <div>
         <p className="rr-dropin-rate-label">Founding rate</p>
         <p className="rr-dropin-big-price">£20<span className="rr-dropin-big-unit"> /class</span></p>
-        <p className="rr-dropin-standard" style={{textDecoration:'none',color:'rgba(255,255,255,0.5)',fontSize:'14px'}}>£25 from 13.07</p>
+        <p className="rr-dropin-standard" style={{textDecoration:'none',color:'rgba(255,255,255,0.8)',fontSize:'14px'}}>£25 from 13.07</p>
       </div>
       <button className="rr-btn-ghost" onClick={() => window.open('https://momence.com/u/renegade-reformer-ltd-74tF03', '_blank')}>Book a class</button>
     </div>
@@ -1428,20 +1428,20 @@ const Pricing = () => {
       <p className="rr-intro-title">Intro pack</p>
       <p className="rr-intro-sub">3 classes to find your feet. The best way to try Renegade properly before committing to a membership.</p>
       <div className="rr-intro-prices">
-        <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>£48 <span style={{fontWeight:400,fontSize:'12px',color:'rgba(255,255,255,0.5)'}}>founding rate</span></span>
-        <span style={{color:'rgba(255,255,255,0.55)',fontSize:'14px'}}>£55 <span style={{color:'rgba(255,255,255,0.55)',fontSize:'12px'}}>from 13.07</span></span>
+        <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>£48 <span style={{fontWeight:400,fontSize:'12px',color:'rgba(255,255,255,0.85)'}}>founding rate</span></span>
+        <span style={{color:'rgba(255,255,255,0.75)',fontSize:'14px'}}>£55 <span style={{color:'rgba(255,255,255,0.75)',fontSize:'12px'}}>from 13.07</span></span>
       </div>
       <ul className="rr-dropin-bullets">
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>£16 per class at founding rate (£18.33 standard)</li>
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>Use across any 3 classes in the schedule</li>
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.45)'}}>All levels welcome — great for complete beginners</li>
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>£16 per class at founding rate (£18.33 standard)</li>
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>Use across any 3 classes in the schedule</li>
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>All levels welcome — great for complete beginners</li>
       </ul>
     </div>
     <div className="rr-intro-right">
       <div style={{textAlign:'right'}}>
-        <p style={{fontSize:'9px',letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.3)',fontWeight:600,marginBottom:'4px'}}>3 classes</p>
+        <p style={{fontSize:'9px',letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.85)',fontWeight:600,marginBottom:'4px'}}>3 classes</p>
         <p style={{fontSize:'52px',fontWeight:900,color:'#f0e6d6',letterSpacing:'-3px',lineHeight:1}}>£48</p>
-        <p style={{fontSize:'11px',color:'rgba(255,255,255,0.55)',marginTop:'4px'}}>£55 from 13.07</p>
+        <p style={{fontSize:'11px',color:'rgba(255,255,255,0.85)',marginTop:'4px'}}>£55 from 13.07</p>
       </div>
       <button className="rr-btn-ghost" style={{width:'auto',padding:'13px 28px'}} onClick={() => window.open('https://momence.com/Renegade-Reformer/membership/Intro-Offer---Class-Pack/763559', '_blank')}>Book intro pack</button>
     </div>
