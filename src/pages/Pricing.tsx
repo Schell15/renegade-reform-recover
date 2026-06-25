@@ -1021,7 +1021,7 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
 
 const PRICING_BODY_TAIL_AFTER_GALLERY_CLASSPACKS = `<div class="page" style="padding-top:0;padding-bottom:0;">
   <!-- CLASS PACKS -->
-  <section class="section" id="class-packs">
+  <section class="section" id="class-packs" style="margin-bottom:0;">
     <p class="section-label">Class packs</p>
     <p class="section-note">Not a member yet? Packs are a great way to try the studio.</p>
     <div class="grid-3">
