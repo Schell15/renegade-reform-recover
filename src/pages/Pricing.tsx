@@ -1019,7 +1019,7 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
   </div>
 </div>`;
 
-const PRICING_BODY_TAIL_AFTER_GALLERY = `<div class="page" style="padding-top:0;padding-bottom:0;">
+const PRICING_BODY_TAIL_AFTER_GALLERY_CLASSPACKS = `<div class="page" style="padding-top:0;padding-bottom:0;">
   <!-- CLASS PACKS -->
   <section class="section" id="class-packs">
     <p class="section-label">Class packs</p>
@@ -1059,6 +1059,9 @@ const PRICING_BODY_TAIL_AFTER_GALLERY = `<div class="page" style="padding-top:0;
     </div>
   </section>
 
+</div>`;
+
+const PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER = `<div class="page" style="padding-top:0;padding-bottom:0;">
   <div style="margin:1rem 0;">
     <button
       type="button"
@@ -1396,10 +1399,6 @@ const Pricing = () => {
     </div>
   </div>
 </div>
-</div>
-<div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
-<RenegadeGallery />
-<div className="page" style={{paddingTop:0,paddingBottom:0}}>
 
 {/* DROP-IN */}
 <div className="rr-dropin-section" id="drop-in">
@@ -1691,7 +1690,10 @@ const Pricing = () => {
 </div>
 
       </div>
-      <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY }} />
+      <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
+      <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY_CLASSPACKS }} />
+      <RenegadeGallery />
+      <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER }} />
     </>
   );
 };
