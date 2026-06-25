@@ -1694,8 +1694,10 @@ const Pricing = () => {
       </div>
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY_CLASSPACKS }} />
+      <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_NOTIFY_BUTTON }} />
       <RenegadeGallery />
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER }} />
+
     </>
   );
 };
