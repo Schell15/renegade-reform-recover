@@ -68,30 +68,44 @@ const GalleryItem = ({ src, name, sub }: { src: string; name: string; sub: strin
 const RenegadeGallery = () => {
   return (
     <div
-      className="grid"
       style={{
-        gridTemplateColumns: "repeat(3, 1fr)",
-        height: "620px",
-        width: "100vw",
-        position: "relative",
-        left: "50%",
-        transform: "translateX(-50%)",
+        width: "100%",
+        background: "transparent",
         margin: 0,
         padding: 0,
       }}
     >
-      {images.map((img, i) => (
+      <div
+        style={{
+          maxWidth: "920px",
+          margin: "0 auto",
+          padding: "0 24px",
+        }}
+      >
         <div
-          key={i}
-          className="relative"
+          className="grid"
           style={{
-            borderRight:
-              i < images.length - 1 ? "1px solid rgba(240,235,227,0.18)" : "none",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            height: "620px",
+            width: "100%",
+            margin: 0,
+            padding: 0,
           }}
         >
-          <GalleryItem {...img} />
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="relative"
+              style={{
+                borderRight:
+                  i < images.length - 1 ? "1px solid rgba(240,235,227,0.18)" : "none",
+              }}
+            >
+              <GalleryItem {...img} />
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };
