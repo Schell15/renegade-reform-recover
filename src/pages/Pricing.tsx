@@ -1016,7 +1016,9 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
       </a>
     </div>
   </div>
+</div>`;
 
+const PRICING_BODY_TAIL_AFTER_GALLERY = `<div class="page" style="padding-top:0;padding-bottom:0;">
   <!-- CLASS PACKS -->
   <section class="section" id="class-packs">
     <p class="section-label">Class packs</p>
