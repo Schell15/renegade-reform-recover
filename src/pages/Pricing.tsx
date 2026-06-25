@@ -1061,7 +1061,7 @@ const PRICING_BODY_TAIL_AFTER_GALLERY_CLASSPACKS = `<div class="page" style="pad
 
 </div>`;
 
-const PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER = `<div class="page" style="padding-top:0;padding-bottom:0;">
+const PRICING_BODY_NOTIFY_BUTTON = `<div class="page" style="padding-top:0;padding-bottom:0;">
   <div style="margin:1rem 0;">
     <button
       type="button"
@@ -1086,7 +1086,9 @@ const PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER = `<div class="page" style="padding
       </div>
     </div>
   </div>
+</div>`;
 
+const PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER = `<div class="page" style="padding-top:0;padding-bottom:0;">
   <footer class="footer">
     <p>All memberships roll monthly after an initial 1-month term. Class packs are non-refundable and non-transferable. Founding member rates are strictly limited to 50 spots and locked in for life, your rate never increases as long as your membership remains active.</p>
     <div>
@@ -1094,10 +1096,10 @@ const PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER = `<div class="page" style="padding
       <p class="footer-tagline">reform · repower · recover</p>
     </div>
   </footer>
-
 </div>
 
 `;
+
 
 
 const Pricing = () => {
