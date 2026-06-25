@@ -1396,6 +1396,10 @@ const Pricing = () => {
     </div>
   </div>
 </div>
+</div>
+<div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
+<RenegadeGallery />
+<div className="page" style={{paddingTop:0,paddingBottom:0}}>
 
 {/* DROP-IN */}
 <div className="rr-dropin-section" id="drop-in">
@@ -1687,8 +1691,6 @@ const Pricing = () => {
 </div>
 
       </div>
-      <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
-      <RenegadeGallery />
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY }} />
     </>
   );
