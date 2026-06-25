@@ -1687,6 +1687,8 @@ const Pricing = () => {
 
       </div>
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
+      <RenegadeGallery />
+      <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY }} />
     </>
   );
 };
