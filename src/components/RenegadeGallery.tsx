@@ -75,32 +75,39 @@ const RenegadeGallery = () => {
         padding: 0,
       }}
     >
-      <div
-        style={{
-          maxWidth: "920px",
-          margin: "0 auto",
-          padding: "0 24px",
-        }}
-      >
-        <div
-          className="grid"
-          style={{
-            gridTemplateColumns: "repeat(3, 1fr)",
-            height: "620px",
-            width: "100%",
-            margin: 0,
-            padding: 0,
-          }}
-        >
+      <div style={{ width: "100%", margin: 0, padding: 0 }}>
+        <style>{`
+          .rg-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+            height: clamp(620px, calc(100vw / 3 * 1.5), 900px);
+            margin: 0;
+            padding: 0;
+          }
+          .rg-item {
+            position: relative;
+          }
+          .rg-item:not(:last-child) {
+            border-right: 1px solid rgba(240,235,227,0.18);
+          }
+          @media (max-width: 720px) {
+            .rg-grid {
+              grid-template-columns: 1fr;
+              height: clamp(420px, 80vw, 540px);
+            }
+            .rg-item {
+              border-right: none;
+              border-bottom: 1px solid rgba(240,235,227,0.18);
+            }
+            .rg-item:last-child {
+              border-bottom: none;
+            }
+          }
+        `}</style>
+        <div className="rg-grid">
           {images.map((img, i) => (
-            <div
-              key={i}
-              className="relative"
-              style={{
-                borderRight:
-                  i < images.length - 1 ? "1px solid rgba(240,235,227,0.18)" : "none",
-              }}
-            >
+            <div key={i} className="rg-item">
               <GalleryItem {...img} />
             </div>
           ))}
