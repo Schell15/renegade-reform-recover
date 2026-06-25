@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SEO } from "@/components/SEO";
+import RenegadeGallery from "@/components/RenegadeGallery";
 
 const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1016,7 +1017,9 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
       </a>
     </div>
   </div>
+</div>`;
 
+const PRICING_BODY_TAIL_AFTER_GALLERY = `<div class="page" style="padding-top:0;padding-bottom:0;">
   <!-- CLASS PACKS -->
   <section class="section" id="class-packs">
     <p class="section-label">Class packs</p>
@@ -1685,6 +1688,8 @@ const Pricing = () => {
 
       </div>
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
+      <RenegadeGallery />
+      <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY }} />
     </>
   );
 };
