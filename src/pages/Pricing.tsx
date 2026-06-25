@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SEO } from "@/components/SEO";
+import RenegadeGallery from "@/components/RenegadeGallery";
 
 const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
