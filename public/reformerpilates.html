@@ -242,10 +242,16 @@
     .photo-row {
       display: grid;
       gap: 3px;
-      height: 320px;
+      height: 400px;
     }
 
-    .photo-row img {
+    .photo-cell {
+      overflow: hidden;
+      min-height: 0;
+      min-width: 0;
+    }
+
+    .photo-cell img {
       width: 100%;
       height: 100%;
       object-fit: cover;
