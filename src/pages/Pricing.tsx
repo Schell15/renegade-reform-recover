@@ -1518,7 +1518,7 @@ const Pricing = () => {
               <span className="rr-row-label-g">Non-founders rate</span>
               <span className="rr-row-price-g">£85<span className="rr-row-unit-g"> /mo</span></span>
             </div>
-            <button className="rr-btn-ghost" style={{cursor:'pointer'}} onClick={() => window.open('https://momence.com/m/811786', '_blank')}>Get founding rate</button>
+            <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/811786', '_blank')}>Get founding rate</button>
           </div>
         </div>
       </div>
@@ -1649,7 +1649,7 @@ const Pricing = () => {
               <span className="rr-row-label-g">Non-founders rate</span>
               <span className="rr-row-price-g">£195<span className="rr-row-unit-g"> /mo</span></span>
             </div>
-            <button className="rr-btn-ghost" onClick={() => window.open('https://momence.com/m/812642', '_blank')}>Get founding rate</button>
+            <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/812642', '_blank')}>Get founding rate</button>
           </div>
         </div>
       </div>
