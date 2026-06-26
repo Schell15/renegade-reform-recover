@@ -242,10 +242,16 @@
     .photo-row {
       display: grid;
       gap: 3px;
-      height: 320px;
+      height: 400px;
     }
 
-    .photo-row img {
+    .photo-cell {
+      overflow: hidden;
+      min-height: 0;
+      min-width: 0;
+    }
+
+    .photo-cell img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -876,22 +882,22 @@
 
       <div class="photo-grid">
         <div class="photo-row row-2-60-40">
-          <img class="photo-grade" src="/reformer-collage/reformer-collage-01.png" alt="Renegade Reformer studio photograph, reformer Pilates Bristol" loading="lazy" />
-          <img class="photo-grade" src="/reformer-collage/reformer-collage-02.png" alt="Renegade Reformer workout detail, reformer Pilates Bristol" loading="lazy" />
+          <div class="photo-cell"><img class="photo-grade" src="/reformer-collage/reformer-collage-01.png" alt="Renegade Reformer studio photograph, reformer Pilates Bristol" loading="lazy" /></div>
+          <div class="photo-cell"><img class="photo-grade" src="/reformer-collage/reformer-collage-02.png" alt="Renegade Reformer workout detail, reformer Pilates Bristol" loading="lazy" /></div>
         </div>
         <div class="photo-row row-3-equal">
-          <img class="photo-grade" src="/reformer-collage/reformer-collage-03.png" alt="Renegade Reformer class scene, reformer Pilates Bristol" loading="lazy" />
-          <img class="photo-grade" src="/reformer-collage/reformer-collage-04.png" alt="Renegade Reformer studio moment, reformer Pilates Bristol" loading="lazy" />
-          <img class="photo-grade" src="/reformer-collage/reformer-collage-05.png" alt="Renegade Reformer equipment and studio detail, reformer Pilates Bristol" loading="lazy" />
+          <div class="photo-cell"><img class="photo-grade" src="/reformer-collage/reformer-collage-03.png" alt="Renegade Reformer class scene, reformer Pilates Bristol" loading="lazy" /></div>
+          <div class="photo-cell"><img class="photo-grade" src="/reformer-collage/reformer-collage-04.png" alt="Renegade Reformer studio moment, reformer Pilates Bristol" loading="lazy" /></div>
+          <div class="photo-cell"><img class="photo-grade" src="/reformer-collage/reformer-collage-05.png" alt="Renegade Reformer equipment and studio detail, reformer Pilates Bristol" loading="lazy" /></div>
         </div>
         <div class="photo-row row-2-40-60">
-          <img class="photo-grade" src="/reformer-collage/reformer-collage-06.png" alt="Renegade Reformer studio image, reformer Pilates Bristol" loading="lazy" />
-          <img class="photo-grade" src="/reformer-collage/reformer-collage-07.png" alt="Renegade Reformer class with medicine balls, reformer Pilates Bristol" loading="lazy" />
+          <div class="photo-cell"><img class="photo-grade" src="/reformer-collage/reformer-collage-06.png" alt="Renegade Reformer studio image, reformer Pilates Bristol" loading="lazy" /></div>
+          <div class="photo-cell"><img class="photo-grade" src="/reformer-collage/reformer-collage-07.png" alt="Renegade Reformer class with medicine balls, reformer Pilates Bristol" loading="lazy" /></div>
         </div>
         <div class="photo-row row-3-equal">
-          <img class="photo-grade" src="/reformer-collage/reformer-collage-08.png" alt="Renegade Reformer side stretch class portrait, reformer Pilates Bristol" loading="lazy" />
-          <img class="photo-grade" src="/reformer-collage/reformer-collage-09.png" alt="Renegade Reformer standing pose on reformer bed, reformer Pilates Bristol" loading="lazy" />
-          <img class="photo-grade" src="/reformer-collage/reformer-collage-10.png" alt="Renegade Reformer brand mark on textured stone wall" loading="lazy" />
+          <div class="photo-cell"><img class="photo-grade" src="/reformer-collage/reformer-collage-08.png" alt="Renegade Reformer side stretch class portrait, reformer Pilates Bristol" loading="lazy" /></div>
+          <div class="photo-cell"><img class="photo-grade" src="/reformer-collage/reformer-collage-09.png" alt="Renegade Reformer standing pose on reformer bed, reformer Pilates Bristol" loading="lazy" /></div>
+          <div class="photo-cell"><img class="photo-grade" src="/reformer-collage/reformer-collage-10.png" alt="Renegade Reformer brand mark on textured stone wall" loading="lazy" /></div>
         </div>
       </div>
     </div>
