@@ -81,7 +81,7 @@ const RenegadeGallery = () => {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             width: 100%;
-            height: clamp(620px, calc(100vw / 3 * 1.5), 900px);
+            aspect-ratio: 2 / 1;
             margin: 0;
             padding: 0;
           }

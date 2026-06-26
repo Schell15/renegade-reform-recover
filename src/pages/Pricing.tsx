@@ -1695,7 +1695,9 @@ const Pricing = () => {
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL }} />
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY_CLASSPACKS }} />
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_NOTIFY_BUTTON }} />
-      <RenegadeGallery />
+      <div className="page" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <RenegadeGallery />
+      </div>
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER }} />
 
     </>
