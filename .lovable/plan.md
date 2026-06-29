@@ -1,32 +1,26 @@
-## Goal
-Stop the global colour-grading on the Reformer Pilates gallery images while keeping the `.photo-grade` CSS class available for future use.
+The favicon file `favicon.png` exists in `public/`, but the icon link tags may not be detected cleanly by Google. I'll standardize them to the exact format you specified, across every HTML file, and remove the deprecated `shortcut icon` link.
 
-## Background
-The collage images on `public/reformerpilates.html` all use the `.photo-grade` class, which currently applies a warm-amber filter:
+## What I'll change
 
-```css
-.photo-grade {
-  filter: sepia(35%) saturate(90%) brightness(0.88) contrast(1.08) hue-rotate(-8deg);
-}
-```
-
-This makes the photos look cooler and darker than the originals.
-
-## Plan
-1. **Open** `public/reformerpilates.html`.
-2. **Update** the `.photo-grade` rule to keep the class selector but disable the filter:
-   ```css
-   .photo-grade {
-     /* reserved for future colour grading; currently passthrough */
-     filter: none;
-   }
+1. Replace the existing favicon declarations in each HTML file with:
+   ```html
+   <link rel="icon" type="image/png" href="/favicon.png" />
+   <link rel="apple-touch-icon" href="/favicon.png" />
    ```
-3. **Remove** the existing comment that describes the warm-amber colour-grade, since it no longer applies.
+2. Remove the redundant `sizes` variants and the deprecated `shortcut icon` link.
+3. Keep all other head tags (charset, viewport, title, meta, fonts, scripts, JSON-LD) untouched.
 
-## Result
-All gallery images will render with their original colours and warmth. The `.photo-grade` class remains in the markup so it can be re-enabled later by simply adding a `filter` value.
+## Files to update
 
-## Out of scope
-- No markup changes to the `<img>` tags.
-- No changes to hover behaviour (already removed in a previous edit).
-- No changes to other pages or components.
+- `index.html` (root Vite entry)
+- `public/index.html`
+- `public/reformer-signup/index.html`
+- `public/teachwithus/index.html`
+- `public/timetable/index.html`
+- Any other top-level `public/*.html` files that contain the current favicon links
+
+## Verification
+
+After the change, I'll fetch the preview or read the source to confirm the `<link rel="icon">` and `<link rel="apple-touch-icon">` tags appear as the first tags after `viewport` and before any font preload tags.
+
+Note: Google can take days to re-crawl and update the favicon shown in search results. If you need to force a refresh, use the Google Search Console URL Inspection / Favicon debugger.
