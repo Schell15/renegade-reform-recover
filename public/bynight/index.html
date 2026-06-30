@@ -404,7 +404,7 @@ body {
   padding-left: 1.5rem;
 }
 .ch2-not-line::before {
-  content: '—';
+  content: '–';
   position: absolute;
   left: 0;
   color: rgba(196,154,74,0.3);
@@ -431,7 +431,7 @@ body {
   line-height: 1.7;
 }
 
-/* CHAPTER 3 — FULLSCREEN WORDS */
+/* CHAPTER 3 – FULLSCREEN WORDS */
 #ch3 {
   background: #080807;
   flex-direction: column;
@@ -463,7 +463,7 @@ body {
 }
 .ch3-word em { color: var(--gold); font-style: normal; }
 
-/* CHAPTER 4 — SOUND + LIGHT */
+/* CHAPTER 4 – SOUND + LIGHT */
 #ch4 {
   background: linear-gradient(to bottom, #080807 0%, #0d0b08 100%);
 }
@@ -634,7 +634,7 @@ canvas#waveCanvas {
   pointer-events: none;
 }
 
-/* CHAPTER 5 — SPLIT */
+/* CHAPTER 5 – SPLIT */
 #ch5 {
   background: #090807;
   padding: 0;
@@ -1159,7 +1159,7 @@ canvas#waveCanvas {
   </div>
 </section>
 
-<!-- ═══ CHAPTER 3 — WORDS ═══ -->
+<!-- ═══ CHAPTER 3 – WORDS ═══ -->
 <section class="chapter" id="ch3">
   <div class="ch3-words">
     <span class="ch-label fade-in" style="padding-left:4rem;padding-bottom:1rem;display:block">Chapter Three</span>
@@ -1172,7 +1172,7 @@ canvas#waveCanvas {
   </div>
 </section>
 
-<!-- ═══ CHAPTER 4 — SOUND + LIGHT ═══ -->
+<!-- ═══ CHAPTER 4 – SOUND + LIGHT ═══ -->
 <section class="chapter" id="ch4">
   <div class="chapter-inner">
     <span class="ch-label fade-in">Chapter Four</span>
@@ -1227,7 +1227,7 @@ canvas#waveCanvas {
       </h2>
       <p class="vid-body fade-in" style="transition-delay:0.2s">
         No description does it justice.<br><br>
-        Step inside and feel the difference — the music, the lights, the energy — all of it, the moment you walk through the door.
+        Step inside and feel the difference – the music, the lights, the energy – all of it, the moment you walk through the door.
       </p>
     </div>
     <div class="vid-frame-side">
@@ -1245,7 +1245,7 @@ canvas#waveCanvas {
   </div>
 </section>
 
-<!-- ═══ CHAPTER 5 — SPLIT ═══ -->
+<!-- ═══ CHAPTER 5 – SPLIT ═══ -->
 <section id="ch5">
   <div class="split-wrap">
     <div class="split-panel energy fade-in">
@@ -1363,7 +1363,7 @@ window.addEventListener('scroll', () => {
   });
   dots.forEach((d, i) => d.classList.toggle('active', i === current));
 
-  // Progressive darkening — starts dark at ch3, gets darker toward final
+  // Progressive darkening – starts dark at ch3, gets darker toward final
   const docH = document.body.scrollHeight - window.innerHeight;
   const progress = y / docH;
   const veil = document.getElementById('dark-veil');
@@ -1396,7 +1396,7 @@ const ro = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
 fadeEls.forEach(el => ro.observe(el));
 
-/* ── CH3 WORD LIGHTING — lights up as each word enters viewport ── */
+/* ── CH3 WORD LIGHTING – lights up as each word enters viewport ── */
 const wordObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
