@@ -1494,6 +1494,40 @@ if (canvas) {
   buildBars();
   requestAnimationFrame(drawWave);
 }
+
+/* ── VIDEO SOUND ON SCROLL ── */
+(function() {
+  const video = document.getElementById('night-video');
+  const btn = document.getElementById('night-video-sound');
+  if (!video || !btn) return;
+
+  let userMuted = false;
+
+  function setMuted(m) {
+    video.muted = m;
+    btn.textContent = m ? '🔇 Sound off' : '🔊 Sound on';
+  }
+
+  btn.addEventListener('click', () => {
+    userMuted = !video.muted ? true : false;
+    setMuted(!video.muted);
+    if (!video.muted) video.play().catch(()=>{});
+  });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.intersectionRatio > 0.5) {
+        if (!userMuted && video.muted) {
+          setMuted(false);
+          video.play().catch(() => { setMuted(true); });
+        }
+      } else {
+        if (!video.muted) setMuted(true);
+      }
+    });
+  }, { threshold: [0, 0.5, 1] });
+  io.observe(video);
+})();
 </script>
 </body>
 </html>
