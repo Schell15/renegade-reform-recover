@@ -1241,7 +1241,8 @@ canvas#waveCanvas {
       </p>
     </div>
     <div class="vid-frame-side">
-      <video autoplay muted loop playsinline src="/night_edit.mp4"></video>
+      <video id="night-video" autoplay muted loop playsinline src="/night_edit.mp4"></video>
+      <button id="night-video-sound" type="button" aria-label="Toggle sound" style="position:absolute;bottom:16px;right:16px;z-index:3;background:rgba(0,0,0,0.55);color:#F2EDE4;border:1px solid rgba(242,237,228,0.3);border-radius:999px;padding:8px 14px;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(6px);">🔇 Sound off</button>
       <div class="vid-overlay"></div>
     </div>
   </div>
@@ -1316,10 +1317,28 @@ canvas#waveCanvas {
   <p class="signup-sub fade-in" style="transition-delay:0.2s">
     Be the first to know when Renegade | By Night launches.<br>No noise. Just the moment it's ready.
   </p>
-  <form class="signup-form fade-in" style="transition-delay:0.3s" onsubmit="handleSignup(event)">
-    <input class="signup-input" type="email" placeholder="Your email address" required />
-    <button class="signup-btn" type="submit">Notify Me</button>
-  </form>
+  <div class="signup-form fade-in" style="transition-delay:0.3s;max-width:560px;margin:0 auto;width:100%;">
+    <div id="momence-plugin-lead-form"></div>
+    <script
+      async
+      type="module"
+      id="momence-plugin-lead-form-src"
+      host_id="227483"
+      fields="fullName,email,phoneNumber"
+      token="zQ7OKzkB7l"
+      country_code="gb"
+      data-field-def='{"fullName":{"type":"text","label":"Full name","required":true,"hidden":false},"email":{"type":"email","label":"Email","required":true},"phoneNumber":{"type":"phone-number","label":"Phone number","required":true}}'
+      src="https://momence.com/plugin/lead-form/lead-form.js"
+    ></script>
+    <style>
+      .signup-form :root,
+      .signup-form {
+        --momenceColorBackground: #000000;
+        --momenceColorPrimary: 168, 138, 77;
+        --momenceColorBlack: 255, 255, 255;
+      }
+    </style>
+  </div>
   <p class="signup-note fade-in" style="transition-delay:0.4s">No spam. Unsubscribe any time.</p>
 </section>
 
