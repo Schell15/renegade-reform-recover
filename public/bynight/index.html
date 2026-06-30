@@ -5,7 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RENEGADE | BY NIGHT</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" href="/Neogrotesk SC Black Regular.otf" as="font" type="font/otf" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'Neogrotesk';
+  src: url('/Neogrotesk SC Black Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+</style>
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -175,9 +185,9 @@ body {
   margin-bottom: 2.2rem;
 }
 .hero-title {
-  font-family: var(--display);
+  font-family: 'Neogrotesk', var(--display);
   font-size: clamp(4rem, 12vw, 11rem);
-  font-weight: 200;
+  font-weight: normal;
   line-height: 0.92;
   letter-spacing: -0.025em;
   color: var(--warm-white);
@@ -186,6 +196,7 @@ body {
   animation: up 1.6s cubic-bezier(0.22,1,0.36,1) forwards 0.7s;
 }
 .hero-title .pipe {
+  font-family: var(--display);
   color: var(--gold);
   font-style: italic;
   font-weight: 200;
