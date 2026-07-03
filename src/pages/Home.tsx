@@ -14,8 +14,8 @@ const Home = () => {
       }}
     >
       <SEO
-        title="Reformer Pilates Studio in Bristol | Renegade Reformer"
-        description="Renegade Reformer is a premium Reformer Pilates studio in Bristol. Strength-led, contemporary classes opening Spring 2026, get early access now."
+        title="Reformer Pilates in Lawrence Hill, Bristol | Renegade Reformer"
+        description="Renegade Reformer is a strength-led reformer Pilates studio in Lawrence Hill, Bristol. Now open, founding member rates live. Book your first class today."
         path="/"
       />
       <div className="relative z-10 flex flex-col items-center justify-center w-full">

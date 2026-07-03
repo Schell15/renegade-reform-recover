@@ -1256,8 +1256,8 @@ const Pricing = () => {
   return (
     <>
       <SEO
-        title="Reformer Pilates Pricing Bristol | Renegade Reformer"
-        description="Explore Renegade Reformer's class packages and membership options. Flexible pricing for reformer Pilates in Bristol, find the plan that works for you."
+        title="Pricing & Membership | Renegade Reformer Bristol"
+        description="Founding member rates now live at Renegade Reformer, Bristol's reformer Pilates studio in Lawrence Hill. Drop-ins, class packs and monthly memberships from £14/class."
         path="/pricing"
       />
       <style dangerouslySetInnerHTML={{ __html: PRICING_CSS }} />
