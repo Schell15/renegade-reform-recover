@@ -913,7 +913,7 @@ const PRICING_BODY_HEAD = `<nav class="rn-nav">
     <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo, reformer Pilates Bristol" />
   </a>
   <ul class="nav-links">
-    <li><a href="/reformer-signup">Early Access</a></li>
+    <li><a href="/reformer-signup">Our Story</a></li>
     <li><a href="/reformerpilates.html">Reformer Pilates</a></li>
     <li><a href="/reformerpilates.html#journey">Classes</a></li>
     <li><a href="/pricing">Pricing</a></li>
@@ -925,7 +925,7 @@ const PRICING_BODY_HEAD = `<nav class="rn-nav">
 </nav>
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <ul>
-    <li><a href="/reformer-signup">Early Access</a></li>
+    <li><a href="/reformer-signup">Our Story</a></li>
     <li><a href="/reformerpilates.html">Reformer Pilates</a></li>
     <li><a href="/reformerpilates.html#journey">Classes</a></li>
     <li><a href="/pricing">Pricing</a></li>
@@ -1000,7 +1000,7 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
         <svg class="perk-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         <div>
           <p class="perk-title">Renegade tote bag*</p>
-          <p class="perk-body">Complimentary branded tote on joining — *Elite membership only</p>
+          <p class="perk-body">Complimentary branded tote on joining, *Elite membership only</p>
         </div>
       </div>
       <div class="perk">
@@ -1256,8 +1256,8 @@ const Pricing = () => {
   return (
     <>
       <SEO
-        title="Reformer Pilates Pricing Bristol | Renegade Reformer"
-        description="Explore Renegade Reformer's class packages and membership options. Flexible pricing for reformer Pilates in Bristol, find the plan that works for you."
+        title="Pricing & Membership | Renegade Reformer Bristol"
+        description="Founding member rates now live at Renegade Reformer, Bristol's reformer Pilates studio in Lawrence Hill. Drop-ins, class packs and monthly memberships from £14/class."
         path="/pricing"
       />
       <style dangerouslySetInnerHTML={{ __html: PRICING_CSS }} />
@@ -1410,7 +1410,7 @@ const Pricing = () => {
   </div>
   <div className="rr-dropin-body">
     <div className="rr-dropin-left">
-      <p className="rr-dropin-desc">New to Reformer, curious about Renegade, or not ready to commit yet? Book a single class and experience the studio on your own terms.<br /><br />Early access founding rate available for a limited time as we open the doors.</p>
+      <p className="rr-dropin-desc">New to Reformer, curious about Renegade, or not ready to commit yet? Book a single class and experience the studio on your own terms.<br /><br />Founding rate available for a limited time, only 50 founding member spots.</p>
       <ul className="rr-dropin-bullets">
         <li className="rr-dropin-bullet">All levels welcome, including complete beginners</li>
         <li className="rr-dropin-bullet">Book any reformer class with available spaces</li>
@@ -1442,7 +1442,7 @@ const Pricing = () => {
       <ul className="rr-dropin-bullets">
         <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>£16 per class at founding rate (£18.33 standard)</li>
         <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>Use across any 3 classes in the schedule</li>
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>All levels welcome — great for complete beginners</li>
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>All levels welcome, great for complete beginners</li>
       </ul>
     </div>
     <div className="rr-intro-right">
@@ -1482,7 +1482,7 @@ const Pricing = () => {
           <ul className="rr-acc-features">
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding rate locked for life</strong> — your price never increases*</span>
+              <span className="rr-acc-feat-text"><strong>Founding rate locked for life</strong>, your price never increases*</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
@@ -1494,15 +1494,15 @@ const Pricing = () => {
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Early booking</strong> — 1 week ahead of non-members</span>
+              <span className="rr-acc-feat-text"><strong>Early booking</strong>, 1 week ahead of non-members</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-              <span className="rr-acc-feat-text">Rolls monthly — <strong>no lock-in</strong> after first term</span>
+              <span className="rr-acc-feat-text">Rolls monthly, <strong>no lock-in</strong> after first term</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding welcome gift</strong> — branded socks</span>
+              <span className="rr-acc-feat-text"><strong>Founding welcome gift</strong>, branded socks</span>
             </li>
           </ul>
           <div className="rr-acc-pricing-right">
@@ -1547,7 +1547,7 @@ const Pricing = () => {
           <ul className="rr-acc-features">
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding rate locked for life</strong> — your price never increases*</span>
+              <span className="rr-acc-feat-text"><strong>Founding rate locked for life</strong>, your price never increases*</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
@@ -1559,15 +1559,15 @@ const Pricing = () => {
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Early booking</strong> — 1 week ahead of non-members</span>
+              <span className="rr-acc-feat-text"><strong>Early booking</strong>, 1 week ahead of non-members</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Priority event booking</strong> — first access to all events</span>
+              <span className="rr-acc-feat-text"><strong>Priority event booking</strong>, first access to all events</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding welcome gift</strong> — branded socks</span>
+              <span className="rr-acc-feat-text"><strong>Founding welcome gift</strong>, branded socks</span>
             </li>
           </ul>
           <div className="rr-acc-pricing-right">
@@ -1609,7 +1609,7 @@ const Pricing = () => {
           <ul className="rr-acc-features">
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding rate locked for life</strong> — your price never increases*</span>
+              <span className="rr-acc-feat-text"><strong>Founding rate locked for life</strong>, your price never increases*</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
@@ -1621,19 +1621,19 @@ const Pricing = () => {
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Priority event booking</strong> — first access to all events</span>
+              <span className="rr-acc-feat-text"><strong>Priority event booking</strong>, first access to all events</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Early booking</strong> — 1 week ahead of non-members</span>
+              <span className="rr-acc-feat-text"><strong>Early booking</strong>, 1 week ahead of non-members</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><text x="12" y="17" textAnchor="middle" fontSize="15" fontFamily="Georgia,serif" fill="rgba(210,160,120,0.8)" stroke="none">£</text></svg></div>
-              <span className="rr-acc-feat-text"><strong>Best value</strong> — lowest per-class price of any tier</span>
+              <span className="rr-acc-feat-text"><strong>Best value</strong>, lowest per-class price of any tier</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding welcome gift</strong> — branded socks & tote</span>
+              <span className="rr-acc-feat-text"><strong>Founding welcome gift</strong>, branded socks & tote</span>
             </li>
           </ul>
           <div className="rr-acc-pricing-right">

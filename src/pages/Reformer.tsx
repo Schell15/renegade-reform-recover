@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Reformer = () => {
   const navigate = useNavigate();
@@ -19,6 +20,11 @@ const Reformer = () => {
 
   return (
     <div className="min-h-screen bg-cream font-grotesk">
+      <SEO
+        title="Reformer Pilates Classes | Renegade Reformer Bristol"
+        description="Reformer Pilates classes at Renegade Reformer in Lawrence Hill, Bristol. Strength-led, music-driven sessions for every level. Founding rates now live."
+        path="/reformer"
+      />
       {/* Header */}
       <header className="py-6 px-4 border-b border-border">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
