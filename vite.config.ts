@@ -7,28 +7,42 @@ import { componentTagger } from "lovable-tagger";
 const SITE = "https://www.renegadereformer.co.uk";
 const OG_IMAGE = `${SITE}/og-image.png`;
 
-type RouteMeta = { path: string; title: string; description: string };
+type RouteMeta = { path: string; title: string; description: string; fallbackBody?: string };
 
 const REFORMER_SIGNUP_META: RouteMeta = {
   path: "/reformer-signup",
-  title: "Join Renegade Reformer | Sign Up for Reformer Pilates Bristol",
+  title: "Our Story | Renegade Reformer Bristol",
   description:
-    "Sign up for early access to Renegade Reformer, Bristol's strength-led reformer Pilates studio. Be the first to book when we open.",
+    "Meet Renegade Reformer, Bristol's strength-led reformer Pilates studio in Lawrence Hill. Now open with founding member rates live. Join the movement.",
+  fallbackBody:
+    "<h1>Our Story - Renegade Reformer</h1><p>Renegade Reformer is a strength-led reformer Pilates studio in Lawrence Hill, Bristol. We're now open, with founding member rates live for drop-ins, class packs and monthly memberships.</p><p>Read our story, meet the team behind the studio, and book your first reformer class in Bristol.</p>",
 };
 
 const ROUTES: RouteMeta[] = [
   {
     path: "/",
-    title: "Reformer Pilates Studio in Bristol | Renegade Reformer",
+    title: "Reformer Pilates in Lawrence Hill, Bristol | Renegade Reformer",
     description:
-      "Renegade Reformer is a premium Reformer Pilates studio in Bristol. Strength-led, contemporary classes opening Spring 2026. Get early access now.",
+      "Renegade Reformer is a strength-led reformer Pilates studio in Lawrence Hill, Bristol. Now open, founding member rates live. Book your first class today.",
+    fallbackBody:
+      "<h1>Renegade Reformer - Reformer Pilates in Lawrence Hill, Bristol</h1><p>Renegade Reformer is a strength-led, music-driven reformer Pilates studio in Lawrence Hill, Bristol. We're now open, with founding member rates live for drop-ins, class packs and monthly memberships.</p><h2>Reform. Repower. Recover.</h2><p>Small class sizes, contemporary reformer Pilates, and a studio built for progression. Explore our classes, view pricing, or book your first session on the timetable.</p><p><a href=\"/pricing\">View pricing</a> | <a href=\"/reformerpilates.html\">Class information</a> | <a href=\"/timetable\">Book a class</a> | <a href=\"/contact\">Contact us</a></p>",
   },
   REFORMER_SIGNUP_META,
   {
     path: "/pricing",
-    title: "Reformer Pilates Pricing Bristol | Renegade Reformer",
+    title: "Pricing & Membership | Renegade Reformer Bristol",
     description:
-      "Explore Renegade Reformer's class packages and membership options. Flexible pricing for reformer Pilates in Bristol. Find the plan that works for you.",
+      "Founding member rates now live at Renegade Reformer, Bristol's reformer Pilates studio in Lawrence Hill. Drop-ins, class packs and monthly memberships from £14/class.",
+    fallbackBody:
+      "<h1>Pricing and Membership - Renegade Reformer Bristol</h1><p>Founding member rates are now live at Renegade Reformer, our reformer Pilates studio in Lawrence Hill, Bristol. Choose from drop-in classes, class packs and monthly memberships.</p><h2>Memberships</h2><ul><li>Foundations - 4 classes / month - founding rate from £72/mo (£18/class)</li><li>Pro - 8 classes / month - founding rate from £128/mo (£16/class)</li><li>Elite - 12 classes / month - founding rate from £168/mo (£14/class)</li></ul><p>Founding rates are locked for life for the first 50 members. Class packs and drop-ins also available.</p>",
+  },
+  {
+    path: "/contact",
+    title: "Contact | Renegade Reformer Bristol",
+    description:
+      "Get in touch with Renegade Reformer, the reformer Pilates studio in Lawrence Hill, Bristol. Now open, founding rates live. We'd love to hear from you.",
+    fallbackBody:
+      "<h1>Contact Renegade Reformer</h1><p>Get in touch with Renegade Reformer, our reformer Pilates studio at 22a Church Road, Lawrence Hill, Bristol BS5 9JA.</p><p>Email <a href=\"mailto:studio@renegadereformer.co.uk\">studio@renegadereformer.co.uk</a> or use the contact form. We'd love to hear from you.</p>",
   },
 ];
 
@@ -65,8 +79,9 @@ function hardcodedReformerSignupHead() {
 }
 
 function bakeRouteHtml(rootHtml: string, route: RouteMeta) {
+  let html = rootHtml;
   if (route.path === "/reformer-signup") {
-    return rootHtml
+    html = rootHtml
       .replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(route.title)}</title>`)
       .replace(
         /<meta\s+name="description"[^>]*>/,
@@ -76,17 +91,27 @@ function bakeRouteHtml(rootHtml: string, route: RouteMeta) {
         /<title>[^<]*<\/title>\s*<meta\s+name="description"[^>]*>/,
         hardcodedReformerSignupHead(),
       );
+  } else {
+    html = html.replace(
+      /<title>[^<]*<\/title>/,
+      `<title>${escapeAttr(route.title)}</title>`,
+    );
+    html = html.replace(
+      /<meta\s+name="description"[^>]*>/,
+      `<meta name="description" content="${escapeAttr(route.description)}" />`,
+    );
+    html = html.replace("</head>", `    ${bakedMetaTags(route)}\n  </head>`);
   }
 
-  let html = rootHtml.replace(
-    /<title>[^<]*<\/title>/,
-    `<title>${escapeAttr(route.title)}</title>`,
-  );
-  html = html.replace(
-    /<meta\s+name="description"[^>]*>/,
-    `<meta name="description" content="${escapeAttr(route.description)}" />`,
-  );
-  html = html.replace("</head>", `    ${bakedMetaTags(route)}\n  </head>`);
+  // Inject a prerendered fallback inside <noscript> so non-JS crawlers see
+  // real headings and copy for the route instead of an empty #root div.
+  if (route.fallbackBody) {
+    const fallback = `<noscript><div id="seo-fallback" style="max-width:720px;margin:2rem auto;padding:1rem;font-family:system-ui,sans-serif;line-height:1.6;">${route.fallbackBody}</div></noscript>`;
+    html = html.replace(
+      /<div id="root"><\/div>/,
+      `<div id="root"></div>\n    ${fallback}`,
+    );
+  }
   return html;
 }
 
