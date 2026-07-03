@@ -1,11 +1,11 @@
 # Renegade Reformer
 
-> Premium Reformer Pilates studio in Bristol, UK, strength-led contemporary classes opening Summer 2026.
+> Premium Reformer Pilates studio in Bristol, UK, strength-led contemporary classes now open in Lawrence Hill, Bristol.
 
 Renegade Reformer is a strength-led reformer Pilates studio opening in Bristol, Redfield, 22a Church Road, BS5 9JA.
 
 ## Pages
 
 - [Home](/): Studio overview, brand, and launch information.
-- [Early Access Signup](/reformer-signup): Join the founders list for priority booking and launch pricing.
+- [Founding Member Signup](/reformer-signup): Join as a founding member for locked-in rates and priority booking.
 - [Pricing](/pricing): Drop-in rates, intro offers, monthly memberships, and class packs.
