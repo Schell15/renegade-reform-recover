@@ -913,7 +913,7 @@ const PRICING_BODY_HEAD = `<nav class="rn-nav">
     <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo, reformer Pilates Bristol" />
   </a>
   <ul class="nav-links">
-    <li><a href="/reformer-signup">Early Access</a></li>
+    <li><a href="/reformer-signup">Our Story</a></li>
     <li><a href="/reformerpilates.html">Reformer Pilates</a></li>
     <li><a href="/reformerpilates.html#journey">Classes</a></li>
     <li><a href="/pricing">Pricing</a></li>
@@ -925,7 +925,7 @@ const PRICING_BODY_HEAD = `<nav class="rn-nav">
 </nav>
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
   <ul>
-    <li><a href="/reformer-signup">Early Access</a></li>
+    <li><a href="/reformer-signup">Our Story</a></li>
     <li><a href="/reformerpilates.html">Reformer Pilates</a></li>
     <li><a href="/reformerpilates.html#journey">Classes</a></li>
     <li><a href="/pricing">Pricing</a></li>
@@ -1410,7 +1410,7 @@ const Pricing = () => {
   </div>
   <div className="rr-dropin-body">
     <div className="rr-dropin-left">
-      <p className="rr-dropin-desc">New to Reformer, curious about Renegade, or not ready to commit yet? Book a single class and experience the studio on your own terms.<br /><br />Early access founding rate available for a limited time as we open the doors.</p>
+      <p className="rr-dropin-desc">New to Reformer, curious about Renegade, or not ready to commit yet? Book a single class and experience the studio on your own terms.<br /><br />Founding rate available for a limited time — only 50 founding member spots.</p>
       <ul className="rr-dropin-bullets">
         <li className="rr-dropin-bullet">All levels welcome, including complete beginners</li>
         <li className="rr-dropin-bullet">Book any reformer class with available spaces</li>
