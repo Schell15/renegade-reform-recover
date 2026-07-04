@@ -1,9 +1,20 @@
 import { useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
+import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 // Updated to use direct image paths
 const Home = () => {
   const navigate = useNavigate();
+  const [storyOpen, setStoryOpen] = useState(false);
 
   return (
     <main
@@ -69,7 +80,7 @@ const Home = () => {
             style={{ borderBottom: "0.5px solid #4a2e12" }}
           >
             <button
-              onClick={() => navigate("/reformer-signup")}
+              onClick={() => setStoryOpen(true)}
               className="py-6 px-4 text-center transition-colors hover:bg-white/[0.035]"
               style={{ borderTop: "0.5px solid #4a2e12" }}
             >
@@ -153,6 +164,49 @@ const Home = () => {
               </span>
             </button>
           </nav>
+
+          {/* Secondary nav row */}
+          <nav
+            className="grid grid-cols-2"
+            aria-label="Resources"
+            style={{ borderBottom: "0.5px solid #4a2e12" }}
+          >
+            <button
+              onClick={() => { window.location.href = "/faq.html"; }}
+              className="py-6 px-4 text-center transition-colors hover:bg-white/[0.035]"
+            >
+              <span
+                className="block uppercase font-bold mb-[5px]"
+                style={{ fontSize: "13px", letterSpacing: "0.14em", color: "#f0ebe3" }}
+              >
+                FAQs
+              </span>
+              <span
+                className="block uppercase font-light"
+                style={{ fontSize: "11px", letterSpacing: "0.22em", color: "#6a5035" }}
+              >
+                Common questions
+              </span>
+            </button>
+            <button
+              onClick={() => { window.location.href = "/guides.html"; }}
+              className="py-6 px-4 text-center transition-colors hover:bg-white/[0.035]"
+              style={{ borderLeft: "0.5px solid #4a2e12" }}
+            >
+              <span
+                className="block uppercase font-bold mb-[5px]"
+                style={{ fontSize: "13px", letterSpacing: "0.14em", color: "#f0ebe3" }}
+              >
+                Guides
+              </span>
+              <span
+                className="block uppercase font-light"
+                style={{ fontSize: "11px", letterSpacing: "0.22em", color: "#6a5035" }}
+              >
+                Tips &amp; advice
+              </span>
+            </button>
+          </nav>
         </div>
 
         {/* Founders Rates */}
@@ -198,6 +252,41 @@ const Home = () => {
           }}
         >
           REFORMER CLASS TIMETABLE
+        </a>
+
+        {/* By Night CTA */}
+        <a
+          href="/bynight"
+          style={{
+            display: "inline-block",
+            marginTop: "12px",
+            background: "transparent",
+            color: "#C49A4A",
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontWeight: 600,
+            fontSize: "12px",
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            padding: "14px 48px",
+            borderRadius: 0,
+            textDecoration: "none",
+            border: "1px solid #C49A4A",
+            textAlign: "center",
+          }}
+        >
+          <span style={{ display: "block" }}>RENEGADE | BY NIGHT</span>
+          <span
+            style={{
+              display: "block",
+              fontSize: "10px",
+              letterSpacing: "0.24em",
+              fontWeight: 400,
+              marginTop: "4px",
+              opacity: 0.85,
+            }}
+          >
+            An immersive wellness experience
+          </span>
         </a>
 
         {/* Coming Soon Bar */}
@@ -269,8 +358,111 @@ const Home = () => {
             Instructor Application
           </a>
         </div>
+
+        {/* Footer */}
+        <footer
+          className="w-full mt-16 pt-10 text-center"
+          style={{ borderTop: "0.5px solid #4a2e12" }}
+        >
+          <p
+            className="uppercase font-light mb-2"
+            style={{ fontSize: "11px", letterSpacing: "0.28em", color: "#6a5035" }}
+          >
+            Visit Us
+          </p>
+          <p style={{ fontSize: "13px", letterSpacing: "0.06em", color: "#f0ebe3", marginBottom: "24px" }}>
+            22a Church Road, Redfield, Bristol BS5 9JA
+          </p>
+
+          <p
+            className="uppercase font-light mb-2"
+            style={{ fontSize: "11px", letterSpacing: "0.28em", color: "#6a5035" }}
+          >
+            Opening Hours
+          </p>
+          <p style={{ fontSize: "13px", color: "#f0ebe3", marginBottom: "4px" }}>
+            Reformer Classes: Mon–Fri, 8:30am–8:30pm
+          </p>
+          <p style={{ fontSize: "13px", color: "#f0ebe3", marginBottom: "24px" }}>
+            Renegade | By Night: Fri, 9:00pm–10:30pm
+          </p>
+
+          <p
+            className="uppercase font-light mb-2"
+            style={{ fontSize: "11px", letterSpacing: "0.28em", color: "#6a5035" }}
+          >
+            Contact
+          </p>
+          <p style={{ fontSize: "13px", marginBottom: "6px" }}>
+            <a
+              href="mailto:studio@renegadereformer.co.uk"
+              style={{ color: "#f0ebe3", textDecoration: "none" }}
+            >
+              studio@renegadereformer.co.uk
+            </a>
+          </p>
+          <p style={{ fontSize: "13px", marginBottom: "24px" }}>
+            <a
+              href="https://wa.me/447846849456"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#f0ebe3", textDecoration: "underline" }}
+            >
+              Message us on WhatsApp
+            </a>
+          </p>
+
+          <p
+            className="uppercase font-light mb-2"
+            style={{ fontSize: "11px", letterSpacing: "0.28em", color: "#6a5035" }}
+          >
+            Follow
+          </p>
+          <div
+            className="flex items-center justify-center gap-4 flex-wrap"
+            style={{ fontSize: "13px", color: "#f0ebe3", paddingBottom: "32px" }}
+          >
+            <a
+              href="https://www.facebook.com/fitnessreformer/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#f0ebe3", textDecoration: "none" }}
+            >
+              Facebook
+            </a>
+            <span style={{ color: "#4a2e12" }}>·</span>
+            <a
+              href="https://www.instagram.com/renegade.reformer/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#f0ebe3", textDecoration: "none" }}
+            >
+              Instagram
+            </a>
+            <span style={{ color: "#4a2e12" }}>·</span>
+            <a
+              href="tel:+447846849456"
+              style={{ color: "#f0ebe3", textDecoration: "none" }}
+            >
+              +44 7846 849456
+            </a>
+          </div>
+        </footer>
       </div>
 
+      <Dialog open={storyOpen} onOpenChange={setStoryOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Our Story</DialogTitle>
+            <DialogDescription>
+              We're still writing this chapter. Check back soon.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button onClick={() => setStoryOpen(false)}>Close</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </main>
   );
 };
