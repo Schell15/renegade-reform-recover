@@ -13,36 +13,36 @@ const REFORMER_SIGNUP_META: RouteMeta = {
   path: "/reformer-signup",
   title: "Our Story | Renegade Reformer Bristol",
   description:
-    "Meet Renegade Reformer, Bristol's strength-led reformer Pilates studio in Lawrence Hill. Now open with founding member rates live. Join the movement.",
+    "Meet Renegade Reformer, Bristol's strength-led reformer Pilates studio in Redfield. Now open with founding member rates live. Join the movement.",
   fallbackBody:
-    "<h1>Our Story - Renegade Reformer</h1><p>Renegade Reformer is a strength-led reformer Pilates studio in Lawrence Hill, Bristol. We're now open, with founding member rates live for drop-ins, class packs and monthly memberships.</p><p>Read our story, meet the team behind the studio, and book your first reformer class in Bristol.</p>",
+    "<h1>Our Story - Renegade Reformer</h1><p>Renegade Reformer is a strength-led reformer Pilates studio in Redfield, Bristol. We're now open, with founding member rates live for drop-ins, class packs and monthly memberships.</p><p>Read our story, meet the team behind the studio, and book your first reformer class in Bristol.</p>",
 };
 
 const ROUTES: RouteMeta[] = [
   {
     path: "/",
-    title: "Reformer Pilates in Lawrence Hill, Bristol | Renegade Reformer",
+    title: "Reformer Pilates in Redfield, Bristol | Renegade Reformer",
     description:
-      "Renegade Reformer is a strength-led reformer Pilates studio in Lawrence Hill, Bristol. Now open, founding member rates live. Book your first class today.",
+      "Renegade Reformer is a strength-led reformer Pilates studio in Redfield, Bristol. Now open, founding member rates live. Book your first class today.",
     fallbackBody:
-      "<h1>Renegade Reformer - Reformer Pilates in Lawrence Hill, Bristol</h1><p>Renegade Reformer is a strength-led, music-driven reformer Pilates studio in Lawrence Hill, Bristol. We're now open, with founding member rates live for drop-ins, class packs and monthly memberships.</p><h2>Reform. Repower. Recover.</h2><p>Small class sizes, contemporary reformer Pilates, and a studio built for progression. Explore our classes, view pricing, or book your first session on the timetable.</p><p><a href=\"/pricing\">View pricing</a> | <a href=\"/reformerpilates.html\">Class information</a> | <a href=\"/timetable\">Book a class</a> | <a href=\"/contact\">Contact us</a></p>",
+      "<h1>Renegade Reformer - Reformer Pilates in Redfield, Bristol</h1><p>Renegade Reformer is a strength-led, music-driven reformer Pilates studio in Redfield, Bristol. We're now open, with founding member rates live for drop-ins, class packs and monthly memberships.</p><h2>Reform. Repower. Recover.</h2><p>Small class sizes, contemporary reformer Pilates, and a studio built for progression. Explore our classes, view pricing, or book your first session on the timetable.</p><p><a href=\"/pricing\">View pricing</a> | <a href=\"/reformerpilates.html\">Class information</a> | <a href=\"/timetable\">Book a class</a> | <a href=\"/contact\">Contact us</a></p>",
   },
   REFORMER_SIGNUP_META,
   {
     path: "/pricing",
     title: "Pricing & Membership | Renegade Reformer Bristol",
     description:
-      "Founding member rates now live at Renegade Reformer, Bristol's reformer Pilates studio in Lawrence Hill. Drop-ins, class packs and monthly memberships from £14/class.",
+      "Founding member rates now live at Renegade Reformer, Bristol's reformer Pilates studio in Redfield. Drop-ins, class packs and monthly memberships from £14/class.",
     fallbackBody:
-      "<h1>Pricing and Membership - Renegade Reformer Bristol</h1><p>Founding member rates are now live at Renegade Reformer, our reformer Pilates studio in Lawrence Hill, Bristol. Choose from drop-in classes, class packs and monthly memberships.</p><h2>Memberships</h2><ul><li>Foundations - 4 classes / month - founding rate from £72/mo (£18/class)</li><li>Pro - 8 classes / month - founding rate from £128/mo (£16/class)</li><li>Elite - 12 classes / month - founding rate from £168/mo (£14/class)</li></ul><p>Founding rates are locked for life for the first 50 members. Class packs and drop-ins also available.</p>",
+      "<h1>Pricing and Membership - Renegade Reformer Bristol</h1><p>Founding member rates are now live at Renegade Reformer, our reformer Pilates studio in Redfield, Bristol. Choose from drop-in classes, class packs and monthly memberships.</p><h2>Memberships</h2><ul><li>Foundations - 4 classes / month - founding rate from £72/mo (£18/class)</li><li>Pro - 8 classes / month - founding rate from £128/mo (£16/class)</li><li>Elite - 12 classes / month - founding rate from £168/mo (£14/class)</li></ul><p>Founding rates are locked for life for the first 50 members. Class packs and drop-ins also available.</p>",
   },
   {
     path: "/contact",
     title: "Contact | Renegade Reformer Bristol",
     description:
-      "Get in touch with Renegade Reformer, the reformer Pilates studio in Lawrence Hill, Bristol. Now open, founding rates live. We'd love to hear from you.",
+      "Get in touch with Renegade Reformer, the reformer Pilates studio in Redfield, Bristol. Now open, founding rates live. We'd love to hear from you.",
     fallbackBody:
-      "<h1>Contact Renegade Reformer</h1><p>Get in touch with Renegade Reformer, our reformer Pilates studio at 22a Church Road, Lawrence Hill, Bristol BS5 9JA.</p><p>Email <a href=\"mailto:studio@renegadereformer.co.uk\">studio@renegadereformer.co.uk</a> or use the contact form. We'd love to hear from you.</p>",
+      "<h1>Contact Renegade Reformer</h1><p>Get in touch with Renegade Reformer, our reformer Pilates studio at 22a Church Road, Redfield, Bristol BS5 9JA.</p><p>Email <a href=\"mailto:studio@renegadereformer.co.uk\">studio@renegadereformer.co.uk</a> or use the contact form. We'd love to hear from you.</p>",
   },
 ];
 

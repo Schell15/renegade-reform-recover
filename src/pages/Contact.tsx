@@ -47,7 +47,7 @@ const Contact = () => {
     >
       <SEO
         title="Contact | Renegade Reformer Bristol"
-        description="Get in touch with Renegade Reformer, the reformer Pilates studio in Lawrence Hill, Bristol. Now open, founding rates live. We'd love to hear from you."
+        description="Get in touch with Renegade Reformer, the reformer Pilates studio in Redfield, Bristol. Now open, founding rates live. We'd love to hear from you."
         path="/contact"
       />
 

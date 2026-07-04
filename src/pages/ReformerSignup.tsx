@@ -35,7 +35,7 @@ const ReformerSignup = () => {
     <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%)'}}>
       <SEO
         title="Our Story | Renegade Reformer Bristol"
-        description="Meet Renegade Reformer, Bristol's strength-led reformer Pilates studio in Lawrence Hill. Now open with founding member rates live. Join the movement."
+        description="Meet Renegade Reformer, Bristol's strength-led reformer Pilates studio in Redfield. Now open with founding member rates live. Join the movement."
         path="/reformer-signup"
       />
       <div className="text-center space-y-7 max-w-3xl relative z-10 flex-1 flex flex-col justify-center">

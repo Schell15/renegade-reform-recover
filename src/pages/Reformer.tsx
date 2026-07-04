@@ -22,7 +22,7 @@ const Reformer = () => {
     <div className="min-h-screen bg-cream font-grotesk">
       <SEO
         title="Reformer Pilates Classes | Renegade Reformer Bristol"
-        description="Reformer Pilates classes at Renegade Reformer in Lawrence Hill, Bristol. Strength-led, music-driven sessions for every level. Founding rates now live."
+        description="Reformer Pilates classes at Renegade Reformer in Redfield, Bristol. Strength-led, music-driven sessions for every level. Founding rates now live."
         path="/reformer"
       />
       {/* Header */}
