@@ -189,6 +189,48 @@ const Contact = () => {
             studio@renegadereformer.co.uk
           </a>
         </div>
+
+        <div
+          className="mt-12"
+          style={{ height: "0.5px", background: "#4a2e12" }}
+          aria-hidden="true"
+        ></div>
+
+        <section className="mt-10 text-center" aria-label="Studio opening hours">
+          <h2
+            className="uppercase font-light mb-4"
+            style={{
+              fontSize: "11px",
+              letterSpacing: "0.35em",
+              color: "#8a6e50",
+            }}
+          >
+            Opening Hours
+          </h2>
+          <address
+            className="not-italic"
+            style={{
+              fontSize: "13px",
+              lineHeight: "1.9",
+              letterSpacing: "0.06em",
+              color: "#b8a080",
+            }}
+          >
+            <div>Monday to Friday: 8:30am &ndash; 8:30pm</div>
+            <div>Saturday: Closed</div>
+            <div>Sunday: Closed</div>
+          </address>
+          <p
+            className="mt-6 uppercase font-light"
+            style={{
+              fontSize: "11px",
+              letterSpacing: "0.28em",
+              color: "#6a5035",
+            }}
+          >
+            22a Church Road, Redfield, Bristol BS5 9JA
+          </p>
+        </section>
       </div>
     </main>
   );
