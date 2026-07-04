@@ -10,8 +10,6 @@ const ExternalRedirect = ({ to }: { to: string }) => {
   return null;
 };
 import Home from "./pages/Home";
-import Reformer from "./pages/Reformer";
-import ReformerSignup from "./pages/ReformerSignup";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -26,11 +24,12 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/reformer-signup" element={<ReformerSignup />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/reformer" element={<ExternalRedirect to="/reformerpilates.html" />} />
-          <Route path="/discover" element={<ExternalRedirect to="/reformerpilates.html" />} />
+          {/* Legacy pre-launch routes now redirect to live pages */}
+          <Route path="/reformer" element={<Navigate to="/pricing" replace />} />
+          <Route path="/discover" element={<Navigate to="/" replace />} />
+          <Route path="/reformer-signup" element={<Navigate to="/timetable" replace />} />
           <Route path="/reformerpilates" element={<ExternalRedirect to="/reformerpilates.html" />} />
           <Route path="/timetable" element={<ExternalRedirect to="/timetable/index.html" />} />
           <Route path="/teachwithus" element={<ExternalRedirect to="/teachwithus/index.html" />} />
