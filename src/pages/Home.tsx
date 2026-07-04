@@ -271,42 +271,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Journal section */}
-      <div
-        className="relative z-10 w-full mt-12"
-        style={{ maxWidth: "min(600px, 86vw)", display: "none" }}
-      >
-        <div
-          style={{ height: "0.5px", background: "#4a2e12" }}
-          aria-hidden="true"
-        ></div>
-        <a
-          href="/journal.html"
-          className="block py-8 px-4 text-center transition-colors hover:bg-white/[0.035]"
-        >
-          <span
-            className="block uppercase font-bold mb-[6px]"
-            style={{
-              fontSize: "13px",
-              letterSpacing: "0.22em",
-              color: "#f0ebe3",
-            }}
-          >
-            The Renegade Journal
-          </span>
-          <span
-            className="block font-light"
-            style={{
-              fontSize: "12px",
-              letterSpacing: "0.06em",
-              color: "#8a5035",
-            }}
-          >
-            Pilates guides, class breakdowns &amp; studio news
-          </span>
-        </a>
-      </div>
-
     </main>
   );
 };
