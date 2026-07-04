@@ -34,6 +34,8 @@ const App = () => (
           <Route path="/timetable" element={<ExternalRedirect to="/timetable/index.html" />} />
           <Route path="/teachwithus" element={<ExternalRedirect to="/teachwithus/index.html" />} />
           <Route path="/bynight" element={<ExternalRedirect to="/bynight/index.html" />} />
+          <Route path="/guides" element={<ExternalRedirect to="/guides.html" />} />
+          <Route path="/faq" element={<ExternalRedirect to="/faq.html" />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
