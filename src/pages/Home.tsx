@@ -55,6 +55,16 @@ const btnGold: React.CSSProperties = {
   border: "1px solid " + gold,
 };
 
+const navLinkStyle: React.CSSProperties = {
+  fontFamily: "'Barlow Condensed', sans-serif",
+  fontSize: 12,
+  letterSpacing: "0.22em",
+  textTransform: "uppercase",
+  color: cream,
+  textDecoration: "none",
+  opacity: 0.85,
+};
+
 const classes = [
   {
     name: "Foundations",
@@ -194,11 +204,12 @@ const Home = () => {
             />
           </Link>
           <nav className="hidden md:flex items-center gap-8">
-            <a href="/reformerpilates.html" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", color: cream, textDecoration: "none", opacity: 0.85 }}>Classes</a>
-            <Link to="/bynight" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", color: cream, textDecoration: "none", opacity: 0.85 }}>By Night</Link>
-            <Link to="/pricing" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", color: cream, textDecoration: "none", opacity: 0.85 }}>Pricing</Link>
-            <a href="/reformerpilates.html" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", color: cream, textDecoration: "none", opacity: 0.85 }}>About</a>
-            <Link to="/contact" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", color: cream, textDecoration: "none", opacity: 0.85 }}>Visit</Link>
+            <Link to="/timetable" style={navLinkStyle}>Timetable</Link>
+            <Link to="/bynight" style={navLinkStyle}>By Night</Link>
+            <a href="/reformerpilates.html" style={navLinkStyle}>Classes</a>
+            <Link to="/pricing" style={navLinkStyle}>Pricing</Link>
+            <a href="/faq.html" style={navLinkStyle}>FAQs</a>
+            <a href="/guides.html" style={navLinkStyle}>Guides</a>
           </nav>
           <div className="flex items-center gap-3">
             <Link to="/timetable" style={btnSolid}>Book a class</Link>
