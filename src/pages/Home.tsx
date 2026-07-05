@@ -61,7 +61,7 @@ const classes = [
   },
   {
     name: "Renegade",
-    desc: "Our signature strength-and-flow class. Powerful, rhythmic and set to a tuned soundtrack — think reformer training with the intensity dial turned up.",
+    desc: "Our signature strength-and-flow class. Powerful, rhythmic and set to a tuned soundtrack. Think reformer training with the intensity dial turned up.",
   },
   {
     name: "Rebuild",
@@ -452,7 +452,7 @@ const Home = () => {
             </h2>
             <p style={{ color: mutedCream, fontSize: 16, lineHeight: 1.75, maxWidth: 500 }}
                className="mb-4">
-              An immersive Friday night reformer session — tuned lighting, deeper
+              An immersive Friday night reformer session. Tuned lighting, deeper
               sound, a longer set. Reformer pilates as an experience, not a
               workout. Slow-build energy, one shared room, doors close on time.
             </p>
@@ -507,8 +507,8 @@ const Home = () => {
             </p>
             <p style={{ color: mutedCream, fontSize: 16, lineHeight: 1.75 }}>
               Our classes are technique-first and strength-honest. The room is
-              dark, warm and considered. Every detail — the beds, the lighting,
-              the soundtrack — is chosen so you can train hard and switch off
+              dark, warm and considered. Every detail, the beds, the lighting,
+              the soundtrack, is chosen so you can train hard and switch off
               from everything else.
             </p>
           </div>
@@ -574,7 +574,7 @@ const Home = () => {
                   textTransform: "uppercase",
                 }}
               >
-                — {r.who}
+                {r.who}
               </p>
             </div>
           ))}
