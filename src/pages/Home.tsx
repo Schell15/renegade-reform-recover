@@ -9,6 +9,7 @@ const border = "rgba(225,214,200,0.14)";
 const cardBg = "rgba(255,255,255,0.03)";
 const heroBg =
   "radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%)";
+const nightBg = "#050200";
 
 const eyebrowStyle: React.CSSProperties = {
   fontFamily: "'Barlow Condensed', sans-serif",
@@ -61,7 +62,7 @@ const classes = [
   },
   {
     name: "Renegade",
-    desc: "Our signature strength-and-flow class. Powerful, rhythmic and set to a tuned soundtrack. Think reformer training with the intensity dial turned up.",
+    desc: "Our signature strength-and-flow class. Powerful, rhythmic and set to a tuned soundtrack. Reformer training with the intensity dial turned up.",
   },
   {
     name: "Rebuild",
@@ -81,7 +82,7 @@ const prices = [
   {
     name: "Intro Pack",
     price: "£55",
-    unit: "3 classes · new members",
+    unit: "3 classes, new members",
     perks: ["Use within 21 days", "Try every class type", "Best way to start"],
     href: "/pricing",
     featured: true,
@@ -89,7 +90,7 @@ const prices = [
   {
     name: "Founding Membership",
     price: "£99",
-    unit: "per month · unlimited",
+    unit: "per month, unlimited",
     perks: [
       "Unlimited reformer classes",
       "Rate locked for life",
@@ -144,20 +145,27 @@ const NavLinkA = ({ href, children }: { href: string; children: React.ReactNode 
   </a>
 );
 
-const Wordmark = ({ size = "sm" }: { size?: "sm" | "lg" }) => {
-  const h1 = size === "lg" ? "text-5xl sm:text-7xl" : "text-xl sm:text-2xl";
-  const h2 = size === "lg" ? "text-4xl sm:text-6xl -mt-1" : "text-lg sm:text-xl -mt-1";
-  return (
-    <div className="inline-block leading-none">
-      <div className={`text-primary font-neogrotesk font-bold tracking-tight ${h1}`}>
-        RENEGADE.
-      </div>
-      <div className={`text-primary font-bigcaslon tracking-tight text-right ${h2}`}>
-        reformer
-      </div>
+const HeroLockup = () => (
+  <div style={{ display: "inline-block", textAlign: "right", marginBottom: 26 }}>
+    <img
+      src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
+      alt="Renegade Reformer eagle logo"
+      style={{ width: 64, height: 64, objectFit: "contain", display: "block", margin: "0 auto 10px" }}
+    />
+    <div
+      className="font-neogrotesk font-bold text-primary"
+      style={{ fontSize: "clamp(34px, 5vw, 50px)", letterSpacing: "0.01em", lineHeight: 0.95 }}
+    >
+      RENEGADE.
     </div>
-  );
-};
+    <div
+      className="font-bigcaslon"
+      style={{ fontSize: "clamp(20px, 2.6vw, 28px)", color: gold, lineHeight: 1, marginTop: 4 }}
+    >
+      reformer
+    </div>
+  </div>
+);
 
 const Home = () => {
   return (
@@ -168,7 +176,6 @@ const Home = () => {
         path="/"
       />
 
-      {/* STICKY NAV */}
       <header
         style={{
           position: "sticky",
@@ -180,13 +187,12 @@ const Home = () => {
         }}
       >
         <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4">
-          <Link to="/" className="flex items-center gap-3" aria-label="Renegade Reformer home">
+          <Link to="/" aria-label="Renegade Reformer home">
             <img
               src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
               alt="Renegade Reformer eagle logo"
-              className="w-10 h-10 object-contain"
+              className="w-11 h-11 object-contain"
             />
-            <Wordmark />
           </Link>
           <nav className="hidden md:flex items-center gap-8">
             <NavLinkA href="#classes">Classes</NavLinkA>
@@ -202,47 +208,21 @@ const Home = () => {
         </div>
       </header>
 
-      {/* HERO */}
       <section className="max-w-[1200px] mx-auto px-6 pt-16 pb-24">
         <div className="grid md:grid-cols-2 gap-14 items-center">
           <div>
-            <div className="flex items-center gap-3 mb-3 opacity-90">
-              <img
-                src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
-                alt="Renegade Reformer eagle logo"
-                className="w-10 h-10 object-contain"
-              />
-              <div className="inline-block leading-none">
-                <div
-                  className="text-primary font-neogrotesk font-bold tracking-tight"
-                  style={{ fontSize: 19, letterSpacing: "0.01em" }}
-                >
-                  RENEGADE.
-                </div>
-                <div
-                  className="text-primary font-bigcaslon tracking-tight text-right"
-                  style={{ fontSize: 16, marginTop: -2 }}
-                >
-                  reformer
-                </div>
-              </div>
-            </div>
+            <HeroLockup />
             <p style={eyebrowStyle} className="mb-2">
               Bristol · Redfield · Now Open
             </p>
             <h1
-              className="font-bigcaslon text-primary mb-3"
-              style={{ fontSize: "clamp(38px, 5vw, 60px)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
+              className="font-neogrotesk font-bold text-primary mb-3"
+              style={{ fontSize: 20, letterSpacing: "0.02em", whiteSpace: "nowrap" }}
             >
-              Reformer pilates, <em style={{ color: gold }}>reimagined.</em>
+              Immersive Reformer Pilates
             </h1>
             <p
-              style={{
-                color: "rgba(225,214,200,0.5)",
-                fontSize: 14,
-                lineHeight: 1.7,
-                maxWidth: 520,
-              }}
+              style={{ color: "rgba(225,214,200,0.5)", fontSize: 14, lineHeight: 1.7, maxWidth: 520 }}
               className="mb-8"
             >
               Strength, control and rhythm, built into every class. Set inside a
@@ -261,7 +241,7 @@ const Home = () => {
                 <MapPin size={14} /> 22a Church Rd, Redfield BS5 9JA
               </span>
               <span className="inline-flex items-center gap-2">
-                <Clock size={14} /> Mon–Fri · 8:30am–8:30pm
+                <Clock size={14} /> Mon to Fri, 8:30am to 8:30pm
               </span>
               <span className="inline-flex items-center gap-2" style={{ color: gold }}>
                 <Star size={14} fill={gold} /> 5.0 on Google
@@ -269,20 +249,10 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <div
-              style={{
-                aspectRatio: "4 / 5",
-                borderRadius: 18,
-                overflow: "hidden",
-                border: "1px solid " + border,
-              }}
-            >
+            <div style={{ aspectRatio: "4 / 5", borderRadius: 18, overflow: "hidden", border: "1px solid " + border }}>
               <video
                 src="/WEBSITE-size.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
+                autoPlay muted loop playsInline
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               />
             </div>
@@ -290,7 +260,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* LOGISTICS STRIP */}
       <section
         id="visit"
         className="max-w-[1200px] mx-auto px-6 py-10 grid md:grid-cols-3 gap-8"
@@ -305,51 +274,37 @@ const Home = () => {
         <div>
           <p style={sectionLabelStyle} className="mb-2">Opening Hours</p>
           <p style={{ color: cream, fontSize: 15, lineHeight: 1.6 }}>
-            Reformer classes · Mon–Fri, 8:30am–8:30pm<br />
-            Renegade | By Night · Fri, 9:00pm–10:30pm
+            Reformer classes, Mon to Fri, 8:30am to 8:30pm<br />
+            Renegade | By Night, Fri, 9:00pm to 10:30pm
           </p>
         </div>
         <div>
           <p style={sectionLabelStyle} className="mb-2">Get In Touch</p>
           <p style={{ color: cream, fontSize: 15, lineHeight: 1.7 }}>
             <a href="https://wa.me/447846849456" target="_blank" rel="noopener noreferrer"
-               style={{ color: cream, textDecoration: "none" }}
-               className="inline-flex items-center gap-2">
+               style={{ color: cream, textDecoration: "none" }} className="inline-flex items-center gap-2">
               <MessageCircle size={14} /> WhatsApp us
             </a><br />
             <a href="mailto:studio@renegadereformer.co.uk"
-               style={{ color: cream, textDecoration: "none" }}
-               className="inline-flex items-center gap-2">
+               style={{ color: cream, textDecoration: "none" }} className="inline-flex items-center gap-2">
               <Mail size={14} /> studio@renegadereformer.co.uk
             </a>
           </p>
         </div>
       </section>
 
-      {/* CLASSES */}
       <section id="classes" className="max-w-[1200px] mx-auto px-6 py-24">
         <p style={eyebrowStyle} className="mb-3">The Classes</p>
         <h2
-          className="font-bigcaslon text-primary mb-14"
-          style={{ fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.1 }}
+          className="font-neogrotesk font-bold text-primary mb-14"
+          style={{ fontSize: "clamp(28px, 3.6vw, 42px)", lineHeight: 1.1 }}
         >
-          Three ways to <em style={{ color: gold }}>train</em> on the reformer.
+          Three ways to train on the reformer.
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {classes.map((c) => (
-            <div
-              key={c.name}
-              style={{
-                background: cardBg,
-                border: "1px solid " + border,
-                padding: 28,
-                borderRadius: 4,
-              }}
-            >
-              <p
-                className="font-neogrotesk text-primary mb-4"
-                style={{ fontSize: 24, letterSpacing: "0.04em" }}
-              >
+            <div key={c.name} style={{ background: cardBg, border: "1px solid " + border, padding: 28, borderRadius: 4 }}>
+              <p className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 24, letterSpacing: "0.04em" }}>
                 {c.name.toUpperCase()}
               </p>
               <p style={{ color: mutedCream, fontSize: 14, lineHeight: 1.7 }}>{c.desc}</p>
@@ -361,143 +316,80 @@ const Home = () => {
         </div>
       </section>
 
-      {/* PRICING */}
-      <section
-        id="pricing"
-        className="max-w-[1200px] mx-auto px-6 py-24"
-        style={{ borderTop: "1px solid " + border }}
-      >
+      <section id="pricing" className="max-w-[1200px] mx-auto px-6 py-24" style={{ borderTop: "1px solid " + border }}>
         <div
           className="text-center mb-10 py-4 px-6"
-          style={{
-            border: "1px solid " + gold,
-            color: gold,
-            fontFamily: "'Barlow Condensed', sans-serif",
-            letterSpacing: "0.24em",
-            fontSize: 12,
-            textTransform: "uppercase",
-          }}
+          style={{ border: "1px solid " + gold, color: gold, fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.24em", fontSize: 12, textTransform: "uppercase" }}
         >
-          Founding Member Rates · Limited to the First 50 Members · Locked for Life
+          Founding Member Rates, Limited to the First 50 Members, Locked for Life
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {prices.map((p) => (
             <div
               key={p.name}
-              style={{
-                background: p.featured ? "rgba(196,154,74,0.08)" : cardBg,
-                border: "1px solid " + (p.featured ? gold : border),
-                padding: 32,
-                borderRadius: 4,
-                position: "relative",
-              }}
+              style={{ background: p.featured ? "rgba(196,154,74,0.08)" : cardBg, border: "1px solid " + (p.featured ? gold : border), padding: 32, borderRadius: 4, position: "relative" }}
             >
               {p.featured && (
-                <div
-                  style={{
-                    position: "absolute",
-                    top: -10,
-                    left: 24,
-                    background: gold,
-                    color: "#180800",
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontSize: 10,
-                    letterSpacing: "0.24em",
-                    padding: "3px 10px",
-                    textTransform: "uppercase",
-                  }}
-                >
+                <div style={{ position: "absolute", top: -10, left: 24, background: gold, color: "#180800", fontFamily: "'Barlow Condensed', sans-serif", fontSize: 10, letterSpacing: "0.24em", padding: "3px 10px", textTransform: "uppercase" }}>
                   Most Popular
                 </div>
               )}
-              <p className="font-neogrotesk text-primary mb-4"
-                 style={{ fontSize: 18, letterSpacing: "0.08em" }}>
+              <p className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 18, letterSpacing: "0.08em" }}>
                 {p.name.toUpperCase()}
               </p>
               <div className="mb-1">
-                <span className="font-bigcaslon" style={{ fontSize: 48, color: cream }}>{p.price}</span>
+                <span className="font-neogrotesk font-bold" style={{ fontSize: 46, color: cream }}>{p.price}</span>
               </div>
-              <p style={{ color: mutedCream, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }}
-                 className="mb-6">
+              <p style={{ color: mutedCream, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-6">
                 {p.unit}
               </p>
               <ul style={{ color: mutedCream, fontSize: 14, lineHeight: 1.9 }} className="mb-8">
-                {p.perks.map((perk) => (
-                  <li key={perk}>· {perk}</li>
-                ))}
+                {p.perks.map((perk) => (<li key={perk}>· {perk}</li>))}
               </ul>
-              <Link to={p.href} style={p.featured ? btnSolid : btnGhost}>
-                Choose {p.name}
-              </Link>
+              <Link to={p.href} style={p.featured ? btnSolid : btnGhost}>Choose {p.name}</Link>
             </div>
           ))}
         </div>
       </section>
 
-      {/* BY NIGHT */}
-      <section
-        id="bynight"
-        className="max-w-[1200px] mx-auto px-6 py-24"
-        style={{ borderTop: "1px solid " + border }}
-      >
-        <div className="grid md:grid-cols-2 gap-14 items-center">
-          <div>
-            <p style={{ ...eyebrowStyle, color: gold }} className="mb-4">After Dark</p>
-            <h2
-              className="font-bigcaslon text-primary mb-6"
-              style={{ fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.1 }}
-            >
-              RENEGADE <span style={{ color: gold }}>|</span>{" "}
-              <em style={{ color: gold }}>By Night</em>
-            </h2>
-            <p style={{ color: mutedCream, fontSize: 16, lineHeight: 1.75, maxWidth: 500 }}
-               className="mb-4">
-              An immersive Friday night reformer session. Tuned lighting, deeper
-              sound, a longer set. Reformer pilates as an experience, not a
-              workout. Slow-build energy, one shared room, doors close on time.
-            </p>
-            <p style={{ color: cream, fontSize: 13, letterSpacing: "0.18em", textTransform: "uppercase" }}
-               className="mb-8 font-medium">
-              Fridays · 9:00pm–10:30pm
-            </p>
-            <Link to="/bynight" style={btnGold}>Explore By Night</Link>
-          </div>
-          <div>
-            <div
-              style={{
-                aspectRatio: "1 / 1",
-                borderRadius: 18,
-                overflow: "hidden",
-                border: "1px solid " + border,
-              }}
-            >
-              <video
-                src="/night_edit.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-              />
+      <section id="bynight" style={{ background: nightBg, borderTop: "1px solid " + border, borderBottom: "1px solid " + border }}>
+        <div className="max-w-[1200px] mx-auto px-6 py-24">
+          <div className="grid md:grid-cols-2 gap-14 items-center">
+            <div>
+              <p style={{ ...eyebrowStyle, color: gold }} className="mb-4">After Dark</p>
+              <h2 className="font-neogrotesk font-bold text-primary mb-6" style={{ fontSize: "clamp(28px, 3.6vw, 42px)", lineHeight: 1.1 }}>
+                RENEGADE <span style={{ color: gold }}>|</span>{" "}
+                <span className="font-bigcaslon" style={{ color: gold, fontWeight: 400 }}>By Night</span>
+              </h2>
+              <p style={{ color: mutedCream, fontSize: 16, lineHeight: 1.75, maxWidth: 500 }} className="mb-4">
+                An immersive Friday night reformer session. Tuned lighting, deeper
+                sound, a longer set. Reformer pilates as an experience, not a
+                workout. Slow-build energy, one shared room, doors close on time.
+              </p>
+              <p style={{ color: cream, fontSize: 13, letterSpacing: "0.18em", textTransform: "uppercase" }} className="mb-8 font-medium">
+                Fridays, 9:00pm to 10:30pm
+              </p>
+              <Link to="/bynight" style={btnGold}>Explore By Night</Link>
+            </div>
+            <div>
+              <div style={{ aspectRatio: "1 / 1", borderRadius: 18, overflow: "hidden", border: "1px solid " + border }}>
+                <video
+                  src="/night_edit.mp4"
+                  autoPlay muted loop playsInline
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* OUR STORY */}
-      <section
-        id="story"
-        className="max-w-[1200px] mx-auto px-6 py-24"
-        style={{ borderTop: "1px solid " + border }}
-      >
+      <section id="story" className="max-w-[1200px] mx-auto px-6 py-24">
         <div className="grid md:grid-cols-2 gap-14 items-center">
           <div>
             <p style={eyebrowStyle} className="mb-4">Our Story</p>
-            <h2
-              className="font-bigcaslon text-primary mb-6"
-              style={{ fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.1 }}
-            >
-              A studio built on <em style={{ color: gold }}>strength</em>, not aesthetics.
+            <h2 className="font-neogrotesk font-bold text-primary mb-6" style={{ fontSize: "clamp(28px, 3.6vw, 42px)", lineHeight: 1.1 }}>
+              A studio built on strength, not aesthetics.
             </h2>
             <p style={{ color: mutedCream, fontSize: 16, lineHeight: 1.75 }} className="mb-4">
               Renegade Reformer is a strength-led reformer pilates studio in
@@ -514,15 +406,7 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-3 gap-3">
             {["01", "05", "07"].map((n) => (
-              <div
-                key={n}
-                style={{
-                  aspectRatio: "3 / 4",
-                  overflow: "hidden",
-                  borderRadius: 4,
-                  border: "1px solid " + border,
-                }}
-              >
+              <div key={n} style={{ aspectRatio: "3 / 4", overflow: "hidden", borderRadius: 4, border: "1px solid " + border }}>
                 <img
                   src={`/reformer-collage/reformer-collage-${n}.png`}
                   alt="Renegade Reformer studio"
@@ -535,45 +419,21 @@ const Home = () => {
         </div>
       </section>
 
-      {/* REVIEWS */}
-      <section
-        className="max-w-[1200px] mx-auto px-6 py-24"
-        style={{ borderTop: "1px solid " + border }}
-      >
+      <section className="max-w-[1200px] mx-auto px-6 py-24" style={{ borderTop: "1px solid " + border }}>
         <p style={eyebrowStyle} className="mb-3">Reviews</p>
-        <h2
-          className="font-bigcaslon text-primary mb-12"
-          style={{ fontSize: "clamp(28px, 3.5vw, 40px)", lineHeight: 1.1 }}
-        >
+        <h2 className="font-neogrotesk font-bold text-primary mb-12" style={{ fontSize: "clamp(26px, 3.2vw, 36px)", lineHeight: 1.1 }}>
           What members are saying.
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
           {reviews.map((r) => (
-            <div
-              key={r.who}
-              style={{
-                background: cardBg,
-                border: "1px solid " + border,
-                padding: 32,
-                borderRadius: 4,
-              }}
-            >
+            <div key={r.who} style={{ background: cardBg, border: "1px solid " + border, padding: 32, borderRadius: 4 }}>
               <div className="flex gap-1 mb-5" aria-label="5 star review">
-                {[0, 1, 2, 3, 4].map((i) => (
-                  <Star key={i} size={16} fill={gold} color={gold} />
-                ))}
+                {[0, 1, 2, 3, 4].map((i) => (<Star key={i} size={16} fill={gold} color={gold} />))}
               </div>
-              <p style={{ color: cream, fontSize: 16, lineHeight: 1.75 }} className="mb-6 font-bigcaslon">
+              <p style={{ color: cream, fontSize: 15, lineHeight: 1.75 }} className="mb-6">
                 "{r.text}"
               </p>
-              <p
-                style={{
-                  color: mutedCream,
-                  fontSize: 11,
-                  letterSpacing: "0.24em",
-                  textTransform: "uppercase",
-                }}
-              >
+              <p style={{ color: mutedCream, fontSize: 11, letterSpacing: "0.24em", textTransform: "uppercase" }}>
                 {r.who}
               </p>
             </div>
@@ -581,31 +441,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* FAQ + GUIDES */}
-      <section
-        className="max-w-[1200px] mx-auto px-6 py-24 grid md:grid-cols-2 gap-14"
-        style={{ borderTop: "1px solid " + border }}
-      >
+      <section className="max-w-[1200px] mx-auto px-6 py-24 grid md:grid-cols-2 gap-14" style={{ borderTop: "1px solid " + border }}>
         <div>
           <p style={eyebrowStyle} className="mb-3">FAQs</p>
-          <h3 className="font-bigcaslon text-primary mb-6" style={{ fontSize: 28 }}>
-            Common questions.
-          </h3>
+          <h3 className="font-neogrotesk font-bold text-primary mb-6" style={{ fontSize: 26 }}>Common questions.</h3>
           <ul style={{ borderTop: "1px solid " + border }}>
             {faqs.map((q) => (
               <li key={q} style={{ borderBottom: "1px solid " + border }}>
-                <a
-                  href="/faq.html"
-                  style={{
-                    display: "block",
-                    padding: "16px 0",
-                    color: cream,
-                    fontSize: 15,
-                    textDecoration: "none",
-                  }}
-                >
-                  {q}
-                </a>
+                <a href="/faq.html" style={{ display: "block", padding: "16px 0", color: cream, fontSize: 15, textDecoration: "none" }}>{q}</a>
               </li>
             ))}
           </ul>
@@ -613,24 +456,11 @@ const Home = () => {
         </div>
         <div>
           <p style={eyebrowStyle} className="mb-3">Guides</p>
-          <h3 className="font-bigcaslon text-primary mb-6" style={{ fontSize: 28 }}>
-            Read from the studio.
-          </h3>
+          <h3 className="font-neogrotesk font-bold text-primary mb-6" style={{ fontSize: 26 }}>Read from the studio.</h3>
           <ul style={{ borderTop: "1px solid " + border }}>
             {guides.map((g) => (
               <li key={g.title} style={{ borderBottom: "1px solid " + border }}>
-                <a
-                  href={g.href}
-                  style={{
-                    display: "block",
-                    padding: "16px 0",
-                    color: cream,
-                    fontSize: 15,
-                    textDecoration: "none",
-                  }}
-                >
-                  {g.title}
-                </a>
+                <a href={g.href} style={{ display: "block", padding: "16px 0", color: cream, fontSize: 15, textDecoration: "none" }}>{g.title}</a>
               </li>
             ))}
           </ul>
@@ -638,18 +468,10 @@ const Home = () => {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer style={{ borderTop: "1px solid " + border }}>
         <div className="max-w-[1200px] mx-auto px-6 py-16 grid md:grid-cols-2 gap-12">
           <div>
-            <div
-              style={{
-                overflow: "hidden",
-                borderRadius: 8,
-                border: "1px solid " + border,
-                aspectRatio: "4 / 3",
-              }}
-            >
+            <div style={{ overflow: "hidden", borderRadius: 8, border: "1px solid " + border, aspectRatio: "4 / 3" }}>
               <iframe
                 title="Renegade Reformer location map"
                 src="https://www.google.com/maps?q=22a+Church+Road,+Redfield,+Bristol+BS5+9JA&output=embed"
@@ -660,55 +482,26 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <Link to="/" className="flex items-center gap-3 mb-8">
-              <img
-                src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
-                alt="Renegade Reformer eagle logo"
-                className="w-10 h-10 object-contain"
-              />
-              <Wordmark />
+            <Link to="/" className="inline-block mb-8">
+              <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo" className="w-11 h-11 object-contain" />
             </Link>
             <p style={sectionLabelStyle} className="mb-2">Visit</p>
-            <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-5">
-              22a Church Road, Redfield<br />Bristol BS5 9JA
-            </p>
+            <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-5">22a Church Road, Redfield<br />Bristol BS5 9JA</p>
             <p style={sectionLabelStyle} className="mb-2">Hours</p>
             <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-5">
-              Reformer · Mon–Fri, 8:30am–8:30pm<br />
-              By Night · Fri, 9:00pm–10:30pm
+              Reformer, Mon to Fri, 8:30am to 8:30pm<br />By Night, Fri, 9:00pm to 10:30pm
             </p>
             <p style={sectionLabelStyle} className="mb-2">Contact</p>
             <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-6">
-              <a href="mailto:studio@renegadereformer.co.uk" style={{ color: cream, textDecoration: "none" }}>
-                studio@renegadereformer.co.uk
-              </a><br />
-              <a href="tel:+447846849456" style={{ color: cream, textDecoration: "none" }}>
-                +44 7846 849456
-              </a>
+              <a href="mailto:studio@renegadereformer.co.uk" style={{ color: cream, textDecoration: "none" }}>studio@renegadereformer.co.uk</a><br />
+              <a href="tel:+447846849456" style={{ color: cream, textDecoration: "none" }}>+44 7846 849456</a>
             </p>
             <div className="flex items-center gap-4 mb-8">
-              <a href="https://www.instagram.com/renegade.reformer/" target="_blank" rel="noopener noreferrer"
-                 aria-label="Instagram" style={{ color: cream }}>
-                <Instagram size={20} />
-              </a>
-              <a href="https://www.facebook.com/fitnessreformer/" target="_blank" rel="noopener noreferrer"
-                 aria-label="Facebook" style={{ color: cream }}>
-                <Facebook size={20} />
-              </a>
-              <a href="https://wa.me/447846849456" target="_blank" rel="noopener noreferrer"
-                 aria-label="WhatsApp" style={{ color: cream }}>
-                <MessageCircle size={20} />
-              </a>
+              <a href="https://www.instagram.com/renegade.reformer/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ color: cream }}><Instagram size={20} /></a>
+              <a href="https://www.facebook.com/fitnessreformer/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ color: cream }}><Facebook size={20} /></a>
+              <a href="https://wa.me/447846849456" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style={{ color: cream }}><MessageCircle size={20} /></a>
             </div>
-            <div
-              className="flex flex-wrap gap-x-5 gap-y-2"
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontSize: 12,
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-              }}
-            >
+            <div className="flex flex-wrap gap-x-5 gap-y-2" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.18em", textTransform: "uppercase" }}>
               <Link to="/" style={{ color: mutedCream, textDecoration: "none" }}>Home</Link>
               <a href="/reformerpilates.html" style={{ color: mutedCream, textDecoration: "none" }}>Reformer</a>
               <Link to="/pricing" style={{ color: mutedCream, textDecoration: "none" }}>Pricing</Link>
@@ -721,11 +514,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div
-          className="text-center py-6 px-6"
-          style={{ borderTop: "1px solid " + border, color: mutedCream, fontSize: 11, letterSpacing: "0.24em", textTransform: "uppercase" }}
-        >
-          © 2026 Renegade Reformer · Redfield, Bristol
+        <div className="text-center py-6 px-6" style={{ borderTop: "1px solid " + border, color: mutedCream, fontSize: 11, letterSpacing: "0.24em", textTransform: "uppercase" }}>
+          © 2026 Renegade Reformer, Redfield, Bristol
         </div>
       </footer>
     </div>
