@@ -10,6 +10,8 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 // Updated to use direct image paths
 const Home = () => {
@@ -24,6 +26,7 @@ const Home = () => {
           "radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%)",
       }}
     >
+      <SiteHeader />
       <SEO
         title="Reformer Pilates in Redfield, Bristol | Renegade Reformer"
         description="Renegade Reformer is a strength-led reformer Pilates studio in Redfield, Bristol. Now open, founding member rates live. Book your first class today."
@@ -463,6 +466,7 @@ const Home = () => {
           </DialogFooter>
         </DialogContent>
       </Dialog>
+      <SiteFooter />
     </main>
   );
 };

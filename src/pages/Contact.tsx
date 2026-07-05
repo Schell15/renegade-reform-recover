@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -45,6 +47,7 @@ const Contact = () => {
           "radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%)",
       }}
     >
+      <SiteHeader />
       <SEO
         title="Contact | Renegade Reformer Bristol"
         description="Get in touch with Renegade Reformer, the reformer Pilates studio in Redfield, Bristol. Now open, founding rates live. We'd love to hear from you."
@@ -232,6 +235,7 @@ const Contact = () => {
           </p>
         </section>
       </div>
+      <SiteFooter />
     </main>
   );
 };
