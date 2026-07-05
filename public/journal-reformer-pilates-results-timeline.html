@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="preload" href="/Neogrotesk SC Black Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="/rr-nav.css">
   <link rel="canonical" href="https://www.renegadereformer.co.uk/journal-reformer-pilates-results-timeline.html">
   <title>How Long Until You See Results From Reformer Pilates? | Renegade Reformer Bristol</title>
   <meta name="description" content="A realistic week-by-week timeline of what to expect from reformer Pilates, from your first class to the point where other people start noticing.">
@@ -105,18 +106,30 @@
 </head>
 <body>
 
-  <nav>
-    <a href="https://www.renegadereformer.co.uk/" class="nav-logo">
-      <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer logo">
-    </a>
-    <ul class="nav-links">
-      <li><a href="https://www.renegadereformer.co.uk/reformerpilates.html">Classes</a></li>
-      <li><a href="https://www.renegadereformer.co.uk/pricing">Pricing</a></li>
-      <li><a href="https://www.renegadereformer.co.uk/guides.html">Guides</a></li>
-      <li><a href="https://www.renegadereformer.co.uk/faq.html">FAQs</a></li>
-      <li><a href="https://www.renegadereformer.co.uk/reformer-signup">Early access</a></li>
-    </ul>
-  </nav>
+  <nav class="rr-nav">
+  <a href="https://www.renegadereformer.co.uk/" class="rr-nav-logo" aria-label="Renegade Reformer home">
+    <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer logo">
+  </a>
+  <div class="rr-nav-right">
+    <a href="https://www.renegadereformer.co.uk/timetable" class="rr-nav-cta">Timetable</a>
+    <button class="rr-nav-burger" id="rrNavBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="rr-nav-spacer"></div>
+
+<div class="rr-nav-drawer" id="rrNavDrawer">
+  <button class="rr-nav-close" id="rrNavClose" aria-label="Close menu">&times;</button>
+  <a href="https://www.renegadereformer.co.uk/reformerpilates.html">Reformer Pilates</a>
+  <a href="https://www.renegadereformer.co.uk/bynight">Renegade | By Night</a>
+  <a href="https://www.renegadereformer.co.uk/pricing">Pricing</a>
+  <a href="https://www.renegadereformer.co.uk/guides.html">Guides</a>
+  <a href="https://www.renegadereformer.co.uk/faq.html">FAQs</a>
+  <a href="https://www.renegadereformer.co.uk/contact">Contact</a>
+  <a href="https://www.renegadereformer.co.uk/timetable" class="rr-nav-drawer-cta">Timetable</a>
+</div>
+<div class="rr-nav-overlay" id="rrNavOverlay"></div>
 
   <div class="article-hero">
     <div class="article-hero-inner">
@@ -236,15 +249,20 @@
     </div>
   </div>
 
-  <footer>
-    <p>&copy; 2026 Renegade Reformer &middot; 22a Church Road, Redfield, Bristol BS5 9JA</p>
-    <div class="footer-links">
-      <a href="https://www.renegadereformer.co.uk/">Home</a>
-      <a href="https://www.renegadereformer.co.uk/guides.html">Guides</a>
-      <a href="https://www.renegadereformer.co.uk/faq.html">FAQs</a>
-      <a href="https://www.renegadereformer.co.uk/reformer-signup">Early access</a>
-    </div>
-  </footer>
+  <footer class="rr-footer">
+  <p>&copy; 2026 Renegade Reformer &middot; 22a Church Road, Redfield, Bristol BS5 9JA</p>
+  <div class="rr-footer-links">
+    <a href="https://www.renegadereformer.co.uk/">Home</a>
+    <a href="https://www.renegadereformer.co.uk/reformerpilates.html">Reformer Pilates</a>
+    <a href="https://www.renegadereformer.co.uk/pricing">Pricing</a>
+    <a href="https://www.renegadereformer.co.uk/timetable">Timetable</a>
+    <a href="https://www.renegadereformer.co.uk/bynight">Renegade | By Night</a>
+    <a href="https://www.renegadereformer.co.uk/guides.html">Guides</a>
+    <a href="https://www.renegadereformer.co.uk/faq.html">FAQs</a>
+    <a href="https://www.renegadereformer.co.uk/contact">Contact</a>
+    <a href="https://www.renegadereformer.co.uk/teachwithus">Instructor Application</a>
+  </div>
+</footer>
 
   <script>
     document.querySelectorAll('.share-btn').forEach(function (btn) {
@@ -268,6 +286,8 @@
       });
     });
   </script>
+
+  <script src="/rr-nav.js" defer></script>
 
 </body>
 </html>
