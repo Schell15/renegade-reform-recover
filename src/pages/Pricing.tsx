@@ -1223,6 +1223,7 @@ const Pricing = () => {
 
   return (
     <>
+      <SiteHeader />
       <SEO
         title="Pricing & Membership | Renegade Reformer Bristol"
         description="Founding member rates now live at Renegade Reformer, Bristol's reformer Pilates studio in Redfield. Drop-ins, class packs and monthly memberships from £14/class."
@@ -1668,6 +1669,7 @@ const Pricing = () => {
       </div>
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER }} />
 
+      <SiteFooter />
     </>
   );
 };
