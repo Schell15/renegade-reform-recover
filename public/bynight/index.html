@@ -16,6 +16,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>RENEGADE | BY NIGHT</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preload" href="/Neogrotesk SC Black Regular.otf" as="font" type="font/otf" crossorigin>
+<link rel="stylesheet" href="/rr-nav.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
 <style>
 @font-face {
@@ -1113,10 +1114,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="dark-veil"></div>
 
 <!-- NAV -->
-<nav id="nav">
-  <a class="nav-mark" href="#">Renegade <span>| By Night</span></a>
-  <a class="nav-cta" href="#final">Book Now</a>
+<nav class="rr-nav">
+  <a href="https://www.renegadereformer.co.uk/" class="rr-nav-logo" aria-label="Renegade Reformer home">
+    <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer logo">
+  </a>
+  <div class="rr-nav-right">
+    <a href="https://www.renegadereformer.co.uk/timetable" class="rr-nav-cta">Timetable</a>
+    <button class="rr-nav-burger" id="rrNavBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+<div class="rr-nav-spacer"></div>
+
+<div class="rr-nav-drawer" id="rrNavDrawer">
+  <button class="rr-nav-close" id="rrNavClose" aria-label="Close menu">&times;</button>
+  <a href="https://www.renegadereformer.co.uk/reformerpilates.html">Reformer Pilates</a>
+  <a href="https://www.renegadereformer.co.uk/bynight">Renegade | By Night</a>
+  <a href="https://www.renegadereformer.co.uk/pricing">Pricing</a>
+  <a href="https://www.renegadereformer.co.uk/guides.html">Guides</a>
+  <a href="https://www.renegadereformer.co.uk/faq.html">FAQs</a>
+  <a href="https://www.renegadereformer.co.uk/contact">Contact</a>
+  <a href="https://www.renegadereformer.co.uk/timetable" class="rr-nav-drawer-cta">Timetable</a>
+</div>
+<div class="rr-nav-overlay" id="rrNavOverlay"></div>
 
 <!-- CHAPTER DOTS -->
 <div id="chapter-indicator">
@@ -1292,15 +1313,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<footer class="rr-footer">
+  <p>&copy; 2026 Renegade Reformer &middot; 22a Church Road, Redfield, Bristol BS5 9JA</p>
+  <div class="rr-footer-links">
+    <a href="https://www.renegadereformer.co.uk/">Home</a>
+    <a href="https://www.renegadereformer.co.uk/reformerpilates.html">Reformer Pilates</a>
+    <a href="https://www.renegadereformer.co.uk/pricing">Pricing</a>
+    <a href="https://www.renegadereformer.co.uk/timetable">Timetable</a>
+    <a href="https://www.renegadereformer.co.uk/bynight">Renegade | By Night</a>
+    <a href="https://www.renegadereformer.co.uk/guides.html">Guides</a>
+    <a href="https://www.renegadereformer.co.uk/faq.html">FAQs</a>
+    <a href="https://www.renegadereformer.co.uk/contact">Contact</a>
+    <a href="https://www.renegadereformer.co.uk/teachwithus">Instructor Application</a>
+  </div>
+</footer>
+
 <script>
 /* ── NAV ── */
-const nav = document.getElementById('nav');
 const chInd = document.getElementById('chapter-indicator');
 const dots = document.querySelectorAll('.ch-dot');
 
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
-  nav.classList.toggle('compact', y > 60);
 
   // Show chapter indicator after first scroll
   chInd.classList.toggle('visible', y > window.innerHeight * 0.5);
@@ -1446,5 +1480,6 @@ if (canvas) {
   io.observe(video);
 })();
 </script>
+  <script src="/rr-nav.js" defer></script>
 </body>
 </html>
