@@ -1669,6 +1669,22 @@ const Pricing = () => {
       </div>
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER }} />
 
+      <p
+        style={{
+          maxWidth: 720,
+          margin: '2rem auto 3rem',
+          padding: '0 1.5rem',
+          textAlign: 'center',
+          fontSize: '12px',
+          lineHeight: 1.7,
+          color: 'rgba(225,214,200,0.55)',
+        }}
+      >
+        All memberships roll monthly after an initial 1-month term. Class packs are non-refundable
+        and non-transferable. Founding member rates are strictly limited to 50 spots and locked in
+        for life, your rate never increases as long as your membership remains active.
+      </p>
+
       <SiteFooter />
     </>
   );
