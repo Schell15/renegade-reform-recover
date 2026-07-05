@@ -303,7 +303,7 @@ const Home = () => {
           {classes.map((c) => (
             <div key={c.name} style={{ background: cardBg, border: "1px solid " + border, padding: 28, borderRadius: 4 }}>
               <p className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 24, letterSpacing: "0.04em" }}>
-                {c.name.toUpperCase()}
+                {c.name.toUpperCase()}.
               </p>
               <p style={{ color: mutedCream, fontSize: 14, lineHeight: 1.7 }}>{c.desc}</p>
             </div>

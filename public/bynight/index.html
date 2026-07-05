@@ -26,6 +26,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'BigCaslon';
+  src: url('/big-caslon-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 </style>
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -211,7 +218,7 @@ body {
   text-align: right;
 }
 .hero-title .pipe {
-  font-family: var(--display);
+  font-family: 'BigCaslon', serif;
   color: var(--gold);
   font-style: italic;
   font-weight: 200;
@@ -343,10 +350,12 @@ body {
   line-height: 1.12;
   letter-spacing: -0.025em;
   color: var(--warm-white);
+  text-transform: uppercase;
 }
 .ch1-question em {
   color: var(--gold);
   font-style: italic;
+  font-family: 'BigCaslon', serif;
 }
 .ch1-feeling {
   font-family: var(--display);
@@ -456,6 +465,7 @@ body {
   font-weight: 900;
   color: var(--warm-white);
   line-height: 1.15;
+  text-transform: uppercase;
 }
 .ch2-close {
   margin-top: 3.5rem;
@@ -481,7 +491,7 @@ body {
 }
 .ch3-word {
   font-family: 'NeoGrotesk', sans-serif;
-  font-size: clamp(3.5rem, 10vw, 10rem);
+  font-size: clamp(2.275rem, 6.5vw, 6.5rem);
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.05;
@@ -515,6 +525,7 @@ body {
   font-weight: 900;
   line-height: 1.0;
   letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 .ch4-heading em { font-style: italic; color: var(--gold); display: block; }
 .ch4-body {
