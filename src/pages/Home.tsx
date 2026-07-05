@@ -73,29 +73,28 @@ const classes = [
 const prices = [
   {
     name: "Drop In",
-    price: "£22",
+    subtitle: "No commitment",
+    price: "£20",
     unit: "per class",
-    perks: ["Single 50-min class", "Any class, any level", "No commitment"],
+    perks: ["All levels welcome", "Free cancellation up to 12 hours before", "No commitment"],
     href: "/pricing",
     featured: false,
   },
   {
     name: "Intro Pack",
-    price: "£55",
+    subtitle: "Find your feet",
+    price: "£48",
     unit: "3 classes, new members",
-    perks: ["Use within 21 days", "Try every class type", "Best way to start"],
+    perks: ["Valid for 30 days", "The best way to try Renegade properly", "Before committing to a membership"],
     href: "/pricing",
     featured: true,
   },
   {
-    name: "Founding Membership",
-    price: "£99",
-    unit: "per month, unlimited",
-    perks: [
-      "Unlimited reformer classes",
-      "Rate locked for life",
-      "Limited to first 50 members",
-    ],
+    name: "Membership",
+    subtitle: "From Core to Elite",
+    price: "£72",
+    unit: "per month, 4 to 12 classes, from £14 per class",
+    perks: ["Founding rate locked in for life", "Guest passes", "Priority booking"],
     href: "/pricing",
     featured: false,
   },
@@ -219,7 +218,7 @@ const Home = () => {
               className="font-neogrotesk font-bold text-primary mb-3"
               style={{ fontSize: 20, letterSpacing: "0.02em", whiteSpace: "nowrap" }}
             >
-              Immersive Reformer Pilates
+              IMMERSIVE REFORMER PILATES
             </h1>
             <p
               style={{ color: "rgba(225,214,200,0.5)", fontSize: 14, lineHeight: 1.7, maxWidth: 520 }}
@@ -299,7 +298,7 @@ const Home = () => {
           className="font-neogrotesk font-bold text-primary mb-14"
           style={{ fontSize: "clamp(28px, 3.6vw, 42px)", lineHeight: 1.1 }}
         >
-          Three ways to train on the reformer.
+          THREE WAYS TO TRAIN ON THE REFORMER.
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           {classes.map((c) => (
@@ -334,8 +333,11 @@ const Home = () => {
                   Most Popular
                 </div>
               )}
-              <p className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 18, letterSpacing: "0.08em" }}>
-                {p.name.toUpperCase()}
+              <p style={{ color: mutedCream, fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase" }} className="mb-2">
+                {p.name}
+              </p>
+              <p className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 18, letterSpacing: "0.04em" }}>
+                {p.subtitle.toUpperCase()}
               </p>
               <div className="mb-1">
                 <span className="font-neogrotesk font-bold" style={{ fontSize: 46, color: cream }}>{p.price}</span>
@@ -387,21 +389,19 @@ const Home = () => {
       <section id="story" className="max-w-[1200px] mx-auto px-6 py-24">
         <div className="grid md:grid-cols-2 gap-14 items-center">
           <div>
-            <p style={eyebrowStyle} className="mb-4">Our Story</p>
+            <p style={eyebrowStyle} className="mb-4">We Are Renegade</p>
             <h2 className="font-neogrotesk font-bold text-primary mb-6" style={{ fontSize: "clamp(28px, 3.6vw, 42px)", lineHeight: 1.1 }}>
-              A studio built on strength, not aesthetics.
+              A DIVINELY POWERFUL APPROACH.
             </h2>
             <p style={{ color: mutedCream, fontSize: 16, lineHeight: 1.75 }} className="mb-4">
-              Renegade Reformer is a strength-led reformer pilates studio in
-              Redfield, Bristol. We built it because reformer in the UK too often
-              feels like a soft stretch class in an off-white room. That's not
-              what the reformer is for.
+              Movement at Renegade is motivated by music, where tradition meets
+              progression. We elevate pilates as a source of personal power, one
+              that makes you feel bold.
             </p>
             <p style={{ color: mutedCream, fontSize: 16, lineHeight: 1.75 }}>
-              Our classes are technique-first and strength-honest. The room is
-              dark, warm and considered. Every detail, the beds, the lighting,
-              the soundtrack, is chosen so you can train hard and switch off
-              from everything else.
+              We fuse pilates, fitness, set design and world-class audio and
+              lighting production, designed and built by some of Bristol's
+              finest creative minds. The first studio of its kind in the UK.
             </p>
           </div>
           <div className="grid grid-cols-3 gap-3">
@@ -422,7 +422,7 @@ const Home = () => {
       <section className="max-w-[1200px] mx-auto px-6 py-24" style={{ borderTop: "1px solid " + border }}>
         <p style={eyebrowStyle} className="mb-3">Reviews</p>
         <h2 className="font-neogrotesk font-bold text-primary mb-12" style={{ fontSize: "clamp(26px, 3.2vw, 36px)", lineHeight: 1.1 }}>
-          What members are saying.
+          WHAT MEMBERS ARE SAYING.
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
           {reviews.map((r) => (
@@ -444,7 +444,7 @@ const Home = () => {
       <section className="max-w-[1200px] mx-auto px-6 py-24 grid md:grid-cols-2 gap-14" style={{ borderTop: "1px solid " + border }}>
         <div>
           <p style={eyebrowStyle} className="mb-3">FAQs</p>
-          <h3 className="font-neogrotesk font-bold text-primary mb-6" style={{ fontSize: 26 }}>Common questions.</h3>
+          <h3 className="font-neogrotesk font-bold text-primary mb-6" style={{ fontSize: 26 }}>COMMON QUESTIONS.</h3>
           <ul style={{ borderTop: "1px solid " + border }}>
             {faqs.map((q) => (
               <li key={q} style={{ borderBottom: "1px solid " + border }}>
@@ -456,7 +456,7 @@ const Home = () => {
         </div>
         <div>
           <p style={eyebrowStyle} className="mb-3">Guides</p>
-          <h3 className="font-neogrotesk font-bold text-primary mb-6" style={{ fontSize: 26 }}>Read from the studio.</h3>
+          <h3 className="font-neogrotesk font-bold text-primary mb-6" style={{ fontSize: 26 }}>READ FROM THE STUDIO.</h3>
           <ul style={{ borderTop: "1px solid " + border }}>
             {guides.map((g) => (
               <li key={g.title} style={{ borderBottom: "1px solid " + border }}>
