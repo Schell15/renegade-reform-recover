@@ -194,15 +194,14 @@ const Home = () => {
             />
           </Link>
           <nav className="hidden md:flex items-center gap-8">
-            <NavLinkA href="#classes">Classes</NavLinkA>
-            <NavLinkA href="#bynight">By Night</NavLinkA>
-            <NavLinkA href="#pricing">Pricing</NavLinkA>
-            <NavLinkA href="#story">Our Story</NavLinkA>
-            <NavLinkA href="#visit">Visit</NavLinkA>
+            <a href="/reformerpilates.html" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", color: cream, textDecoration: "none", opacity: 0.85 }}>Classes</a>
+            <Link to="/bynight" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", color: cream, textDecoration: "none", opacity: 0.85 }}>By Night</Link>
+            <Link to="/pricing" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", color: cream, textDecoration: "none", opacity: 0.85 }}>Pricing</Link>
+            <a href="/reformerpilates.html" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", color: cream, textDecoration: "none", opacity: 0.85 }}>About</a>
+            <Link to="/contact" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.22em", textTransform: "uppercase", color: cream, textDecoration: "none", opacity: 0.85 }}>Visit</Link>
           </nav>
           <div className="flex items-center gap-3">
-            <Link to="/timetable" style={btnGhost}>Timetable</Link>
-            <a href="/reformerpilates.html" style={btnSolid}>Book a class</a>
+            <Link to="/timetable" style={btnSolid}>Book a class</Link>
           </div>
         </div>
       </header>
