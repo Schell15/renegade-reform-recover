@@ -61,7 +61,7 @@ const classes = [
   },
   {
     name: "Renegade",
-    desc: "Our signature strength-and-flow class. Powerful, rhythmic and set to a tuned soundtrack — think reformer training with the intensity dial turned up.",
+    desc: "Our signature strength-and-flow class. Powerful, rhythmic and set to a tuned soundtrack. Think reformer training with the intensity dial turned up.",
   },
   {
     name: "Rebuild",
@@ -206,25 +206,46 @@ const Home = () => {
       <section className="max-w-[1200px] mx-auto px-6 pt-16 pb-24">
         <div className="grid md:grid-cols-2 gap-14 items-center">
           <div>
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-3 mb-3 opacity-90">
               <img
                 src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
                 alt="Renegade Reformer eagle logo"
-                className="w-20 h-20 object-contain"
+                className="w-10 h-10 object-contain"
               />
-              <Wordmark size="lg" />
+              <div className="inline-block leading-none">
+                <div
+                  className="text-primary font-neogrotesk font-bold tracking-tight"
+                  style={{ fontSize: 19, letterSpacing: "0.01em" }}
+                >
+                  RENEGADE.
+                </div>
+                <div
+                  className="text-primary font-bigcaslon tracking-tight text-right"
+                  style={{ fontSize: 16, marginTop: -2 }}
+                >
+                  reformer
+                </div>
+              </div>
             </div>
-            <p style={eyebrowStyle} className="mb-5">
+            <p style={eyebrowStyle} className="mb-2">
               Bristol · Redfield · Now Open
             </p>
             <h1
-              className="font-bigcaslon text-primary mb-6"
+              className="font-bigcaslon text-primary mb-3"
               style={{ fontSize: "clamp(38px, 5vw, 60px)", lineHeight: 1.05, letterSpacing: "-0.01em" }}
             >
               Reformer pilates, <em style={{ color: gold }}>reimagined.</em>
             </h1>
-            <p style={{ color: mutedCream, fontSize: 16, lineHeight: 1.7, maxWidth: 520 }} className="mb-8">
-              Strength, control and rhythm — built into every class. Set inside a
+            <p
+              style={{
+                color: "rgba(225,214,200,0.5)",
+                fontSize: 14,
+                lineHeight: 1.7,
+                maxWidth: 520,
+              }}
+              className="mb-8"
+            >
+              Strength, control and rhythm, built into every class. Set inside a
               considered space of tuned lighting, thoughtful set design and a
               music-first soundtrack. Reformer pilates in Bristol, done our way.
             </p>
@@ -431,7 +452,7 @@ const Home = () => {
             </h2>
             <p style={{ color: mutedCream, fontSize: 16, lineHeight: 1.75, maxWidth: 500 }}
                className="mb-4">
-              An immersive Friday night reformer session — tuned lighting, deeper
+              An immersive Friday night reformer session. Tuned lighting, deeper
               sound, a longer set. Reformer pilates as an experience, not a
               workout. Slow-build energy, one shared room, doors close on time.
             </p>
@@ -486,8 +507,8 @@ const Home = () => {
             </p>
             <p style={{ color: mutedCream, fontSize: 16, lineHeight: 1.75 }}>
               Our classes are technique-first and strength-honest. The room is
-              dark, warm and considered. Every detail — the beds, the lighting,
-              the soundtrack — is chosen so you can train hard and switch off
+              dark, warm and considered. Every detail, the beds, the lighting,
+              the soundtrack, is chosen so you can train hard and switch off
               from everything else.
             </p>
           </div>
@@ -553,7 +574,7 @@ const Home = () => {
                   textTransform: "uppercase",
                 }}
               >
-                — {r.who}
+                {r.who}
               </p>
             </div>
           ))}
