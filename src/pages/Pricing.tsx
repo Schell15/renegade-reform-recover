@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { SEO } from "@/components/SEO";
 import RenegadeGallery from "@/components/RenegadeGallery";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -908,31 +910,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   
 `;
 
-const PRICING_BODY_HEAD = `<nav class="rn-nav">
-  <a href="/" class="nav-logo" aria-label="Renegade Reformer home">
-    <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo, reformer Pilates Bristol" />
-  </a>
-  <ul class="nav-links">
-    <li><a href="/reformer-signup">Our Story</a></li>
-    <li><a href="/reformerpilates.html">Reformer Pilates</a></li>
-    <li><a href="/reformerpilates.html#journey">Classes</a></li>
-    <li><a href="/pricing">Pricing</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
-  <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-  <ul>
-    <li><a href="/reformer-signup">Our Story</a></li>
-    <li><a href="/reformerpilates.html">Reformer Pilates</a></li>
-    <li><a href="/reformerpilates.html#journey">Classes</a></li>
-    <li><a href="/pricing">Pricing</a></li>
-    <li><a href="/contact">Contact</a></li>
-  </ul>
-</div>
-<div class="page">
+const PRICING_BODY_HEAD = `<div class="page">
 
   <header class="header" style="display:flex;align-items:center;justify-content:space-between;gap:32px;">
     <div style="flex:1;min-width:0;">
@@ -1088,17 +1066,7 @@ const PRICING_BODY_NOTIFY_BUTTON = `<div class="page" style="padding-top:0;paddi
   </div>
 </div>`;
 
-const PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER = `<div class="page" style="padding-top:0;padding-bottom:0;">
-  <footer class="footer">
-    <p>All memberships roll monthly after an initial 1-month term. Class packs are non-refundable and non-transferable. Founding member rates are strictly limited to 50 spots and locked in for life, your rate never increases as long as your membership remains active.</p>
-    <div>
-      <p class="footer-brand">Renegade.</p>
-      <p class="footer-tagline">reform · repower · recover</p>
-    </div>
-  </footer>
-</div>
-
-`;
+const PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER = ``;
 
 
 
@@ -1255,6 +1223,7 @@ const Pricing = () => {
 
   return (
     <>
+      <SiteHeader />
       <SEO
         title="Pricing & Membership | Renegade Reformer Bristol"
         description="Founding member rates now live at Renegade Reformer, Bristol's reformer Pilates studio in Redfield. Drop-ins, class packs and monthly memberships from £14/class."
@@ -1700,6 +1669,7 @@ const Pricing = () => {
       </div>
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_TAIL_AFTER_GALLERY_FOOTER }} />
 
+      <SiteFooter />
     </>
   );
 };
