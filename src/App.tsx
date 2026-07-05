@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Timetable from "./pages/Timetable";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +32,7 @@ const App = () => (
           <Route path="/discover" element={<Navigate to="/" replace />} />
           <Route path="/reformer-signup" element={<Navigate to="/timetable" replace />} />
           <Route path="/reformerpilates" element={<ExternalRedirect to="/reformerpilates.html" />} />
-          <Route path="/timetable" element={<ExternalRedirect to="/timetable/index.html" />} />
+          <Route path="/timetable" element={<Timetable />} />
           <Route path="/teachwithus" element={<ExternalRedirect to="/teachwithus/index.html" />} />
           <Route path="/bynight" element={<ExternalRedirect to="/bynight/index.html" />} />
           <Route path="/guides" element={<ExternalRedirect to="/guides.html" />} />

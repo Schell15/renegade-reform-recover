@@ -145,7 +145,7 @@ const NavLinkA = ({ href, children }: { href: string; children: React.ReactNode 
 );
 
 const HeroLockup = () => (
-  <div style={{ display: "block", textAlign: "right", margin: "0 auto 8px" }}>
+  <div style={{ display: "block", textAlign: "center", margin: "0 auto 12px" }}>
     <img
       src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
       alt="Renegade Reformer eagle logo"
