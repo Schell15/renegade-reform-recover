@@ -65,6 +65,7 @@ const navLinkStyle: React.CSSProperties = {
   opacity: 0.85,
 };
 
+const classes = [
   {
     name: "Foundations",
     desc: "A slower, technique-led class focused on breath, alignment, and building a confident base on the reformer. Ideal for first-timers and anyone returning after a break.",
