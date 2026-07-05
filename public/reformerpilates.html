@@ -23,6 +23,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:image" content="https://www.renegadereformer.co.uk/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://www.renegadereformer.co.uk/og-image.png" />
+  <link rel="stylesheet" href="/rr-nav.css">
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -847,18 +849,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
   <!-- NAV -->
-  <nav>
-    <a href="/" class="nav-logo" aria-label="Renegade Reformer home">
-      <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo, reformer Pilates Bristol" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="/reformer-signup">Our Story</a></li>
-      <li><a href="#discover">Discover</a></li>
-      <li><a href="/discover">Studio</a></li>
-      <li><a href="/pricing">Pricing</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </nav>
+  <nav class="rr-nav">
+  <a href="https://www.renegadereformer.co.uk/" class="rr-nav-logo" aria-label="Renegade Reformer home">
+    <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer logo">
+  </a>
+  <div class="rr-nav-right">
+    <a href="https://www.renegadereformer.co.uk/timetable" class="rr-nav-cta">Timetable</a>
+    <button class="rr-nav-burger" id="rrNavBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="rr-nav-spacer"></div>
+
+<div class="rr-nav-drawer" id="rrNavDrawer">
+  <button class="rr-nav-close" id="rrNavClose" aria-label="Close menu">&times;</button>
+  <a href="https://www.renegadereformer.co.uk/reformerpilates.html">Reformer Pilates</a>
+  <a href="https://www.renegadereformer.co.uk/bynight">Renegade | By Night</a>
+  <a href="https://www.renegadereformer.co.uk/pricing">Pricing</a>
+  <a href="https://www.renegadereformer.co.uk/guides.html">Guides</a>
+  <a href="https://www.renegadereformer.co.uk/faq.html">FAQs</a>
+  <a href="https://www.renegadereformer.co.uk/contact">Contact</a>
+  <a href="https://www.renegadereformer.co.uk/timetable" class="rr-nav-drawer-cta">Timetable</a>
+</div>
+<div class="rr-nav-overlay" id="rrNavOverlay"></div>
 
   <!-- HERO -->
   <section class="hero">
@@ -1068,18 +1082,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="rule-h"></div>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="page-footer">
-      <div class="footer-logo">
-        <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo, reformer Pilates Bristol" />
-      </div>
-      <ul class="footer-links">
-        <li><a href="/reformer-signup">Our Story</a></li>
-        <li><a href="/pricing">Founders Pricing</a></li>
-      </ul>
-      <p class="footer-copy">Bristol &nbsp;&middot;&nbsp; Now Open</p>
-    </div>
-  </footer>
+  <footer class="rr-footer">
+  <p>&copy; 2026 Renegade Reformer &middot; 22a Church Road, Redfield, Bristol BS5 9JA</p>
+  <div class="rr-footer-links">
+    <a href="https://www.renegadereformer.co.uk/">Home</a>
+    <a href="https://www.renegadereformer.co.uk/reformerpilates.html">Reformer Pilates</a>
+    <a href="https://www.renegadereformer.co.uk/pricing">Pricing</a>
+    <a href="https://www.renegadereformer.co.uk/timetable">Timetable</a>
+    <a href="https://www.renegadereformer.co.uk/bynight">Renegade | By Night</a>
+    <a href="https://www.renegadereformer.co.uk/guides.html">Guides</a>
+    <a href="https://www.renegadereformer.co.uk/faq.html">FAQs</a>
+    <a href="https://www.renegadereformer.co.uk/contact">Contact</a>
+    <a href="https://www.renegadereformer.co.uk/teachwithus">Instructor Application</a>
+  </div>
+</footer>
 
   <script>
     const content = {
@@ -1180,6 +1196,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     if (journeySection) journeyObserver.observe(journeySection);
   </script>
+
+  <script src="/rr-nav.js" defer></script>
 
 </body>
 </html>
