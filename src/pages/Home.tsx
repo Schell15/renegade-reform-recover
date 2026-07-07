@@ -224,9 +224,126 @@ const Home = () => {
           </nav>
           <div className="flex items-center gap-3">
             <Link to="/timetable" style={btnSolid}>Book a class</Link>
+            <button
+              type="button"
+              aria-label="Open menu"
+              aria-expanded={mobileNavOpen}
+              onClick={() => setMobileNavOpen(true)}
+              className="md:hidden relative"
+              style={{
+                width: 30,
+                height: 22,
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                padding: 0,
+                flexShrink: 0,
+              }}
+            >
+              {[0, 10, 20].map((top) => (
+                <span
+                  key={top}
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    right: 0,
+                    top,
+                    height: 2,
+                    background: cream,
+                    display: "block",
+                  }}
+                />
+              ))}
+            </button>
           </div>
         </div>
       </header>
+
+      {/* Mobile nav overlay + drawer */}
+      <div
+        onClick={closeMobileNav}
+        aria-hidden={!mobileNavOpen}
+        className="md:hidden"
+        style={{
+          position: "fixed",
+          inset: 0,
+          background: "rgba(0,0,0,0.5)",
+          zIndex: 310,
+          opacity: mobileNavOpen ? 1 : 0,
+          pointerEvents: mobileNavOpen ? "auto" : "none",
+          transition: "opacity 0.3s",
+        }}
+      />
+      <aside
+        role="dialog"
+        aria-modal="true"
+        aria-hidden={!mobileNavOpen}
+        className="md:hidden"
+        style={{
+          position: "fixed",
+          top: 0,
+          right: mobileNavOpen ? 0 : -320,
+          width: 300,
+          maxWidth: "80vw",
+          height: "100vh",
+          background: "#140800",
+          zIndex: 320,
+          padding: "5rem 2rem 2rem",
+          display: "flex",
+          flexDirection: "column",
+          gap: "1.5rem",
+          transition: "right 0.3s ease",
+          borderLeft: "1px solid " + border,
+        }}
+      >
+        <button
+          type="button"
+          aria-label="Close menu"
+          onClick={closeMobileNav}
+          style={{
+            position: "absolute",
+            top: "1.5rem",
+            right: "1.5rem",
+            background: "none",
+            border: "none",
+            color: cream,
+            fontSize: 26,
+            lineHeight: 1,
+            cursor: "pointer",
+            padding: 0,
+          }}
+        >
+          ×
+        </button>
+        {mobileLinks.map((item) =>
+          item.external ? (
+            <a
+              key={item.label}
+              href={item.to}
+              onClick={closeMobileNav}
+              style={{ ...navLinkStyle, fontSize: 13, letterSpacing: "0.1em", opacity: 0.85 }}
+            >
+              {item.label}
+            </a>
+          ) : (
+            <Link
+              key={item.label}
+              to={item.to}
+              onClick={closeMobileNav}
+              style={{ ...navLinkStyle, fontSize: 13, letterSpacing: "0.1em", opacity: 0.85 }}
+            >
+              {item.label}
+            </Link>
+          )
+        )}
+        <Link
+          to="/timetable"
+          onClick={closeMobileNav}
+          style={{ ...btnSolid, background: gold, color: "#170701", border: "1px solid " + gold, textAlign: "center", marginTop: "auto" }}
+        >
+          Book a class
+        </Link>
+      </aside>
 
       <section className="max-w-[1200px] mx-auto px-6 pt-16 pb-24">
         <div className="grid md:grid-cols-2 gap-14 items-center">
