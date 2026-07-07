@@ -1,11 +1,16 @@
 # Renegade Reformer
 
-> Premium Reformer Pilates studio in Bristol, UK, strength-led contemporary classes now open in Redfield, Bristol.
+> Strength led reformer Pilates studio in Redfield, Bristol. Now open, founding member rates live.
 
-Renegade Reformer is a strength-led reformer Pilates studio opening in Bristol, Redfield, 22a Church Road, BS5 9JA.
+Renegade Reformer is a strength led reformer Pilates studio in Redfield, Bristol, at 22a Church Road, BS5 9JA. Classes include Foundations, Renegade, and Rebuild, alongside Renegade By Night, an immersive Friday evening reformer session.
 
 ## Pages
 
-- [Home](/): Studio overview, brand, and launch information.
-- [Founding Member Signup](/reformer-signup): Join as a founding member for locked-in rates and priority booking.
-- [Pricing](/pricing): Drop-in rates, intro offers, monthly memberships, and class packs.
+- [Home](/): Studio overview, current opening hours, and founding member pricing.
+- [Classes](/reformerpilates.html): Class formats, Foundations, Renegade, and Rebuild, and what to expect in a session.
+- [Timetable](/timetable): Live class schedule and booking calendar.
+- [Pricing](/pricing): Drop in rates, intro pack, and monthly membership pricing.
+- [Renegade By Night](/bynight): Immersive Friday evening reformer experience.
+- [FAQs](/faq.html): Common questions about classes, booking, and what to bring.
+- [Guides](/guides.html): Articles on reformer Pilates for beginners.
+- [Contact](/contact): Address, opening hours, and how to get in touch.
