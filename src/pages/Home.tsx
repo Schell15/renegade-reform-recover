@@ -1,5 +1,6 @@
 import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Star, MapPin, Clock, MessageCircle, Mail, Instagram, Facebook } from "lucide-react";
 
 const gold = "#C49A4A";
@@ -177,6 +178,16 @@ const HeroLockup = () => (
 );
 
 const Home = () => {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const closeMobileNav = () => setMobileNavOpen(false);
+  const mobileLinks: Array<{ label: string; to: string; external?: boolean }> = [
+    { label: "Timetable", to: "/timetable" },
+    { label: "By Night", to: "/bynight" },
+    { label: "Classes", to: "/reformerpilates.html", external: true },
+    { label: "Pricing", to: "/pricing" },
+    { label: "FAQs", to: "/faq.html", external: true },
+    { label: "Guides", to: "/guides.html", external: true },
+  ];
   return (
     <div style={{ background: heroBg, minHeight: "100vh", color: cream }}>
       <SEO
