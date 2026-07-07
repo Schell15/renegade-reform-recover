@@ -12,6 +12,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Instructor Application | Renegade Reformer</title>
+<meta name="description" content="Join the Renegade Reformer teaching team in Redfield, Bristol. Now recruiting qualified Reformer Pilates instructors, freelance with growth potential.">
+<link rel="canonical" href="https://www.renegadereformer.co.uk/teachwithus">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Instructor Application | Renegade Reformer">
+<meta name="twitter:description" content="Now recruiting qualified Reformer Pilates instructors in Redfield, Bristol. Freelance with growth potential.">
+<meta name="twitter:image" content="/og-image.png">
+<link rel="stylesheet" href="/rr-nav.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "Reformer Pilates Instructor",
+  "description": "Renegade Reformer is recruiting a qualified Reformer Pilates instructor for our community-focused movement studio in Redfield, Bristol. Deliver high-quality Reformer Pilates classes with strong technical foundations, coach clients of mixed abilities, and contribute to a consistent class experience aligned with the Renegade standard. Freelance with growth potential.",
+  "datePosted": "2026-07-07",
+  "validThrough": "2026-10-05",
+  "employmentType": "CONTRACTOR",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "Renegade Reformer"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "22a Church Road",
+      "addressLocality": "Redfield, Bristol",
+      "postalCode": "BS5 9JA",
+      "addressCountry": "GB"
+    }
+  }
+}
+</script>
 <link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/favicon.png" />
 <meta property="og:image" content="/og-image.png" />
@@ -43,34 +75,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
   }
-
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    height: 72px; display: flex; align-items: center; justify-content: space-between;
-    padding: 0 48px;
-    background: rgba(24,8,0,0.95);
-    border-bottom: 1px solid rgba(225,214,200,0.1);
-    backdrop-filter: blur(16px);
-  }
-  .nav-logo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 600; font-size: 13px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--ivory); text-decoration: none;
-  }
-  .nav-back {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 400; font-size: 11px; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--ivory-dim); text-decoration: none;
-    display: flex; align-items: center; gap: 10px; transition: color 0.2s;
-  }
-  .nav-back::before {
-    content: '';
-    display: inline-block; width: 8px; height: 8px;
-    border-left: 1px solid currentColor; border-bottom: 1px solid currentColor;
-    transform: rotate(45deg);
-  }
-  .nav-back:hover { color: var(--ivory); }
 
   /* HERO */
   .hero {
@@ -279,21 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .disc-status.open { color: rgba(225,214,200,0.6); }
 
-  /* FOOTER */
-  footer {
-    border-top: 1px solid rgba(225,214,200,0.08);
-    padding: 40px 48px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .footer-brand {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 600; font-size: 12px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--ivory-dim);
-  }
-  .footer-note { font-size: 12px; font-weight: 300; color: rgba(225,214,200,0.3); }
-
   @media (max-width: 768px) {
-    nav { padding: 0 24px; }
     .hero { grid-template-columns: 1fr; gap: 32px; padding: 120px 24px 48px; }
     .content { grid-template-columns: 1fr; padding: 48px 24px; }
     .section, .section:nth-child(even) { padding: 36px 0; border-left: none; }
@@ -301,7 +291,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .disciplines { flex-direction: column; gap: 0; }
     .disc-item { border-right: none; border-bottom: 1px solid rgba(225,214,200,0.08); padding: 16px 0; width: 100%; }
     .disc-item:last-child { border-bottom: none; }
-    footer { padding: 32px 24px; flex-direction: column; gap: 12px; text-align: center; }
   }
 
   /* STUDIO GALLERY */
@@ -428,10 +417,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 
-<nav>
-  <a class="nav-logo" href="/">Renegade Reformer</a>
-  <a class="nav-back" href="/">Back</a>
+<nav class="rr-nav">
+  <a href="https://www.renegadereformer.co.uk/" class="rr-nav-logo" aria-label="Renegade Reformer home">
+    <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer logo">
+  </a>
+  <div class="rr-nav-right">
+    <a href="https://www.renegadereformer.co.uk/timetable" class="rr-nav-cta">Timetable</a>
+    <button class="rr-nav-burger" id="rrNavBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+<div class="rr-nav-spacer"></div>
+
+<div class="rr-nav-drawer" id="rrNavDrawer">
+  <button class="rr-nav-close" id="rrNavClose" aria-label="Close menu">&times;</button>
+  <a href="https://www.renegadereformer.co.uk/reformerpilates.html">Reformer Pilates</a>
+  <a href="https://www.renegadereformer.co.uk/bynight">Renegade | By Night</a>
+  <a href="https://www.renegadereformer.co.uk/pricing">Pricing</a>
+  <a href="https://www.renegadereformer.co.uk/guides.html">Guides</a>
+  <a href="https://www.renegadereformer.co.uk/faq.html">FAQs</a>
+  <a href="https://www.renegadereformer.co.uk/contact">Contact</a>
+  <a href="https://www.renegadereformer.co.uk/timetable" class="rr-nav-drawer-cta">Timetable</a>
+</div>
+<div class="rr-nav-overlay" id="rrNavOverlay"></div>
 
 <section class="hero">
   <div class="hero-left">
@@ -578,11 +587,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<footer>
-  <span class="footer-brand">Renegade Reformer · Bristol</span>
-  <span class="footer-note">renegadereformer.co.uk</span>
+<footer class="rr-footer">
+  <p>&copy; 2026 Renegade Reformer &middot; 22a Church Road, Redfield, Bristol BS5 9JA</p>
+  <div class="rr-footer-links">
+    <a href="https://www.renegadereformer.co.uk/">Home</a>
+    <a href="https://www.renegadereformer.co.uk/reformerpilates.html">Reformer Pilates</a>
+    <a href="https://www.renegadereformer.co.uk/pricing">Pricing</a>
+    <a href="https://www.renegadereformer.co.uk/timetable">Timetable</a>
+    <a href="https://www.renegadereformer.co.uk/bynight">Renegade | By Night</a>
+    <a href="https://www.renegadereformer.co.uk/guides.html">Guides</a>
+    <a href="https://www.renegadereformer.co.uk/faq.html">FAQs</a>
+    <a href="https://www.renegadereformer.co.uk/contact">Contact</a>
+    <a href="https://www.renegadereformer.co.uk/teachwithus">Instructor Application</a>
+  </div>
 </footer>
 
 
 
+<script src="/rr-nav.js" defer></script>
 </body></html>
