@@ -94,9 +94,9 @@ const prices = [
   {
     name: "Intro Pack",
     subtitle: "Find your feet",
-    price: "£48",
+    price: "£52",
     unit: "3 classes, new members",
-    perks: ["Valid for 30 days", "The best way to try Renegade properly", "Before committing to a membership"],
+    perks: ["Valid for 21 days, new members only", "The best way to try Renegade properly", "Before committing to a membership"],
     href: "/pricing",
     featured: true,
   },
