@@ -717,12 +717,13 @@ const Home = () => {
           style={{
             position: "fixed", inset: 0, zIndex: 300,
             background: "rgba(13,4,0,0.85)", backdropFilter: "blur(8px)",
-            display: "flex", alignItems: "center", justifyContent: "center", padding: 24,
+            display: "flex", alignItems: "center", justifyContent: "center", padding: 12,
           }}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            style={{ background: "#1c0a00", border: "1px solid " + border, borderRadius: 12, maxWidth: 900, width: "100%", maxHeight: "85vh", overflowY: "auto", position: "relative", padding: 40 }}
+            className="p-5 md:p-10"
+            style={{ background: "#1c0a00", border: "1px solid " + border, borderRadius: 12, maxWidth: 900, width: "100%", maxHeight: "85vh", overflowY: "auto", overflowX: "hidden", position: "relative" }}
           >
             <button
               onClick={() => setReviewsModalOpen(false)}
