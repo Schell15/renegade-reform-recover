@@ -602,7 +602,7 @@ const Home = () => {
             Flexible pack discounts, all packs are valid for 3 months from purchase, use with any of our classes including the By Night series.
           </p>
           <div style={{ background: "transparent", border: "1px solid rgba(24,8,0,0.12)", borderRadius: 4, padding: 24 }}>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 gap-6">
               {classPacks.map((pack) => (
                 <div key={pack.name} style={{ background: cream, border: "1px solid rgba(24,8,0,0.15)", borderRadius: 4, padding: "24px 20px", textAlign: "center" }}>
                   <p style={{ color: "#180800", fontSize: 14, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }} className="mb-3">
