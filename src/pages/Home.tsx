@@ -111,19 +111,6 @@ const prices = [
   },
 ];
 
-const reviews = [
-  {
-    text:
-      "This is the best studio I have been to. Every tiny detail has been thought of in the space and the beds are incredible quality. Dani is really welcoming and gives so much detail and support when teaching.",
-    who: "Sophie M.",
-  },
-  {
-    text:
-      "Just want to say a massive thank you to Dani for my first session Monday morning, she made everyone feel super comfortable and personally greeted everyone as they came in, offering to go through the carriage and checking for injuries etc which is something I've not had at another place.",
-    who: "Rhian G.",
-  },
-];
-const faqs = [
   "Do I need experience to try reformer pilates?",
   "What should I wear and bring?",
   "How often should I train on the reformer?",
