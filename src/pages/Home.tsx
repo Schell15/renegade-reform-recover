@@ -596,32 +596,27 @@ const Home = () => {
           ))}
         </div>
 
-        <div style={{ background: cream, border: "1px solid rgba(24,8,0,0.12)", borderRadius: 4, padding: 32, marginTop: 24 }}>
-          <p style={{ color: "#180800", fontSize: 20, fontWeight: 700, letterSpacing: "0.04em" }} className="mb-2">CLASS PACKS</p>
-          <p style={{ color: "rgba(24,8,0,0.6)", fontSize: 14, lineHeight: 1.7 }} className="mb-8">
+        <div className="mt-10">
+          <p className="font-neogrotesk font-bold text-primary mb-2" style={{ fontSize: 20, letterSpacing: "0.04em" }}>CLASS PACKS</p>
+          <p style={{ color: mutedCream, fontSize: 14, lineHeight: 1.7 }} className="mb-6">
             Flexible pack discounts, all packs are valid for 3 months from purchase, use with any of our classes including the By Night series.
           </p>
-          <div className="grid md:grid-cols-3 gap-0" style={{ borderTop: "1px solid rgba(24,8,0,0.12)" }}>
-            {classPacks.map((pack, i) => (
-              <div
-                key={pack.name}
-                style={{
-                  padding: "24px 20px",
-                  borderRight: i < classPacks.length - 1 ? "1px solid rgba(24,8,0,0.12)" : "none",
-                  textAlign: "center",
-                }}
-              >
-                <p style={{ color: "#180800", fontSize: 14, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }} className="mb-3">
-                  {pack.name}
-                </p>
-                <p style={{ color: "#180800", fontSize: 28, fontWeight: 700 }} className="mb-4">
-                  {pack.price}
-                </p>
-                <a href={pack.href} target="_blank" rel="noopener noreferrer" style={darkBtnGhost}>
-                  Buy {pack.name}
-                </a>
-              </div>
-            ))}
+          <div style={{ background: cream, border: "1px solid rgba(24,8,0,0.12)", borderRadius: 4, padding: 24 }}>
+            <div className="grid md:grid-cols-3 gap-4">
+              {classPacks.map((pack) => (
+                <div key={pack.name} style={{ border: "1px solid rgba(24,8,0,0.15)", borderRadius: 4, padding: "24px 20px", textAlign: "center" }}>
+                  <p style={{ color: "#180800", fontSize: 14, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }} className="mb-3">
+                    {pack.name}
+                  </p>
+                  <p style={{ color: "#180800", fontSize: 28, fontWeight: 700 }} className="mb-4">
+                    {pack.price}
+                  </p>
+                  <a href={pack.href} target="_blank" rel="noopener noreferrer" style={darkBtnGhost}>
+                    Buy {pack.name}
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
