@@ -55,6 +55,8 @@ const btnGold: React.CSSProperties = {
   color: gold,
   border: "1px solid " + gold,
 };
+const darkBtnSolid: React.CSSProperties = { ...btnSolid, background: "#180800", color: cream, border: "1px solid #180800" };
+const darkBtnGhost: React.CSSProperties = { ...btnSolid, background: "transparent", color: "#180800", border: "1px solid rgba(24,8,0,0.3)" };
 
 const navLinkStyle: React.CSSProperties = {
   fontFamily: "'Barlow Condensed', sans-serif",
@@ -87,7 +89,7 @@ const prices = [
     subtitle: "No commitment",
     price: "£20",
     unit: "per class",
-    perks: ["All levels welcome", "Free cancellation up to 12 hours before", "No commitment"],
+    perks: ["All levels welcome", "Free cancellation up to 24 hours before", "No commitment"],
     href: "/pricing",
     featured: false,
   },
@@ -109,6 +111,12 @@ const prices = [
     href: "/pricing",
     featured: false,
   },
+];
+
+const classPacks = [
+  { name: "4 Class", price: "£95", href: "https://momence.com/Renegade-Reformer/membership/4-CLASS-PACK/783154" },
+  { name: "8 Class", price: "£175", href: "https://momence.com/Renegade-Reformer/membership/8-CLASS-PACK/783156" },
+  { name: "12 Class", price: "£252", href: "https://momence.com/Renegade-Reformer/membership/12-CLASS-PACK/783155" },
 ];
 
 const reviews = [
@@ -192,7 +200,8 @@ const HeroLockup = () => (
     <img
       src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
       alt="Renegade Reformer eagle logo"
-      style={{ width: 64, height: 64, objectFit: "contain", display: "block", margin: "0 auto 10px" }}
+      className="mb-4 md:mb-2.5"
+      style={{ width: 64, height: 64, objectFit: "contain", display: "block", margin: "0 auto" }}
     />
     <div
       className="font-neogrotesk font-bold text-primary"
