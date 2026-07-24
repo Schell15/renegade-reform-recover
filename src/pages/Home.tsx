@@ -597,11 +597,11 @@ const Home = () => {
         </div>
 
         <div className="mt-10">
-          <p className="font-neogrotesk font-bold text-primary mb-2" style={{ fontSize: 20, letterSpacing: "0.04em" }}>CLASS PACKS</p>
-          <p style={{ color: mutedCream, fontSize: 14, lineHeight: 1.7 }} className="mb-6">
+          <p className="font-neogrotesk font-bold text-primary mb-2" style={{ fontSize: 20, letterSpacing: "0.04em", textAlign: "center" }}>CLASS PACKS</p>
+          <p style={{ color: mutedCream, fontSize: 14, lineHeight: 1.7, textAlign: "center" }} className="mb-6">
             Flexible pack discounts, all packs are valid for 3 months from purchase, use with any of our classes including the By Night series.
           </p>
-          <div style={{ background: cream, border: "1px solid rgba(24,8,0,0.12)", borderRadius: 4, padding: 24 }}>
+          <div style={{ background: "transparent", border: "1px solid rgba(24,8,0,0.12)", borderRadius: 4, padding: 24 }}>
             <div className="grid md:grid-cols-3 gap-4">
               {classPacks.map((pack) => (
                 <div key={pack.name} style={{ border: "1px solid rgba(24,8,0,0.15)", borderRadius: 4, padding: "24px 20px", textAlign: "center" }}>
