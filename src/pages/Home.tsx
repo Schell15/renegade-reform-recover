@@ -594,7 +594,7 @@ const Home = () => {
               <ul style={{ color: "rgba(24,8,0,0.6)", fontSize: 14, lineHeight: 1.9 }} className="mb-8">
                 {p.perks.map((perk) => (<li key={perk}>· {perk}</li>))}
               </ul>
-              <Link to={p.href} style={{ ...(p.featured ? darkBtnSolid : darkBtnGhost), marginTop: "auto" }}>Choose {p.name}</Link>
+              <Link to={p.href} style={{ ...(p.featured ? darkBtnSolid : darkBtnGhost), marginTop: "auto", width: "100%", boxSizing: "border-box", display: "block", textAlign: "center" }}>Choose {p.name}</Link>
             </div>
           ))}
         </div>
