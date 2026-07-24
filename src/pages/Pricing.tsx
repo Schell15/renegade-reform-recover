@@ -1383,7 +1383,7 @@ const Pricing = () => {
       <ul className="rr-dropin-bullets">
         <li className="rr-dropin-bullet">All levels welcome, including complete beginners</li>
         <li className="rr-dropin-bullet">Book any reformer class with available spaces</li>
-        <li className="rr-dropin-bullet">Free cancellation up to 12 hours before class</li>
+        <li className="rr-dropin-bullet">Free cancellation up to 24 hours before class</li>
       </ul>
     </div>
     <div className="rr-dropin-right">
