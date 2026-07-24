@@ -123,7 +123,7 @@ const reviews = [
     who: "Rhian G.",
   },
 ];
-
+const faqs = [
 const faqs = [
   "Do I need experience to try reformer pilates?",
   "What should I wear and bring?",
