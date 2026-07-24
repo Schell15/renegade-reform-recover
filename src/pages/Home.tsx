@@ -440,6 +440,23 @@ const Home = () => {
         </div>
       </section>
 
+      <section id="reviews" className="max-w-[1200px] mx-auto px-6 py-24" style={{ borderTop: "1px solid " + border }}>
+        <p style={eyebrowStyle} className="mb-3">Reviews</p>
+        <h2 className="font-neogrotesk font-bold text-primary mb-12" style={{ fontSize: "clamp(26px, 3.2vw, 36px)", lineHeight: 1.1 }}>
+          WHAT MEMBERS ARE SAYING.
+        </h2>
+        <div style={{ borderRadius: 4, overflow: "hidden" }}>
+          <iframe
+            src="/momence-reviews-embed.html"
+            title="Renegade Reformer client reviews"
+            loading="lazy"
+            scrolling="no"
+            frameBorder={0}
+            style={{ width: "100%", border: "none", display: "block", minHeight: 1200 }}
+          />
+        </div>
+      </section>
+
       <section id="pricing" className="max-w-[1200px] mx-auto px-6 py-24" style={{ borderTop: "1px solid " + border }}>
         <div
           className="text-center mb-10 py-4 px-6"
@@ -541,28 +558,6 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="max-w-[1200px] mx-auto px-6 py-24" style={{ borderTop: "1px solid " + border }}>
-        <p style={eyebrowStyle} className="mb-3">Reviews</p>
-        <h2 className="font-neogrotesk font-bold text-primary mb-12" style={{ fontSize: "clamp(26px, 3.2vw, 36px)", lineHeight: 1.1 }}>
-          WHAT MEMBERS ARE SAYING.
-        </h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {reviews.map((r) => (
-            <div key={r.who} style={{ background: cardBg, border: "1px solid " + border, padding: 32, borderRadius: 4 }}>
-              <div className="flex gap-1 mb-5" aria-label="5 star review">
-                {[0, 1, 2, 3, 4].map((i) => (<Star key={i} size={16} fill={gold} color={gold} />))}
-              </div>
-              <p style={{ color: cream, fontSize: 15, lineHeight: 1.75 }} className="mb-6">
-                "{r.text}"
-              </p>
-              <p style={{ color: mutedCream, fontSize: 11, letterSpacing: "0.24em", textTransform: "uppercase" }}>
-                {r.who}
-              </p>
-            </div>
-          ))}
         </div>
       </section>
 
