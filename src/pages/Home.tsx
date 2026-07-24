@@ -41,6 +41,7 @@ const btnSolid: React.CSSProperties = {
   textDecoration: "none",
   border: "1px solid " + cream,
   cursor: "pointer",
+  whiteSpace: "nowrap",
 };
 
 const btnGhost: React.CSSProperties = {
