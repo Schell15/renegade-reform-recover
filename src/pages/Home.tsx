@@ -15,7 +15,7 @@ const nightBg = "#050200";
 const eyebrowStyle: React.CSSProperties = {
   fontFamily: "'Barlow Condensed', sans-serif",
   fontWeight: 500,
-  fontSize: 11,
+  fontSize: 17,
   letterSpacing: "0.32em",
   textTransform: "uppercase",
   color: gold,
