@@ -120,11 +120,11 @@ const reviews = [
     text: "My first time doing pilates with equipment. Laura was a great instructor, took her time explaining what each step was and how to position yourself correctly. Wonderful space, the owner is very nice, I can't wait until my next session. I also met some lovely ladies.",
   },
   {
-    who: "Mariesha J.",
+    who: "Steph Graham",
     className: "Foundations",
-    instructor: "Kate Travers",
-    date: "22 Jul 2026",
-    text: "Kate is fantastic! The class was great, well explained and hard work.",
+    instructor: "Danielle Dell",
+    date: "30 Jun 2026",
+    text: "My first time trying reformer and I absolutely loved it! Danielle was so friendly, gave really clear instructions and made me feel completely at ease as a beginner. I felt great afterwards and I'm already looking forward to my next class.",
   },
   {
     who: "Phoebe S.",
@@ -141,11 +141,11 @@ const reviews = [
     text: "Renegade is an absolutely stunning studio space. The attention to detail in every corner makes it feel luxurious, but also calming. Danielle is very attentive to make sure you're always finding the correct form but also created a really relaxed and flowy class. Absolutely loved my experience, will be spreading the word and returning soon!",
   },
   {
-    who: "Sophie E.",
+    who: "Amy Darlison-Lee",
     className: "Rebuild",
     instructor: "Danielle Dell",
-    date: "20 Jul 2026",
-    text: "Great class! Clear instructions and different challenge levels.",
+    date: "6 Jul 2026",
+    text: "Loved the class! Well structured, great coaching from Danielle, challenging enough and what a beautiful space to have in St George!",
   },
   {
     who: "Chloe S.",
@@ -211,6 +211,7 @@ const HeroLockup = () => (
 
 const Home = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [reviewsModalOpen, setReviewsModalOpen] = useState(false);
   const closeMobileNav = () => setMobileNavOpen(false);
   const mobileLinks: Array<{ label: string; to: string; external?: boolean }> = [
     { label: "Timetable", to: "/timetable" },
@@ -513,7 +514,12 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-center gap-2 mt-10" style={{ opacity: 0.45 }}>
+        <div className="flex justify-center mt-10">
+          <button type="button" onClick={() => setReviewsModalOpen(true)} style={btnGhost}>
+            Read more reviews from our members
+          </button>
+        </div>
+        <div className="flex items-center justify-center gap-2 mt-6" style={{ opacity: 0.45 }}>
           <span style={{ color: mutedCream, fontSize: 11, letterSpacing: "0.08em" }}>Reviews powered by</span>
           <img
             src="https://momence.com/momence-landing_260528/images/Momence-Logotype.svg"
@@ -704,6 +710,42 @@ const Home = () => {
           © 2026 Renegade Reformer, Redfield, Bristol
         </div>
       </footer>
+
+      {reviewsModalOpen && (
+        <div
+          onClick={() => setReviewsModalOpen(false)}
+          style={{
+            position: "fixed", inset: 0, zIndex: 300,
+            background: "rgba(13,4,0,0.85)", backdropFilter: "blur(8px)",
+            display: "flex", alignItems: "center", justifyContent: "center", padding: 24,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ background: "#1c0a00", border: "1px solid " + border, borderRadius: 12, maxWidth: 900, width: "100%", maxHeight: "85vh", overflowY: "auto", position: "relative", padding: 40 }}
+          >
+            <button
+              onClick={() => setReviewsModalOpen(false)}
+              aria-label="Close"
+              style={{
+                position: "absolute", top: 16, right: 16, width: 32, height: 32,
+                background: "none", border: "1px solid " + border, color: mutedCream,
+                cursor: "pointer", fontSize: 18, display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1,
+              }}
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <iframe
+              src="/momence-reviews-grid-embed.html"
+              title="All Renegade Reformer reviews"
+              loading="lazy"
+              scrolling="no"
+              frameBorder={0}
+              style={{ width: "100%", border: "none", display: "block", minHeight: 2000 }}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
