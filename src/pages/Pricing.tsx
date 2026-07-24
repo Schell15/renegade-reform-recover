@@ -481,6 +481,54 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   }
   .btn-ghost:hover { background: rgba(255,255,255,0.06); color: #f0e6d6; }
 
+  /* ---- PACKS (CREAM VARIANT) ---- */
+  .pack-outer {
+    background: #E1D6C8;
+    border: 1px solid rgba(24,8,0,0.12);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .pack-card-cream {
+    background: transparent;
+    border: 1px solid rgba(24,8,0,0.15);
+    border-radius: 10px;
+    padding: 14px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+  }
+  .pk-eyebrow-cream {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(24,8,0,0.75);
+    margin: 14px 0 2px;
+  }
+  .pk-num-cream { font-size: 72px; font-weight: 900; color: #180800; letter-spacing: -0.03em; line-height: 1; }
+  .pk-unit-cream { font-size: 18px; font-weight: 600; color: rgba(24,8,0,0.55); align-self: flex-end; padding-bottom: 8px; }
+  .pk-price-cream { font-size: 28px; font-weight: 700; color: #180800; margin: 10px 0 14px; letter-spacing: -0.01em; }
+  .btn-ghost-cream {
+    display: block;
+    width: 100%;
+    padding: 11px 18px;
+    margin-top: auto;
+    padding-top: 13px;
+    background: transparent;
+    color: #180800;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid rgba(24,8,0,0.3);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-ghost-cream:hover { background: rgba(24,8,0,0.06); color: #180800; }
+
   /* ---- PERKS BANNER ---- */
   .perks-banner {
     background: var(--founding-deep);
