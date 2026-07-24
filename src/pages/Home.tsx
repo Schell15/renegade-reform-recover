@@ -201,7 +201,7 @@ const HeroLockup = () => (
       src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
       alt="Renegade Reformer eagle logo"
       className="mb-4 md:mb-2.5"
-      style={{ width: 64, height: 64, objectFit: "contain", display: "block", margin: "0 auto" }}
+      style={{ width: 64, height: 64, objectFit: "contain", display: "block", marginLeft: "auto", marginRight: "auto" }}
     />
     <div
       className="font-neogrotesk font-bold text-primary"
