@@ -513,6 +513,14 @@ const Home = () => {
             </div>
           ))}
         </div>
+        <div className="flex items-center justify-center gap-2 mt-10" style={{ opacity: 0.45 }}>
+          <span style={{ color: mutedCream, fontSize: 11, letterSpacing: "0.08em" }}>Reviews powered by</span>
+          <img
+            src="https://momence.com/momence-landing_260528/images/Momence-Logotype.svg"
+            alt="Momence"
+            style={{ height: 14, width: "auto" }}
+          />
+        </div>
       </section>
 
       <section id="pricing" className="max-w-[1200px] mx-auto px-6 py-24" style={{ borderTop: "1px solid " + border }}>
