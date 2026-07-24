@@ -111,6 +111,7 @@ const prices = [
   },
 ];
 
+const faqs = [
   "Do I need experience to try reformer pilates?",
   "What should I wear and bring?",
   "How often should I train on the reformer?",
