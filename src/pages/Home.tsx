@@ -116,36 +116,42 @@ const reviews = [
     who: "Erin D.",
     className: "Foundations",
     instructor: "Laura Bond",
+    date: "20 Jul 2026",
     text: "My first time doing pilates with equipment. Laura was a great instructor, took her time explaining what each step was and how to position yourself correctly. Wonderful space, the owner is very nice, I can't wait until my next session. I also met some lovely ladies.",
   },
   {
     who: "Mariesha J.",
     className: "Foundations",
     instructor: "Kate Travers",
+    date: "22 Jul 2026",
     text: "Kate is fantastic! The class was great, well explained and hard work.",
   },
   {
     who: "Phoebe S.",
     className: "Renegade",
     instructor: "Margaux Thibaut",
+    date: "14 Jul 2026",
     text: "Margaux is a fabulous teacher! Engaging and with a good level of intensity. Gorgeous way to start the day.",
   },
   {
     who: "Alice R.",
     className: "Renegade",
     instructor: "Danielle Dell",
+    date: "8 Jul 2026",
     text: "Renegade is an absolutely stunning studio space. The attention to detail in every corner makes it feel luxurious, but also calming. Danielle is very attentive to make sure you're always finding the correct form but also created a really relaxed and flowy class. Absolutely loved my experience, will be spreading the word and returning soon!",
   },
   {
     who: "Sophie E.",
     className: "Rebuild",
     instructor: "Danielle Dell",
+    date: "20 Jul 2026",
     text: "Great class! Clear instructions and different challenge levels.",
   },
   {
     who: "Chloe S.",
     className: "Renegade | By Night",
     instructor: "Danielle Dell",
+    date: "17 Jul 2026",
     text: "One of the best fitness classes I've been to! A great fusion of music, lights, pilates and vibes. Danielle led a great class, well instructed, and I felt I worked my whole body. The soundtrack and lights were the icing on top. Can't wait for the next one!",
   },
 ];
@@ -487,17 +493,22 @@ const Home = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {reviews.map((r) => (
             <div key={r.who + r.className} style={{ background: cardBg, border: "1px solid " + border, padding: 28, borderRadius: 4 }}>
-              <div className="flex gap-1 mb-4" aria-label="5 star review">
-                {[0, 1, 2, 3, 4].map((i) => (<Star key={i} size={14} fill={gold} color={gold} />))}
+              <div className="flex items-start justify-between mb-1">
+                <p style={{ color: cream, fontSize: 14, fontWeight: 700, letterSpacing: "0.02em" }}>
+                  {r.who}
+                </p>
+                <div className="flex gap-1" aria-label="5 star review">
+                  {[0, 1, 2, 3, 4].map((i) => (<Star key={i} size={14} fill={gold} color={gold} />))}
+                </div>
               </div>
-              <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-6">
-                "{r.text}"
+              <p style={{ color: mutedCream, fontSize: 11, letterSpacing: "0.03em" }} className="mb-2">
+                {r.date}
               </p>
-              <p style={{ color: cream, fontSize: 13, fontWeight: 700, letterSpacing: "0.02em" }} className="mb-1">
-                {r.who}
-              </p>
-              <p style={{ color: mutedCream, fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase" }}>
+              <p style={{ color: mutedCream, fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase" }} className="mb-5">
                 {r.className} · with {r.instructor}
+              </p>
+              <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }}>
+                "{r.text}"
               </p>
             </div>
           ))}
