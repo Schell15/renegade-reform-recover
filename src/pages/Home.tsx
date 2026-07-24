@@ -32,7 +32,7 @@ const btnSolid: React.CSSProperties = {
   display: "inline-block",
   background: cream,
   color: "#180800",
-  fontFamily: "'Barlow Condensed', sans-serif",
+  fontFamily: "'Neogrotesk', sans-serif",
   fontWeight: 600,
   fontSize: 12,
   letterSpacing: "0.18em",
@@ -571,7 +571,7 @@ const Home = () => {
           {prices.map((p) => (
             <div
               key={p.name}
-              style={{ background: p.featured ? "#efe0c0" : cream, border: "1px solid " + (p.featured ? gold : "rgba(24,8,0,0.12)"), padding: 32, borderRadius: 4, position: "relative" }}
+              style={{ background: p.featured ? "#efe0c0" : cream, border: "1px solid " + (p.featured ? gold : "rgba(24,8,0,0.12)"), padding: 32, borderRadius: 4, position: "relative", display: "flex", flexDirection: "column" }}
             >
               {p.featured && (
                 <div style={{ position: "absolute", top: -10, left: 24, background: gold, color: "#180800", fontFamily: "'Barlow Condensed', sans-serif", fontSize: 10, letterSpacing: "0.24em", padding: "3px 10px", textTransform: "uppercase" }}>
@@ -593,7 +593,7 @@ const Home = () => {
               <ul style={{ color: "rgba(24,8,0,0.6)", fontSize: 14, lineHeight: 1.9 }} className="mb-8">
                 {p.perks.map((perk) => (<li key={perk}>· {perk}</li>))}
               </ul>
-              <Link to={p.href} style={p.featured ? darkBtnSolid : darkBtnGhost}>Choose {p.name}</Link>
+              <Link to={p.href} style={{ ...(p.featured ? darkBtnSolid : darkBtnGhost), marginTop: "auto" }}>Choose {p.name}</Link>
             </div>
           ))}
         </div>
