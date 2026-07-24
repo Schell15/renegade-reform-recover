@@ -489,7 +489,7 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
     padding: 24px;
   }
   .pack-card-cream {
-    background: transparent;
+    background: #E1D6C8;
     border: 1px solid rgba(24,8,0,0.15);
     border-radius: 10px;
     padding: 14px 14px 14px;

@@ -604,7 +604,7 @@ const Home = () => {
           <div style={{ background: "transparent", border: "1px solid rgba(24,8,0,0.12)", borderRadius: 4, padding: 24 }}>
             <div className="grid md:grid-cols-3 gap-4">
               {classPacks.map((pack) => (
-                <div key={pack.name} style={{ border: "1px solid rgba(24,8,0,0.15)", borderRadius: 4, padding: "24px 20px", textAlign: "center" }}>
+                <div key={pack.name} style={{ background: cream, border: "1px solid rgba(24,8,0,0.15)", borderRadius: 4, padding: "24px 20px", textAlign: "center" }}>
                   <p style={{ color: "#180800", fontSize: 14, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }} className="mb-3">
                     {pack.name}
                   </p>
