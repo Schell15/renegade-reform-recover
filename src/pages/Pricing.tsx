@@ -481,6 +481,54 @@ const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 
   }
   .btn-ghost:hover { background: rgba(255,255,255,0.06); color: #f0e6d6; }
 
+  /* ---- PACKS (CREAM VARIANT) ---- */
+  .pack-outer {
+    background: #E1D6C8;
+    border: 1px solid rgba(24,8,0,0.12);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .pack-card-cream {
+    background: transparent;
+    border: 1px solid rgba(24,8,0,0.15);
+    border-radius: 10px;
+    padding: 14px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+  }
+  .pk-eyebrow-cream {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(24,8,0,0.75);
+    margin: 14px 0 2px;
+  }
+  .pk-num-cream { font-size: 72px; font-weight: 900; color: #180800; letter-spacing: -0.03em; line-height: 1; }
+  .pk-unit-cream { font-size: 18px; font-weight: 600; color: rgba(24,8,0,0.55); align-self: flex-end; padding-bottom: 8px; }
+  .pk-price-cream { font-size: 28px; font-weight: 700; color: #180800; margin: 10px 0 14px; letter-spacing: -0.01em; }
+  .btn-ghost-cream {
+    display: block;
+    width: 100%;
+    padding: 11px 18px;
+    margin-top: auto;
+    padding-top: 13px;
+    background: transparent;
+    color: #180800;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid rgba(24,8,0,0.3);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-ghost-cream:hover { background: rgba(24,8,0,0.06); color: #180800; }
+
   /* ---- PERKS BANNER ---- */
   .perks-banner {
     background: var(--founding-deep);
@@ -1002,38 +1050,43 @@ const PRICING_BODY_TAIL_AFTER_GALLERY_CLASSPACKS = `<div class="page" style="pad
   <section class="section" id="class-packs" style="margin-bottom:0;">
     <p class="section-label">Class packs</p>
     <p class="section-note">Not a member yet? Packs are a great way to try the studio.</p>
-    <div class="grid-3">
+    <div class="pack-outer">
+      <div class="grid-3">
 
-      <div class="pack-card">
-        <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.55);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
-        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-          <span style="font-size:72px;font-weight:900;color:#f0e6d6;letter-spacing:-0.03em;line-height:1;">4</span>
-          <span style="font-size:18px;font-weight:600;color:rgba(255,255,255,0.55);align-self:flex-end;padding-bottom:8px;">classes</span>
+        <div class="pack-card-cream">
+          <p class="pk-eyebrow-cream" style="margin-top:0;">Class pack</p>
+          <p style="font-size:12px;color:rgba(24,8,0,0.6);font-weight:400;margin-bottom:14px;">Valid 3 months from first use</p>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span class="pk-num-cream">4</span>
+            <span class="pk-unit-cream">classes</span>
+          </div>
+          <p class="pk-price-cream">£95</p>
+          <a class="btn-ghost-cream" href="https://momence.com/Renegade-Reformer/membership/4-CLASS-PACK/783154" target="_blank" rel="noopener noreferrer">Buy 4 class pack</a>
         </div>
-        <button class="btn-ghost" disabled style="opacity:0.5;cursor:not-allowed">Coming soon</button>
-      </div>
 
-      <div class="pack-card">
-        <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.55);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
-        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-          <span style="font-size:72px;font-weight:900;color:#f0e6d6;letter-spacing:-0.03em;line-height:1;">8</span>
-          <span style="font-size:18px;font-weight:600;color:rgba(255,255,255,0.55);align-self:flex-end;padding-bottom:8px;">classes</span>
+        <div class="pack-card-cream">
+          <p class="pk-eyebrow-cream" style="margin-top:0;">Class pack</p>
+          <p style="font-size:12px;color:rgba(24,8,0,0.6);font-weight:400;margin-bottom:14px;">Valid 3 months from first use</p>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span class="pk-num-cream">8</span>
+            <span class="pk-unit-cream">classes</span>
+          </div>
+          <p class="pk-price-cream">£175</p>
+          <a class="btn-ghost-cream" href="https://momence.com/Renegade-Reformer/membership/8-CLASS-PACK/783156" target="_blank" rel="noopener noreferrer">Buy 8 class pack</a>
         </div>
-        <button class="btn-ghost" disabled style="opacity:0.5;cursor:not-allowed">Coming soon</button>
-      </div>
 
-      <div class="pack-card">
-        <p class="pk-eyebrow" style="margin-top:0;">Class pack</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.55);font-weight:300;margin-bottom:14px;">Valid 3 months from first use</p>
-        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-          <span style="font-size:72px;font-weight:900;color:#f0e6d6;letter-spacing:-0.03em;line-height:1;">12</span>
-          <span style="font-size:18px;font-weight:600;color:rgba(255,255,255,0.55);align-self:flex-end;padding-bottom:8px;">classes</span>
+        <div class="pack-card-cream">
+          <p class="pk-eyebrow-cream" style="margin-top:0;">Class pack</p>
+          <p style="font-size:12px;color:rgba(24,8,0,0.6);font-weight:400;margin-bottom:14px;">Valid 3 months from first use</p>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span class="pk-num-cream">12</span>
+            <span class="pk-unit-cream">classes</span>
+          </div>
+          <p class="pk-price-cream">£252</p>
+          <a class="btn-ghost-cream" href="https://momence.com/Renegade-Reformer/membership/12-CLASS-PACK/783155" target="_blank" rel="noopener noreferrer">Buy 12 class pack</a>
         </div>
-        <button class="btn-ghost" disabled style="opacity:0.5;cursor:not-allowed">Coming soon</button>
-      </div>
 
+      </div>
     </div>
   </section>
 
