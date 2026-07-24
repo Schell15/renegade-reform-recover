@@ -114,9 +114,9 @@ const prices = [
 ];
 
 const classPacks = [
-  { name: "4 Class", price: "£95", href: "https://momence.com/Renegade-Reformer/membership/4-CLASS-PACK/783154" },
-  { name: "8 Class", price: "£175", href: "https://momence.com/Renegade-Reformer/membership/8-CLASS-PACK/783156" },
-  { name: "12 Class", price: "£252", href: "https://momence.com/Renegade-Reformer/membership/12-CLASS-PACK/783155" },
+  { name: "4 Class Pack", price: "£95", href: "https://momence.com/Renegade-Reformer/membership/4-CLASS-PACK/783154" },
+  { name: "8 Class Pack", price: "£175", href: "https://momence.com/Renegade-Reformer/membership/8-CLASS-PACK/783156" },
+  { name: "12 Class Pack", price: "£252", href: "https://momence.com/Renegade-Reformer/membership/12-CLASS-PACK/783155" },
 ];
 
 const reviews = [
@@ -605,10 +605,13 @@ const Home = () => {
             <div className="grid md:grid-cols-3 gap-6">
               {classPacks.map((pack) => (
                 <div key={pack.name} style={{ background: cream, border: "1px solid rgba(24,8,0,0.15)", borderRadius: 4, padding: "24px 20px", textAlign: "center" }}>
-                  <p style={{ color: "#180800", fontSize: 14, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }} className="mb-3">
+                  <p className="font-neogrotesk font-bold text-primary mb-2" style={{ fontSize: 18, letterSpacing: "0.04em", color: "#180800", textTransform: "uppercase" }}>
                     {pack.name}
                   </p>
-                  <p style={{ color: "#180800", fontSize: 28, fontWeight: 700 }} className="mb-4">
+                  <p style={{ color: "rgba(24,8,0,0.55)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-4">
+                    Valid for 3 months
+                  </p>
+                  <p className="font-neogrotesk font-bold mb-4" style={{ fontSize: 46, color: "#180800" }}>
                     {pack.price}
                   </p>
                   <a href={pack.href} target="_blank" rel="noopener noreferrer" style={darkBtnGhost}>
