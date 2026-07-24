@@ -1,6 +1,6 @@
 import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Star, MapPin, Clock, MessageCircle, Mail, Instagram, Facebook } from "lucide-react";
 
 const gold = "#C49A4A";
@@ -212,7 +212,27 @@ const HeroLockup = () => (
 const Home = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [reviewsModalOpen, setReviewsModalOpen] = useState(false);
+  const [reviewsIframeHeight, setReviewsIframeHeight] = useState(800);
+  const reviewsIframeRef = useRef<HTMLIFrameElement>(null);
   const closeMobileNav = () => setMobileNavOpen(false);
+  useEffect(() => {
+    if (!reviewsModalOpen) return;
+    const el = reviewsIframeRef.current;
+    if (!el) return;
+    const measure = () => {
+      try {
+        const doc = el.contentWindow?.document;
+        const h = doc?.body?.scrollHeight;
+        if (h) setReviewsIframeHeight((prev) => (Math.abs(prev - h) > 20 ? h + 40 : prev));
+      } catch {}
+    };
+    const interval = setInterval(measure, 400);
+    el.addEventListener("load", measure);
+    return () => {
+      clearInterval(interval);
+      el.removeEventListener("load", measure);
+    };
+  }, [reviewsModalOpen]);
   const mobileLinks: Array<{ label: string; to: string; external?: boolean }> = [
     { label: "Timetable", to: "/timetable" },
     { label: "By Night", to: "/bynight" },
@@ -729,20 +749,22 @@ const Home = () => {
               onClick={() => setReviewsModalOpen(false)}
               aria-label="Close"
               style={{
-                position: "absolute", top: 16, right: 16, width: 32, height: 32,
-                background: "none", border: "1px solid " + border, color: mutedCream,
-                cursor: "pointer", fontSize: 18, display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1,
+                position: "absolute", top: 16, right: 16, width: 36, height: 36,
+                background: cream, border: "none", color: "#180800",
+                cursor: "pointer", fontSize: 20, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center",
+                borderRadius: "50%", zIndex: 2, boxShadow: "0 2px 10px rgba(0,0,0,0.35)",
               }}
             >
               <span aria-hidden="true">&times;</span>
             </button>
             <iframe
+              ref={reviewsIframeRef}
               src="/momence-reviews-grid-embed.html"
               title="All Renegade Reformer reviews"
               loading="lazy"
               scrolling="no"
               frameBorder={0}
-              style={{ width: "100%", border: "none", display: "block", minHeight: 2000 }}
+              style={{ width: "100%", border: "none", display: "block", height: reviewsIframeHeight }}
             />
           </div>
         </div>
