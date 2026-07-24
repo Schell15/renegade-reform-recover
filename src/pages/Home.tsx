@@ -55,6 +55,8 @@ const btnGold: React.CSSProperties = {
   color: gold,
   border: "1px solid " + gold,
 };
+const darkBtnSolid: React.CSSProperties = { ...btnSolid, background: "#180800", color: cream, border: "1px solid #180800" };
+const darkBtnGhost: React.CSSProperties = { ...btnSolid, background: "transparent", color: "#180800", border: "1px solid rgba(24,8,0,0.3)" };
 
 const navLinkStyle: React.CSSProperties = {
   fontFamily: "'Barlow Condensed', sans-serif",
@@ -87,7 +89,7 @@ const prices = [
     subtitle: "No commitment",
     price: "£20",
     unit: "per class",
-    perks: ["All levels welcome", "Free cancellation up to 12 hours before", "No commitment"],
+    perks: ["All levels welcome", "Free cancellation up to 24 hours before", "No commitment"],
     href: "/pricing",
     featured: false,
   },
@@ -109,6 +111,12 @@ const prices = [
     href: "/pricing",
     featured: false,
   },
+];
+
+const classPacks = [
+  { name: "4 Class", price: "£95", href: "https://momence.com/Renegade-Reformer/membership/4-CLASS-PACK/783154" },
+  { name: "8 Class", price: "£175", href: "https://momence.com/Renegade-Reformer/membership/8-CLASS-PACK/783156" },
+  { name: "12 Class", price: "£252", href: "https://momence.com/Renegade-Reformer/membership/12-CLASS-PACK/783155" },
 ];
 
 const reviews = [
@@ -192,7 +200,8 @@ const HeroLockup = () => (
     <img
       src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
       alt="Renegade Reformer eagle logo"
-      style={{ width: 64, height: 64, objectFit: "contain", display: "block", margin: "0 auto 10px" }}
+      className="mb-4 md:mb-2.5"
+      style={{ width: 64, height: 64, objectFit: "contain", display: "block", margin: "0 auto" }}
     />
     <div
       className="font-neogrotesk font-bold text-primary"
@@ -552,7 +561,7 @@ const Home = () => {
       <section id="pricing" className="max-w-[1200px] mx-auto px-6 py-24" style={{ borderTop: "1px solid " + border }}>
         <div
           className="text-center mb-10 py-4 px-6"
-          style={{ border: "1px solid " + gold, color: gold, fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: "0.24em", fontSize: 12, textTransform: "uppercase" }}
+          style={{ border: "1px solid " + gold, color: gold, fontSize: 14 }}
         >
           Founding Member Rates, Limited to the First 50 Members, Locked for Life
         </div>
@@ -560,31 +569,60 @@ const Home = () => {
           {prices.map((p) => (
             <div
               key={p.name}
-              style={{ background: p.featured ? "rgba(196,154,74,0.08)" : cardBg, border: "1px solid " + (p.featured ? gold : border), padding: 32, borderRadius: 4, position: "relative" }}
+              style={{ background: p.featured ? "#efe0c0" : cream, border: "1px solid " + (p.featured ? gold : "rgba(24,8,0,0.12)"), padding: 32, borderRadius: 4, position: "relative" }}
             >
               {p.featured && (
                 <div style={{ position: "absolute", top: -10, left: 24, background: gold, color: "#180800", fontFamily: "'Barlow Condensed', sans-serif", fontSize: 10, letterSpacing: "0.24em", padding: "3px 10px", textTransform: "uppercase" }}>
                   Most Popular
                 </div>
               )}
-              <p style={{ color: mutedCream, fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase" }} className="mb-2">
+              <p style={{ color: "rgba(24,8,0,0.55)", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase" }} className="mb-2">
                 {p.name}
               </p>
-              <p className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 18, letterSpacing: "0.04em" }}>
+              <p className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 18, letterSpacing: "0.04em", color: "#180800" }}>
                 {p.subtitle.toUpperCase()}
               </p>
               <div className="mb-1">
-                <span className="font-neogrotesk font-bold" style={{ fontSize: 46, color: cream }}>{p.price}</span>
+                <span className="font-neogrotesk font-bold" style={{ fontSize: 46, color: "#180800" }}>{p.price}</span>
               </div>
-              <p style={{ color: mutedCream, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-6">
+              <p style={{ color: "rgba(24,8,0,0.55)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-6">
                 {p.unit}
               </p>
-              <ul style={{ color: mutedCream, fontSize: 14, lineHeight: 1.9 }} className="mb-8">
+              <ul style={{ color: "rgba(24,8,0,0.6)", fontSize: 14, lineHeight: 1.9 }} className="mb-8">
                 {p.perks.map((perk) => (<li key={perk}>· {perk}</li>))}
               </ul>
-              <Link to={p.href} style={p.featured ? btnSolid : btnGhost}>Choose {p.name}</Link>
+              <Link to={p.href} style={p.featured ? darkBtnSolid : darkBtnGhost}>Choose {p.name}</Link>
             </div>
           ))}
+        </div>
+
+        <div style={{ background: cream, border: "1px solid rgba(24,8,0,0.12)", borderRadius: 4, padding: 32, marginTop: 24 }}>
+          <p style={{ color: "#180800", fontSize: 20, fontWeight: 700, letterSpacing: "0.04em" }} className="mb-2">CLASS PACKS</p>
+          <p style={{ color: "rgba(24,8,0,0.6)", fontSize: 14, lineHeight: 1.7 }} className="mb-8">
+            Flexible pack discounts, all packs are valid for 3 months from purchase, use with any of our classes including the By Night series.
+          </p>
+          <div className="grid md:grid-cols-3 gap-0" style={{ borderTop: "1px solid rgba(24,8,0,0.12)" }}>
+            {classPacks.map((pack, i) => (
+              <div
+                key={pack.name}
+                style={{
+                  padding: "24px 20px",
+                  borderRight: i < classPacks.length - 1 ? "1px solid rgba(24,8,0,0.12)" : "none",
+                  textAlign: "center",
+                }}
+              >
+                <p style={{ color: "#180800", fontSize: 14, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }} className="mb-3">
+                  {pack.name}
+                </p>
+                <p style={{ color: "#180800", fontSize: 28, fontWeight: 700 }} className="mb-4">
+                  {pack.price}
+                </p>
+                <a href={pack.href} target="_blank" rel="noopener noreferrer" style={darkBtnGhost}>
+                  Buy {pack.name}
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
