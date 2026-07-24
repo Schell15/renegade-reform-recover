@@ -203,17 +203,19 @@ const HeroLockup = () => (
       className="mb-4 md:mb-2.5"
       style={{ width: 64, height: 64, objectFit: "contain", display: "block", marginLeft: "auto", marginRight: "auto" }}
     />
-    <div
-      className="font-neogrotesk font-bold text-primary"
-      style={{ fontSize: "clamp(34px, 5vw, 50px)", letterSpacing: "0.01em", lineHeight: 0.95 }}
-    >
-      RENEGADE.
-    </div>
-    <div
-      className="font-bigcaslon"
-      style={{ fontSize: "clamp(20px, 2.6vw, 28px)", color: gold, lineHeight: 1, marginTop: 4 }}
-    >
-      reformer
+    <div style={{ display: "inline-block" }}>
+      <div
+        className="font-neogrotesk font-bold text-primary"
+        style={{ fontSize: "clamp(34px, 5vw, 50px)", letterSpacing: "0.01em", lineHeight: 0.95 }}
+      >
+        RENEGADE.
+      </div>
+      <div
+        className="font-bigcaslon"
+        style={{ fontSize: "clamp(28px, 3.8vw, 40px)", color: gold, lineHeight: 1, marginTop: 4, textAlign: "right" }}
+      >
+        reformer
+      </div>
     </div>
   </div>
 );
