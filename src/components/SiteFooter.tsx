@@ -17,6 +17,7 @@ const SiteFooter = () => (
       <a href={`${EXT}/faq.html`}>FAQs</a>
       <Link to="/contact">Contact</Link>
       <a href={`${EXT}/teachwithus`}>Instructor Application</a>
+      <Link to="/privacypolicy">Privacy Policy</Link>
     </div>
   </footer>
 );
