@@ -762,7 +762,7 @@ const Home = () => {
               <a href="/faq.html" style={{ color: mutedCream, textDecoration: "none" }}>FAQs</a>
               <Link to="/contact" style={{ color: mutedCream, textDecoration: "none" }}>Contact</Link>
               <a href="/teachwithus" style={{ color: mutedCream, textDecoration: "none" }}>Teach with us</a>
-              <a href="/privacypolicy" style={{ color: mutedCream, textDecoration: "none" }}>Privacy Policy</a>
+              <a href="/privacypolicy.html" style={{ color: mutedCream, textDecoration: "none" }}>Privacy Policy</a>
             </div>
           </div>
         </div>
