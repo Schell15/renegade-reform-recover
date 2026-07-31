@@ -607,7 +607,7 @@ const Home = () => {
           <span style={{ color: mutedCream, fontSize: 11, letterSpacing: "0.08em" }}>Reviews powered by</span>
           <img
             src="https://momence.com/momence-landing_260528/images/Momence-Logotype.svg"
-            alt="Momence"
+            alt="Momence booking platform logo"
             style={{ height: 14, width: "auto" }}
           />
         </div>
@@ -734,7 +734,7 @@ const Home = () => {
               <div key={n} style={{ aspectRatio: "3 / 4", overflow: "hidden", borderRadius: 4, border: "1px solid " + border }}>
                 <img
                   src={`/reformer-collage/reformer-collage-${n}.png`}
-                  alt="Renegade Reformer studio"
+                  alt={`Reformer pilates studio interior at Renegade Reformer, Redfield, Bristol, view ${n}`}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   loading="lazy"
                 />
