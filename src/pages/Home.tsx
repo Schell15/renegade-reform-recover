@@ -495,7 +495,59 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="classes" className="max-w-[1200px] mx-auto px-6 py-24">
+      <section id="about-reformer" className="max-w-[1200px] mx-auto px-6 py-24">
+        <div className="grid md:grid-cols-3 gap-12">
+          <div>
+            <h2 className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 22, letterSpacing: "0.02em" }}>
+              WHAT IS REFORMER PILATES.
+            </h2>
+            <p style={{ color: mutedCream, fontSize: 15, lineHeight: 1.8 }}>
+              Reformer pilates uses a spring loaded machine to add both resistance
+              and support to classic pilates movement. The carriage, straps and
+              adjustable springs let you load a movement precisely, so you build
+              strength, control and mobility without high impact through the
+              joints. It suits every level, from a first ever class to seasoned
+              athletes looking for better movement quality. See the full range of
+              sessions on our{" "}
+              <a href="/reformerpilates.html" style={{ color: gold, textDecoration: "underline" }}>reformer pilates classes</a>{" "}
+              page, or browse the{" "}
+              <Link to="/timetable" style={{ color: gold, textDecoration: "underline" }}>class timetable</Link>.
+            </p>
+          </div>
+          <div>
+            <h2 className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 22, letterSpacing: "0.02em" }}>
+              OUR STUDIO IN REDFIELD.
+            </h2>
+            <p style={{ color: mutedCream, fontSize: 15, lineHeight: 1.8 }}>
+              You will find us at 22a Church Road, Bristol BS5 9JA, in the heart
+              of Redfield. The studio is built around small class sizes, a dark
+              and immersive room with tuned lighting and sound, and coaching that
+              keeps every session intentional rather than rushed. Everyone gets
+              seen, corrected and pushed at the right pace. Questions before you
+              visit? Say hello on our{" "}
+              <Link to="/contact" style={{ color: gold, textDecoration: "underline" }}>contact page</Link>, or if you teach,
+              see{" "}
+              <a href="/teachwithus" style={{ color: gold, textDecoration: "underline" }}>teach with us</a>.
+            </p>
+          </div>
+          <div>
+            <h2 className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 22, letterSpacing: "0.02em" }}>
+              FOUNDING MEMBERSHIP.
+            </h2>
+            <p style={{ color: mutedCream, fontSize: 15, lineHeight: 1.8 }}>
+              Founding member spots are capped. Join the founding cohort and your
+              rate is locked in for life, alongside early booking windows and
+              studio perks reserved for the people who backed us first. Once those
+              places fill, standard pricing applies and the founding rate closes
+              for good. Full details sit on our{" "}
+              <Link to="/pricing" style={{ color: gold, textDecoration: "underline" }}>pricing and membership</Link>{" "}
+              page.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="classes" className="max-w-[1200px] mx-auto px-6 py-24" style={{ borderTop: "1px solid " + border }}>
         <p style={eyebrowStyle} className="mb-3">The Classes</p>
         <h2
           className="font-neogrotesk font-bold text-primary mb-14"
@@ -555,7 +607,7 @@ const Home = () => {
           <span style={{ color: mutedCream, fontSize: 11, letterSpacing: "0.08em" }}>Reviews powered by</span>
           <img
             src="https://momence.com/momence-landing_260528/images/Momence-Logotype.svg"
-            alt="Momence"
+            alt="Momence booking platform logo"
             style={{ height: 14, width: "auto" }}
           />
         </div>
@@ -682,7 +734,7 @@ const Home = () => {
               <div key={n} style={{ aspectRatio: "3 / 4", overflow: "hidden", borderRadius: 4, border: "1px solid " + border }}>
                 <img
                   src={`/reformer-collage/reformer-collage-${n}.png`}
-                  alt="Renegade Reformer studio"
+                  alt={`Reformer pilates studio interior at Renegade Reformer, Redfield, Bristol, view ${n}`}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   loading="lazy"
                 />
