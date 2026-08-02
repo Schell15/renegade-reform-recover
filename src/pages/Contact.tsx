@@ -191,6 +191,40 @@ const Contact = () => {
           >
             studio@renegadereformer.co.uk
           </a>
+
+          <p
+            className="uppercase font-light mb-2 mt-8"
+            style={{
+              fontSize: "11px",
+              letterSpacing: "0.28em",
+              color: "#6a5035",
+            }}
+          >
+            Or message us on WhatsApp
+          </p>
+          <a
+            href="https://wa.me/447846849456"
+            target="_blank"
+            rel="noopener"
+            className="transition-colors hover:opacity-80"
+            style={{
+              fontSize: "14px",
+              letterSpacing: "0.08em",
+              color: "#b8a080",
+            }}
+          >
+            WhatsApp us on +44 7846 849456
+          </a>
+          <p
+            className="mt-2"
+            style={{
+              fontSize: "11px",
+              letterSpacing: "0.06em",
+              color: "#6a5035",
+            }}
+          >
+            WhatsApp messages only, this number does not take voice calls.
+          </p>
         </div>
 
         <div
