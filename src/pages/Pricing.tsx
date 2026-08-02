@@ -5,6 +5,40 @@ import RenegadeGallery from "@/components/RenegadeGallery";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
+const SITE = "https://www.renegadereformer.co.uk";
+const STUDIO_ID = { "@id": `${SITE}/#studio` };
+
+const offer = (
+  name: string,
+  description: string,
+  price: string,
+) => ({
+  "@type": "Offer",
+  name,
+  description,
+  price,
+  priceCurrency: "GBP",
+  availability: "https://schema.org/InStock",
+  url: `${SITE}/pricing`,
+  seller: STUDIO_ID,
+});
+
+const PRICING_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Reformer Pilates pricing at Renegade Reformer, Bristol",
+  url: `${SITE}/pricing`,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, item: offer("Drop-in class", "A single 50 minute reformer Pilates class.", "25.00") },
+    { "@type": "ListItem", position: 2, item: offer("4 class pack", "4 reformer Pilates classes, valid 3 months from first use.", "95.00") },
+    { "@type": "ListItem", position: 3, item: offer("8 class pack", "8 reformer Pilates classes, valid 3 months from first use.", "175.00") },
+    { "@type": "ListItem", position: 4, item: offer("12 class pack", "12 reformer Pilates classes, valid 3 months from first use.", "252.00") },
+    { "@type": "ListItem", position: 5, item: offer("Core membership", "4 reformer Pilates classes a month, £21.25 per class.", "85.00") },
+    { "@type": "ListItem", position: 6, item: offer("Pro membership", "8 reformer Pilates classes a month, £18.75 per class.", "150.00") },
+    { "@type": "ListItem", position: 7, item: offer("Elite membership", "12 reformer Pilates classes a month, £16.25 per class.", "195.00") },
+  ],
+};
+
 const PRICING_CSS = `  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
