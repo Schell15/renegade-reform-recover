@@ -1283,6 +1283,9 @@ const Pricing = () => {
         description="Pricing at Renegade Reformer, Bristol's reformer Pilates studio in Redfield. Drop-ins, class packs and monthly memberships from £16.25/class."
         path="/pricing"
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(PRICING_SCHEMA)}</script>
+      </Helmet>
       <style dangerouslySetInnerHTML={{ __html: PRICING_CSS }} />
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_HEAD }} />
       <div className="page" style={{paddingTop:0,paddingBottom:0}}>
