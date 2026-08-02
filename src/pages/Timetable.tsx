@@ -157,7 +157,7 @@ const Timetable = () => {
           <li><strong style={{ color: cream }}>Rebuild</strong>, intermediate reformer and strength training class with added load and full body sequences for sculpt and power.</li>
         </ul>
         <p>
-          Studio: 22a Church Road, Redfield, Bristol BS5 9JA. Founding member rates are live.{" "}
+          Studio: 22a Church Road, Redfield, Bristol BS5 9JA.{" "}
           <Link to="/pricing" style={{ color: cream, textDecoration: "underline" }}>See pricing</Link> or{" "}
           <Link to="/contact" style={{ color: cream, textDecoration: "underline" }}>get in touch</Link>.
         </p>
