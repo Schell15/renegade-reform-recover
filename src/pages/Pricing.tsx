@@ -981,16 +981,16 @@ const PRICING_BODY_HEAD = `<div class="page">
 `;
 
 const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom:0;">
-  <!-- FOUNDING PERKS BANNER -->
+  <!-- MEMBER PERKS BANNER -->
   <div class="perks-banner" style="margin-top: 4rem;">
     <div class="perks-top">
       <div>
-        <p class="perks-heading">Founding member perks.</p>
-        <p class="perks-sub">Be one of the first to join Renegade and receive all of the below, for as long as you stay a member.</p>
+        <p class="perks-heading">Membership perks.</p>
+        <p class="perks-sub">Join Renegade and receive all of the below, for as long as you stay a member.</p>
       </div>
       <div class="perks-lock">
-        <p class="perks-lock-title">Locked in for life</p>
-        <p class="perks-lock-body">Your founding rate stays yours until you pause or cancel. Never pay more.</p>
+        <p class="perks-lock-title">A fixed monthly rate</p>
+        <p class="perks-lock-body">Your rate stays the same while your membership is active. No surprise increases.</p>
       </div>
     </div>
     <div class="perks-grid">
@@ -1279,7 +1279,7 @@ const Pricing = () => {
       <SiteHeader />
       <SEO
         title="Pricing & Membership | Renegade Reformer Bristol"
-        description="Founding member rates now live at Renegade Reformer, Bristol's reformer Pilates studio in Redfield. Drop-ins, class packs and monthly memberships from £14/class."
+        description="Pricing at Renegade Reformer, Bristol's reformer Pilates studio in Redfield. Drop-ins, class packs and monthly memberships from £16.25/class."
         path="/pricing"
       />
       <style dangerouslySetInnerHTML={{ __html: PRICING_CSS }} />
@@ -1397,33 +1397,6 @@ const Pricing = () => {
   }
 `}</style>
 
-{/* FOUNDING RATE BANNER */}
-<div className="rr-banner">
-  <div className="rr-banner-inner">
-    <div className="rr-banner-text">
-      <div className="rr-banner-tag">
-        <span className="rr-tag-brown">Ends 31 July</span>
-        <span className="rr-tag-muted">Founding rates</span>
-      </div>
-      <p className="rr-banner-heading">FOUNDING RATES.</p>
-      <p className="rr-banner-body">Founding memberships lock in your rate <strong>for life.</strong> Join now and this price is yours for as long as you stay a member.<sup style={{fontSize:'9px',color:'rgba(26,8,0,0.3)'}}>*</sup></p>
-      <p className="rr-banner-tc">* Founding membership rate is locked for the duration of your active membership. Standard membership terms and cancellation policy applies.</p>
-    </div>
-    <div className="rr-banner-prices">
-      <div className="rr-banner-price-col">
-        <p className="rr-banner-pill-label">Founding drop-in</p>
-        <p className="rr-banner-pill-price">£20</p>
-        <p className="rr-banner-pill-unit">/class</p>
-      </div>
-      <div className="rr-banner-price-col">
-        <p className="rr-banner-pill-label">INTRO PACK</p>
-        <p className="rr-banner-pill-price">£52</p>
-        <p className="rr-banner-pill-unit">3 classes</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 {/* DROP-IN */}
 <div className="rr-dropin-section" id="drop-in">
   <div className="rr-dropin-header">
@@ -1432,7 +1405,7 @@ const Pricing = () => {
   </div>
   <div className="rr-dropin-body">
     <div className="rr-dropin-left">
-      <p className="rr-dropin-desc">New to Reformer, curious about Renegade, or not ready to commit yet? Book a single class and experience the studio on your own terms.<br /><br />Founding rate available for a limited time, only 50 founding member spots.</p>
+      <p className="rr-dropin-desc">New to Reformer, curious about Renegade, or not ready to commit yet? Book a single class and experience the studio on your own terms.</p>
       <ul className="rr-dropin-bullets">
         <li className="rr-dropin-bullet">All levels welcome, including complete beginners</li>
         <li className="rr-dropin-bullet">Book any reformer class with available spaces</li>
@@ -1441,9 +1414,8 @@ const Pricing = () => {
     </div>
     <div className="rr-dropin-right">
       <div>
-        <p className="rr-dropin-rate-label">Founding rate</p>
-        <p className="rr-dropin-big-price">£20<span className="rr-dropin-big-unit"> /class</span></p>
-        <p className="rr-dropin-standard" style={{textDecoration:'none',color:'rgba(255,255,255,0.8)',fontSize:'14px'}}>£25 from 13.07</p>
+        <p className="rr-dropin-rate-label">Drop-in rate</p>
+        <p className="rr-dropin-big-price">£25<span className="rr-dropin-big-unit"> /class</span></p>
       </div>
       <button className="rr-btn-ghost" onClick={() => window.open('https://momence.com/u/renegade-reformer-ltd-74tF03', '_blank')}>Book a class</button>
     </div>
@@ -1458,10 +1430,10 @@ const Pricing = () => {
       <p className="rr-intro-title">Intro pack</p>
       <p className="rr-intro-sub">3 classes to find your feet. The best way to try Renegade properly before committing to a membership.</p>
       <div className="rr-intro-prices">
-        <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>£52 <span style={{fontWeight:400,fontSize:'12px',color:'rgba(255,255,255,0.85)'}}>founding rate</span></span>
+        <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>£52</span>
       </div>
       <ul className="rr-dropin-bullets">
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>£17.33 per class at founding rate (£18.33 standard)</li>
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>£17.33 per class</li>
         <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>Use across any 3 classes in the schedule</li>
         <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>All levels welcome, great for complete beginners</li>
       </ul>
@@ -1491,8 +1463,8 @@ const Pricing = () => {
         </div>
         <div className="rr-acc-right">
           <div className="rr-acc-price-collapsed">
-            <div className="rr-acc-price-big">£72 <span>/month</span></div>
-            <div className="rr-acc-price-sub">£18 per class</div>
+            <div className="rr-acc-price-big">£85 <span>/month</span></div>
+            <div className="rr-acc-price-sub">£21.25 per class</div>
           </div>
           <div className="rr-acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
         </div>
@@ -1502,7 +1474,7 @@ const Pricing = () => {
           <ul className="rr-acc-features">
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding rate locked for life</strong>, your price never increases*</span>
+              <span className="rr-acc-feat-text"><strong>Rate stays fixed</strong> while your membership is active*</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
@@ -1522,23 +1494,19 @@ const Pricing = () => {
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding welcome gift</strong>, branded socks</span>
+              <span className="rr-acc-feat-text"><strong>Welcome gift</strong>, branded socks</span>
             </li>
           </ul>
           <div className="rr-acc-pricing-right">
             <div className="rr-acc-per-class-box">
               <span className="rr-acc-per-class-label">Per class</span>
-              <span className="rr-acc-per-class-num">£18</span>
-            </div>
-            <div className="rr-price-row founders" style={{marginBottom:'7px'}}>
-              <span className="rr-row-label-f">Founders Rate · First 50 Members</span>
-              <span className="rr-row-price-f">£72<span className="rr-row-unit-f"> /mo</span></span>
+              <span className="rr-acc-per-class-num">£21.25</span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">Non-founders rate</span>
+              <span className="rr-row-label-g">Monthly rate</span>
               <span className="rr-row-price-g">£85<span className="rr-row-unit-g"> /mo</span></span>
             </div>
-            <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/811786', '_blank')}>Get founding rate</button>
+            <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/811786', '_blank')}>Join now</button>
           </div>
         </div>
       </div>
@@ -1553,8 +1521,8 @@ const Pricing = () => {
         </div>
         <div className="rr-acc-right">
           <div className="rr-acc-price-collapsed">
-            <div className="rr-acc-price-big">£128 <span>/month</span></div>
-            <div className="rr-acc-price-sub">£16 per class</div>
+            <div className="rr-acc-price-big">£150 <span>/month</span></div>
+            <div className="rr-acc-price-sub">£18.75 per class</div>
           </div>
           <div className="rr-acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
         </div>
@@ -1567,7 +1535,7 @@ const Pricing = () => {
           <ul className="rr-acc-features">
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding rate locked for life</strong>, your price never increases*</span>
+              <span className="rr-acc-feat-text"><strong>Rate stays fixed</strong> while your membership is active*</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
@@ -1587,23 +1555,19 @@ const Pricing = () => {
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding welcome gift</strong>, branded socks</span>
+              <span className="rr-acc-feat-text"><strong>Welcome gift</strong>, branded socks</span>
             </li>
           </ul>
           <div className="rr-acc-pricing-right">
             <div className="rr-acc-per-class-box">
               <span className="rr-acc-per-class-label">Per class</span>
-              <span className="rr-acc-per-class-num">£16</span>
-            </div>
-            <div className="rr-price-row founders" style={{marginBottom:'7px'}}>
-              <span className="rr-row-label-f">Founders Rate · First 50 Members</span>
-              <span className="rr-row-price-f">£128<span className="rr-row-unit-f"> /mo</span></span>
+              <span className="rr-acc-per-class-num">£18.75</span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">Non-founders rate</span>
+              <span className="rr-row-label-g">Monthly rate</span>
               <span className="rr-row-price-g">£150<span className="rr-row-unit-g"> /mo</span></span>
             </div>
-            <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/812640', '_blank')}>Get founding rate</button>
+            <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/812640', '_blank')}>Join now</button>
           </div>
         </div>
       </div>
@@ -1618,8 +1582,8 @@ const Pricing = () => {
         </div>
         <div className="rr-acc-right">
           <div className="rr-acc-price-collapsed">
-            <div className="rr-acc-price-big">£168 <span>/month</span></div>
-            <div className="rr-acc-price-sub">£14 per class</div>
+            <div className="rr-acc-price-big">£195 <span>/month</span></div>
+            <div className="rr-acc-price-sub">£16.25 per class</div>
           </div>
           <div className="rr-acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
         </div>
@@ -1629,7 +1593,7 @@ const Pricing = () => {
           <ul className="rr-acc-features">
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding rate locked for life</strong>, your price never increases*</span>
+              <span className="rr-acc-feat-text"><strong>Rate stays fixed</strong> while your membership is active*</span>
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
@@ -1653,23 +1617,19 @@ const Pricing = () => {
             </li>
             <li className="rr-acc-feat">
               <div className="rr-acc-feat-icon"><svg viewBox="0 0 24 24"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-              <span className="rr-acc-feat-text"><strong>Founding welcome gift</strong>, branded socks & tote</span>
+              <span className="rr-acc-feat-text"><strong>Welcome gift</strong>, branded socks & tote</span>
             </li>
           </ul>
           <div className="rr-acc-pricing-right">
             <div className="rr-acc-per-class-box">
               <span className="rr-acc-per-class-label">Per class</span>
-              <span className="rr-acc-per-class-num">£14</span>
-            </div>
-            <div className="rr-price-row founders" style={{marginBottom:'7px'}}>
-              <span className="rr-row-label-f">Founders Rate · First 50 Members</span>
-              <span className="rr-row-price-f">£168<span className="rr-row-unit-f"> /mo</span></span>
+              <span className="rr-acc-per-class-num">£16.25</span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
-              <span className="rr-row-label-g">Non-founders rate</span>
+              <span className="rr-row-label-g">Monthly rate</span>
               <span className="rr-row-price-g">£195<span className="rr-row-unit-g"> /mo</span></span>
             </div>
-            <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/812642', '_blank')}>Get founding rate</button>
+            <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/812642', '_blank')}>Join now</button>
           </div>
         </div>
       </div>
@@ -1732,8 +1692,7 @@ const Pricing = () => {
         }}
       >
         All memberships roll monthly after an initial 1-month term. Class packs are non-refundable
-        and non-transferable. Founding member rates are strictly limited to 50 spots and locked in
-        for life, your rate never increases as long as your membership remains active.
+        and non-transferable. Your monthly rate stays the same for as long as your membership remains active.
       </p>
 
       <SiteFooter />
