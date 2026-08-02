@@ -14,6 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
 <title>RENEGADE | BY NIGHT</title>
+<link rel="canonical" href="https://www.renegadereformer.co.uk/bynight/" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preload" href="/Neogrotesk SC Black Regular.otf" as="font" type="font/otf" crossorigin>
 <link rel="stylesheet" href="/rr-nav.css">
@@ -1150,7 +1151,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- NAV -->
 <nav class="rr-nav">
   <a href="https://www.renegadereformer.co.uk/" class="rr-nav-logo" aria-label="Renegade Reformer home">
-    <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer logo">
+    <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer logo" width="1920" height="1920" fetchpriority="high" decoding="async">
   </a>
   <div class="rr-nav-right">
     <a href="https://www.renegadereformer.co.uk/timetable" class="rr-nav-cta">Timetable</a>
@@ -1373,7 +1374,7 @@ window.addEventListener('scroll', () => {
   const y = window.scrollY;
 
   // Show chapter indicator after first scroll
-  chInd.classList.toggle('visible', y > window.innerHeight * 0.5);
+  if (chInd) chInd.classList.toggle('visible', y > window.innerHeight * 0.5);
 
   // Active dot
   let current = 0;
@@ -1385,12 +1386,12 @@ window.addEventListener('scroll', () => {
   dots.forEach((d, i) => d.classList.toggle('active', i === current));
 
   // Progressive darkening – starts dark at ch3, gets darker toward final
-  const docH = document.body.scrollHeight - window.innerHeight;
+  const docH = Math.max(document.body.scrollHeight - window.innerHeight, 1);
   const progress = y / docH;
   const veil = document.getElementById('dark-veil');
   // Slight darkening overlay that peaks around ch3 then lightens
   const darkAmount = Math.min(Math.max((progress - 0.15) * 0.3, 0), 0.12);
-  veil.style.opacity = darkAmount;
+  if (veil) veil.style.opacity = darkAmount;
 
   // Animate Ch3 words on scroll
   animateWords();

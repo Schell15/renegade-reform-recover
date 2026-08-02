@@ -51,5 +51,8 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /momence-embed.html
+Disallow: /momence-reviews-embed.html
+Disallow: /momence-reviews-grid-embed.html
 
 Sitemap: https://www.renegadereformer.co.uk/sitemap.xml

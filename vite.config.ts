@@ -44,63 +44,69 @@ const ROUTES: RouteMeta[] = [
     fallbackBody:
       "<h1>Contact Renegade Reformer</h1><p>Get in touch with Renegade Reformer, our reformer Pilates studio at 22a Church Road, Redfield, Bristol BS5 9JA.</p><p>Email <a href=\"mailto:studio@renegadereformer.co.uk\">studio@renegadereformer.co.uk</a>, message us on WhatsApp at <a href=\"https://wa.me/447846849456\">+44 7846 849456</a> (messages only, not voice calls), or use the contact form.</p>",
   },
+  {
+    path: "/timetable",
+    title: "Class Timetable & Booking | Renegade Reformer, Redfield Bristol",
+    description:
+      "Browse this week's reformer Pilates class timetable in Redfield, Bristol and book your spot. Foundations, Renegade and Rebuild classes, 50 minutes, small groups.",
+    fallbackBody:
+      "<h1>Reformer Pilates Timetable, Redfield, Bristol</h1><p>Browse this week's reformer Pilates classes at Renegade Reformer, 22a Church Road, Redfield, Bristol BS5 9JA, and book your spot online.</p><h2>Our classes</h2><ul><li>Foundations - technique first, ideal for your first reformer classes</li><li>Renegade - our signature strength-led, music-driven class</li><li>Rebuild - strength and Pilates, your gym workout on the reformer</li></ul><p>Every class runs 50 minutes in small groups. <a href=\"/pricing\">View pricing</a> | <a href=\"/reformerpilates.html\">Class information</a></p>",
+  },
 ];
 
 const escapeAttr = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-function bakedMetaTags({ title, description, path: routePath }: RouteMeta) {
-  const url = `${SITE}${routePath === "/" ? "/" : routePath}`;
-  return [
-    `<link rel="canonical" href="${escapeAttr(url)}" />`,
-    `<meta property="og:title" content="${escapeAttr(title)}" />`,
-    `<meta property="og:description" content="${escapeAttr(description)}" />`,
-    `<meta property="og:url" content="${escapeAttr(url)}" />`,
-    `<meta property="og:type" content="website" />`,
-    `<meta property="og:image" content="${escapeAttr(OG_IMAGE)}" />`,
-    `<meta name="twitter:card" content="summary_large_image" />`,
-    `<meta name="twitter:title" content="${escapeAttr(title)}" />`,
-    `<meta name="twitter:description" content="${escapeAttr(description)}" />`,
-    `<meta name="twitter:image" content="${escapeAttr(OG_IMAGE)}" />`,
-  ].join("\n    ");
+// Every head tag below is also emitted at runtime by react-helmet-async (the
+// SEO component). Helmet takes ownership of, and replaces, any tag carrying the
+// data-rh attribute, so marking the baked tags keeps exactly one of each in the
+// live DOM instead of a static copy plus a Helmet copy.
+const RH = ` data-rh="true"`;
+
+/** Replace an existing head tag in place, or append it before </head>. */
+function upsertHead(html: string, matcher: RegExp, tag: string) {
+  if (matcher.test(html)) return html.replace(matcher, tag);
+  return html.replace("</head>", `    ${tag}\n  </head>`);
 }
 
-function hardcodedReformerSignupHead() {
+function bakedHeadTags({ title, description, path: routePath }: RouteMeta) {
+  const url = `${SITE}${routePath === "/" ? "/" : routePath}`;
+  const t = escapeAttr(title);
+  const d = escapeAttr(description);
+  const u = escapeAttr(url);
+  const img = escapeAttr(OG_IMAGE);
   return [
-    `<title>${escapeAttr(REFORMER_SIGNUP_META.title)}</title>`,
-    `<meta name="description" content="${escapeAttr(REFORMER_SIGNUP_META.description)}" />`,
-    `<link rel="canonical" href="${SITE}/reformer-signup" />`,
-    `<meta property="og:title" content="${escapeAttr(REFORMER_SIGNUP_META.title)}" />`,
-    `<meta property="og:description" content="${escapeAttr(REFORMER_SIGNUP_META.description)}" />`,
-    `<meta property="og:url" content="${SITE}/reformer-signup" />`,
-    `<meta property="og:image" content="${OG_IMAGE}" />`,
-    `<meta name="twitter:card" content="summary_large_image" />`,
-  ].join("\n    ");
+    [/<title[^>]*>[^<]*<\/title>/, `<title${RH}>${t}</title>`],
+    [/<meta[^>]*name="description"[^>]*>/, `<meta${RH} name="description" content="${d}" />`],
+    [/<link[^>]*rel="canonical"[^>]*>/, `<link${RH} rel="canonical" href="${u}" />`],
+    [/<meta[^>]*property="og:title"[^>]*>/, `<meta${RH} property="og:title" content="${t}" />`],
+    [
+      /<meta[^>]*property="og:description"[^>]*>/,
+      `<meta${RH} property="og:description" content="${d}" />`,
+    ],
+    [/<meta[^>]*property="og:url"[^>]*>/, `<meta${RH} property="og:url" content="${u}" />`],
+    [/<meta[^>]*property="og:type"[^>]*>/, `<meta${RH} property="og:type" content="website" />`],
+    [
+      /<meta[^>]*property="og:image"(?![:])[^>]*>/,
+      `<meta${RH} property="og:image" content="${img}" />`,
+    ],
+    [
+      /<meta[^>]*name="twitter:card"[^>]*>/,
+      `<meta${RH} name="twitter:card" content="summary_large_image" />`,
+    ],
+    [/<meta[^>]*name="twitter:title"[^>]*>/, `<meta${RH} name="twitter:title" content="${t}" />`],
+    [
+      /<meta[^>]*name="twitter:description"[^>]*>/,
+      `<meta${RH} name="twitter:description" content="${d}" />`,
+    ],
+    [/<meta[^>]*name="twitter:image"[^>]*>/, `<meta${RH} name="twitter:image" content="${img}" />`],
+  ] as [RegExp, string][];
 }
 
 function bakeRouteHtml(rootHtml: string, route: RouteMeta) {
   let html = rootHtml;
-  if (route.path === "/reformer-signup") {
-    html = rootHtml
-      .replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(route.title)}</title>`)
-      .replace(
-        /<meta\s+name="description"[^>]*>/,
-        `<meta name="description" content="${escapeAttr(route.description)}" />`,
-      )
-      .replace(
-        /<title>[^<]*<\/title>\s*<meta\s+name="description"[^>]*>/,
-        hardcodedReformerSignupHead(),
-      );
-  } else {
-    html = html.replace(
-      /<title>[^<]*<\/title>/,
-      `<title>${escapeAttr(route.title)}</title>`,
-    );
-    html = html.replace(
-      /<meta\s+name="description"[^>]*>/,
-      `<meta name="description" content="${escapeAttr(route.description)}" />`,
-    );
-    html = html.replace("</head>", `    ${bakedMetaTags(route)}\n  </head>`);
+  for (const [matcher, tag] of bakedHeadTags(route)) {
+    html = upsertHead(html, matcher, tag);
   }
 
   // Inject a prerendered fallback inside <noscript> so non-JS crawlers see

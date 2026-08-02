@@ -16,18 +16,22 @@
   document.addEventListener(
     "click",
     function (event) {
-      if (!window.dataLayer) return;
-      var target = event.target;
-      var link = target && target.closest ? target.closest("a[href]") : null;
-      if (!link) return;
-      var href = link.getAttribute("href");
-      if (!isTrackedHref(href)) return;
-      window.dataLayer.push({
-        event: "cta_click",
-        cta_destination: href,
-        cta_label: (link.textContent || "").trim(),
-        page_path: window.location.pathname,
-      });
+      try {
+        if (!window.dataLayer || typeof window.dataLayer.push !== "function") return;
+        var target = event && event.target;
+        var link = target && typeof target.closest === "function" ? target.closest("a[href]") : null;
+        if (!link || typeof link.getAttribute !== "function") return;
+        var href = link.getAttribute("href");
+        if (!isTrackedHref(href)) return;
+        window.dataLayer.push({
+          event: "cta_click",
+          cta_destination: href,
+          cta_label: (link.textContent || "").trim(),
+          page_path: window.location.pathname,
+        });
+      } catch (e) {
+        // Tracking must never throw into the page.
+      }
     },
     true
   );

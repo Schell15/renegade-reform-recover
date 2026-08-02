@@ -33,8 +33,10 @@ const App = () => (
           <Route path="/reformer-signup" element={<Navigate to="/pricing" replace />} />
           <Route path="/reformerpilates" element={<ExternalRedirect to="/reformerpilates.html" />} />
           <Route path="/timetable" element={<Timetable />} />
-          <Route path="/teachwithus" element={<ExternalRedirect to="/teachwithus/index.html" />} />
-          <Route path="/bynight" element={<ExternalRedirect to="/bynight/index.html" />} />
+          {/* Redirect to the trailing-slash directory form so the landing URL
+              matches each page's rel=canonical. */}
+          <Route path="/teachwithus" element={<ExternalRedirect to="/teachwithus/" />} />
+          <Route path="/bynight" element={<ExternalRedirect to="/bynight/" />} />
           <Route path="/guides" element={<ExternalRedirect to="/guides.html" />} />
           <Route path="/faq" element={<ExternalRedirect to="/faq.html" />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
