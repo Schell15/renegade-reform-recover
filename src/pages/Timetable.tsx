@@ -72,26 +72,7 @@ const Timetable = () => {
         path="/timetable"
       />
 
-      <header
-        style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 60,
-          backdropFilter: "blur(10px)",
-          background: "rgba(13,4,0,0.72)",
-          borderBottom: "1px solid " + border,
-        }}
-      >
-        <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4">
-          <Link to="/" aria-label="Renegade Reformer home">
-            <img
-              src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
-              alt="Renegade Reformer eagle logo"
-              className="w-11 h-11 object-contain"
-            />
-          </Link>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="max-w-[1200px] mx-auto px-6 pt-16 pb-10">
         <p style={eyebrowStyle} className="mb-4">Bristol's Boutique Reformer Studio</p>
