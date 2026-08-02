@@ -202,6 +202,10 @@ const HeroLockup = () => (
       src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
       alt="Renegade Reformer eagle logo"
       className="mb-4 md:mb-2.5"
+      width={1920}
+      height={1920}
+      decoding="async"
+      {...{ fetchpriority: "high" }}
       style={{ width: 64, height: 64, objectFit: "contain", display: "block", marginLeft: "auto", marginRight: "auto" }}
     />
     <div style={{ display: "inline-block" }}>
@@ -277,6 +281,10 @@ const Home = () => {
               src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
               alt="Renegade Reformer eagle logo"
               className="w-11 h-11 object-contain"
+              width={1920}
+              height={1920}
+              decoding="async"
+              {...{ fetchpriority: "high" }}
             />
           </Link>
           <nav className="hidden md:flex items-center gap-8">
@@ -726,17 +734,23 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-3 gap-3">
             {[
-              { n: "01", alt: "A member performs a standing resistance-band exercise on the reformer bed during a class at Renegade Reformer, Redfield, Bristol" },
-              { n: "05", alt: "Reformer Pilates beds beside the arched studio windows at Renegade Reformer, Bristol, with warm natural light and greenery" },
-              { n: "07", alt: "Group reformer Pilates class lying back with medicine balls raised overhead at Renegade Reformer, Bristol" },
-            ].map(({ n, alt }) => (
+              { n: "01", w: 797, h: 1200, alt: "A member performs a standing resistance-band exercise on the reformer bed during a class at Renegade Reformer, Redfield, Bristol" },
+              { n: "05", w: 794, h: 1200, alt: "Reformer Pilates beds beside the arched studio windows at Renegade Reformer, Bristol, with warm natural light and greenery" },
+              { n: "07", w: 1200, h: 788, alt: "Group reformer Pilates class lying back with medicine balls raised overhead at Renegade Reformer, Bristol" },
+            ].map(({ n, w, h, alt }) => (
               <div key={n} style={{ aspectRatio: "3 / 4", overflow: "hidden", borderRadius: 4, border: "1px solid " + border }}>
-                <img
-                  src={`/reformer-collage/reformer-collage-${n}.png`}
-                  alt={alt}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                  loading="lazy"
-                />
+                <picture>
+                  <source srcSet={`/reformer-collage/reformer-collage-${n}.webp`} type="image/webp" />
+                  <img
+                    src={`/reformer-collage/reformer-collage-${n}.jpg`}
+                    alt={alt}
+                    width={w}
+                    height={h}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
             ))}
           </div>
