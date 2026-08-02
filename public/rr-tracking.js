@@ -5,6 +5,7 @@
   function isTrackedHref(href) {
     if (!href) return false;
     if (href.indexOf("momence.com") !== -1 || href.indexOf("momence.co") !== -1) return true;
+    if (href.indexOf("wa.me/") !== -1 || href.indexOf("api.whatsapp.com") !== -1) return true;
     var path = href;
     try {
       path = new URL(href, window.location.href).pathname;
