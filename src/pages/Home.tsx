@@ -88,7 +88,7 @@ const prices = [
   {
     name: "Drop In",
     subtitle: "No commitment",
-    price: "£20",
+    price: "£25",
     unit: "per class",
     perks: ["All levels welcome", "Free cancellation up to 24 hours before", "No commitment"],
     href: "/pricing",
@@ -106,9 +106,9 @@ const prices = [
   {
     name: "Membership",
     subtitle: "From Core to Elite",
-    price: "£72",
-    unit: "per month, 4 to 12 classes, from £14 per class",
-    perks: ["Founding rate locked in for life", "Guest passes", "Priority booking"],
+    price: "£85",
+    unit: "per month, 4 to 12 classes, from £16.25 per class",
+    perks: ["Locked-in monthly rate", "Guest passes", "Priority booking"],
     href: "/pricing",
     featured: false,
   },
