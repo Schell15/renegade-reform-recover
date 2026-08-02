@@ -88,7 +88,7 @@ const prices = [
   {
     name: "Drop In",
     subtitle: "No commitment",
-    price: "£20",
+    price: "£25",
     unit: "per class",
     perks: ["All levels welcome", "Free cancellation up to 24 hours before", "No commitment"],
     href: "/pricing",
@@ -106,9 +106,9 @@ const prices = [
   {
     name: "Membership",
     subtitle: "From Core to Elite",
-    price: "£72",
-    unit: "per month, 4 to 12 classes, from £14 per class",
-    perks: ["Founding rate locked in for life", "Guest passes", "Priority booking"],
+    price: "£85",
+    unit: "per month, 4 to 12 classes, from £16.25 per class",
+    perks: ["Locked-in monthly rate", "Guest passes", "Priority booking"],
     href: "/pricing",
     featured: false,
   },
@@ -257,7 +257,7 @@ const Home = () => {
     <div style={{ background: heroBg, minHeight: "100vh", color: cream }}>
       <SEO
         title="Reformer Pilates in Redfield, Bristol | Renegade Reformer"
-        description="Renegade Reformer is a strength-led reformer Pilates studio in Redfield, Bristol. Now open, founding member rates live. Book your first class today."
+        description="Renegade Reformer is a strength-led reformer Pilates studio in Redfield, Bristol. Now open. Book your first class today."
         path="/"
       />
 
@@ -532,14 +532,15 @@ const Home = () => {
           </div>
           <div>
             <h2 className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 22, letterSpacing: "0.02em" }}>
-              FOUNDING MEMBERSHIP.
+              MEMBERSHIP.
             </h2>
             <p style={{ color: mutedCream, fontSize: 15, lineHeight: 1.8 }}>
-              Founding member spots are capped. Join the founding cohort and your
-              rate is locked in for life, alongside early booking windows and
-              studio perks reserved for the people who backed us first. Once those
-              places fill, standard pricing applies and the founding rate closes
-              for good. Full details sit on our{" "}
+              Class sizes are capped, so memberships are built around a rhythm
+              that actually fits your week. Choose four, eight or twelve classes
+              a month, and your monthly rate stays fixed while you are a member,
+              alongside early booking windows and studio perks. Prefer to keep
+              things flexible? Drop-ins and class packs work too. Full details
+              sit on our{" "}
               <Link to="/pricing" style={{ color: gold, textDecoration: "underline" }}>pricing and membership</Link>{" "}
               page.
             </p>
@@ -614,12 +615,6 @@ const Home = () => {
       </section>
 
       <section id="pricing" className="max-w-[1200px] mx-auto px-6 py-24" style={{ borderTop: "1px solid " + border }}>
-        <div
-          className="text-center mb-10 py-4 px-6"
-          style={{ border: "1px solid " + gold, color: gold, fontSize: 14 }}
-        >
-          Founding Member Rates, Limited to the First 50 Members, Locked for Life
-        </div>
         <div className="grid md:grid-cols-3 gap-6">
           {prices.map((p) => (
             <div

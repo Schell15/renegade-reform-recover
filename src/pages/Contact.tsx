@@ -50,7 +50,7 @@ const Contact = () => {
       <SiteHeader />
       <SEO
         title="Contact | Renegade Reformer Bristol"
-        description="Get in touch with Renegade Reformer, the reformer Pilates studio in Redfield, Bristol. Now open, founding rates live. We'd love to hear from you."
+        description="Get in touch with Renegade Reformer, the reformer Pilates studio in Redfield, Bristol. Now open. We'd love to hear from you."
         path="/contact"
       />
 
