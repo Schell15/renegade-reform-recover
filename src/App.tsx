@@ -28,9 +28,9 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
           {/* Legacy pre-launch routes now redirect to live pages */}
-          <Route path="/reformer" element={<Navigate to="/pricing" replace />} />
+          <Route path="/reformer" element={<Navigate to="/" replace />} />
           <Route path="/discover" element={<Navigate to="/" replace />} />
-          <Route path="/reformer-signup" element={<Navigate to="/timetable" replace />} />
+          <Route path="/reformer-signup" element={<Navigate to="/pricing" replace />} />
           <Route path="/reformerpilates" element={<ExternalRedirect to="/reformerpilates.html" />} />
           <Route path="/timetable" element={<Timetable />} />
           <Route path="/teachwithus" element={<ExternalRedirect to="/teachwithus/index.html" />} />
