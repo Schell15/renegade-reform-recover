@@ -4,12 +4,27 @@ import classAsset from "@/assets/renegade-class.jpg.asset.json";
 import rebuildAsset from "@/assets/renegade-rebuild.jpg.asset.json";
 
 const images = [
-  { src: foundationsAsset.url, name: "FOUNDATIONS.", sub: "Begin here" },
-  { src: classAsset.url, name: "RENEGADE.", sub: "Find your rhythm" },
-  { src: rebuildAsset.url, name: "REBUILD.", sub: "Strength meets reformer" },
+  {
+    src: foundationsAsset.url,
+    name: "FOUNDATIONS.",
+    sub: "Begin here",
+    alt: "Foundations reformer Pilates class in session at Renegade Reformer, Bristol, a beginner-friendly introduction to the reformer",
+  },
+  {
+    src: classAsset.url,
+    name: "RENEGADE.",
+    sub: "Find your rhythm",
+    alt: "Renegade reformer Pilates class at Renegade Reformer, Bristol, set to music with full studio lighting",
+  },
+  {
+    src: rebuildAsset.url,
+    name: "REBUILD.",
+    sub: "Strength meets reformer",
+    alt: "Rebuild reformer Pilates class at Renegade Reformer, Bristol, focused on strength and control",
+  },
 ];
 
-const GalleryItem = ({ src, name, sub }: { src: string; name: string; sub: string }) => {
+const GalleryItem = ({ src, name, sub, alt }: { src: string; name: string; sub: string; alt: string }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -20,7 +35,7 @@ const GalleryItem = ({ src, name, sub }: { src: string; name: string; sub: strin
     >
       <img
         src={src}
-        alt={name}
+        alt={alt}
         className="w-full h-full object-cover object-top transition-all duration-700 ease-out"
         style={{
           transform: hovered ? "scale(1.05)" : "scale(1)",

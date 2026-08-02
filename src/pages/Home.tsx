@@ -725,11 +725,15 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-3 gap-3">
-            {["01", "05", "07"].map((n) => (
+            {[
+              { n: "01", alt: "A member performs a standing resistance-band exercise on the reformer bed during a class at Renegade Reformer, Redfield, Bristol" },
+              { n: "05", alt: "Reformer Pilates beds beside the arched studio windows at Renegade Reformer, Bristol, with warm natural light and greenery" },
+              { n: "07", alt: "Group reformer Pilates class lying back with medicine balls raised overhead at Renegade Reformer, Bristol" },
+            ].map(({ n, alt }) => (
               <div key={n} style={{ aspectRatio: "3 / 4", overflow: "hidden", borderRadius: 4, border: "1px solid " + border }}>
                 <img
                   src={`/reformer-collage/reformer-collage-${n}.png`}
-                  alt={`Reformer pilates studio interior at Renegade Reformer, Redfield, Bristol, view ${n}`}
+                  alt={alt}
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                   loading="lazy"
                 />

@@ -29,7 +29,7 @@ const momenceEmbed = `<div id="momence-plugin-lead-form"></div>
 
 const ReformerSignup = () => {
   const navigate = useNavigate();
-  const [expandedImage, setExpandedImage] = useState<string | null>(null);
+  const [expandedImage, setExpandedImage] = useState<{ src: string; alt: string } | null>(null);
 
   return (
     <main className="min-h-screen font-grotesk flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden" style={{background: 'radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%)'}}>
@@ -71,10 +71,20 @@ const ReformerSignup = () => {
               A divinely powerful approach to pilates
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-4xl mx-auto">
-              <img src={reformer1} alt="Renegade Reformer studio interior render, reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.2s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer1)} />
-              <img src={reformer2} alt="Renegade Reformer studio floor plan, reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_1.5s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer2)} />
-              <img src={reformer3} alt="Renegade Reformer brand colour palette, reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideDown_0.6s_ease-out_1.8s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer3)} />
-              <img src={reformer4} alt="Renegade Reformer exterior sketch, reformer Pilates Bristol" className="w-full h-auto rounded-lg object-cover opacity-0 animate-[slideUp_0.6s_ease-out_2.1s_forwards] cursor-pointer transition-transform duration-300 hover:scale-110" onClick={() => setExpandedImage(reformer4)} />
+              {[
+                { src: reformer1, alt: "Renegade Reformer studio interior render, reformer Pilates Bristol", anim: "animate-[slideDown_0.6s_ease-out_1.2s_forwards]" },
+                { src: reformer2, alt: "Renegade Reformer studio floor plan, reformer Pilates Bristol", anim: "animate-[slideUp_0.6s_ease-out_1.5s_forwards]" },
+                { src: reformer3, alt: "Renegade Reformer brand colour palette, reformer Pilates Bristol", anim: "animate-[slideDown_0.6s_ease-out_1.8s_forwards]" },
+                { src: reformer4, alt: "Renegade Reformer exterior sketch, reformer Pilates Bristol", anim: "animate-[slideUp_0.6s_ease-out_2.1s_forwards]" },
+              ].map((img) => (
+                <img
+                  key={img.src}
+                  src={img.src}
+                  alt={img.alt}
+                  className={`w-full h-auto rounded-lg object-cover opacity-0 ${img.anim} cursor-pointer transition-transform duration-300 hover:scale-110`}
+                  onClick={() => setExpandedImage({ src: img.src, alt: img.alt })}
+                />
+              ))}
             </div>
             <p className="text-primary text-sm tracking-wide max-w-2xl mx-auto mt-6 opacity-0 animate-[fadeInSubtle_0.8s_ease-out_2.5s_forwards] font-sans px-0 py-[50px] font-extrabold sm:text-base">
               Our full build story coming soon!
@@ -103,8 +113,8 @@ const ReformerSignup = () => {
           onClick={() => setExpandedImage(null)}
         >
           <img 
-            src={expandedImage} 
-            alt="Expanded view" 
+            src={expandedImage.src} 
+            alt={expandedImage.alt} 
             className="max-w-full max-h-[90vh] rounded-lg object-contain animate-[scale-in_0.3s_ease-out]"
           />
         </div>
