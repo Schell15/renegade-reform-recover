@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { SEO } from "@/components/SEO";
 import RenegadeGallery from "@/components/RenegadeGallery";
 import SiteHeader from "@/components/SiteHeader";
