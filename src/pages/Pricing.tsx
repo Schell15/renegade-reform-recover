@@ -1490,6 +1490,10 @@ const Pricing = () => {
 <div id="memberships" style={{marginTop:'4.5rem',marginBottom:'1rem'}}>
   <p className="rr-section-heading">Monthly memberships.</p>
 
+  <p style={{maxWidth:620,margin:'0 0 1.75rem',fontSize:14,lineHeight:1.75,color:'rgba(225,214,200,0.7)'}}>
+    Every membership is a rolling monthly plan. No long-term contract, just an initial one-month term after you join.
+  </p>
+
   <div className="rr-accordion">
 
     {/* CORE */}
@@ -1674,6 +1678,35 @@ const Pricing = () => {
     </div>
 
   </div>
+</div>
+
+{/* MINI FAQ */}
+<div style={{marginTop:'3rem'}}>
+  <p className="rr-section-heading">Common questions.</p>
+  <div style={{display:'grid',gap:'1rem',marginTop:'1.25rem'}}>
+    {[
+      {
+        q: 'How do membership credits work?',
+        a: "Each class costs 3 credits. Core, Pro and Elite give you 12, 24 or 36 credits a month, that's 4, 8 or 12 reformer classes, renewing on your billing date. Unused credits don't roll over.",
+      },
+      {
+        q: "What's your cancellation policy?",
+        a: "We operate a 24-hour cancellation policy on every class. Cancel more than 24 hours ahead and your credit is returned automatically. Cancel within 24 hours and it's lost, and cancelling within 90 minutes of class adds a £5 fee.",
+      },
+      {
+        q: 'Can I upgrade or downgrade my plan?',
+        a: 'Yes, changes usually take effect from your next billing cycle.',
+      },
+    ].map((item) => (
+      <div key={item.q} style={{border:'1px solid rgba(240,230,214,0.18)',borderRadius:8,padding:'1.1rem 1.3rem',background:'rgba(255,255,255,0.03)'}}>
+        <p style={{fontSize:13,fontWeight:600,letterSpacing:'0.04em',color:'#f0e6d6',marginBottom:6}}>{item.q}</p>
+        <p style={{fontSize:14,lineHeight:1.75,color:'rgba(225,214,200,0.7)'}}>{item.a}</p>
+      </div>
+    ))}
+  </div>
+  <p style={{marginTop:'1.25rem',fontSize:13}}>
+    <a href="/faq.html" style={{color:'#f0e6d6',textDecoration:'underline'}}>See the full FAQ</a>
+  </p>
 </div>
 
 {/* LEAD CAPTURE ROW */}
