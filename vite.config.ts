@@ -48,7 +48,7 @@ const ROUTES: RouteMeta[] = [
     path: "/timetable",
     title: "Class Timetable & Booking | Renegade Reformer, Redfield Bristol",
     description:
-      "Browse this week's reformer Pilates class timetable in Redfield, Bristol and book your spot. Foundations, Renegade and Rebuild classes, 50 minutes, small groups.",
+      "Browse this week's reformer Pilates timetable in Redfield, Bristol and book your spot: Foundations, Renegade and Rebuild classes, small groups.",
     fallbackBody:
       "<h1>Reformer Pilates Timetable, Redfield, Bristol</h1><p>Browse this week's reformer Pilates classes at Renegade Reformer, 22a Church Road, Redfield, Bristol BS5 9JA, and book your spot online.</p><h2>Our classes</h2><ul><li>Foundations - technique first, ideal for your first reformer classes</li><li>Renegade - our signature strength-led, music-driven class</li><li>Rebuild - strength and Pilates, your gym workout on the reformer</li></ul><p>Every class runs 50 minutes in small groups. <a href=\"/pricing\">View pricing</a> | <a href=\"/reformerpilates.html\">Class information</a></p>",
   },
