@@ -225,6 +225,17 @@ const Contact = () => {
           >
             WhatsApp messages only, this number does not take voice calls.
           </p>
+          <p
+            className="mt-6"
+            style={{
+              fontSize: "13px",
+              lineHeight: "1.8",
+              letterSpacing: "0.04em",
+              color: "#8a6e50",
+            }}
+          >
+            However you get in touch, by form, email or WhatsApp, we'll get back to you as soon as we can.
+          </p>
         </div>
 
         <div
@@ -267,6 +278,45 @@ const Contact = () => {
           >
             22a Church Road, Redfield, Bristol BS5 9JA
           </p>
+        </section>
+
+        <div
+          className="mt-12"
+          style={{ height: "0.5px", background: "#4a2e12" }}
+          aria-hidden="true"
+        ></div>
+
+        <section className="mt-10" aria-label="Finding the studio">
+          <h2
+            className="uppercase font-light mb-4 text-center"
+            style={{
+              fontSize: "11px",
+              letterSpacing: "0.35em",
+              color: "#8a6e50",
+            }}
+          >
+            Finding the studio
+          </h2>
+          <div
+            style={{
+              fontSize: "13px",
+              lineHeight: "1.9",
+              letterSpacing: "0.04em",
+              color: "#b8a080",
+            }}
+          >
+            <p>
+              Parking is free on the surrounding streets. Please don't park at Vanguard Storage next
+              door, that's a private car park. Lidl is a five-minute walk away and offers up to 90
+              minutes of free parking, though parking there is at your own risk. Lawrence Hill station
+              is just a two-minute walk if you're coming by train.
+            </p>
+            <p className="mt-4">
+              Cycling in? There's a bike rack behind the green gate to the right of the studio, or you
+              can use Vanguard Storage's rack in their car park, just not after 6:30pm when it closes.
+              Both are at your own risk.
+            </p>
+          </div>
         </section>
       </div>
       <SiteFooter />
