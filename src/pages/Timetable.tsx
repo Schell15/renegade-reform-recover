@@ -67,7 +67,7 @@ const Timetable = () => {
   return (
     <div style={{ background: heroBg, minHeight: "100vh", color: cream }}>
       <SEO
-        title="Class Timetable & Booking | Renegade Reformer, Redfield Bristol"
+        title="Class Timetable & Booking | Renegade Reformer"
         description="Browse this week's reformer Pilates timetable in Redfield, Bristol and book your spot: Foundations, Renegade and Rebuild classes, small groups."
         path="/timetable"
       />
