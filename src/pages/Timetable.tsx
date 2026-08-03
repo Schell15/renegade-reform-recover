@@ -133,10 +133,26 @@ const Timetable = () => {
         <p className="mb-4">
           Renegade Reformer runs strength led reformer Pilates classes in Redfield, Bristol, Monday to Friday, 8:30am to 8:30pm. Every session is 50 minutes and class sizes are kept small. Book any class in the live calendar below.
         </p>
-        <ul style={{ listStyle: "disc", paddingLeft: 20, marginBottom: 14 }}>
-          <li><strong style={{ color: cream }}>Foundations</strong>, our entry level introduction to reformer Pilates for first timers and returners. Focus on set up, breath, form and body awareness.</li>
-          <li><strong style={{ color: cream }}>Renegade</strong>, beginner friendly reformer flow class building strength, mobility and posture with a strong focus on control.</li>
-          <li><strong style={{ color: cream }}>Rebuild</strong>, intermediate reformer and strength training class with added load and full body sequences for sculpt and power.</li>
+        <ul style={{ listStyle: "disc", paddingLeft: 20, marginBottom: 14, display: "grid", gap: 14 }}>
+          <li>
+            <strong style={{ color: cream }}>Foundations, entry level.</strong> Our most supportive
+            introduction to the reformer, made for first timers, anyone feeling nervous about starting,
+            and people coming back to movement after a break. You'll get to know the machine properly
+            and learn the basics with a classic full body workout. Expect a calm pace, clear guidance
+            and plenty of time on breath, posture and body awareness.
+          </li>
+          <li>
+            <strong style={{ color: cream }}>Renegade, beginner.</strong> Our beginner class, built
+            around the core principles of Pilates to develop strength, mobility and better posture.
+            The pace is slower and the focus stays on form and control, so you build real confidence
+            on the reformer. A natural next step once the basics feel familiar.
+          </li>
+          <li>
+            <strong style={{ color: cream }}>Rebuild, intermediate.</strong> A weighted, gym inspired
+            reformer class for anyone who wants a fitness challenge. Expect heavier resistance, added
+            load and powerful full body sequences that bring a strength training edge to Pilates.
+            Best suited to people already comfortable with reformer basics.
+          </li>
         </ul>
         <p>
           Studio: 22a Church Road, Redfield, Bristol BS5 9JA.{" "}
