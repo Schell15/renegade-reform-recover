@@ -99,6 +99,15 @@ function bakeRouteHtml(rootHtml: string, route: RouteMeta) {
     html = upsertHead(html, matcher, tag);
   }
 
+  // Critical CSS is inlined in index.html, so the main bundle no longer needs
+  // to block first paint: load it at low priority and apply it on load.
+  html = html.replace(
+    /<link rel="stylesheet"([^>]*?)href="(\/assets\/[^"]+\.css)"([^>]*)>/g,
+    (_m, pre, href, post) =>
+      `<link rel="stylesheet"${pre}href="${href}"${post} media="print" onload="this.media='all'">` +
+      `<noscript><link rel="stylesheet" href="${href}"></noscript>`,
+  );
+
   // Inject a prerendered fallback inside <noscript> so non-JS crawlers see
   // real headings and copy for the route instead of an empty #root div.
   // Homepage only: paint the hero copy straight from HTML so the LCP element
