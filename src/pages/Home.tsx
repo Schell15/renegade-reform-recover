@@ -646,7 +646,7 @@ const Home = () => {
                   Most Popular
                 </div>
               )}
-              <p style={{ color: "rgba(24,8,0,0.55)", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase" }} className="mb-2">
+              <p style={{ color: "rgba(24,8,0,0.68)", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase" }} className="mb-2">
                 {p.name}
               </p>
               <p className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 18, letterSpacing: "0.04em", color: "#180800" }}>
@@ -655,10 +655,10 @@ const Home = () => {
               <div className="mb-1">
                 <span className="font-neogrotesk font-bold" style={{ fontSize: 46, color: "#180800" }}>{p.price}</span>
               </div>
-              <p style={{ color: "rgba(24,8,0,0.55)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-6">
+              <p style={{ color: "rgba(24,8,0,0.68)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-6">
                 {p.unit}
               </p>
-              <ul style={{ color: "rgba(24,8,0,0.6)", fontSize: 14, lineHeight: 1.9 }} className="mb-8">
+              <ul style={{ color: "rgba(24,8,0,0.72)", fontSize: 14, lineHeight: 1.9 }} className="mb-8">
                 {p.perks.map((perk) => (<li key={perk}>· {perk}</li>))}
               </ul>
               <Link to={p.href} style={{ ...(p.featured ? darkBtnSolid : darkBtnGhost), marginTop: "auto", width: "100%", boxSizing: "border-box", display: "block", textAlign: "center" }}>Choose {p.name}</Link>
@@ -678,7 +678,7 @@ const Home = () => {
                   <p className="font-neogrotesk font-bold text-primary mb-2" style={{ fontSize: 18, letterSpacing: "0.04em", color: "#180800", textTransform: "uppercase" }}>
                     {pack.name}
                   </p>
-                  <p style={{ color: "rgba(24,8,0,0.55)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-4">
+                  <p style={{ color: "rgba(24,8,0,0.68)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-4">
                     Valid for 3 months
                   </p>
                   <p className="font-neogrotesk font-bold mb-4" style={{ fontSize: 46, color: "#180800" }}>
@@ -716,8 +716,11 @@ const Home = () => {
             <div>
               <div style={{ aspectRatio: "1 / 1", borderRadius: 18, overflow: "hidden", border: "1px solid " + border }}>
                 <video
-                  src="/night_edit.mp4"
+                  src="/night-loop.mp4"
+                  poster="/night-poster.jpg"
+                  preload="none"
                   autoPlay muted loop playsInline
+                  aria-label="Renegade By Night reformer session under low lighting"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
               </div>
@@ -812,7 +815,7 @@ const Home = () => {
           </div>
           <div>
             <Link to="/" className="inline-block mb-8">
-              <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo" className="w-11 h-11 object-contain" />
+              <img src="/logo-eagle-128.webp" alt="Renegade Reformer eagle logo" className="w-11 h-11 object-contain" width={128} height={128} loading="lazy" decoding="async" />
             </Link>
             <p style={sectionLabelStyle} className="mb-2">Visit</p>
             <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-5">22a Church Road, Redfield<br />Bristol BS5 9JA</p>
