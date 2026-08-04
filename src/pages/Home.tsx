@@ -199,11 +199,11 @@ const NavLinkA = ({ href, children }: { href: string; children: React.ReactNode 
 const HeroLockup = () => (
   <div style={{ display: "block", textAlign: "center", margin: "0 auto 12px" }}>
     <img
-      src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
+      src="/logo-eagle-128.webp"
       alt="Renegade Reformer eagle logo"
       className="mb-4 md:mb-2.5"
-      width={1920}
-      height={1920}
+      width={128}
+      height={128}
       decoding="async"
       {...{ fetchpriority: "high" }}
       style={{ width: 64, height: 64, objectFit: "contain", display: "block", marginLeft: "auto", marginRight: "auto" }}
@@ -278,11 +278,11 @@ const Home = () => {
         <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" aria-label="Renegade Reformer home">
             <img
-              src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
+              src="/logo-eagle-128.webp"
               alt="Renegade Reformer eagle logo"
               className="w-11 h-11 object-contain"
-              width={1920}
-              height={1920}
+              width={128}
+              height={128}
               decoding="async"
               {...{ fetchpriority: "high" }}
             />
@@ -335,7 +335,7 @@ const Home = () => {
       {/* Mobile nav overlay + drawer */}
       <div
         onClick={closeMobileNav}
-        aria-hidden={!mobileNavOpen}
+        aria-hidden="true"
         className="md:hidden"
         style={{
           position: "fixed",
@@ -350,7 +350,7 @@ const Home = () => {
       <aside
         role="dialog"
         aria-modal="true"
-        aria-hidden={!mobileNavOpen}
+        aria-label="Site menu"
         className="md:hidden"
         style={{
           position: "fixed",
@@ -365,8 +365,9 @@ const Home = () => {
           display: "flex",
           flexDirection: "column",
           gap: "1.5rem",
-          transition: "right 0.3s ease",
+          transition: "right 0.3s ease, visibility 0s linear " + (mobileNavOpen ? "0s" : "0.3s"),
           borderLeft: "1px solid " + border,
+          visibility: mobileNavOpen ? "visible" : "hidden",
         }}
       >
         <button
@@ -418,6 +419,7 @@ const Home = () => {
         </Link>
       </aside>
 
+      <main>
       <section className="max-w-[1200px] mx-auto px-6 pt-16 pb-24">
         <div className="grid md:grid-cols-2 gap-14 items-center">
           <div>
@@ -435,7 +437,7 @@ const Home = () => {
               IMMERSIVE REFORMER PILATES
             </h2>
             <p
-              style={{ color: "rgba(225,214,200,0.5)", fontSize: 14, lineHeight: 1.7, maxWidth: 520 }}
+              style={{ color: "rgba(225,214,200,0.68)", fontSize: 14, lineHeight: 1.7, maxWidth: 520 }}
               className="mb-8"
             >
               Strength, control and rhythm, built into every class. Set inside a
@@ -464,8 +466,11 @@ const Home = () => {
           <div>
             <div style={{ aspectRatio: "4 / 5", borderRadius: 18, overflow: "hidden", border: "1px solid " + border }}>
               <video
-                src="/WEBSITE-size.mp4"
+                src="/hero-loop.mp4"
+                poster="/hero-poster.jpg"
+                preload="auto"
                 autoPlay muted loop playsInline
+                aria-label="Reformer Pilates class in progress at Renegade Reformer, Redfield, Bristol"
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               />
             </div>
@@ -594,14 +599,14 @@ const Home = () => {
                 <p style={{ color: "#180800", fontSize: 14, fontWeight: 700, letterSpacing: "0.02em" }}>
                   {r.who}
                 </p>
-                <div className="flex gap-1" aria-label="5 star review">
+                <div className="flex gap-1" role="img" aria-label="Rated 5 out of 5 stars">
                   {[0, 1, 2, 3, 4].map((i) => (<Star key={i} size={14} fill={gold} color={gold} />))}
                 </div>
               </div>
-              <p style={{ color: "rgba(24,8,0,0.5)", fontSize: 11, letterSpacing: "0.03em" }} className="mb-2">
+              <p style={{ color: "rgba(24,8,0,0.68)", fontSize: 11, letterSpacing: "0.03em" }} className="mb-2">
                 {r.date}
               </p>
-              <p style={{ color: "rgba(24,8,0,0.55)", fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase" }} className="mb-5">
+              <p style={{ color: "rgba(24,8,0,0.68)", fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase" }} className="mb-5">
                 {r.className} · with {r.instructor}
               </p>
               <p style={{ color: "#180800", fontSize: 14, lineHeight: 1.7 }}>
@@ -620,6 +625,10 @@ const Home = () => {
           <img
             src="https://momence.com/momence-landing_260528/images/Momence-Logotype.svg"
             alt="Momence booking platform logo"
+            width={90}
+            height={14}
+            loading="lazy"
+            decoding="async"
             style={{ height: 14, width: "auto" }}
           />
         </div>
@@ -637,7 +646,7 @@ const Home = () => {
                   Most Popular
                 </div>
               )}
-              <p style={{ color: "rgba(24,8,0,0.55)", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase" }} className="mb-2">
+              <p style={{ color: "rgba(24,8,0,0.68)", fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase" }} className="mb-2">
                 {p.name}
               </p>
               <p className="font-neogrotesk font-bold text-primary mb-4" style={{ fontSize: 18, letterSpacing: "0.04em", color: "#180800" }}>
@@ -646,10 +655,10 @@ const Home = () => {
               <div className="mb-1">
                 <span className="font-neogrotesk font-bold" style={{ fontSize: 46, color: "#180800" }}>{p.price}</span>
               </div>
-              <p style={{ color: "rgba(24,8,0,0.55)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-6">
+              <p style={{ color: "rgba(24,8,0,0.68)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-6">
                 {p.unit}
               </p>
-              <ul style={{ color: "rgba(24,8,0,0.6)", fontSize: 14, lineHeight: 1.9 }} className="mb-8">
+              <ul style={{ color: "rgba(24,8,0,0.72)", fontSize: 14, lineHeight: 1.9 }} className="mb-8">
                 {p.perks.map((perk) => (<li key={perk}>· {perk}</li>))}
               </ul>
               <Link to={p.href} style={{ ...(p.featured ? darkBtnSolid : darkBtnGhost), marginTop: "auto", width: "100%", boxSizing: "border-box", display: "block", textAlign: "center" }}>Choose {p.name}</Link>
@@ -669,7 +678,7 @@ const Home = () => {
                   <p className="font-neogrotesk font-bold text-primary mb-2" style={{ fontSize: 18, letterSpacing: "0.04em", color: "#180800", textTransform: "uppercase" }}>
                     {pack.name}
                   </p>
-                  <p style={{ color: "rgba(24,8,0,0.55)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-4">
+                  <p style={{ color: "rgba(24,8,0,0.68)", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase" }} className="mb-4">
                     Valid for 3 months
                   </p>
                   <p className="font-neogrotesk font-bold mb-4" style={{ fontSize: 46, color: "#180800" }}>
@@ -707,8 +716,11 @@ const Home = () => {
             <div>
               <div style={{ aspectRatio: "1 / 1", borderRadius: 18, overflow: "hidden", border: "1px solid " + border }}>
                 <video
-                  src="/night_edit.mp4"
+                  src="/night-loop.mp4"
+                  poster="/night-poster.jpg"
+                  preload="none"
                   autoPlay muted loop playsInline
+                  aria-label="Renegade By Night reformer session under low lighting"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
               </div>
@@ -786,6 +798,7 @@ const Home = () => {
           <a href="/guides.html" style={btnGhost} className="mt-8 inline-block">All guides</a>
         </div>
       </section>
+      </main>
 
       <footer style={{ borderTop: "1px solid " + border }}>
         <div className="max-w-[1200px] mx-auto px-6 py-16 grid md:grid-cols-2 gap-12">
@@ -802,7 +815,7 @@ const Home = () => {
           </div>
           <div>
             <Link to="/" className="inline-block mb-8">
-              <img src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo" className="w-11 h-11 object-contain" />
+              <img src="/logo-eagle-128.webp" alt="Renegade Reformer eagle logo" className="w-11 h-11 object-contain" width={128} height={128} loading="lazy" decoding="async" />
             </Link>
             <p style={sectionLabelStyle} className="mb-2">Visit</p>
             <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-5">22a Church Road, Redfield<br />Bristol BS5 9JA</p>
