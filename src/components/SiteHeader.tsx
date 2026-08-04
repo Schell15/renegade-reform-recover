@@ -22,7 +22,7 @@ const SiteHeader = () => {
       <nav className="rr-nav">
         <Link to="/" className="rr-nav-logo" aria-label="Renegade Reformer home" onClick={close}>
           <img
-            src="/logo-eagle-128.webp"
+            src="/__l5e/assets-v1/c5fd150f-245d-47e9-917d-8f0ce77aafcd/logo-eagle-128.webp"
             alt="Renegade Reformer logo"
             width={128}
             height={128}
