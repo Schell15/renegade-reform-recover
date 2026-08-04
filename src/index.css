@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: 'Neogrotesk';
-  src: url('/Neogrotesk SC Black Regular.otf') format('opentype');
+  src: url('/__l5e/assets-v1/ffa98329-835a-4da3-8335-1662e1d4d774/neogrotesk_sc_black-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -35,7 +35,7 @@
 
 @font-face {
   font-family: 'Rosaline';
-  src: url('/Rosaline.otf') format('opentype');
+  src: url('/__l5e/assets-v1/dae112d3-25d4-4b36-96c1-24389127f47e/Rosaline.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

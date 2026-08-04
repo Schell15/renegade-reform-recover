@@ -202,7 +202,7 @@ const NavLinkA = ({ href, children }: { href: string; children: React.ReactNode 
 const HeroLockup = () => (
   <div style={{ display: "block", textAlign: "center", margin: "0 auto 12px" }}>
     <img
-      src="/logo-eagle-128.webp"
+      src="/__l5e/assets-v1/c5fd150f-245d-47e9-917d-8f0ce77aafcd/logo-eagle-128.webp"
       alt="Renegade Reformer eagle logo"
       className="mb-4 md:mb-2.5"
       width={128}
@@ -302,7 +302,7 @@ const Home = () => {
         <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" aria-label="Renegade Reformer home">
             <img
-              src="/logo-eagle-128.webp"
+              src="/__l5e/assets-v1/c5fd150f-245d-47e9-917d-8f0ce77aafcd/logo-eagle-128.webp"
               alt="Renegade Reformer eagle logo"
               className="w-11 h-11 object-contain"
               width={128}
@@ -840,7 +840,7 @@ const Home = () => {
           </div>
           <div>
             <Link to="/" className="inline-block mb-8">
-              <img src="/logo-eagle-128.webp" alt="Renegade Reformer eagle logo" className="w-11 h-11 object-contain" width={128} height={128} loading="lazy" decoding="async" />
+              <img src="/__l5e/assets-v1/c5fd150f-245d-47e9-917d-8f0ce77aafcd/logo-eagle-128.webp" alt="Renegade Reformer eagle logo" className="w-11 h-11 object-contain" width={128} height={128} loading="lazy" decoding="async" />
             </Link>
             <p style={sectionLabelStyle} className="mb-2">Visit</p>
             <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-5">22a Church Road, Redfield<br />Bristol BS5 9JA</p>
