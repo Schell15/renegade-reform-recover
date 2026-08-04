@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from "react";
 import { Star, MapPin, Clock, MessageCircle, Mail, Instagram, Facebook } from "lucide-react";
 import heroLoop from "@/assets/media/hero-loop.mp4.asset.json";
 import heroPoster from "@/assets/media/hero-poster.jpg.asset.json";
-import nightLoop from "@/assets/media/night-loop.mp4.asset.json";
 import nightPoster from "@/assets/media/night-poster.jpg.asset.json";
 
 const gold = "#C49A4A";
@@ -235,27 +234,6 @@ const Home = () => {
   const [reviewsIframeHeight, setReviewsIframeHeight] = useState(800);
   const reviewsIframeRef = useRef<HTMLIFrameElement>(null);
   const heroVideoRef = useRef<HTMLVideoElement>(null);
-  const nightVideoRef = useRef<HTMLVideoElement>(null);
-  // The By Night teaser sits far below the fold: only fetch its 3.6MB loop when
-  // it actually scrolls into view, never on initial homepage load.
-  useEffect(() => {
-    const el = nightVideoRef.current;
-    if (!el || typeof IntersectionObserver === "undefined") return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        if (!entries.some((e) => e.isIntersecting)) return;
-        obs.disconnect();
-        if (el.getAttribute("src")) return;
-        el.setAttribute("src", nightLoop.url);
-        el.load();
-        const play = el.play();
-        if (play && typeof play.catch === "function") play.catch(() => {});
-      },
-      { rootMargin: "200px" }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
   // Attach the hero video source after first paint so the poster is the LCP and
   // the mp4 is fetched exactly once, never in parallel with the initial render.
   useEffect(() => {
@@ -761,12 +739,13 @@ const Home = () => {
             </div>
             <div>
               <div style={{ aspectRatio: "1 / 1", borderRadius: 18, overflow: "hidden", border: "1px solid " + border }}>
-                <video
-                  ref={nightVideoRef}
-                  poster={nightPoster.url}
-                  preload="none"
-                  autoPlay muted loop playsInline
-                  aria-label="Renegade By Night reformer session under low lighting"
+                <img
+                  src={nightPoster.url}
+                  alt="Renegade By Night reformer session under low lighting"
+                  width={1200}
+                  height={1200}
+                  loading="lazy"
+                  decoding="async"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
               </div>
