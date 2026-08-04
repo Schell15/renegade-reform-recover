@@ -230,6 +230,27 @@ const Home = () => {
   const [reviewsModalOpen, setReviewsModalOpen] = useState(false);
   const [reviewsIframeHeight, setReviewsIframeHeight] = useState(800);
   const reviewsIframeRef = useRef<HTMLIFrameElement>(null);
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+  // Attach the hero video source after first paint so the poster is the LCP and
+  // the mp4 is fetched exactly once, never in parallel with the initial render.
+  useEffect(() => {
+    const el = heroVideoRef.current;
+    if (!el || el.getAttribute("src")) return;
+    const start = () => {
+      if (el.getAttribute("src")) return;
+      el.setAttribute("src", "/hero-loop.mp4");
+      el.load();
+      const play = el.play();
+      if (play && typeof play.catch === "function") play.catch(() => {});
+    };
+    const idle = (window as any).requestIdleCallback as undefined | ((cb: () => void, o?: unknown) => number);
+    if (idle) {
+      const id = idle(start, { timeout: 2500 });
+      return () => (window as any).cancelIdleCallback?.(id);
+    }
+    const t = window.setTimeout(start, 600);
+    return () => window.clearTimeout(t);
+  }, []);
   const closeMobileNav = () => setMobileNavOpen(false);
   useEffect(() => {
     if (!reviewsModalOpen) return;
