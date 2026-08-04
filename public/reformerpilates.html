@@ -959,17 +959,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="rr-nav-overlay" id="rrNavOverlay"></div>
 
+  <style>
+    .hero { height: auto; min-height: 0; padding: 72px 24px 80px; }
+    .hero-content { max-width: 860px; }
+    .hero-logo { width: min(84px, 22vw); margin-bottom: 20px; }
+    .hero-eyebrow { margin-bottom: 20px; }
+    .hero-title {
+      font-family: 'NeoGroteskSCBlack', 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      font-size: clamp(30px, 6vw, 60px);
+      line-height: 1.02;
+      color: var(--cream);
+      margin: 0 0 20px;
+    }
+    .hero-copy {
+      font-size: clamp(15px, 1.6vw, 18px);
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 660px;
+      margin: 0 auto 30px;
+    }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .hero-ctas a {
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 24px;
+      border: 1px solid var(--amber-dim);
+      color: var(--cream);
+      transition: background 0.2s, color 0.2s;
+    }
+    .hero-ctas a.solid { background: var(--cream); color: #170701; border-color: var(--cream); }
+    .hero-ctas a:hover { background: var(--amber-dim); color: #170701; }
+  </style>
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Bristol &nbsp;·&nbsp; Now Open</p>
+      <p class="hero-eyebrow">Bristol &nbsp;·&nbsp; Redfield &nbsp;·&nbsp; Now Open</p>
       <img class="hero-logo" src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png" alt="Renegade Reformer eagle logo, reformer Pilates Bristol" />
-      <p class="hero-tagline">reform &nbsp;·&nbsp; repower &nbsp;·&nbsp; recover</p>
-    </div>
-    <div class="hero-scroll" aria-hidden="true">
-      <span>Discover</span>
-      <div class="scroll-line"></div>
+      <h1 class="hero-title">Reformer Pilates in Bristol.</h1>
+      <p class="hero-copy">
+        A divinely powerful approach, fusing strength and control with rhythm.
+        Small classes in a dark, immersive room with tuned lighting, thoughtful
+        set design and a music-first soundtrack. Reform, repower, recover.
+      </p>
+      <div class="hero-ctas">
+        <a class="solid" href="https://www.renegadereformer.co.uk/timetable">Book a class</a>
+        <a href="https://www.renegadereformer.co.uk/pricing">Pricing</a>
+        <a href="#journey">Our classes</a>
+        <a href="#instructors">Instructors</a>
+      </div>
     </div>
   </section>
 
