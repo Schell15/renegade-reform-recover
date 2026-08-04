@@ -1,28 +1,25 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 
 const ExternalRedirect = ({ to }: { to: string }) => {
   useEffect(() => { window.location.replace(to); }, [to]);
   return null;
 };
-import Home from "./pages/Home";
-import Pricing from "./pages/Pricing";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
-import Timetable from "./pages/Timetable";
+
+// Route-based code splitting: each page ships its own JS chunk.
+const Home = lazy(() => import("./pages/Home"));
+const Pricing = lazy(() => import("./pages/Pricing"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Timetable = lazy(() => import("./pages/Timetable"));
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+    <BrowserRouter>
+      <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pricing" element={<Pricing />} />
@@ -38,8 +35,8 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+      </Suspense>
+    </BrowserRouter>
   </QueryClientProvider>
 );
 
