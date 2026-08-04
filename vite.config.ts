@@ -99,15 +99,11 @@ function bakeRouteHtml(rootHtml: string, route: RouteMeta) {
     html = upsertHead(html, matcher, tag);
   }
 
-  // Critical CSS is inlined in index.html, so the main bundle no longer needs
-  // to block first paint: load it at low priority and apply it on load.
-  html = html.replace(
-    /<link rel="stylesheet"([^>]*?)href="(\/assets\/[^"]+\.css)"([^>]*)>/g,
-    (_m, pre, href, post) =>
-      `<link rel="preload" as="style" href="${href}">` +
-      `<link rel="stylesheet"${pre}href="${href}"${post} media="print" onload="this.media='all'">` +
-      `<noscript><link rel="stylesheet" href="${href}"></noscript>`,
-  );
+  // Keep the generated application stylesheet render-blocking. The homepage
+  // hero depends on Tailwind utilities as soon as React replaces the static
+  // shell, so delaying this stylesheet can postpone the final LCP paint on a
+  // throttled connection. Correctly styled first paint is more important than
+  // removing this small CSS request from the critical path.
 
   // The app bundle sits at the end of <body>; preload it from the head so it
   // downloads at high priority in parallel with HTML parsing. React mounting
