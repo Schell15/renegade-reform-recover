@@ -9,15 +9,6 @@ const OG_IMAGE = `${SITE}/og-image.png`;
 
 type RouteMeta = { path: string; title: string; description: string; fallbackBody?: string };
 
-const REFORMER_SIGNUP_META: RouteMeta = {
-  path: "/reformer-signup",
-  title: "Our Story | Renegade Reformer Bristol",
-  description:
-    "Meet Renegade Reformer, Bristol's strength-led reformer Pilates studio in Redfield. Now open, with drop-ins, class packs and memberships. Join the movement.",
-  fallbackBody:
-    "<h1>Our Story - Renegade Reformer</h1><p>Renegade Reformer is a strength-led reformer Pilates studio in Redfield, Bristol. We're now open, with drop-ins, class packs and monthly memberships.</p><p>Read our story, meet the team behind the studio, and book your first reformer class in Bristol.</p>",
-};
-
 const ROUTES: RouteMeta[] = [
   {
     path: "/",
@@ -27,7 +18,6 @@ const ROUTES: RouteMeta[] = [
     fallbackBody:
       "<h1>Renegade Reformer - Reformer Pilates in Redfield, Bristol</h1><p>Renegade Reformer is a strength-led, music-driven reformer Pilates studio in Redfield, Bristol. We're now open, with drop-ins, class packs and monthly memberships.</p><h2>Reform. Repower. Recover.</h2><p>Small class sizes, contemporary reformer Pilates, and a studio built for progression. Explore our classes, view pricing, or book your first session on the timetable.</p><p><a href=\"/pricing\">View pricing</a> | <a href=\"/reformerpilates.html\">Class information</a> | <a href=\"/timetable\">Book a class</a> | <a href=\"/contact\">Contact us</a></p>",
   },
-  REFORMER_SIGNUP_META,
   {
     path: "/pricing",
     title: "Pricing & Membership | Renegade Reformer Bristol",
