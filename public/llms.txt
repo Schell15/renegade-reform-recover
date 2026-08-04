@@ -15,6 +15,10 @@ Renegade Reformer is a strength led reformer Pilates studio in Redfield, Bristol
 - [Guides](/guides.html): Articles on reformer Pilates for beginners.
 - [Contact](/contact): Address, opening hours, and how to get in touch.
 
+## Knowledge bundle
+
+- [OKF bundle](/okf/index.md): Open Knowledge Format (v0.2) bundle, one markdown concept file per page with YAML frontmatter and cross links. Start at /okf/index.md.
+
 ## Pricing
 
 - Drop in: £25 for a single 50 minute class.
