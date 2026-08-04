@@ -513,7 +513,7 @@ const Home = () => {
             <div style={{ aspectRatio: "4 / 5", borderRadius: 18, overflow: "hidden", border: "1px solid " + border }}>
               <video
                 ref={heroVideoRef}
-                poster="/hero-poster.jpg"
+                poster={heroPoster.url}
                 preload="none"
                 autoPlay muted loop playsInline
                 aria-label="Reformer Pilates class in progress at Renegade Reformer, Redfield, Bristol"
@@ -762,8 +762,8 @@ const Home = () => {
             <div>
               <div style={{ aspectRatio: "1 / 1", borderRadius: 18, overflow: "hidden", border: "1px solid " + border }}>
                 <video
-                  src="/night-loop.mp4"
-                  poster="/night-poster.jpg"
+                  ref={nightVideoRef}
+                  poster={nightPoster.url}
                   preload="none"
                   autoPlay muted loop playsInline
                   aria-label="Renegade By Night reformer session under low lighting"
