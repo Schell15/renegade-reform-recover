@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, lazy, Suspense } from "react";
+import Home from "./pages/Home";
 
 const ExternalRedirect = ({ to }: { to: string }) => {
   useEffect(() => { window.location.replace(to); }, [to]);
@@ -7,7 +8,6 @@ const ExternalRedirect = ({ to }: { to: string }) => {
 };
 
 // Route-based code splitting: each page ships its own JS chunk.
-const Home = lazy(() => import("./pages/Home"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
