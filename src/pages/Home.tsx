@@ -483,7 +483,7 @@ const Home = () => {
               music-first soundtrack. Reformer pilates in Bristol, done our way.
             </p>
             <div className="flex flex-wrap gap-3 mb-10">
-              <a href="/reformerpilates.html" style={btnSolid}>Book your first class</a>
+              <Link to="/pricing" style={btnSolid}>Book your first class</Link>
               <Link to="/timetable" style={btnGhost}>View timetable</Link>
             </div>
             <div
