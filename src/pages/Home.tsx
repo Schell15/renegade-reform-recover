@@ -365,7 +365,7 @@ const Home = () => {
           display: "flex",
           flexDirection: "column",
           gap: "1.5rem",
-          transition: "right 0.3s ease",
+          transition: "right 0.3s ease, visibility 0s linear " + (mobileNavOpen ? "0s" : "0.3s"),
           borderLeft: "1px solid " + border,
           visibility: mobileNavOpen ? "visible" : "hidden",
         }}
@@ -419,6 +419,7 @@ const Home = () => {
         </Link>
       </aside>
 
+      <main>
       <section className="max-w-[1200px] mx-auto px-6 pt-16 pb-24">
         <div className="grid md:grid-cols-2 gap-14 items-center">
           <div>
@@ -436,7 +437,7 @@ const Home = () => {
               IMMERSIVE REFORMER PILATES
             </h2>
             <p
-              style={{ color: "rgba(225,214,200,0.5)", fontSize: 14, lineHeight: 1.7, maxWidth: 520 }}
+              style={{ color: "rgba(225,214,200,0.68)", fontSize: 14, lineHeight: 1.7, maxWidth: 520 }}
               className="mb-8"
             >
               Strength, control and rhythm, built into every class. Set inside a
@@ -465,8 +466,11 @@ const Home = () => {
           <div>
             <div style={{ aspectRatio: "4 / 5", borderRadius: 18, overflow: "hidden", border: "1px solid " + border }}>
               <video
-                src="/WEBSITE-size.mp4"
+                src="/hero-loop.mp4"
+                poster="/hero-poster.jpg"
+                preload="auto"
                 autoPlay muted loop playsInline
+                aria-label="Reformer Pilates class in progress at Renegade Reformer, Redfield, Bristol"
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               />
             </div>
