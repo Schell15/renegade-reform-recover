@@ -16,9 +16,10 @@ var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+
 j.async=true;j.dataset.rrGtm='true';j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
 f.parentNode.insertBefore(j,f);
 }
-if(d.readyState==='complete'){setTimeout(boot,0);}
-else{w.addEventListener('load',boot,{once:true});}
-['pointerdown','keydown','touchstart'].forEach(function(ev){w.addEventListener(ev,boot,{once:true,passive:true});});
+function schedule(){if(w.requestIdleCallback){w.requestIdleCallback(boot,{timeout:3000});}else{setTimeout(boot,1200);}}
+if(d.readyState==='complete'){schedule();}
+else{w.addEventListener('load',schedule,{once:true});}
+['pointerdown','keydown','touchstart','scroll'].forEach(function(ev){w.addEventListener(ev,boot,{once:true,passive:true});});
 })(window,document,'script','dataLayer','GTM-NPMRFMNV');</script>
 <!-- End Google Tag Manager -->
     
