@@ -2,6 +2,10 @@ import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { Star, MapPin, Clock, MessageCircle, Mail, Instagram, Facebook } from "lucide-react";
+import heroLoop from "@/assets/media/hero-loop.mp4.asset.json";
+import heroPoster from "@/assets/media/hero-poster.jpg.asset.json";
+import nightLoop from "@/assets/media/night-loop.mp4.asset.json";
+import nightPoster from "@/assets/media/night-poster.jpg.asset.json";
 
 const gold = "#C49A4A";
 const cream = "#E1D6C8";
