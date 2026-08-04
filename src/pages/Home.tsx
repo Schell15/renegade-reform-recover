@@ -16,7 +16,7 @@ const heroBg =
 const nightBg = "#050200";
 
 const eyebrowStyle: React.CSSProperties = {
-  fontFamily: "'Barlow Condensed', sans-serif",
+  fontFamily: "'Barlow Condensed', 'Barlow Fallback', sans-serif",
   fontWeight: 500,
   fontSize: 17,
   letterSpacing: "0.32em",
@@ -63,7 +63,7 @@ const darkBtnSolid: React.CSSProperties = { ...btnSolid, background: "#180800", 
 const darkBtnGhost: React.CSSProperties = { ...btnSolid, background: "transparent", color: "#180800", border: "1px solid rgba(24,8,0,0.3)" };
 
 const navLinkStyle: React.CSSProperties = {
-  fontFamily: "'Barlow Condensed', sans-serif",
+  fontFamily: "'Barlow Condensed', 'Barlow Fallback', sans-serif",
   fontSize: 12,
   letterSpacing: "0.22em",
   textTransform: "uppercase",
@@ -186,7 +186,7 @@ const NavLinkA = ({ href, children }: { href: string; children: React.ReactNode 
   <a
     href={href}
     style={{
-      fontFamily: "'Barlow Condensed', sans-serif",
+      fontFamily: "'Barlow Condensed', 'Barlow Fallback', sans-serif",
       fontSize: 12,
       letterSpacing: "0.22em",
       textTransform: "uppercase",
@@ -681,7 +681,7 @@ const Home = () => {
               style={{ background: p.featured ? "#efe0c0" : cream, border: "1px solid " + (p.featured ? gold : "rgba(24,8,0,0.12)"), padding: 32, borderRadius: 4, position: "relative", display: "flex", flexDirection: "column" }}
             >
               {p.featured && (
-                <div style={{ position: "absolute", top: -10, left: 24, background: gold, color: "#180800", fontFamily: "'Barlow Condensed', sans-serif", fontSize: 10, letterSpacing: "0.24em", padding: "3px 10px", textTransform: "uppercase" }}>
+                <div style={{ position: "absolute", top: -10, left: 24, background: gold, color: "#180800", fontFamily: "'Barlow Condensed', 'Barlow Fallback', sans-serif", fontSize: 10, letterSpacing: "0.24em", padding: "3px 10px", textTransform: "uppercase" }}>
                   Most Popular
                 </div>
               )}
@@ -876,7 +876,7 @@ const Home = () => {
               <a href="https://www.facebook.com/fitnessreformer/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ color: cream }}><Facebook size={20} /></a>
               <a href="https://wa.me/447846849456" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style={{ color: cream }}><MessageCircle size={20} /></a>
             </div>
-            <div className="flex flex-wrap gap-x-5 gap-y-2" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 12, letterSpacing: "0.18em", textTransform: "uppercase" }}>
+            <div className="flex flex-wrap gap-x-5 gap-y-2" style={{ fontFamily: "'Barlow Condensed', 'Barlow Fallback', sans-serif", fontSize: 12, letterSpacing: "0.18em", textTransform: "uppercase" }}>
               <Link to="/" style={{ color: mutedCream, textDecoration: "none" }}>Home</Link>
               <a href="/reformerpilates.html" style={{ color: mutedCream, textDecoration: "none" }}>Reformer</a>
               <Link to="/pricing" style={{ color: mutedCream, textDecoration: "none" }}>Pricing</Link>

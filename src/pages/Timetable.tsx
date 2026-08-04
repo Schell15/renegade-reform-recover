@@ -12,7 +12,7 @@ const heroBg =
   "radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%)";
 
 const eyebrowStyle: React.CSSProperties = {
-  fontFamily: "'Barlow Condensed', sans-serif",
+  fontFamily: "'Barlow Condensed', 'Barlow Fallback', sans-serif",
   fontWeight: 500,
   fontSize: 11,
   letterSpacing: "0.32em",
@@ -110,7 +110,7 @@ const Timetable = () => {
             <button
               onClick={() => setOpenKey(item.key)}
               style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
+                fontFamily: "'Barlow Condensed', 'Barlow Fallback', sans-serif",
                 fontSize: 10,
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
@@ -206,7 +206,7 @@ const Timetable = () => {
             </button>
             <div
               style={{
-                fontFamily: "'Barlow Condensed', sans-serif", fontSize: 10, fontWeight: 500,
+                fontFamily: "'Barlow Condensed', 'Barlow Fallback', sans-serif", fontSize: 10, fontWeight: 500,
                 letterSpacing: "0.22em", textTransform: "uppercase", color: mutedCream,
                 background: "rgba(225,214,200,0.1)", display: "inline-block", padding: "4px 10px", marginBottom: 20,
               }}
@@ -224,7 +224,7 @@ const Timetable = () => {
             {open.note && (
               <div
                 style={{
-                  marginTop: 20, fontFamily: "'Barlow Condensed', sans-serif", fontSize: 11,
+                  marginTop: 20, fontFamily: "'Barlow Condensed', 'Barlow Fallback', sans-serif", fontSize: 11,
                   letterSpacing: "0.14em", textTransform: "uppercase", color: mutedCream,
                   borderLeft: "2px solid " + gold, background: "rgba(196,154,74,0.08)", padding: "8px 12px",
                 }}

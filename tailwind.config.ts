@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'grotesk': ['Space Grotesk', 'sans-serif'],
-				'serif': ['Playfair Display', 'serif'],
+				'grotesk': ['Space Grotesk', 'Grotesk Fallback', 'sans-serif'],
+				'serif': ['Playfair Display', 'Playfair Fallback', 'serif'],
 				'neogrotesk': ['Neogrotesk', 'sans-serif'],
 				'rosaline': ['Rosaline', 'serif'],
 				'bigcaslon': ['Big Caslon', 'serif'],

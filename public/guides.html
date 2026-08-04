@@ -45,7 +45,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       font-display: swap;
     }
     body {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Barlow Condensed', 'Barlow Fallback', sans-serif;
       background: radial-gradient(ellipse at 50% 28%, #3d1c02 0%, #1c0a00 50%, #0d0400 100%);
       color: #E1D6C8;
       min-height: 100vh;
@@ -80,7 +80,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-bottom: 1rem;
     }
     .hero h1 {
-      font-family: 'NeoGrotesk', 'Barlow Condensed', sans-serif;
+      font-family: 'NeoGrotesk', 'Barlow Condensed', 'Barlow Fallback', sans-serif;
       font-size: clamp(2.5rem, 6vw, 4.5rem);
       font-weight: 900;
       letter-spacing: -0.02em;
@@ -112,7 +112,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       flex-wrap: wrap;
     }
     .filter-btn {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Barlow Condensed', 'Barlow Fallback', sans-serif;
       font-size: 12px;
       letter-spacing: 0.06em;
       padding: 5px 14px;
@@ -269,7 +269,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .cta-btn {
       display: inline-block;
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Barlow Condensed', 'Barlow Fallback', sans-serif;
       font-size: 13px;
       letter-spacing: 0.08em;
       padding: 12px 28px;
@@ -361,6 +361,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     }
     </script>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4C_k3HqU.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lwz3bWuYMBYro.woff2">
+<style data-rr-font-fallbacks>
+@font-face{font-family:'Grotesk Fallback';src:local('Arial'),local('Helvetica Neue'),local('Liberation Sans');size-adjust:126.64%;ascent-override:77.70%;descent-override:23.06%;line-gap-override:0%;}
+@font-face{font-family:'Barlow Fallback';src:local('Arial'),local('Helvetica Neue'),local('Liberation Sans');size-adjust:92.66%;ascent-override:107.92%;descent-override:21.58%;line-gap-override:0%;}
+@font-face{font-family:'Playfair Fallback';src:local('Times New Roman'),local('Liberation Serif'),local('Georgia');size-adjust:130.74%;ascent-override:82.76%;descent-override:19.20%;line-gap-override:0%;}
+</style>
 </head>
 <body>
 <noscript><img alt="" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=618081668331348&amp;ev=PageView&amp;noscript=1"></noscript>
