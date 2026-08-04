@@ -791,6 +791,7 @@ const Home = () => {
           <a href="/guides.html" style={btnGhost} className="mt-8 inline-block">All guides</a>
         </div>
       </section>
+      </main>
 
       <footer style={{ borderTop: "1px solid " + border }}>
         <div className="max-w-[1200px] mx-auto px-6 py-16 grid md:grid-cols-2 gap-12">
