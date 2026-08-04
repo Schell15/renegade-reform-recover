@@ -238,7 +238,7 @@ const Home = () => {
     if (!el || el.getAttribute("src")) return;
     const start = () => {
       if (el.getAttribute("src")) return;
-      el.setAttribute("src", "/hero-loop.mp4");
+      el.setAttribute("src", heroLoop.url);
       el.load();
       const play = el.play();
       if (play && typeof play.catch === "function") play.catch(() => {});
