@@ -101,10 +101,6 @@ function bakeRouteHtml(rootHtml: string, route: RouteMeta) {
 
   // Inject a prerendered fallback inside <noscript> so non-JS crawlers see
   // real headings and copy for the route instead of an empty #root div.
-  if (route.fallbackBody) {
-    // handled below
-  }
-
   // Homepage only: paint the hero copy straight from HTML so the LCP element
   // (the hero paragraph) renders before the React bundle executes. React
   // replaces this markup on its first render into #root.
