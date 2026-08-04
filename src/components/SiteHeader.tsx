@@ -22,10 +22,10 @@ const SiteHeader = () => {
       <nav className="rr-nav">
         <Link to="/" className="rr-nav-logo" aria-label="Renegade Reformer home" onClick={close}>
           <img
-            src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
+            src="/logo-eagle-128.webp"
             alt="Renegade Reformer logo"
-            width={1920}
-            height={1920}
+            width={128}
+            height={128}
             {...{ fetchpriority: "high" }}
             decoding="async"
           />
