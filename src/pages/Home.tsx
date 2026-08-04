@@ -278,11 +278,11 @@ const Home = () => {
         <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" aria-label="Renegade Reformer home">
             <img
-              src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
+              src="/logo-eagle-128.webp"
               alt="Renegade Reformer eagle logo"
               className="w-11 h-11 object-contain"
-              width={1920}
-              height={1920}
+              width={128}
+              height={128}
               decoding="async"
               {...{ fetchpriority: "high" }}
             />
@@ -335,7 +335,7 @@ const Home = () => {
       {/* Mobile nav overlay + drawer */}
       <div
         onClick={closeMobileNav}
-        aria-hidden={!mobileNavOpen}
+        aria-hidden="true"
         className="md:hidden"
         style={{
           position: "fixed",
@@ -350,7 +350,7 @@ const Home = () => {
       <aside
         role="dialog"
         aria-modal="true"
-        aria-hidden={!mobileNavOpen}
+        aria-label="Site menu"
         className="md:hidden"
         style={{
           position: "fixed",
@@ -367,6 +367,7 @@ const Home = () => {
           gap: "1.5rem",
           transition: "right 0.3s ease",
           borderLeft: "1px solid " + border,
+          visibility: mobileNavOpen ? "visible" : "hidden",
         }}
       >
         <button
