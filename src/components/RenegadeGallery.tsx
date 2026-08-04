@@ -39,7 +39,7 @@ const GalleryItem = ({ src, webp, name, sub, alt }: { src: string; webp: string;
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <picture>
+      <picture className="block w-full h-full">
         <source type="image/webp" srcSet={webp} />
         <img
           src={src}
