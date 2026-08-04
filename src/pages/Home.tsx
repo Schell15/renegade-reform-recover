@@ -496,9 +496,15 @@ const Home = () => {
               <span className="inline-flex items-center gap-2">
                 <Clock size={14} /> Mon to Fri, 8:30am to 8:30pm
               </span>
-              <span className="inline-flex items-center gap-2" style={{ color: gold }}>
+              <a
+                href="https://www.google.com/search?q=Renegade+Reformer+Bristol+reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:underline"
+                style={{ color: gold }}
+              >
                 <Star size={14} fill={gold} /> 5.0 on Google
-              </span>
+              </a>
             </div>
           </div>
           <div>
