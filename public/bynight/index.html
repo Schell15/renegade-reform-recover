@@ -264,6 +264,28 @@ body {
   margin-left: -50vw;
   text-align: center;
 }
+.hero-cta {
+  display: inline-block;
+  margin-top: 2.2rem;
+  padding: 0.9rem 2rem;
+  font-family: var(--display);
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #180800;
+  background: rgba(196,154,74,0.95);
+  border: 1px solid rgba(196,154,74,0.9);
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: up 1.2s cubic-bezier(0.22,1,0.36,1) forwards 2s;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.hero-cta:hover {
+  background: transparent;
+  color: rgba(196,154,74,0.95);
+}
 .hero-scroll-hint {
   position: absolute;
   bottom: 2.5rem;
@@ -1147,6 +1169,33 @@ canvas#waveCanvas {
     fbq('track', 'PageView');
     </script>
 <!-- End Meta Pixel Code -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Renegade By Night",
+      "url": "https://www.renegadereformer.co.uk/bynight",
+      "isPartOf": { "@type": "WebSite", "name": "Renegade Reformer", "url": "https://www.renegadereformer.co.uk" },
+      "about": {
+        "@type": ["HealthClub", "LocalBusiness"],
+        "@id": "https://www.renegadereformer.co.uk/#studio",
+        "name": "Renegade Reformer",
+        "url": "https://www.renegadereformer.co.uk",
+        "telephone": "+447846849456",
+        "email": "studio@renegadereformer.co.uk",
+        "image": "https://www.renegadereformer.co.uk/og-image.png",
+        "priceRange": "££",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "22a Church Road",
+          "addressLocality": "Redfield",
+          "addressRegion": "Bristol",
+          "postalCode": "BS5 9JA",
+          "addressCountry": "GB"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
 <noscript><img alt="" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=618081668331348&amp;ev=PageView&amp;noscript=1"></noscript>
@@ -1210,6 +1259,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="pipe">| By Night</span>
     </h1>
     <p class="hero-sub">An immersive wellness experience that borrows the emotional highs of nightlife without the downsides.</p>
+    <a href="#workshops" class="hero-cta">Jump to class timetable</a>
   </div>
   <div class="hero-scroll-hint">
     <div class="scroll-tick"></div>
@@ -1296,7 +1346,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ═══ WORKSHOPS ═══ -->
-<section class="signup-section">
+<section class="signup-section" id="workshops">
   <span class="signup-label fade-in">Upcoming Workshops</span>
   <h2 class="signup-heading fade-in reveal-delay-1">
     Book your<br><em>By Night session.</em>
