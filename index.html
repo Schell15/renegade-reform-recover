@@ -6,6 +6,22 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
 
+<script>
+// Defer helper: third-party tags boot only after React has painted the LCP
+// element (or on first interaction / a hard timeout), so they never compete
+// with the hero render on slow connections.
+(function(w,d){
+  if(w.__rrDefer)return;
+  var q=[],fired=false;
+  function run(){if(fired)return;fired=true;for(var i=0;i<q.length;i++){try{q[i]();}catch(e){}}q=[];}
+  function idle(){if(w.requestIdleCallback){w.requestIdleCallback(run,{timeout:2000});}else{setTimeout(run,600);}}
+  function afterPaint(){if(w.__rrAppPainted){idle();}else{w.addEventListener('rr:app-painted',idle,{once:true});setTimeout(idle,5000);}}
+  if(d.readyState==='complete'){afterPaint();}else{w.addEventListener('load',afterPaint,{once:true});}
+  ['pointerdown','keydown','touchstart','scroll'].forEach(function(ev){w.addEventListener(ev,run,{once:true,passive:true});});
+  w.__rrDefer=function(fn){if(fired){fn();}else{q.push(fn);}};
+})(window,document);
+</script>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){
 if(w.__rrGtmBootstrapped)return;w.__rrGtmBootstrapped=true;
@@ -16,10 +32,7 @@ var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+
 j.async=true;j.dataset.rrGtm='true';j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
 f.parentNode.insertBefore(j,f);
 }
-function schedule(){if(w.requestIdleCallback){w.requestIdleCallback(boot,{timeout:3000});}else{setTimeout(boot,1200);}}
-if(d.readyState==='complete'){schedule();}
-else{w.addEventListener('load',schedule,{once:true});}
-['pointerdown','keydown','touchstart','scroll'].forEach(function(ev){w.addEventListener(ev,boot,{once:true,passive:true});});
+w.__rrDefer(boot);
 })(window,document,'script','dataLayer','GTM-NPMRFMNV');</script>
 <!-- End Google Tag Manager -->
     
@@ -175,15 +188,7 @@ else{w.addEventListener('load',schedule,{once:true});}
         t.src='https://connect.facebook.net/en_US/fbevents.js';
         document.head.appendChild(t);
       }
-      function schedule(){
-        if(window.requestIdleCallback){window.requestIdleCallback(load,{timeout:4000});}
-        else{setTimeout(load,1500);}
-      }
-      if(document.readyState==='complete'){schedule();}
-      else{window.addEventListener('load',schedule);}
-      ['pointerdown','keydown','touchstart','scroll'].forEach(function(ev){
-        window.addEventListener(ev,load,{once:true,passive:true});
-      });
+      window.__rrDefer(load);
     })();
     </script>
     <meta name="msvalidate.01" content="AB925159931C9E0CABA11455E2EADD97" />
