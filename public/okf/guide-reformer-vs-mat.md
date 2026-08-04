@@ -14,7 +14,7 @@ Guides  /  Method
 
 Method
 
-# Reformer vs *mat* Pilates: which should you choose?
+## Reformer vs *mat* Pilates: which should you choose?
 
 Renegade Reformer
 July 2026

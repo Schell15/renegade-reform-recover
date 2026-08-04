@@ -12,7 +12,7 @@ status: "stable"
 
 Renegade Guides
 
-# Movement, method *& mind.*
+## Movement, method *& mind.*
 
 Guides, tips and insight from inside the studio: everything you need to move smarter, recover better and understand why reformer Pilates changes things.
 

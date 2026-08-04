@@ -16,7 +16,7 @@ reformer
 
 Bristol · Redfield · Now Open
 
-# Renegade Reformer - Reformer Pilates in Redfield, Bristol
+## Renegade Reformer - Reformer Pilates in Redfield, Bristol
 
 ## IMMERSIVE REFORMER PILATES
 

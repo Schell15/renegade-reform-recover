@@ -14,7 +14,7 @@ Guides  /  Bristol
 
 Bristol
 
-# How reformer Pilates complements your *Great Bristol Run* (10k & Half Marathon) training
+## How reformer Pilates complements your *Great Bristol Run* (10k & Half Marathon) training
 
 Renegade Reformer
 July 2026

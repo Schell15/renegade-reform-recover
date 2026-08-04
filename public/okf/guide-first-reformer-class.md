@@ -14,7 +14,7 @@ Guides  /  Beginners
 
 Beginners
 
-# What to expect at your first *reformer* class
+## What to expect at your first *reformer* class
 
 Renegade Reformer
 July 2026

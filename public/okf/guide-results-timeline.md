@@ -14,7 +14,7 @@ Guides  /  Results
 
 Results
 
-# How long until you see *results* from reformer Pilates?
+## How long until you see *results* from reformer Pilates?
 
 Renegade Reformer
 July 2026

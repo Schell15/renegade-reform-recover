@@ -12,7 +12,7 @@ status: "stable"
 
 Home  /  FAQs
 
-# Frequently asked *questions*
+## Frequently asked *questions*
 
 Everything you need to know before your first class: booking, cancellations, memberships, studio access and safety.
 

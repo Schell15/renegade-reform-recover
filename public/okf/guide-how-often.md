@@ -14,7 +14,7 @@ Guides  /  Beginners
 
 Beginners
 
-# How often should you do *reformer* Pilates?
+## How often should you do *reformer* Pilates?
 
 Renegade Reformer
 July 2026

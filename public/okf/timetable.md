@@ -12,7 +12,7 @@ status: "stable"
 
 Bristol's Boutique Reformer Studio
 
-# Reformer Pilates Timetable, Redfield, Bristol
+## Reformer Pilates Timetable, Redfield, Bristol
 
 ## FIND YOUR CLASS.
 

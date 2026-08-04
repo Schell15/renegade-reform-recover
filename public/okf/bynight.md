@@ -12,7 +12,7 @@ status: "stable"
 
 Bristol · By Night
 
-# RENEGADE | By Night
+## RENEGADE | By Night
 
 An immersive wellness experience that borrows the emotional highs of nightlife without the downsides.
 

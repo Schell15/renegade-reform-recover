@@ -14,7 +14,7 @@ Guides  /  Beginners
 
 Beginners
 
-# Reformer Pilates for beginners in *Bristol*
+## Reformer Pilates for beginners in *Bristol*
 
 Renegade Reformer
 June 2026

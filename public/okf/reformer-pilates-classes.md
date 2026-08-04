@@ -16,7 +16,7 @@ reform  ·  repower  ·  recover
 
 Class types
 
-# Foundations, Renegade and Rebuild — three ways in, one Renegade approach to *strength and control*.
+## Foundations, Renegade and Rebuild — three ways in, one Renegade approach to *strength and control*.
 
 Movement at Renegade is motivated by music, where tradition is met with progression.
 We elevate pilates as a source of **personal power** — one that makes

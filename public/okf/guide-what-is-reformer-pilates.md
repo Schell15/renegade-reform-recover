@@ -14,7 +14,7 @@ Guides  /  Beginners
 
 Beginners
 
-# What is *reformer* Pilates? A complete beginner's guide
+## What is *reformer* Pilates? A complete beginner's guide
 
 Renegade Reformer
 July 2026

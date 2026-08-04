@@ -12,7 +12,7 @@ status: "stable"
 
 Join the team
 
-# Teach*with us.*
+## Teach*with us.*
 
 Renegade Reformer is a community-focused movement studio offering Reformer Pilates, Mat Pilates, Yoga and Barre. We are looking for instructors who take real pride in their craft and want to be part of a studio that values both teaching and teaching environment.
 

@@ -12,7 +12,7 @@ status: "stable"
 
 Renegade Reformer
 
-# Privacy Policy
+## Privacy Policy
 
 By creating an account, booking a class, purchasing a membership, buying a class pack, or using any Renegade Reformer service, I agree that Renegade Reformer may collect and securely process the personal information needed to manage my experience with the studio. This may include my name, contact details, date of birth, emergency contact details, booking history, membership details, payment information, health information, waiver responses and any other details needed to provide services safely and effectively.
 
