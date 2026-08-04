@@ -76,12 +76,13 @@ const Timetable = () => {
 
       <section className="max-w-[1200px] mx-auto px-6 pt-16 pb-10">
         <p style={eyebrowStyle} className="mb-4">Bristol's Boutique Reformer Studio</p>
-        <h1
+        <h1 className="sr-only">Reformer Pilates Timetable, Redfield, Bristol</h1>
+        <h2
           className="font-neogrotesk font-bold text-primary"
           style={{ fontSize: "clamp(40px, 7vw, 80px)", lineHeight: 0.95 }}
         >
           FIND YOUR CLASS.
-        </h1>
+        </h2>
         <p
           style={{ color: mutedCream, fontSize: 14, lineHeight: 1.75, maxWidth: 440, marginTop: 24, borderLeft: "1px solid " + border, paddingLeft: 20 }}
         >
