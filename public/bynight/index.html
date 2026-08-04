@@ -264,6 +264,28 @@ body {
   margin-left: -50vw;
   text-align: center;
 }
+.hero-cta {
+  display: inline-block;
+  margin-top: 2.2rem;
+  padding: 0.9rem 2rem;
+  font-family: var(--display);
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #180800;
+  background: rgba(196,154,74,0.95);
+  border: 1px solid rgba(196,154,74,0.9);
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: up 1.2s cubic-bezier(0.22,1,0.36,1) forwards 2s;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.hero-cta:hover {
+  background: transparent;
+  color: rgba(196,154,74,0.95);
+}
 .hero-scroll-hint {
   position: absolute;
   bottom: 2.5rem;
@@ -1297,7 +1319,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ═══ WORKSHOPS ═══ -->
-<section class="signup-section">
+<section class="signup-section" id="workshops">
   <span class="signup-label fade-in">Upcoming Workshops</span>
   <h2 class="signup-heading fade-in reveal-delay-1">
     Book your<br><em>By Night session.</em>
