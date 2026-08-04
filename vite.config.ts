@@ -102,10 +102,22 @@ function bakeRouteHtml(rootHtml: string, route: RouteMeta) {
   // Inject a prerendered fallback inside <noscript> so non-JS crawlers see
   // real headings and copy for the route instead of an empty #root div.
   if (route.fallbackBody) {
+    // handled below
+  }
+
+  // Homepage only: paint the hero copy straight from HTML so the LCP element
+  // (the hero paragraph) renders before the React bundle executes. React
+  // replaces this markup on its first render into #root.
+  if (route.path === "/") {
+    const heroShell = `<div style="max-width:1200px;margin:0 auto;padding:4rem 1.5rem 6rem;font-family:'Space Grotesk',system-ui,-apple-system,sans-serif;"><p style="font-size:17px;letter-spacing:0.18em;text-transform:uppercase;color:#C49A4A;margin:0 0 0.5rem;">Bristol · Redfield · Now Open</p><h2 style="font-size:20px;letter-spacing:0.02em;color:#C49A4A;margin:0 0 0.75rem;font-weight:700;">IMMERSIVE REFORMER PILATES</h2><p style="color:rgba(225,214,200,0.68);font-size:14px;line-height:1.7;max-width:520px;margin:0;">Strength, control and rhythm, built into every class. Set inside a considered space of tuned lighting, thoughtful set design and a music-first soundtrack. Reformer pilates in Bristol, done our way.</p></div>`;
+    html = html.replace(/<div id="root"><\/div>/, `<div id="root">${heroShell}</div>`);
+  }
+
+  if (route.fallbackBody) {
     const fallback = `<noscript><div id="seo-fallback" style="max-width:720px;margin:2rem auto;padding:1rem;font-family:system-ui,sans-serif;line-height:1.6;">${route.fallbackBody}</div></noscript>`;
     html = html.replace(
-      /<div id="root"><\/div>/,
-      `<div id="root"></div>\n    ${fallback}`,
+      /<div id="root">/,
+      `${fallback}\n    <div id="root">`,
     );
   }
   return html;
