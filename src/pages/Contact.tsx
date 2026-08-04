@@ -69,12 +69,13 @@ const Contact = () => {
           ← Back
         </button>
 
-        <h1
+        <h1 className="sr-only">Contact Renegade Reformer, Reformer Pilates in Redfield, Bristol</h1>
+        <h2
           className="font-neogrotesk text-5xl sm:text-7xl font-bold tracking-tight mb-4"
           style={{ color: "#f0ebe3" }}
         >
           CONTACT.
-        </h1>
+        </h2>
         <p
           className="uppercase font-light mb-12"
           style={{
