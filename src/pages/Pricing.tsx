@@ -997,7 +997,8 @@ const PRICING_BODY_HEAD = `<div class="page">
 
   <header class="header" style="display:flex;align-items:center;justify-content:space-between;gap:32px;">
     <div style="flex:1;min-width:0;">
-      <h1 class="page-title">JOIN<br>THE<br>RENEGADE.</h1>
+      <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Pricing and Membership - Renegade Reformer, Reformer Pilates Bristol</h1>
+      <h2 class="page-title">JOIN<br>THE<br>RENEGADE.</h2>
       <p class="header-sub">Reform · Repower · Recover</p>
       <p class="header-note">Choose the way you move. From flexible class packs to monthly memberships, every option is built to help you find your rhythm, stay consistent and make Renegade part of your routine.</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;">

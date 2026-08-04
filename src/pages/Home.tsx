@@ -425,12 +425,15 @@ const Home = () => {
             <p style={eyebrowStyle} className="mb-2">
               Bristol · Redfield · Now Open
             </p>
-            <h1
+            <h1 className="sr-only">
+              Renegade Reformer - Reformer Pilates in Redfield, Bristol
+            </h1>
+            <h2
               className="font-neogrotesk font-bold text-primary mb-3"
               style={{ fontSize: 20, letterSpacing: "0.02em", whiteSpace: "nowrap" }}
             >
               IMMERSIVE REFORMER PILATES
-            </h1>
+            </h2>
             <p
               style={{ color: "rgba(225,214,200,0.5)", fontSize: 14, lineHeight: 1.7, maxWidth: 520 }}
               className="mb-8"

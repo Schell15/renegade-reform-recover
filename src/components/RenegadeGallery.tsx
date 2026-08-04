@@ -2,29 +2,35 @@ import { useState } from "react";
 import foundationsAsset from "@/assets/renegade-foundations.jpg.asset.json";
 import classAsset from "@/assets/renegade-class.jpg.asset.json";
 import rebuildAsset from "@/assets/renegade-rebuild.jpg.asset.json";
+import foundationsWebp from "@/assets/renegade-foundations.webp.asset.json";
+import classWebp from "@/assets/renegade-class.webp.asset.json";
+import rebuildWebp from "@/assets/renegade-rebuild.webp.asset.json";
 
 const images = [
   {
     src: foundationsAsset.url,
+    webp: foundationsWebp.url,
     name: "FOUNDATIONS.",
     sub: "Begin here",
     alt: "Foundations reformer Pilates class in session at Renegade Reformer, Bristol, a beginner-friendly introduction to the reformer",
   },
   {
     src: classAsset.url,
+    webp: classWebp.url,
     name: "RENEGADE.",
     sub: "Find your rhythm",
     alt: "Renegade reformer Pilates class at Renegade Reformer, Bristol, set to music with full studio lighting",
   },
   {
     src: rebuildAsset.url,
+    webp: rebuildWebp.url,
     name: "REBUILD.",
     sub: "Strength meets reformer",
     alt: "Rebuild reformer Pilates class at Renegade Reformer, Bristol, focused on strength and control",
   },
 ];
 
-const GalleryItem = ({ src, name, sub, alt }: { src: string; name: string; sub: string; alt: string }) => {
+const GalleryItem = ({ src, webp, name, sub, alt }: { src: string; webp: string; name: string; sub: string; alt: string }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -33,15 +39,22 @@ const GalleryItem = ({ src, name, sub, alt }: { src: string; name: string; sub: 
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <img
-        src={src}
-        alt={alt}
-        className="w-full h-full object-cover object-top transition-all duration-700 ease-out"
-        style={{
-          transform: hovered ? "scale(1.05)" : "scale(1)",
-          filter: hovered ? "brightness(0.65)" : "brightness(0.82)",
-        }}
-      />
+      <picture className="block w-full h-full">
+        <source type="image/webp" srcSet={webp} />
+        <img
+          src={src}
+          alt={alt}
+          width={1067}
+          height={1600}
+          loading="lazy"
+          decoding="async"
+          className="w-full h-full object-cover object-top transition-all duration-700 ease-out"
+          style={{
+            transform: hovered ? "scale(1.05)" : "scale(1)",
+            filter: hovered ? "brightness(0.65)" : "brightness(0.82)",
+          }}
+        />
+      </picture>
       <div
         className="absolute inset-x-0 bottom-0 z-10 pointer-events-none"
         style={{
