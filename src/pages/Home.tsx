@@ -466,9 +466,9 @@ const Home = () => {
           <div>
             <div style={{ aspectRatio: "4 / 5", borderRadius: 18, overflow: "hidden", border: "1px solid " + border }}>
               <video
-                src="/hero-loop.mp4"
+                ref={heroVideoRef}
                 poster="/hero-poster.jpg"
-                preload="auto"
+                preload="none"
                 autoPlay muted loop playsInline
                 aria-label="Reformer Pilates class in progress at Renegade Reformer, Redfield, Bristol"
                 style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
