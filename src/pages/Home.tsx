@@ -599,14 +599,14 @@ const Home = () => {
                 <p style={{ color: "#180800", fontSize: 14, fontWeight: 700, letterSpacing: "0.02em" }}>
                   {r.who}
                 </p>
-                <div className="flex gap-1" aria-label="5 star review">
+                <div className="flex gap-1" role="img" aria-label="Rated 5 out of 5 stars">
                   {[0, 1, 2, 3, 4].map((i) => (<Star key={i} size={14} fill={gold} color={gold} />))}
                 </div>
               </div>
-              <p style={{ color: "rgba(24,8,0,0.5)", fontSize: 11, letterSpacing: "0.03em" }} className="mb-2">
+              <p style={{ color: "rgba(24,8,0,0.68)", fontSize: 11, letterSpacing: "0.03em" }} className="mb-2">
                 {r.date}
               </p>
-              <p style={{ color: "rgba(24,8,0,0.55)", fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase" }} className="mb-5">
+              <p style={{ color: "rgba(24,8,0,0.68)", fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase" }} className="mb-5">
                 {r.className} · with {r.instructor}
               </p>
               <p style={{ color: "#180800", fontSize: 14, lineHeight: 1.7 }}>
@@ -625,6 +625,10 @@ const Home = () => {
           <img
             src="https://momence.com/momence-landing_260528/images/Momence-Logotype.svg"
             alt="Momence booking platform logo"
+            width={90}
+            height={14}
+            loading="lazy"
+            decoding="async"
             style={{ height: 14, width: "auto" }}
           />
         </div>
