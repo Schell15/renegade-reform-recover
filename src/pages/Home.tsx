@@ -230,6 +230,20 @@ const HeroLockup = () => (
 
 const Home = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  // Below-the-fold content mounts on the second frame, so React's first commit
+  // only has to build the hero. That first commit is what the browser measures
+  // as LCP, and on throttled mobile the full-page commit was adding seconds.
+  const [belowFold, setBelowFold] = useState(false);
+  useEffect(() => {
+    let raf2 = 0;
+    const raf1 = requestAnimationFrame(() => {
+      raf2 = requestAnimationFrame(() => setBelowFold(true));
+    });
+    return () => {
+      cancelAnimationFrame(raf1);
+      if (raf2) cancelAnimationFrame(raf2);
+    };
+  }, []);
   const [reviewsModalOpen, setReviewsModalOpen] = useState(false);
   const [reviewsIframeHeight, setReviewsIframeHeight] = useState(800);
   const reviewsIframeRef = useRef<HTMLIFrameElement>(null);
