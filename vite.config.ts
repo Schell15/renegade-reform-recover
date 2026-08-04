@@ -104,6 +104,7 @@ function bakeRouteHtml(rootHtml: string, route: RouteMeta) {
   html = html.replace(
     /<link rel="stylesheet"([^>]*?)href="(\/assets\/[^"]+\.css)"([^>]*)>/g,
     (_m, pre, href, post) =>
+      `<link rel="preload" as="style" href="${href}">` +
       `<link rel="stylesheet"${pre}href="${href}"${post} media="print" onload="this.media='all'">` +
       `<noscript><link rel="stylesheet" href="${href}"></noscript>`,
   );
