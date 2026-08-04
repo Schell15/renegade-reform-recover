@@ -16,9 +16,10 @@ var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+
 j.async=true;j.dataset.rrGtm='true';j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
 f.parentNode.insertBefore(j,f);
 }
-if(d.readyState==='complete'){setTimeout(boot,0);}
-else{w.addEventListener('load',boot,{once:true});}
-['pointerdown','keydown','touchstart'].forEach(function(ev){w.addEventListener(ev,boot,{once:true,passive:true});});
+function schedule(){if(w.requestIdleCallback){w.requestIdleCallback(boot,{timeout:3000});}else{setTimeout(boot,1200);}}
+if(d.readyState==='complete'){schedule();}
+else{w.addEventListener('load',schedule,{once:true});}
+['pointerdown','keydown','touchstart','scroll'].forEach(function(ev){w.addEventListener(ev,boot,{once:true,passive:true});});
 })(window,document,'script','dataLayer','GTM-NPMRFMNV');</script>
 <!-- End Google Tag Manager -->
     
@@ -31,6 +32,19 @@ else{w.addEventListener('load',boot,{once:true});}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Booking provider: links, logo and review embeds all resolve to momence.com -->
+    <link rel="preconnect" href="https://momence.com" crossorigin>
+    <link rel="dns-prefetch" href="https://momence.com">
+    <!-- Critical above-the-fold styles: inlined so the hero paints before the
+         main stylesheet arrives (the bundle is loaded non-blocking below). -->
+    <style>
+      html,body{margin:0;padding:0;background:hsl(20 17% 32%);color:hsl(42 25% 92%);
+        font-family:'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+        -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+      #root{min-height:100vh;}
+      img,video{max-width:100%;display:block;}
+      h1,h2,h3,p{margin:0;}
+    </style>
     <!-- Non-blocking stylesheet loading: fetched at low priority, applied on load -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <!-- Shared nav/footer styles: non-blocking (applied on load) -->
@@ -161,9 +175,13 @@ else{w.addEventListener('load',boot,{once:true});}
         t.src='https://connect.facebook.net/en_US/fbevents.js';
         document.head.appendChild(t);
       }
-      if(document.readyState==='complete'){setTimeout(load,1200);}
-      else{window.addEventListener('load',function(){setTimeout(load,1200);});}
-      ['pointerdown','keydown','touchstart'].forEach(function(ev){
+      function schedule(){
+        if(window.requestIdleCallback){window.requestIdleCallback(load,{timeout:4000});}
+        else{setTimeout(load,1500);}
+      }
+      if(document.readyState==='complete'){schedule();}
+      else{window.addEventListener('load',schedule);}
+      ['pointerdown','keydown','touchstart','scroll'].forEach(function(ev){
         window.addEventListener(ev,load,{once:true,passive:true});
       });
     })();
