@@ -199,11 +199,11 @@ const NavLinkA = ({ href, children }: { href: string; children: React.ReactNode 
 const HeroLockup = () => (
   <div style={{ display: "block", textAlign: "center", margin: "0 auto 12px" }}>
     <img
-      src="/lovable-uploads/fa7bc18e-9a79-444a-901b-45cdc911fda3.png"
+      src="/logo-eagle-128.webp"
       alt="Renegade Reformer eagle logo"
       className="mb-4 md:mb-2.5"
-      width={1920}
-      height={1920}
+      width={128}
+      height={128}
       decoding="async"
       {...{ fetchpriority: "high" }}
       style={{ width: 64, height: 64, objectFit: "contain", display: "block", marginLeft: "auto", marginRight: "auto" }}
