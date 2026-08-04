@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { SEO } from "@/components/SEO";
 import RenegadeGallery from "@/components/RenegadeGallery";
 import SiteHeader from "@/components/SiteHeader";
@@ -1317,10 +1316,8 @@ const Pricing = () => {
         title="Pricing & Membership | Renegade Reformer Bristol"
         description="Pricing at Renegade Reformer, Bristol's reformer Pilates studio in Redfield. Drop-ins, class packs and monthly memberships from £16.25/class."
         path="/pricing"
+        jsonLd={PRICING_SCHEMA}
       />
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(PRICING_SCHEMA)}</script>
-      </Helmet>
       <style dangerouslySetInnerHTML={{ __html: PRICING_CSS }} />
       <div dangerouslySetInnerHTML={{ __html: PRICING_BODY_HEAD }} />
       <div className="page" style={{paddingTop:0,paddingBottom:0}}>

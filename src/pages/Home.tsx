@@ -230,6 +230,20 @@ const HeroLockup = () => (
 
 const Home = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  // Below-the-fold content mounts on the second frame, so React's first commit
+  // only has to build the hero. That first commit is what the browser measures
+  // as LCP, and on throttled mobile the full-page commit was adding seconds.
+  const [belowFold, setBelowFold] = useState(false);
+  useEffect(() => {
+    let raf2 = 0;
+    const raf1 = requestAnimationFrame(() => {
+      raf2 = requestAnimationFrame(() => setBelowFold(true));
+    });
+    return () => {
+      cancelAnimationFrame(raf1);
+      if (raf2) cancelAnimationFrame(raf2);
+    };
+  }, []);
   const [reviewsModalOpen, setReviewsModalOpen] = useState(false);
   const [reviewsIframeHeight, setReviewsIframeHeight] = useState(800);
   const reviewsIframeRef = useRef<HTMLIFrameElement>(null);
@@ -502,6 +516,7 @@ const Home = () => {
         </div>
       </section>
 
+      {belowFold && (<>
       <section
         id="visit"
         className="max-w-[1200px] mx-auto px-6 py-10 grid md:grid-cols-3 gap-8"
@@ -823,7 +838,10 @@ const Home = () => {
           <a href="/guides.html" style={btnGhost} className="mt-8 inline-block">All guides</a>
         </div>
       </section>
+      </>)}
       </main>
+
+      {belowFold && (
 
       <footer style={{ borderTop: "1px solid " + border }}>
         <div className="max-w-[1200px] mx-auto px-6 py-16 grid md:grid-cols-2 gap-12">
@@ -877,6 +895,7 @@ const Home = () => {
           © 2026 Renegade Reformer, Redfield, Bristol
         </div>
       </footer>
+      )}
 
       {reviewsModalOpen && (
         <div

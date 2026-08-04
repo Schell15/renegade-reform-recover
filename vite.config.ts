@@ -104,9 +104,21 @@ function bakeRouteHtml(rootHtml: string, route: RouteMeta) {
   html = html.replace(
     /<link rel="stylesheet"([^>]*?)href="(\/assets\/[^"]+\.css)"([^>]*)>/g,
     (_m, pre, href, post) =>
+      `<link rel="preload" as="style" href="${href}">` +
       `<link rel="stylesheet"${pre}href="${href}"${post} media="print" onload="this.media='all'">` +
       `<noscript><link rel="stylesheet" href="${href}"></noscript>`,
   );
+
+  // The app bundle sits at the end of <body>; preload it from the head so it
+  // downloads at high priority in parallel with HTML parsing. React mounting
+  // sooner is what shortens the LCP render delay on throttled connections.
+  const entry = html.match(/<script type="module"[^>]*src="(\/assets\/[^"]+\.js)"/);
+  if (entry && !html.includes(`rel="modulepreload" href="${entry[1]}"`)) {
+    html = html.replace(
+      /<\/head>/,
+      `  <link rel="modulepreload" href="${entry[1]}" crossorigin>\n  </head>`,
+    );
+  }
 
   // Inject a prerendered fallback inside <noscript> so non-JS crawlers see
   // real headings and copy for the route instead of an empty #root div.
