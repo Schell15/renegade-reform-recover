@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { STUDIO, addressOneLine, mailtoHref, whatsappUrl, whatsappDisplay } from "@/content/studio";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -182,7 +183,7 @@ const Contact = () => {
             Or email us directly
           </p>
           <a
-            href="mailto:studio@renegadereformer.co.uk"
+            href={mailtoHref()}
             className="transition-colors hover:opacity-80"
             style={{
               fontSize: "14px",
@@ -190,7 +191,7 @@ const Contact = () => {
               color: "#b8a080",
             }}
           >
-            studio@renegadereformer.co.uk
+            {STUDIO.contact.email}
           </a>
 
           <p
@@ -204,7 +205,7 @@ const Contact = () => {
             Or message us on WhatsApp
           </p>
           <a
-            href="https://wa.me/447846849456"
+            href={whatsappUrl()}
             target="_blank"
             rel="noopener"
             className="transition-colors hover:opacity-80"
@@ -214,7 +215,7 @@ const Contact = () => {
               color: "#b8a080",
             }}
           >
-            WhatsApp us on +44 7846 849456
+            {`WhatsApp us on ${whatsappDisplay()}`}
           </a>
           <p
             className="mt-2"
@@ -265,7 +266,7 @@ const Contact = () => {
               color: "#b8a080",
             }}
           >
-            <div>Monday to Friday: 8:30am &ndash; 8:30pm</div>
+            <div>Monday to Friday: {STUDIO.hours.reformer.open} &ndash; {STUDIO.hours.reformer.close}</div>
             <div>Saturday: Closed</div>
             <div>Sunday: Closed</div>
           </address>
@@ -277,7 +278,7 @@ const Contact = () => {
               color: "#6a5035",
             }}
           >
-            22a Church Road, Redfield, Bristol BS5 9JA
+            {addressOneLine()}
           </p>
         </section>
 

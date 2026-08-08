@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import { STUDIO, addressOneLine, whatsappUrl } from "@/content/studio";
 
 const EXT = "https://www.renegadereformer.co.uk";
 
 const SiteFooter = () => (
   <footer className="rr-footer">
     <p>
-      &copy; 2026 Renegade Reformer &middot; 22a Church Road, Redfield, Bristol BS5 9JA
+      &copy; 2026 {STUDIO.name} &middot; {addressOneLine()}
     </p>
     <div className="rr-footer-links">
       <Link to="/">Home</Link>
@@ -17,7 +18,7 @@ const SiteFooter = () => (
       <a href={`${EXT}/faq.html`}>FAQs</a>
       <Link to="/contact">Contact</Link>
       <a href={`${EXT}/teachwithus`}>Instructor Application</a>
-      <a href="https://wa.me/447846849456" target="_blank" rel="noopener">WhatsApp us</a>
+      <a href={whatsappUrl()} target="_blank" rel="noopener">WhatsApp us</a>
       <a href={`${EXT}/privacypolicy.html`}>Privacy Policy</a>
     </div>
   </footer>
