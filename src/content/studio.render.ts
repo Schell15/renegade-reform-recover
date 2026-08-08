@@ -1,29 +1,23 @@
-import { STUDIO, addressOneLine } from "./studio";
+import { STUDIO } from "./studio";
+import { CANONICAL_HOST } from "./pages.manifest";
 
-const CANONICAL_HOST = "https://www.renegadereformer.co.uk";
-export const BUSINESS_ID = `${CANONICAL_HOST}/#business`;
-
-export interface LocalBusinessOptions {
-  /** Page-specific @id suffix isn't needed, all pages reference the same business @id. */
-  pageUrl: string;
-  /** Extra JSON-LD keys to merge on top of the shared base (e.g. offers, priceRange). */
-  extra?: Record<string, unknown>;
-}
+export const BUSINESS_ID = `${CANONICAL_HOST}/#studio`;
 
 /**
- * Shared LocalBusiness base built from STUDIO. Every page that needs LocalBusiness
- * JSON-LD calls this and may merge page-specific fields on top via `extra`. The
- * @id is always the same so all pages point at one canonical business entity.
+ * The exact "about" business entity object already used identically in
+ * bynight/index.html, guides.html and privacypolicy.html. Any future static
+ * page that needs the same business entity should reuse this unchanged.
  */
-export function localBusinessJsonLd({ pageUrl, extra = {} }: LocalBusinessOptions) {
-  const base = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+export function businessEntityJsonLd() {
+  return {
+    "@type": ["HealthClub", "LocalBusiness"],
     "@id": BUSINESS_ID,
     name: STUDIO.name,
-    url: pageUrl,
+    url: CANONICAL_HOST,
     telephone: STUDIO.contact.whatsappE164,
     email: STUDIO.contact.email,
+    image: `${CANONICAL_HOST}/og-image.png`,
+    priceRange: "££",
     address: {
       "@type": "PostalAddress",
       streetAddress: STUDIO.address.street,
@@ -33,8 +27,39 @@ export function localBusinessJsonLd({ pageUrl, extra = {} }: LocalBusinessOption
       addressCountry: STUDIO.address.countryCode,
     },
   };
-  return { ...base, ...extra };
 }
 
-/** Convenience for pages that just need the plain address string, no JSON-LD. */
-export { addressOneLine };
+/**
+ * Full WebPage-wrapper JSON-LD used by bynight/index.html, guides.html and
+ * privacypolicy.html, each with their own page name/url but an identical
+ * `about` business entity.
+ */
+export function pageAboutBusinessJsonLd(pageName: string, pageUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: pageName,
+    url: pageUrl,
+    isPartOf: { "@type": "WebSite", name: STUDIO.name, url: CANONICAL_HOST },
+    about: businessEntityJsonLd(),
+  };
+}
+
+/**
+ * teachwithus/index.html's JobPosting uses a differently-shaped address
+ * (combined locality + city, no telephone/email at this nesting level).
+ */
+export function jobPostingAddressJsonLd() {
+  return {
+    "@type": "PostalAddress",
+    streetAddress: STUDIO.address.street,
+    addressLocality: `${STUDIO.address.locality}, ${STUDIO.address.city}`,
+    postalCode: STUDIO.address.postalCode,
+    addressCountry: STUDIO.address.countryCode,
+  };
+}
+
+/** The single shared footer copyright/address line used across every static page. */
+export function footerCopyrightHtml(): string {
+  return `  <p>&copy; 2026 ${STUDIO.name} &middot; ${STUDIO.address.street}, ${STUDIO.address.locality}, ${STUDIO.address.city} ${STUDIO.address.postalCode}</p>`;
+}
