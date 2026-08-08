@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import RenegadeGallery from "@/components/RenegadeGallery";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { DROP_IN_PRICE, INTRO_PACK, CLASS_PACKS, MEMBERSHIPS, BOOK_A_CLASS_URL, perClassPrice, formatGBP, fromPerClassText } from "@/content/pricing";
 
 const SITE = "https://www.renegadereformer.co.uk";
 const STUDIO_ID = { "@id": `${SITE}/#studio` };
@@ -28,13 +29,17 @@ const PRICING_SCHEMA = {
   name: "Reformer Pilates pricing at Renegade Reformer, Bristol",
   url: `${SITE}/pricing`,
   itemListElement: [
-    { "@type": "ListItem", position: 1, item: offer("Drop-in class", "A single 50 minute reformer Pilates class.", "25.00") },
-    { "@type": "ListItem", position: 2, item: offer("4 class pack", "4 reformer Pilates classes, valid 3 months from first use.", "95.00") },
-    { "@type": "ListItem", position: 3, item: offer("8 class pack", "8 reformer Pilates classes, valid 3 months from first use.", "175.00") },
-    { "@type": "ListItem", position: 4, item: offer("12 class pack", "12 reformer Pilates classes, valid 3 months from first use.", "252.00") },
-    { "@type": "ListItem", position: 5, item: offer("Core membership", "4 reformer Pilates classes a month, £21.25 per class.", "85.00") },
-    { "@type": "ListItem", position: 6, item: offer("Pro membership", "8 reformer Pilates classes a month, £18.75 per class.", "150.00") },
-    { "@type": "ListItem", position: 7, item: offer("Elite membership", "12 reformer Pilates classes a month, £16.25 per class.", "195.00") },
+    { "@type": "ListItem", position: 1, item: offer("Drop-in class", "A single 50 minute reformer Pilates class.", DROP_IN_PRICE.toFixed(2)) },
+    ...CLASS_PACKS.map((p, i) => ({
+      "@type": "ListItem",
+      position: 2 + i,
+      item: offer(`${p.classes} class pack`, `${p.classes} reformer Pilates classes, valid ${p.validityMonths} months from first use.`, p.price.toFixed(2)),
+    })),
+    ...MEMBERSHIPS.map((m, i) => ({
+      "@type": "ListItem",
+      position: 5 + i,
+      item: offer(`${m.tier} membership`, `${m.classesPerMonth} reformer Pilates classes a month, ${formatGBP(perClassPrice(m.price, m.classesPerMonth))} per class.`, m.price.toFixed(2)),
+    })),
   ],
 };
 
@@ -1080,6 +1085,18 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
   </div>
 </div>`;
 
+const classPackCardsHtml = CLASS_PACKS.map((p) => `
+        <div class="pack-card-cream">
+          <p class="pk-eyebrow-cream" style="margin-top:0;">Class pack</p>
+          <p style="font-size:12px;color:rgba(24,8,0,0.6);font-weight:400;margin-bottom:14px;">Valid ${p.validityMonths} months from first use</p>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span class="pk-num-cream">${p.classes}</span>
+            <span class="pk-unit-cream">classes</span>
+          </div>
+          <p class="pk-price-cream">${formatGBP(p.price)}</p>
+          <a class="btn-ghost-cream" href="${p.momenceUrl}" target="_blank" rel="noopener noreferrer">Buy ${p.classes} class pack</a>
+        </div>`).join("\n");
+
 const PRICING_BODY_TAIL_AFTER_GALLERY_CLASSPACKS = `<div class="page" style="padding-top:0;padding-bottom:0;">
   <!-- CLASS PACKS -->
   <section class="section" id="class-packs" style="margin-bottom:0;">
@@ -1087,40 +1104,7 @@ const PRICING_BODY_TAIL_AFTER_GALLERY_CLASSPACKS = `<div class="page" style="pad
     <p class="section-note" style="text-align:center;">Not a member yet? Packs are a great way to try the studio.</p>
     <div class="pack-outer">
       <div class="grid-3">
-
-        <div class="pack-card-cream">
-          <p class="pk-eyebrow-cream" style="margin-top:0;">Class pack</p>
-          <p style="font-size:12px;color:rgba(24,8,0,0.6);font-weight:400;margin-bottom:14px;">Valid 3 months from first use</p>
-          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-            <span class="pk-num-cream">4</span>
-            <span class="pk-unit-cream">classes</span>
-          </div>
-          <p class="pk-price-cream">£95</p>
-          <a class="btn-ghost-cream" href="https://momence.com/Renegade-Reformer/membership/4-CLASS-PACK/783154" target="_blank" rel="noopener noreferrer">Buy 4 class pack</a>
-        </div>
-
-        <div class="pack-card-cream">
-          <p class="pk-eyebrow-cream" style="margin-top:0;">Class pack</p>
-          <p style="font-size:12px;color:rgba(24,8,0,0.6);font-weight:400;margin-bottom:14px;">Valid 3 months from first use</p>
-          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-            <span class="pk-num-cream">8</span>
-            <span class="pk-unit-cream">classes</span>
-          </div>
-          <p class="pk-price-cream">£175</p>
-          <a class="btn-ghost-cream" href="https://momence.com/Renegade-Reformer/membership/8-CLASS-PACK/783156" target="_blank" rel="noopener noreferrer">Buy 8 class pack</a>
-        </div>
-
-        <div class="pack-card-cream">
-          <p class="pk-eyebrow-cream" style="margin-top:0;">Class pack</p>
-          <p style="font-size:12px;color:rgba(24,8,0,0.6);font-weight:400;margin-bottom:14px;">Valid 3 months from first use</p>
-          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-            <span class="pk-num-cream">12</span>
-            <span class="pk-unit-cream">classes</span>
-          </div>
-          <p class="pk-price-cream">£252</p>
-          <a class="btn-ghost-cream" href="https://momence.com/Renegade-Reformer/membership/12-CLASS-PACK/783155" target="_blank" rel="noopener noreferrer">Buy 12 class pack</a>
-        </div>
-
+${classPackCardsHtml}
       </div>
     </div>
   </section>
@@ -1451,9 +1435,9 @@ const Pricing = () => {
     <div className="rr-dropin-right">
       <div>
         <p className="rr-dropin-rate-label">Drop-in rate</p>
-        <p className="rr-dropin-big-price">£25<span className="rr-dropin-big-unit"> /class</span></p>
+        <p className="rr-dropin-big-price">{formatGBP(DROP_IN_PRICE)}<span className="rr-dropin-big-unit"> /class</span></p>
       </div>
-      <button className="rr-btn-ghost" onClick={() => window.open('https://momence.com/u/renegade-reformer-ltd-74tF03', '_blank')}>Book a class</button>
+      <button className="rr-btn-ghost" onClick={() => window.open(BOOK_A_CLASS_URL, '_blank')}>Book a class</button>
     </div>
   </div>
 </div>
@@ -1462,14 +1446,14 @@ const Pricing = () => {
 <div className="rr-intro-section" style={{ marginBottom: '4rem' }}>
   <div className="rr-intro-inner">
     <div>
-      <p className="rr-intro-tag">New clients only · valid 21 days</p>
+      <p className="rr-intro-tag">{`New clients only · valid ${INTRO_PACK.validityDays} days`}</p>
       <p className="rr-intro-title">Intro pack</p>
       <p className="rr-intro-sub">3 classes to find your feet. The best way to try Renegade properly before committing to a membership.</p>
       <div className="rr-intro-prices">
-        <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>£52</span>
+        <span style={{color:'#f0e6d6',fontWeight:700,fontSize:'15px'}}>{formatGBP(INTRO_PACK.price)}</span>
       </div>
       <ul className="rr-dropin-bullets">
-        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>£17.33 per class</li>
+        <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>{fromPerClassText(INTRO_PACK.price, INTRO_PACK.classes)}</li>
         <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>Use across any 3 classes in the schedule</li>
         <li className="rr-dropin-bullet" style={{color:'rgba(255,255,255,0.9)'}}>All levels welcome, great for complete beginners</li>
       </ul>
@@ -1477,9 +1461,9 @@ const Pricing = () => {
     <div className="rr-intro-right">
       <div style={{textAlign:'right'}}>
         <p style={{fontSize:'9px',letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(255,255,255,0.85)',fontWeight:600,marginBottom:'4px'}}>3 classes</p>
-        <p style={{fontSize:'52px',fontWeight:900,color:'#f0e6d6',letterSpacing:'-3px',lineHeight:1}}>£52</p>
+        <p style={{fontSize:'52px',fontWeight:900,color:'#f0e6d6',letterSpacing:'-3px',lineHeight:1}}>{formatGBP(INTRO_PACK.price)}</p>
       </div>
-      <button className="rr-btn-ghost" style={{width:'auto',padding:'13px 28px'}} onClick={() => window.open('https://momence.com/Renegade-Reformer/membership/Intro-Offer---Class-Pack/763559', '_blank')}>Book intro pack</button>
+      <button className="rr-btn-ghost" style={{width:'auto',padding:'13px 28px'}} onClick={() => window.open(INTRO_PACK.momenceUrl, '_blank')}>Book intro pack</button>
     </div>
   </div>
 </div>
