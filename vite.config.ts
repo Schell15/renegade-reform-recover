@@ -218,9 +218,24 @@ function faqGeneratorPlugin() {
 
       assertValidGeneratedFaqOutput(jsonLd, markdown, FAQ_CATEGORIES);
 
-      html = replaceBetweenMarkers(html, FAQ_MARKERS.jsonLd, JSON.stringify(jsonLd, null, 2));
+      html = replaceBetweenMarkers(
+        html,
+        FAQ_MARKERS.jsonLd,
+        `  <script type="application/ld+json">\n${JSON.stringify(jsonLd, null, 2)}\n  </script>`,
+      );
       html = replaceBetweenMarkers(html, FAQ_MARKERS.jumpRow, renderJumpRowHtml(FAQ_CATEGORIES));
       html = replaceBetweenMarkers(html, FAQ_MARKERS.sections, renderFaqSectionsHtml(FAQ_CATEGORIES));
+
+      const scriptMatch = html.match(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/);
+      if (!scriptMatch) {
+        throw new Error("FAQ generator: could not find the generated <script type=\"application/ld+json\"> block in dist/faq.html");
+      }
+      try {
+        JSON.parse(scriptMatch[1]);
+      } catch (e) {
+        throw new Error(`FAQ generator: generated FAQPage JSON-LD does not parse as valid JSON: ${(e as Error).message}`);
+      }
+
       fs.writeFileSync(faqHtmlPath, html);
 
       const okfDir = path.join(distDir, "okf");
