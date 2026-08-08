@@ -1482,13 +1482,13 @@ const Pricing = () => {
     <div className={`rr-acc-item${openAcc === 'core' ? ' open' : ''}`}>
       <div className="rr-acc-header" onClick={() => toggleAcc('core')}>
         <div className="rr-acc-left">
-          <span className="rr-acc-eyebrow">4 classes / month</span>
+          <span className="rr-acc-eyebrow">{`${MEMBERSHIPS[0].classesPerMonth} classes / month`}</span>
           <span className="rr-acc-name">Core</span>
         </div>
         <div className="rr-acc-right">
           <div className="rr-acc-price-collapsed">
-            <div className="rr-acc-price-big">£85 <span>/month</span></div>
-            <div className="rr-acc-price-sub">£21.25 per class</div>
+            <div className="rr-acc-price-big">{formatGBP(MEMBERSHIPS[0].price)} <span>/month</span></div>
+            <div className="rr-acc-price-sub">{fromPerClassText(MEMBERSHIPS[0].price, MEMBERSHIPS[0].classesPerMonth)}</div>
           </div>
           <div className="rr-acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
         </div>
@@ -1524,13 +1524,13 @@ const Pricing = () => {
           <div className="rr-acc-pricing-right">
             <div className="rr-acc-per-class-box">
               <span className="rr-acc-per-class-label">Per class</span>
-              <span className="rr-acc-per-class-num">£21.25</span>
+              <span className="rr-acc-per-class-num">{formatGBP(perClassPrice(MEMBERSHIPS[0].price, MEMBERSHIPS[0].classesPerMonth))}</span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
               <span className="rr-row-label-g">Monthly rate</span>
-              <span className="rr-row-price-g">£85<span className="rr-row-unit-g"> /mo</span></span>
+              <span className="rr-row-price-g">{formatGBP(MEMBERSHIPS[0].price)}<span className="rr-row-unit-g"> /mo</span></span>
             </div>
-            <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/811786', '_blank')}>Join now</button>
+            <button className="rr-btn-solid" onClick={() => window.open(MEMBERSHIPS[0].momenceUrl, '_blank')}>Join now</button>
           </div>
         </div>
       </div>
@@ -1540,13 +1540,13 @@ const Pricing = () => {
     <div className={`rr-acc-item${openAcc === 'pro' ? ' open' : ''}`}>
       <div className="rr-acc-header" onClick={() => toggleAcc('pro')}>
         <div className="rr-acc-left">
-          <span className="rr-acc-eyebrow">8 classes / month</span>
+          <span className="rr-acc-eyebrow">{`${MEMBERSHIPS[1].classesPerMonth} classes / month`}</span>
           <span className="rr-acc-name">Pro</span>
         </div>
         <div className="rr-acc-right">
           <div className="rr-acc-price-collapsed">
-            <div className="rr-acc-price-big">£150 <span>/month</span></div>
-            <div className="rr-acc-price-sub">£18.75 per class</div>
+            <div className="rr-acc-price-big">{formatGBP(MEMBERSHIPS[1].price)} <span>/month</span></div>
+            <div className="rr-acc-price-sub">{fromPerClassText(MEMBERSHIPS[1].price, MEMBERSHIPS[1].classesPerMonth)}</div>
           </div>
           <div className="rr-acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
         </div>
@@ -1585,13 +1585,13 @@ const Pricing = () => {
           <div className="rr-acc-pricing-right">
             <div className="rr-acc-per-class-box">
               <span className="rr-acc-per-class-label">Per class</span>
-              <span className="rr-acc-per-class-num">£18.75</span>
+              <span className="rr-acc-per-class-num">{formatGBP(perClassPrice(MEMBERSHIPS[1].price, MEMBERSHIPS[1].classesPerMonth))}</span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
               <span className="rr-row-label-g">Monthly rate</span>
-              <span className="rr-row-price-g">£150<span className="rr-row-unit-g"> /mo</span></span>
+              <span className="rr-row-price-g">{formatGBP(MEMBERSHIPS[1].price)}<span className="rr-row-unit-g"> /mo</span></span>
             </div>
-            <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/812640', '_blank')}>Join now</button>
+            <button className="rr-btn-solid" onClick={() => window.open(MEMBERSHIPS[1].momenceUrl, '_blank')}>Join now</button>
           </div>
         </div>
       </div>
@@ -1601,13 +1601,13 @@ const Pricing = () => {
     <div className={`rr-acc-item${openAcc === 'elite' ? ' open' : ''}`}>
       <div className="rr-acc-header" onClick={() => toggleAcc('elite')}>
         <div className="rr-acc-left">
-          <span className="rr-acc-eyebrow">12 classes / month</span>
+          <span className="rr-acc-eyebrow">{`${MEMBERSHIPS[2].classesPerMonth} classes / month`}</span>
           <span className="rr-acc-name">Elite</span>
         </div>
         <div className="rr-acc-right">
           <div className="rr-acc-price-collapsed">
-            <div className="rr-acc-price-big">£195 <span>/month</span></div>
-            <div className="rr-acc-price-sub">£16.25 per class</div>
+            <div className="rr-acc-price-big">{formatGBP(MEMBERSHIPS[2].price)} <span>/month</span></div>
+            <div className="rr-acc-price-sub">{fromPerClassText(MEMBERSHIPS[2].price, MEMBERSHIPS[2].classesPerMonth)}</div>
           </div>
           <div className="rr-acc-chevron"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></div>
         </div>
@@ -1647,13 +1647,13 @@ const Pricing = () => {
           <div className="rr-acc-pricing-right">
             <div className="rr-acc-per-class-box">
               <span className="rr-acc-per-class-label">Per class</span>
-              <span className="rr-acc-per-class-num">£16.25</span>
+              <span className="rr-acc-per-class-num">{formatGBP(perClassPrice(MEMBERSHIPS[2].price, MEMBERSHIPS[2].classesPerMonth))}</span>
             </div>
             <div className="rr-price-row general" style={{marginBottom:'1.25rem'}}>
               <span className="rr-row-label-g">Monthly rate</span>
-              <span className="rr-row-price-g">£195<span className="rr-row-unit-g"> /mo</span></span>
+              <span className="rr-row-price-g">{formatGBP(MEMBERSHIPS[2].price)}<span className="rr-row-unit-g"> /mo</span></span>
             </div>
-            <button className="rr-btn-solid" onClick={() => window.open('https://momence.com/m/812642', '_blank')}>Join now</button>
+            <button className="rr-btn-solid" onClick={() => window.open(MEMBERSHIPS[2].momenceUrl, '_blank')}>Join now</button>
           </div>
         </div>
       </div>
