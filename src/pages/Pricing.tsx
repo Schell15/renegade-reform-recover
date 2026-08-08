@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import RenegadeGallery from "@/components/RenegadeGallery";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { DROP_IN_PRICE, INTRO_PACK, CLASS_PACKS, MEMBERSHIPS, BOOK_A_CLASS_URL, perClassPrice, formatGBP, fromPerClassText } from "@/content/pricing";
 
 const SITE = "https://www.renegadereformer.co.uk";
 const STUDIO_ID = { "@id": `${SITE}/#studio` };
@@ -28,13 +29,17 @@ const PRICING_SCHEMA = {
   name: "Reformer Pilates pricing at Renegade Reformer, Bristol",
   url: `${SITE}/pricing`,
   itemListElement: [
-    { "@type": "ListItem", position: 1, item: offer("Drop-in class", "A single 50 minute reformer Pilates class.", "25.00") },
-    { "@type": "ListItem", position: 2, item: offer("4 class pack", "4 reformer Pilates classes, valid 3 months from first use.", "95.00") },
-    { "@type": "ListItem", position: 3, item: offer("8 class pack", "8 reformer Pilates classes, valid 3 months from first use.", "175.00") },
-    { "@type": "ListItem", position: 4, item: offer("12 class pack", "12 reformer Pilates classes, valid 3 months from first use.", "252.00") },
-    { "@type": "ListItem", position: 5, item: offer("Core membership", "4 reformer Pilates classes a month, £21.25 per class.", "85.00") },
-    { "@type": "ListItem", position: 6, item: offer("Pro membership", "8 reformer Pilates classes a month, £18.75 per class.", "150.00") },
-    { "@type": "ListItem", position: 7, item: offer("Elite membership", "12 reformer Pilates classes a month, £16.25 per class.", "195.00") },
+    { "@type": "ListItem", position: 1, item: offer("Drop-in class", "A single 50 minute reformer Pilates class.", DROP_IN_PRICE.toFixed(2)) },
+    ...CLASS_PACKS.map((p, i) => ({
+      "@type": "ListItem",
+      position: 2 + i,
+      item: offer(`${p.classes} class pack`, `${p.classes} reformer Pilates classes, valid ${p.validityMonths} months from first use.`, p.price.toFixed(2)),
+    })),
+    ...MEMBERSHIPS.map((m, i) => ({
+      "@type": "ListItem",
+      position: 5 + i,
+      item: offer(`${m.tier} membership`, `${m.classesPerMonth} reformer Pilates classes a month, ${formatGBP(perClassPrice(m.price, m.classesPerMonth))} per class.`, m.price.toFixed(2)),
+    })),
   ],
 };
 
