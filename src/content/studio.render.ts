@@ -60,6 +60,23 @@ export function jobPostingAddressJsonLd() {
 }
 
 /** The single shared footer copyright/address line used across every static page. */
+/** teachwithus/index.html's JobPosting. Only the address is a duplicated fact; the rest is campaign copy. */
+export function teachWithUsJobPostingJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: "Reformer Pilates Instructor",
+    description:
+      "Renegade Reformer is recruiting a qualified Reformer Pilates instructor for our community-focused movement studio in Redfield, Bristol. Deliver high-quality Reformer Pilates classes with strong technical foundations, coach clients of mixed abilities, and contribute to a consistent class experience aligned with the Renegade standard. Freelance with growth potential.",
+    datePosted: "2026-07-07",
+    validThrough: "2026-10-05",
+    employmentType: "CONTRACTOR",
+    hiringOrganization: { "@type": "Organization", name: STUDIO.name },
+    jobLocation: { "@type": "Place", address: jobPostingAddressJsonLd() },
+  };
+}
+
+/** The single shared footer copyright/address line used across every static page. */
 export function footerCopyrightHtml(): string {
   return `  <p>&copy; 2026 ${STUDIO.name} &middot; ${STUDIO.address.street}, ${STUDIO.address.locality}, ${STUDIO.address.city} ${STUDIO.address.postalCode}</p>`;
 }
