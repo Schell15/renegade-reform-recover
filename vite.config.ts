@@ -8,6 +8,7 @@ import { assertValidPagesManifest } from "./src/content/pages.manifest.validate"
 import { FAQ_CATEGORIES, FAQ_INTRO } from "./src/content/faq";
 import { renderJumpRowHtml, renderFaqSectionsHtml, renderFaqJsonLd, renderFaqMarkdown } from "./src/content/faq.render";
 import { assertValidFaqSource, assertValidGeneratedFaqOutput } from "./src/content/faq.validate";
+import { pageAboutBusinessJsonLd, teachWithUsJobPostingJsonLd, footerCopyrightHtml } from "./src/content/studio.render";
 
 const SITE = "https://www.renegadereformer.co.uk";
 const OG_IMAGE = `${SITE}/og-image.png`;
@@ -191,6 +192,10 @@ function replaceBetweenMarkers(
 }
 
 function faqGeneratorPlugin() {
+  return faqGeneratorPluginImpl();
+}
+
+function faqGeneratorPluginImpl() {
   return {
     name: "faq-generator",
     apply: "build" as const,
