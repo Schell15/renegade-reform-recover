@@ -73,5 +73,5 @@ export function byNightHoursText(): string {
 }
 
 export function googleMapsEmbedUrl(): string {
-  return `https://www.google.com/maps?q=${encodeURIComponent(addressOneLine())}&output=embed`;
+  return `https://www.google.com/maps?q=${addressOneLine().replace(/ /g, "+")}&output=embed`;
 }
