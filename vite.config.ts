@@ -5,6 +5,9 @@ import fs from "fs";
 import { componentTagger } from "lovable-tagger";
 import { PAGES_MANIFEST } from "./src/content/pages.manifest";
 import { assertValidPagesManifest } from "./src/content/pages.manifest.validate";
+import { FAQ_CATEGORIES, FAQ_INTRO } from "./src/content/faq";
+import { renderJumpRowHtml, renderFaqSectionsHtml, renderFaqJsonLd, renderFaqMarkdown } from "./src/content/faq.render";
+import { assertValidFaqSource, assertValidGeneratedFaqOutput } from "./src/content/faq.validate";
 
 const SITE = "https://www.renegadereformer.co.uk";
 const OG_IMAGE = `${SITE}/og-image.png`;
@@ -167,6 +170,8 @@ function bakedMetaPlugin() {
 }
 
 function noEmDashPlugin() {
+  return {
+    name: "no-em-dash-check",
   return {
     name: "no-em-dash-check",
     apply: "build" as const,
