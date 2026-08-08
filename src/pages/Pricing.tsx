@@ -1085,6 +1085,18 @@ const PRICING_BODY_TAIL = `<div class="page" style="padding-top:0;padding-bottom
   </div>
 </div>`;
 
+const classPackCardsHtml = CLASS_PACKS.map((p) => `
+        <div class="pack-card-cream">
+          <p class="pk-eyebrow-cream" style="margin-top:0;">Class pack</p>
+          <p style="font-size:12px;color:rgba(24,8,0,0.6);font-weight:400;margin-bottom:14px;">Valid ${p.validityMonths} months from first use</p>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span class="pk-num-cream">${p.classes}</span>
+            <span class="pk-unit-cream">classes</span>
+          </div>
+          <p class="pk-price-cream">${formatGBP(p.price)}</p>
+          <a class="btn-ghost-cream" href="${p.momenceUrl}" target="_blank" rel="noopener noreferrer">Buy ${p.classes} class pack</a>
+        </div>`).join("\n");
+
 const PRICING_BODY_TAIL_AFTER_GALLERY_CLASSPACKS = `<div class="page" style="padding-top:0;padding-bottom:0;">
   <!-- CLASS PACKS -->
   <section class="section" id="class-packs" style="margin-bottom:0;">
@@ -1092,40 +1104,7 @@ const PRICING_BODY_TAIL_AFTER_GALLERY_CLASSPACKS = `<div class="page" style="pad
     <p class="section-note" style="text-align:center;">Not a member yet? Packs are a great way to try the studio.</p>
     <div class="pack-outer">
       <div class="grid-3">
-
-        <div class="pack-card-cream">
-          <p class="pk-eyebrow-cream" style="margin-top:0;">Class pack</p>
-          <p style="font-size:12px;color:rgba(24,8,0,0.6);font-weight:400;margin-bottom:14px;">Valid 3 months from first use</p>
-          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-            <span class="pk-num-cream">4</span>
-            <span class="pk-unit-cream">classes</span>
-          </div>
-          <p class="pk-price-cream">£95</p>
-          <a class="btn-ghost-cream" href="https://momence.com/Renegade-Reformer/membership/4-CLASS-PACK/783154" target="_blank" rel="noopener noreferrer">Buy 4 class pack</a>
-        </div>
-
-        <div class="pack-card-cream">
-          <p class="pk-eyebrow-cream" style="margin-top:0;">Class pack</p>
-          <p style="font-size:12px;color:rgba(24,8,0,0.6);font-weight:400;margin-bottom:14px;">Valid 3 months from first use</p>
-          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-            <span class="pk-num-cream">8</span>
-            <span class="pk-unit-cream">classes</span>
-          </div>
-          <p class="pk-price-cream">£175</p>
-          <a class="btn-ghost-cream" href="https://momence.com/Renegade-Reformer/membership/8-CLASS-PACK/783156" target="_blank" rel="noopener noreferrer">Buy 8 class pack</a>
-        </div>
-
-        <div class="pack-card-cream">
-          <p class="pk-eyebrow-cream" style="margin-top:0;">Class pack</p>
-          <p style="font-size:12px;color:rgba(24,8,0,0.6);font-weight:400;margin-bottom:14px;">Valid 3 months from first use</p>
-          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
-            <span class="pk-num-cream">12</span>
-            <span class="pk-unit-cream">classes</span>
-          </div>
-          <p class="pk-price-cream">£252</p>
-          <a class="btn-ghost-cream" href="https://momence.com/Renegade-Reformer/membership/12-CLASS-PACK/783155" target="_blank" rel="noopener noreferrer">Buy 12 class pack</a>
-        </div>
-
+${classPackCardsHtml}
       </div>
     </div>
   </section>
