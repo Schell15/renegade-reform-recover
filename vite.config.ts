@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import fs from "fs";
 import { componentTagger } from "lovable-tagger";
+import { PAGES_MANIFEST } from "./src/content/pages.manifest";
+import { assertValidPagesManifest } from "./src/content/pages.manifest.validate";
 
 const SITE = "https://www.renegadereformer.co.uk";
 const OG_IMAGE = `${SITE}/og-image.png`;
@@ -213,6 +215,16 @@ function noEmDashPlugin() {
   };
 }
 
+function pagesManifestValidationPlugin() {
+  return {
+    name: "pages-manifest-validation",
+    apply: "build" as const,
+    buildStart() {
+      assertValidPagesManifest(PAGES_MANIFEST);
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
@@ -225,6 +237,7 @@ export default defineConfig(({ mode }) => ({
     componentTagger(),
     mode !== 'development' && bakedMetaPlugin(),
     mode !== 'development' && noEmDashPlugin(),
+    mode !== 'development' && pagesManifestValidationPlugin(),
   ].filter(Boolean),
   resolve: {
     alias: {
