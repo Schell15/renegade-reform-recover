@@ -8,6 +8,7 @@ import { assertValidPagesManifest } from "./src/content/pages.manifest.validate"
 import { FAQ_CATEGORIES, FAQ_INTRO } from "./src/content/faq";
 import { renderJumpRowHtml, renderFaqSectionsHtml, renderFaqJsonLd, renderFaqMarkdown } from "./src/content/faq.render";
 import { assertValidFaqSource, assertValidGeneratedFaqOutput } from "./src/content/faq.validate";
+import { pageAboutBusinessJsonLd, teachWithUsJobPostingJsonLd, footerCopyrightHtml } from "./src/content/studio.render";
 
 const SITE = "https://www.renegadereformer.co.uk";
 const OG_IMAGE = `${SITE}/og-image.png`;
@@ -190,6 +191,77 @@ function replaceBetweenMarkers(
   return `${before}\n${replacement}\n${after}`;
 }
 
+const BUSINESS_MARKERS = {
+  jsonLd: ["<!-- BUSINESS_JSONLD_START -->", "<!-- BUSINESS_JSONLD_END -->"] as const,
+  footer: ["<!-- BUSINESS_FOOTER_START -->", "<!-- BUSINESS_FOOTER_END -->"] as const,
+};
+
+interface StaticFactsTarget {
+  file: string;
+  footer: boolean;
+  jsonLd?: () => unknown;
+}
+
+const STATIC_FACTS_TARGETS: StaticFactsTarget[] = [
+  { file: "bynight/index.html", footer: true, jsonLd: () => pageAboutBusinessJsonLd("Renegade By Night", `${SITE}/bynight`) },
+  { file: "guides.html", footer: true, jsonLd: () => pageAboutBusinessJsonLd("Guides", `${SITE}/guides.html`) },
+  { file: "privacypolicy.html", footer: true, jsonLd: () => pageAboutBusinessJsonLd("Privacy Policy", `${SITE}/privacypolicy.html`) },
+  { file: "teachwithus/index.html", footer: true, jsonLd: () => teachWithUsJobPostingJsonLd() },
+  { file: "reformerpilates.html", footer: true },
+  { file: "faq.html", footer: true },
+  { file: "journal-first-reformer-class-bristol.html", footer: true },
+  { file: "journal-how-often-reformer-pilates.html", footer: true },
+  { file: "journal-reformer-pilates-beginners-bristol.html", footer: true },
+  { file: "journal-reformer-pilates-great-bristol-run.html", footer: true },
+  { file: "journal-reformer-pilates-results-timeline.html", footer: true },
+  { file: "journal-reformer-vs-mat-pilates.html", footer: true },
+  { file: "journal-what-is-reformer-pilates.html", footer: true },
+];
+
+function staticFactsGeneratorPlugin() {
+  return {
+    name: "static-facts-generator",
+    apply: "build" as const,
+    closeBundle() {
+      const distDir = path.resolve(__dirname, "dist");
+
+      for (const target of STATIC_FACTS_TARGETS) {
+        const filePath = path.join(distDir, target.file);
+        if (!fs.existsSync(filePath)) {
+          throw new Error(`static-facts-generator: expected file not found in dist: ${target.file}`);
+        }
+        let html = fs.readFileSync(filePath, "utf8");
+
+        if (target.footer) {
+          html = replaceBetweenMarkers(html, BUSINESS_MARKERS.footer, footerCopyrightHtml());
+        }
+
+        if (target.jsonLd) {
+          const json = target.jsonLd();
+          const generated = `    <script type="application/ld+json">\n${JSON.stringify(json, null, 2)}\n    </script>`;
+          html = replaceBetweenMarkers(html, BUSINESS_MARKERS.jsonLd, generated);
+
+          const [startMarker, endMarker] = BUSINESS_MARKERS.jsonLd;
+          const regionStart = html.indexOf(startMarker);
+          const regionEnd = html.indexOf(endMarker) + endMarker.length;
+          const region = html.slice(regionStart, regionEnd);
+          const scriptMatch = region.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+          if (!scriptMatch) {
+            throw new Error(`static-facts-generator: generated JSON-LD script tag not found for ${target.file}`);
+          }
+          try {
+            JSON.parse(scriptMatch[1]);
+          } catch (e) {
+            throw new Error(`static-facts-generator: generated JSON-LD for ${target.file} does not parse as valid JSON: ${(e as Error).message}`);
+          }
+        }
+
+        fs.writeFileSync(filePath, html);
+      }
+    },
+  };
+}
+
 function faqGeneratorPlugin() {
   return {
     name: "faq-generator",
@@ -316,6 +388,7 @@ export default defineConfig(({ mode }) => ({
     componentTagger(),
     mode !== 'development' && bakedMetaPlugin(),
     mode !== 'development' && faqGeneratorPlugin(),
+    mode !== 'development' && staticFactsGeneratorPlugin(),
     mode !== 'development' && noEmDashPlugin(),
     mode !== 'development' && pagesManifestValidationPlugin(),
   ].filter(Boolean),
