@@ -5,6 +5,8 @@ import { Star, MapPin, Clock, MessageCircle, Mail, Instagram, Facebook } from "l
 import heroLoop from "@/assets/media/hero-loop.mp4.asset.json";
 import heroPoster from "@/assets/media/hero-poster.jpg.asset.json";
 import nightPoster from "@/assets/media/night-poster.jpg.asset.json";
+import { STUDIO, addressStreetShort, whatsappUrl, mailtoHref, googleMapsEmbedUrl } from "@/content/studio";
+import { DROP_IN_PRICE, INTRO_PACK, MEMBERSHIPS, CLASS_PACKS, formatGBP, perClassPrice } from "@/content/pricing";
 
 const gold = "#C49A4A";
 const cream = "#E1D6C8";
@@ -87,41 +89,39 @@ const classes = [
   },
 ];
 
+const eliteMembership = MEMBERSHIPS[2];
+
 const prices = [
   {
     name: "Drop In",
     subtitle: "No commitment",
-    price: "£25",
+    price: formatGBP(DROP_IN_PRICE),
     unit: "per class",
     perks: ["All levels welcome", "Free cancellation up to 24 hours before", "No commitment"],
     href: "/pricing",
     featured: false,
   },
   {
-    name: "Intro Pack",
+    name: INTRO_PACK.name,
     subtitle: "Find your feet",
-    price: "£52",
-    unit: "3 classes, new members",
-    perks: ["Valid for 21 days, new members only", "The best way to try Renegade properly", "Before committing to a membership"],
+    price: formatGBP(INTRO_PACK.price),
+    unit: `${INTRO_PACK.classes} classes, new members`,
+    perks: [`Valid for ${INTRO_PACK.validityDays} days, new members only`, "The best way to try Renegade properly", "Before committing to a membership"],
     href: "/pricing",
     featured: true,
   },
   {
     name: "Membership",
     subtitle: "From Core to Elite",
-    price: "£85",
-    unit: "per month, 4 to 12 classes, from £16.25 per class",
+    price: formatGBP(MEMBERSHIPS[0].price),
+    unit: `per month, 4 to 12 classes, from ${formatGBP(perClassPrice(eliteMembership.price, eliteMembership.classesPerMonth))} per class`,
     perks: ["Locked-in monthly rate", "Guest passes", "Priority booking"],
     href: "/pricing",
     featured: false,
   },
 ];
 
-const classPacks = [
-  { name: "4 Class Pack", price: "£95", href: "https://momence.com/Renegade-Reformer/membership/4-CLASS-PACK/783154" },
-  { name: "8 Class Pack", price: "£175", href: "https://momence.com/Renegade-Reformer/membership/8-CLASS-PACK/783156" },
-  { name: "12 Class Pack", price: "£252", href: "https://momence.com/Renegade-Reformer/membership/12-CLASS-PACK/783155" },
-];
+const classPacks = CLASS_PACKS.map((p) => ({ name: p.name, price: formatGBP(p.price), href: p.momenceUrl }));
 
 const reviews = [
   {
@@ -491,10 +491,10 @@ const Home = () => {
               style={{ fontSize: 12, color: mutedCream, letterSpacing: "0.08em" }}
             >
               <span className="inline-flex items-center gap-2">
-                <MapPin size={14} /> 22a Church Rd, Redfield BS5 9JA
+                <MapPin size={14} /> {addressStreetShort()}, {STUDIO.address.locality} {STUDIO.address.postalCode}
               </span>
               <span className="inline-flex items-center gap-2">
-                <Clock size={14} /> Mon to Fri, 8:30am to 8:30pm
+                <Clock size={14} /> {STUDIO.hours.reformer.days}, {STUDIO.hours.reformer.open} to {STUDIO.hours.reformer.close}
               </span>
               <a
                 href="https://www.google.com/search?q=Renegade+Reformer+Bristol+reviews"
@@ -531,26 +531,26 @@ const Home = () => {
         <div>
           <p style={sectionLabelStyle} className="mb-2">Find Us</p>
           <p style={{ color: cream, fontSize: 15, lineHeight: 1.6 }}>
-            22a Church Road<br />Redfield, Bristol BS5 9JA
+            {STUDIO.address.street}<br />{STUDIO.address.locality}, {STUDIO.address.city} {STUDIO.address.postalCode}
           </p>
         </div>
         <div>
           <p style={sectionLabelStyle} className="mb-2">Opening Hours</p>
           <p style={{ color: cream, fontSize: 15, lineHeight: 1.6 }}>
-            Reformer classes, Mon to Fri, 8:30am to 8:30pm<br />
-            Renegade | By Night, Fri, 9:00pm to 10:30pm
+            Reformer classes, {STUDIO.hours.reformer.days}, {STUDIO.hours.reformer.open} to {STUDIO.hours.reformer.close}<br />
+            Renegade | By Night, {STUDIO.hours.byNight.days}, {STUDIO.hours.byNight.open} to {STUDIO.hours.byNight.close}
           </p>
         </div>
         <div>
           <p style={sectionLabelStyle} className="mb-2">Get In Touch</p>
           <p style={{ color: cream, fontSize: 15, lineHeight: 1.7 }}>
-            <a href="https://wa.me/447846849456" target="_blank" rel="noopener noreferrer"
+            <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer"
                style={{ color: cream, textDecoration: "none" }} className="inline-flex items-center gap-2">
               <MessageCircle size={14} /> WhatsApp us
             </a><br />
-            <a href="mailto:studio@renegadereformer.co.uk"
+            <a href={mailtoHref()}
                style={{ color: cream, textDecoration: "none" }} className="inline-flex items-center gap-2">
-              <Mail size={14} /> studio@renegadereformer.co.uk
+              <Mail size={14} /> {STUDIO.contact.email}
             </a>
           </p>
         </div>
@@ -580,7 +580,7 @@ const Home = () => {
               OUR STUDIO IN REDFIELD.
             </h2>
             <p style={{ color: mutedCream, fontSize: 15, lineHeight: 1.8 }}>
-              You will find us at 22a Church Road, Bristol BS5 9JA, in the heart
+              You will find us at {STUDIO.address.street}, {STUDIO.address.city} {STUDIO.address.postalCode}, in the heart
               of Redfield. The studio is built around small class sizes, a dark
               and immersive room with tuned lighting and sound, and coaching that
               keeps every session intentional rather than rushed. Everyone gets
@@ -855,7 +855,7 @@ const Home = () => {
             <div style={{ overflow: "hidden", borderRadius: 8, border: "1px solid " + border, aspectRatio: "4 / 3" }}>
               <iframe
                 title="Renegade Reformer location map"
-                src="https://www.google.com/maps?q=22a+Church+Road,+Redfield,+Bristol+BS5+9JA&output=embed"
+                src={googleMapsEmbedUrl()}
                 style={{ border: 0, width: "100%", height: "100%", filter: "grayscale(0.4) contrast(1.05)" }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -867,20 +867,20 @@ const Home = () => {
               <img src="/__l5e/assets-v1/c5fd150f-245d-47e9-917d-8f0ce77aafcd/logo-eagle-128.webp" alt="Renegade Reformer eagle logo" className="w-11 h-11 object-contain" width={128} height={128} loading="lazy" decoding="async" />
             </Link>
             <p style={sectionLabelStyle} className="mb-2">Visit</p>
-            <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-5">22a Church Road, Redfield<br />Bristol BS5 9JA</p>
+            <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-5">{STUDIO.address.street}, {STUDIO.address.locality}<br />{STUDIO.address.city} {STUDIO.address.postalCode}</p>
             <p style={sectionLabelStyle} className="mb-2">Hours</p>
             <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-5">
-              Reformer, Mon to Fri, 8:30am to 8:30pm<br />By Night, Fri, 9:00pm to 10:30pm
+              Reformer, {STUDIO.hours.reformer.days}, {STUDIO.hours.reformer.open} to {STUDIO.hours.reformer.close}<br />By Night, {STUDIO.hours.byNight.days}, {STUDIO.hours.byNight.open} to {STUDIO.hours.byNight.close}
             </p>
             <p style={sectionLabelStyle} className="mb-2">Contact</p>
             <p style={{ color: cream, fontSize: 14, lineHeight: 1.7 }} className="mb-6">
-              <a href="mailto:studio@renegadereformer.co.uk" style={{ color: cream, textDecoration: "none" }}>studio@renegadereformer.co.uk</a><br />
-              <a href="tel:+447846849456" style={{ color: cream, textDecoration: "none" }}>+44 7846 849456</a>
+              <a href={mailtoHref()} style={{ color: cream, textDecoration: "none" }}>{STUDIO.contact.email}</a><br />
+              <a href={`tel:${STUDIO.contact.whatsappE164}`} style={{ color: cream, textDecoration: "none" }}>+44 7846 849456</a>
             </p>
             <div className="flex items-center gap-4 mb-8">
               <a href="https://www.instagram.com/renegade.reformer/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ color: cream }}><Instagram size={20} /></a>
               <a href="https://www.facebook.com/fitnessreformer/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style={{ color: cream }}><Facebook size={20} /></a>
-              <a href="https://wa.me/447846849456" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style={{ color: cream }}><MessageCircle size={20} /></a>
+              <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style={{ color: cream }}><MessageCircle size={20} /></a>
             </div>
             <div className="flex flex-wrap gap-x-5 gap-y-2" style={{ fontFamily: "'Barlow Condensed', 'Barlow Fallback', sans-serif", fontSize: 12, letterSpacing: "0.18em", textTransform: "uppercase" }}>
               <Link to="/" style={{ color: mutedCream, textDecoration: "none" }}>Home</Link>
@@ -892,7 +892,7 @@ const Home = () => {
               <a href="/faq.html" style={{ color: mutedCream, textDecoration: "none" }}>FAQs</a>
               <Link to="/contact" style={{ color: mutedCream, textDecoration: "none" }}>Contact</Link>
               <a href="/teachwithus" style={{ color: mutedCream, textDecoration: "none" }}>Teach with us</a>
-              <a href="https://wa.me/447846849456" target="_blank" rel="noopener" style={{ color: mutedCream, textDecoration: "none" }}>WhatsApp us</a>
+              <a href={whatsappUrl()} target="_blank" rel="noopener" style={{ color: mutedCream, textDecoration: "none" }}>WhatsApp us</a>
               <a href="/privacypolicy.html" style={{ color: mutedCream, textDecoration: "none" }}>Privacy Policy</a>
             </div>
           </div>
