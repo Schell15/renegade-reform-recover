@@ -5,6 +5,9 @@ import fs from "fs";
 import { componentTagger } from "lovable-tagger";
 import { PAGES_MANIFEST } from "./src/content/pages.manifest";
 import { assertValidPagesManifest } from "./src/content/pages.manifest.validate";
+import { FAQ_CATEGORIES, FAQ_INTRO } from "./src/content/faq";
+import { renderJumpRowHtml, renderFaqSectionsHtml, renderFaqJsonLd, renderFaqMarkdown } from "./src/content/faq.render";
+import { assertValidFaqSource, assertValidGeneratedFaqOutput } from "./src/content/faq.validate";
 
 const SITE = "https://www.renegadereformer.co.uk";
 const OG_IMAGE = `${SITE}/og-image.png`;
@@ -166,6 +169,67 @@ function bakedMetaPlugin() {
   };
 }
 
+const FAQ_MARKERS = {
+  jsonLd: ["<!-- FAQ_JSONLD_START -->", "<!-- FAQ_JSONLD_END -->"] as const,
+  jumpRow: ["<!-- FAQ_JUMP_ROW_START -->", "<!-- FAQ_JUMP_ROW_END -->"] as const,
+  sections: ["<!-- FAQ_SECTIONS_START -->", "<!-- FAQ_SECTIONS_END -->"] as const,
+};
+
+function replaceBetweenMarkers(
+  html: string,
+  [startMarker, endMarker]: readonly [string, string],
+  replacement: string,
+): string {
+  const start = html.indexOf(startMarker);
+  const end = html.indexOf(endMarker);
+  if (start === -1 || end === -1 || end < start) {
+    throw new Error(`FAQ generator: could not find markers "${startMarker}" / "${endMarker}" in dist/faq.html`);
+  }
+  const before = html.slice(0, start + startMarker.length);
+  const after = html.slice(end);
+  return `${before}\n${replacement}\n${after}`;
+}
+
+function faqGeneratorPlugin() {
+  return {
+    name: "faq-generator",
+    apply: "build" as const,
+    closeBundle() {
+      assertValidFaqSource(FAQ_CATEGORIES);
+
+      const distDir = path.resolve(__dirname, "dist");
+      const faqHtmlPath = path.join(distDir, "faq.html");
+      if (!fs.existsSync(faqHtmlPath)) return;
+
+      let html = fs.readFileSync(faqHtmlPath, "utf8");
+      const jsonLd = renderFaqJsonLd(FAQ_CATEGORIES);
+      const generatedAt = new Date().toISOString();
+      const markdown = renderFaqMarkdown(FAQ_CATEGORIES, FAQ_INTRO, {
+        type: "Article",
+        title: "FAQs | Renegade Reformer",
+        description:
+          "Answers to common questions about reformer Pilates at Renegade Reformer: experience needed, what to wear, booking, cancellations, injuries and pregnancy.",
+        resource: "https://www.renegadereformer.co.uk/faq.html",
+        tags: ["reformer-pilates", "bristol", "faq", "beginners", "policies"],
+        generatedBy: "build:faq-generator",
+        generatedAt,
+        status: "stable",
+      });
+
+      assertValidGeneratedFaqOutput(jsonLd, markdown, FAQ_CATEGORIES);
+
+      html = replaceBetweenMarkers(html, FAQ_MARKERS.jsonLd, JSON.stringify(jsonLd, null, 2));
+      html = replaceBetweenMarkers(html, FAQ_MARKERS.jumpRow, renderJumpRowHtml(FAQ_CATEGORIES));
+      html = replaceBetweenMarkers(html, FAQ_MARKERS.sections, renderFaqSectionsHtml(FAQ_CATEGORIES));
+      fs.writeFileSync(faqHtmlPath, html);
+
+      const okfDir = path.join(distDir, "okf");
+      fs.mkdirSync(okfDir, { recursive: true });
+      fs.writeFileSync(path.join(okfDir, "faq.md"), markdown);
+    },
+  };
+}
+
 function noEmDashPlugin() {
   return {
     name: "no-em-dash-check",
@@ -236,6 +300,7 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
     mode !== 'development' && bakedMetaPlugin(),
+    mode !== 'development' && faqGeneratorPlugin(),
     mode !== 'development' && noEmDashPlugin(),
     mode !== 'development' && pagesManifestValidationPlugin(),
   ].filter(Boolean),
