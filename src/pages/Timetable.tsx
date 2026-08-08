@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import SiteHeader from "@/components/SiteHeader";
+import { STUDIO, addressOneLine } from "@/content/studio";
 
 const gold = "#C49A4A";
 const cream = "#E1D6C8";
@@ -132,7 +133,7 @@ const Timetable = () => {
           THIS WEEK'S REFORMER PILATES CLASSES IN REDFIELD, BRISTOL
         </h2>
         <p className="mb-4">
-          Renegade Reformer runs strength led reformer Pilates classes in Redfield, Bristol, Monday to Friday, 8:30am to 8:30pm. Every session is 50 minutes and class sizes are kept small. Book any class in the live calendar below.
+          Renegade Reformer runs strength led reformer Pilates classes in Redfield, Bristol, Monday to Friday, {STUDIO.hours.reformer.open} to {STUDIO.hours.reformer.close}. Every session is 50 minutes and class sizes are kept small. Book any class in the live calendar below.
         </p>
         <ul style={{ listStyle: "disc", paddingLeft: 20, marginBottom: 14, display: "grid", gap: 14 }}>
           <li>
@@ -156,7 +157,7 @@ const Timetable = () => {
           </li>
         </ul>
         <p>
-          Studio: 22a Church Road, Redfield, Bristol BS5 9JA.{" "}
+          Studio: {addressOneLine()}.{" "}
           <Link to="/pricing" style={{ color: cream, textDecoration: "underline" }}>See pricing</Link> or{" "}
           <Link to="/contact" style={{ color: cream, textDecoration: "underline" }}>get in touch</Link>.
         </p>
