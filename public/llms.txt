@@ -1,32 +1,25 @@
 # Renegade Reformer
 
-> Strength led reformer Pilates studio in Redfield, Bristol. Now open.
+> Boutique reformer Pilates studio in Redfield, Bristol, offering small-group classes for all levels.
 
-Renegade Reformer is a strength led reformer Pilates studio in Redfield, Bristol, at 22a Church Road, BS5 9JA. Classes include Foundations, Renegade, and Rebuild, alongside Renegade By Night, an immersive Friday evening reformer session.
+Renegade Reformer is a reformer Pilates studio at 22a Church Road, Redfield, Bristol BS5 9JA, UK. Classes run in small, capped groups, with three core formats: Foundations, Renegade and Rebuild.
 
-## Pages
+Official/canonical website: https://www.renegadereformer.co.uk/
 
-- [Home](/): Studio overview, current opening hours, and pricing.
-- [Classes](/reformerpilates.html): Class formats, Foundations, Renegade, and Rebuild, and what to expect in a session.
-- [Timetable](/timetable): Live class schedule and booking calendar.
-- [Pricing](/pricing): Drop in rates, class packs, and monthly membership pricing.
-- [Renegade By Night](/bynight): Immersive Friday evening reformer experience.
-- [FAQs](/faq.html): Common questions about classes, booking, and what to bring.
-- [Guides](/guides.html): Articles on reformer Pilates for beginners.
-- [Contact](/contact): Address, opening hours, and how to get in touch.
+## Key information
 
-## Knowledge bundle
+This site publishes information on timetable and booking, pricing and memberships, beginner guidance, FAQs, reformer Pilates guides, contact and location details, Renegade By Night, and Teach With Us (instructor applications).
 
-- [OKF bundle](/okf/index.md): Open Knowledge Format (v0.2) bundle, one markdown concept file per page with YAML frontmatter and cross links. Start at /okf/index.md.
+## Most important machine-readable resources
 
-## Pricing
+- Pricing and memberships: https://www.renegadereformer.co.uk/okf/pricing.md
+- Timetable and classes: https://www.renegadereformer.co.uk/okf/timetable.md
+- Frequently asked questions: https://www.renegadereformer.co.uk/okf/faq.md
+- Guides index: https://www.renegadereformer.co.uk/okf/guides.md
+- Contact and location: https://www.renegadereformer.co.uk/okf/contact.md
 
-- Drop in: £25 for a single 50 minute class.
-- Class packs: £95 for 4 classes, £175 for 8 classes, £252 for 12 classes. Each pack is valid 3 months from first use.
-- Memberships: Core £85 a month for 4 classes (£21.25 per class), Pro £150 a month for 8 classes (£18.75 per class), Elite £195 a month for 12 classes (£16.25 per class).
+## Complete knowledge bundle
 
-## Contact
+The full machine-readable directory, one markdown file per page, is available at:
 
-- Email: studio@renegadereformer.co.uk
-- WhatsApp: +44 7846 849456 (https://wa.me/447846849456). Messages only, this number does not take voice calls.
-- Address: 22a Church Road, Redfield, Bristol BS5 9JA.
+https://www.renegadereformer.co.uk/okf/index.md
